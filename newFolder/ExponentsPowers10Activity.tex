@@ -3,21 +3,6 @@
 
 \usepackage{xcolor}
 
-\definecolor{googleblue}{RGB}{66,133,244}
-\definecolor{googlered}{RGB}{234,67,53}
-\definecolor{googleyellow}{RGB}{244,180,0}
-\definecolor{googlegreen}{RGB}{52,168,83}
-
-\usepackage{TikZlings}
-\newcommand{\rulecolor}[1]{\def\CT@arc@{\color{#1}}}
-\definecolor{darkblue}{rgb}{0.4,0.5,0.85}
-\definecolor{blue}{rgb}{0.1,0.3,.95}
-\definecolor{pink}{rgb}{0.6,0.4,0.7}
-\definecolor{green}{rgb}{0.4,0.6,0.5}
-\definecolor{yellow}{rgb}{0.1,0.6,0.8}
-\definecolor{red}{rgb}{0.8,0.1,0.5}
-\definecolor{glaucous}{rgb}{0.38,0.51,0.71}
-\definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
 
 
 \title{Exponents and Positive Powers of 10}   % Use xmlatex all -s to compile when SERVE refuses to work.
@@ -219,9 +204,9 @@ What number is this?
 
 \end{problem}
 
-\begin{tikzpicture}[scale=0.7] % Scaling options
-    \chicken[transform shape,3D, body=glaucous] % Customizing with colors
-\end{tikzpicture}
+%\begin{tikzpicture}[scale=0.7] % Scaling options
+    %\chicken[transform shape,3D, body=glaucous] % Customizing with colors
+%\end{tikzpicture}
 
 \large{\textbf{Fun Fact}}
 
@@ -317,31 +302,6 @@ Look for the relationship between the number of zeros in the power of 10 and the
 %    \owl[transform shape,3D, body=glaucous, graduate=black, tassel=gray] % Customizing with colors
 %\end{tikzpicture}
 
-\begin{tikzpicture}[scale=0.6]
-    % Draw the owl
-    \owl[transform shape,3D, body=glaucous]
-
-    % Approximate top of head
-    \coordinate (head) at (0,2.3); 
-
-    % Tilted graduation cap
-    \begin{scope}[rotate around={-12:(head)}]  % Change -15 to adjust tilt
-        % Cap top (diamond)
-        \fill[black]
-            ($(head)+(-0.9,0)$) --
-            ($(head)+(0,0.3)$) --
-            ($(head)+(0.9,0)$) --
-            ($(head)+(0,-0.3)$) -- cycle;
-
-        % Cap base
-        \fill[black]
-            ($(head)+(-0.35,-0.35)$) rectangle ($(head)+(0.35,-0.2)$);
-
-        % Tassel
-       % \draw[thick] ($(head)+(0,0.3)$) -- ($(head)+(0.5,0.8)$);
-        %\fill[black] ($(head)+(0.5,0.8)$) circle (0.06);
-    \end{scope}
-\end{tikzpicture}
 
 \LARGE{\textbf{Summary}}
 
