@@ -1,5 +1,25 @@
 \documentclass{ximera}
 
+
+\usepackage{xcolor}
+
+\definecolor{googleblue}{RGB}{66,133,244}
+\definecolor{googlered}{RGB}{234,67,53}
+\definecolor{googleyellow}{RGB}{244,180,0}
+\definecolor{googlegreen}{RGB}{52,168,83}
+
+\usepackage{TikZlings}
+\newcommand{\rulecolor}[1]{\def\CT@arc@{\color{#1}}}
+\definecolor{darkblue}{rgb}{0.4,0.5,0.85}
+\definecolor{blue}{rgb}{0.1,0.3,.95}
+\definecolor{pink}{rgb}{0.6,0.4,0.7}
+\definecolor{green}{rgb}{0.4,0.6,0.5}
+\definecolor{yellow}{rgb}{0.1,0.6,0.8}
+\definecolor{red}{rgb}{0.8,0.1,0.5}
+\definecolor{glaucous}{rgb}{0.38,0.51,0.71}
+\definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
+
+
 \title{Exponents and Positive Powers of 10}   % Use xmlatex all -s to compile when SERVE refuses to work.
 \author{Kelly Stady}
 \license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
@@ -25,10 +45,24 @@ the base.
 \begin{problem} Identify the base and exponent of $10^7.$
 
 
-\textbf{Base} $\begin{prompt}=\answer{10}\end{prompt}$  \hspace{0.5in}  \textbf{Exponent} $\begin{prompt}=\answer{7}\end{prompt}$
-
+\textbf{Base} $\begin{prompt}=\answer{10}\end{prompt}$  \hspace{1in}  \textbf{Exponent} $\begin{prompt}=\answer{7}\end{prompt}$
 
 \end{problem}
+
+
+\begin{problem} Identify the base and exponent of $4^5.$
+
+
+\textbf{Base} $\begin{prompt}=\answer{4}\end{prompt}$  \hspace{1in}  \textbf{Exponent} $\begin{prompt}=\answer{5}\end{prompt}$
+
+\end{problem}
+
+\begin{problem} Identify the base and exponent of $\left(\frac{1}{7} \right)^2.$
+
+\textbf{Base} $\begin{prompt}=\answer{\frac{1}{7}}\end{prompt}$  \hspace{1in}  \textbf{Exponent} $\begin{prompt}=\answer{2}\end{prompt}$
+
+\end{problem}
+
 
 \begin{problem} Write the expression $11 \cdot 11 $ using exponential notation.
 
@@ -40,20 +74,43 @@ the base.
 
 \end{problem}
 
-\begin{problem} Write the expression $3^4$ as a product without the exponent.
+
+\begin{problem} Write the expression $9 \cdot 9 \cdot 9 \cdot 9$ using exponential notation.
 
 \begin{multipleChoice}
-    \choice[correct]{$3 \cdot 3 \cdot 3 \cdot 3$}
-    \choice{$3 \cdot 4$}
-    \choice{$4 \cdot 4 \cdot 4$ }
+    \choice{$9 \cdot 4$}
+    \choice[correct]{$9^4$ }
+    \choice{$9^3$}
   \end{multipleChoice}
 
 \end{problem}
 
+
+\begin{problem} Write the expression $2^5$ as a product without the exponent.
+
+\begin{multipleChoice}
+    \choice[correct]{$2 \cdot 2 \cdot 2 \cdot 2 \cdot 2$}
+    \choice{$2 \cdot 5$}
+    \choice{$2 \cdot 2 \cdot 2 \cdot 2$ }
+  \end{multipleChoice}
+
+\end{problem}
+
+
+\begin{problem} Write the expression $\left(\frac{1}{5} \right)^3$ as a product without the exponent.
+
+\begin{multipleChoice}
+    \choice{$\left(\frac{1}{5} \right) \cdot 3$}
+    \choice{$\left(\frac{1}{5} \right) \cdot \left(\frac{1}{5} \right)$ }
+    \choice[correct]{$\left(\frac{1}{5} \right) \cdot \left(\frac{1}{5} \right) \cdot \left(\frac{1}{5} \right)$}
+  \end{multipleChoice}
+
+\end{problem}
+
+
 \subsection*{Reading Numbers in Exponential Notation}
 
 Below are some powers of 3 and how they are read in exponential notation.
-
 
 \fbox{\parbox{6.1in}{
 \begin{tabular}{r c c l}
@@ -67,14 +124,28 @@ $3 \cdot 3 \cdot 3 \cdot 3 \cdot 3  $ & = & $3^5$ & ``Three to the fifth power."
 \end{tabular}
 }}
 
-\begin{problem} Write the product below in words.
+\begin{problem} Write the expression below in words.
 
-\[  10^3 \cdot 2^5 \]
+\[  100^3  \]
 
 \begin{multipleChoice}
-    \choice{Ten times 3 times 2 times 5.}
-    \choice[correct]{Ten cubed times two to the fifth power.}
-    \choice{Three to the tenth power times five squared.}
+    \choice{One hundred three}
+    \choice{Three hundred.}
+    \choice{One hundred times three.}
+    \choice[correct]{One hundred cubed.}
+  \end{multipleChoice}
+
+\end{problem}
+
+\begin{problem} Write the expression below in words.
+
+\[  10^2 \cdot 3^6 \]
+
+\begin{multipleChoice}
+    \choice{Ten times 2 times 3 times 6.}
+    \choice[correct]{Ten squared times three to the sixth power.}
+    \choice{Thirty to the twelfth power.}
+    \choice{Ten to the sixth power times three squared.}
   \end{multipleChoice}
 
 \end{problem}
@@ -95,19 +166,48 @@ Below are the first three positive powers of 10.  Notice that the exponent of 10
 \youtube{ne5Jyg6OK7w}   
 \end{center}
 
-\begin{problem} Use what you learned above to write the value of $10^4.$
+A \textbf{positive power of 10} is a power of 10 in which the exponent is a positive integer: $\{1, 2, 3, 4, \ldots\}.$
+Below are the first three positive powers of 10.  Notice that the exponent in each power of 10 is the same as the number of zeros in the result.  In general, if $n$ is a positive integer, then the value of $10^n$ is the number 1 followed by $n$ zeros.  For example, below you can see that $10^3$ equals the number 1 followed by 3 zeros.
+\begin{eqnarray*}
+10^1 &=& 10 \ \rightarrow \textrm{1 zero}\\
+10^2 &=& 100  \ \rightarrow \textrm{2 zeros} \\
+10^3 &=& 1,000 \ \rightarrow \textrm{3 zeros}
+%10^4 &=& 10,000
+\end{eqnarray*}
+
+
+
+\begin{problem} Write the value of $10^4.$
 
 
 \begin{multipleChoice}
     \choice{$40$}
     \choice[correct]{$10,000$}
     \choice{$1,000$}
+    \choice{$40,000$}
   \end{multipleChoice}
 
 \end{problem}
 
+\begin{problem} Write the value of $10^6.$
 
-\begin{problem} A greedy CEO demanded a pay package worth \$1 trillion, which is equal to $10^{12}.$  Write the value of $10^{12}.$
+
+\[ 10^6 \begin{prompt}=\answer{1,000,000 }\end{prompt} \]
+
+What number is this?
+
+\begin{multipleChoice}
+    \choice{One hundred thousand.}
+    \choice[correct]{One million.}
+    \choice{One billion.}
+    \choice{Ten thousand.}
+  \end{multipleChoice}
+
+
+\end{problem}
+
+
+\begin{problem} A greedy CEO demanded a pay package worth \$1 trillion.  One trillion equals $10^{12}.$  Write the value of $10^{12}.$
 
 
 \begin{multipleChoice}
@@ -119,14 +219,24 @@ Below are the first three positive powers of 10.  Notice that the exponent of 10
 
 \end{problem}
 
+\begin{tikzpicture}[scale=0.7] % Scaling options
+    \chicken[transform shape,3D, body=glaucous] % Customizing with colors
+\end{tikzpicture}
+
+\large{\textbf{Fun Fact}}
+
+A \textbf{googol} is $10^{100},$ the number 1 followed by 100 zeros!  In 1920, mathematician Edward Kasner was writing a book called \emph{Mathematics and Imagination} and wanted to give a name to $10^{100}.$  He asked his 9-year-old nephew, Milton Sirotta, for a suggestion and little Milton came up with the word googol.  Decades later, it inspired the name of one of the biggest tech companies, \textcolor{googleblue}{\textbf{G}}%
+\textcolor{googlered}{\textbf{o}}%
+\textcolor{googleyellow}{\textbf{o}}%
+\textcolor{googleblue}{\textbf{g}}%
+\textcolor{googlegreen}{\textbf{l}}%
+\textcolor{googlered}{\textbf{e}}.
+
 \subsection*{Multiplying and Dividing by Positive Powers of 10}
 
 When we multiply or divide a number by a positive power of 10, there is a relationship between the movement of the decimal point and the number of zeros
-in the power of 10.
-
-
-Consider the multiplication problems shown below.
-
+in the power of 10.  Once you notice this relationship, you won't need to perform multiplication or long division to find the answer for these types of problems.
+Look for the relationship between the number of zeros in the power of 10 and the movement of the decimal point in the multiplication problems shown below.
 \begin{eqnarray*}
 0.625 (10) &=& 6.25 \hspace{0.2in} \textrm{The decimal point moved 1 place to the right.} \\
 0.625 (100) &=&  62.5  \hspace{0.2in} \textrm{The decimal point moved 2 places to the right.} \\
@@ -137,17 +247,34 @@ Consider the multiplication problems shown below.
 5 (1000) &=& 5000 \hspace{0.2in} \textrm{The decimal point moved 3 places to the right.}
 \end{eqnarray*}
 
-\begin{problem} Use the pattern seen above to write a general rule for multiplying a number by a positive power of 10.
+\begin{problem} Write a general rule for multiplying a number by a positive power of 10.
 
 
 \begin{multipleChoice}
-    \choice{To multiply a number by a positive power of 10, move the decimal point to the left the same number of places as there are zeros in the power of 10.}
-    \choice[correct]{To multiply a number by a positive power of 10, move the decimal point to the right the same number of places as there are zeros in the power of 10.}
+    \choice{To multiply a number by a positive power of 10, count the number of zeros in the power of 10, then move the decimal point to the \textbf{left} that many places.}
+    \choice[correct]{To multiply a number by a positive power of 10, count the number of zeros in the power of 10, then move the decimal point to the \textbf{right} that many places.}
   \end{multipleChoice}
 
 \end{problem}
 
-Consider the division problems shown below.
+
+\begin{center}
+\youtube{CTfY61uLv80}
+\end{center}
+
+\begin{problem}  Use the rule from the previous problem to find each answer.
+
+\[ 2.8 (10) \begin{prompt}=\answer{28}\end{prompt} \]
+
+
+\[ 3.0525 (1000) \begin{prompt}=\answer{3052.5}\end{prompt} \]
+
+\[ 620 (100) \begin{prompt}=\answer{62,000}\end{prompt} \]
+
+\end{problem}
+
+
+Look for the relationship between the number of zeros in the power of 10 and the movement of the decimal point in the division problems shown below.
 
 \begin{eqnarray*}
 \frac{43.2}{10} &=&  4.32 \hspace{0.48in} \textrm{The decimal point moved 1 place to the left.} \\
@@ -164,15 +291,92 @@ Consider the division problems shown below.
 \frac{3}{1000} &=& 0.003 \hspace{0.3in} \textrm{The decimal point moved 3 places to the left.} \\
 \end{eqnarray*}
 
-\begin{problem} Use the pattern seen above to write a general rule for dividing a number by a positive power of 10.
+\begin{problem} Write a general rule for dividing a number by a positive power of 10.
 
 
 \begin{multipleChoice}
-    \choice[correct]{To divide a number by a positive power of 10, move the decimal point to the left the same number of places as there are zeros in the power of 10.}
-    \choice{To divide a number by a positive power of 10, move the decimal point to the right the same number of places as there are zeros in the power of 10.}
+    \choice[correct]{To divide a number by a positive power of 10, count the number of zeros in the power of 10, then move the decimal point to the \textbf{left} that many places.}
+    \choice{To divide a number by a positive power of 10, count the number of zeros in the power of 10, then move the decimal point to the \textbf{right} that many places.}
   \end{multipleChoice}
 
 \end{problem}
+
+\begin{problem}  Use the rule from the previous problem to find each answer.
+
+
+\[ \frac{63}{1000} \begin{prompt}=\answer{0.063}\end{prompt} \]
+
+\[ \frac{35.5}{10} \begin{prompt}=\answer{3.55}\end{prompt} \]
+
+\[ \frac{1}{100} \begin{prompt}=\answer{0.01}\end{prompt} \]
+
+\end{problem}
+
+%\hspace{4.3in} 
+%\begin{tikzpicture}[scale=0.6] % Scaling options
+%    \owl[transform shape,3D, body=glaucous, graduate=black, tassel=gray] % Customizing with colors
+%\end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.6]
+    % Draw the owl
+    \owl[transform shape,3D, body=glaucous]
+
+    % Approximate top of head
+    \coordinate (head) at (0,2.3); 
+
+    % Tilted graduation cap
+    \begin{scope}[rotate around={-12:(head)}]  % Change -15 to adjust tilt
+        % Cap top (diamond)
+        \fill[black]
+            ($(head)+(-0.9,0)$) --
+            ($(head)+(0,0.3)$) --
+            ($(head)+(0.9,0)$) --
+            ($(head)+(0,-0.3)$) -- cycle;
+
+        % Cap base
+        \fill[black]
+            ($(head)+(-0.35,-0.35)$) rectangle ($(head)+(0.35,-0.2)$);
+
+        % Tassel
+       % \draw[thick] ($(head)+(0,0.3)$) -- ($(head)+(0.5,0.8)$);
+        %\fill[black] ($(head)+(0.5,0.8)$) circle (0.06);
+    \end{scope}
+\end{tikzpicture}
+
+\LARGE{\textbf{Summary}}
+
+
+\normalsize
+\begin{enumerate}
+\item \textbf{Exponential Notation}
+
+Exponential notation is shorthand for repeated multiplication of the same quantity.  A number written in exponential notation has a base and an exponent.  The exponent indicates the number of times to multiply the base.  For example, the product $8 \cdot 8 \cdot 8$ is written as $8^3$ in exponential notation.  The number 8 is the base and 
+the number 3 is the exponent. 
+
+\item \textbf{Positive Powers of 10}
+
+A \textbf{positive power of 10} is a power of 10 in which the exponent is a positive integer: $\{1, 2, 3, 4, \ldots \}.$  Below are the first four positive powers of 10.
+\begin{eqnarray*}
+10^1 &=& 10 \\
+10^2 &=& 100   \\
+10^3 &=& 1,000 \\
+10^4 &=& 10,000
+\end{eqnarray*}
+
+In general, if $n$ is a positive integer, then the value of $10^n$ is the number 1 followed by $n$ zeros.
+
+\item \textbf{Multiplying a Number by a Positive Power of 10}
+
+To multiply a number by a positive power of 10, count the number of zeros in the power of 10, then move the decimal point to the \textbf{right} that many places.
+
+
+\item \textbf{Dividing a Number by a Positive Power of 10}
+
+To divide a number by a positive power of 10, count the number of zeros in the power of 10, then move the decimal point to the \textbf{left} that many places.
+
+
+
+\end{enumerate}
 
 
 
