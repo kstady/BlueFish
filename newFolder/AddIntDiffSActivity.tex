@@ -73,18 +73,28 @@ As we noticed in our earlier examples, adding numbers with different signs is a 
 we actually have to subtract.  From the number battles, we know that the sign of the answer depends on which number 
 has the greatest strength. To turn these observations into a formal rule, we will use absolute value.
 
-\bigskip
 
 \begin{procedure}[\textbf{Steps for Adding Integers with Different Signs}]
 
-    ~ \\[1em]
 
-  \begin{enumerate}
+\begin{enumerate}
     \item Find the \textbf{absolute value} or \textbf{strength} of each number.
-    \item Subtract the smaller absolute value from the larger absolute value.
-    \item Write the answer with the sign of the number with the \textbf{larger absolute value}.
-  \end{enumerate}
+
+     \item Subtract the smaller absolute value from the larger absolute value.
+
+     \item Write the answer with the sign of the number with the \textbf{larger absolute value}.
+\end{enumerate}
 \end{procedure}
+
+\begin{warning}
+  % A small orange exclamation triangle
+  \begin{tikzpicture}[baseline=(excl.base)]
+    \node[draw=orange, thick, fill=orange!20, regular polygon, regular polygon sides=3, inner sep=1pt] (excl) {\textbf{!}};
+  \end{tikzpicture}
+  \quad % Adds a little horizontal space after the icon
+  \textbf{Caution:} Always check if any orange-blue pairs can be removed before finalizing your sum.
+\end{warning}
+
 
 
 \begin{example} Let's use our three-step process to find the sum $-50 + 30.$
