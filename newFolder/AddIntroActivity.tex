@@ -1,8 +1,8 @@
 \documentclass{ximera}[font=12pt]
 
 %Next 2 lines create spaces between items in itemize and enumerate
-\setitemize{itemsep=1.5ex}
-\setenumerate{itemsep=1.5ex}
+\setitemize{itemsep=2ex}
+\setenumerate{itemsep=2ex}
 
 %Creates space between paragraphs
 \setlength{\parskip}{\medskipamount}
@@ -53,7 +53,7 @@ To understand how to add integers, we will begin by using the Chinese Red-Black 
 Negative numbers were first used systematically in ancient China. In \emph{The Nine Chapters on the Mathematical Art} (written between about 200 BC and 100 AD), Chinese mathematicians used counting rods to represent numbers.  Red rods were used for positive numbers and black rods for negative numbers.  For example, the number 3 was
 represented by three red rods and the number $-2$ was represented by two black rods.  These rods were used as a calculator of sorts for financial transactions involving profits and losses and to solve simple equations.  The Red-Black Rule is described below.
 
-\begin{enumerate}
+\begin{enumerate}[itemsep=1ex]
 \item A red rod represents $1$ and a black rod $-1.$
 
 \item To find the total of profits (red) and losses (black), place rods on a board to represent each number.
@@ -249,9 +249,9 @@ Use the Blue-Orange Rule to find the sum $-2+6.$  The problem has been setup for
     \foreach \x in {0.8, 1.2, 1.6, 2.0}
     \draw[line width=2.5pt, posColor, cap=round] (\x, -0.8) -- (\x, 0.2);
 
-% Transition arrow
-    \draw[->, ultra thick, glaucous] (3.2, 0.3) -- (4.2, 0.3);
-    \end{scope}
+% Transition arrow  %The answer box doesn't appear within the tikz pic, so I moved it out. 
+    %\draw[->, ultra thick, glaucous] (3.2, 0.3) -- (4.2, 0.3);
+    %\end{scope}
 
 % --- SECTION 3: THE RESULT ---
     %\begin{scope}[shift={(5.5,0)}]
