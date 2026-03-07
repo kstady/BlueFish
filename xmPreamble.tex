@@ -9,7 +9,29 @@
 
 %\usepackage{TikZlings}
 
+\usepackage{tcolorbox}  %Not needed for my ximera content.  Trying it out to create a better box around my rules.
+\usepackage[dvipsnames]{xcolor}
+\usepackage{enumitem}  %To modify enumerate and itemize
+
 \usepackage{xcolor}
+\newtheorem{steps}{Steps} %Creates Theorem/Example like box for steps to solve a prolem
+
+\definecolor{googleblue}{RGB}{66,133,244}
+\definecolor{googlered}{RGB}{234,67,53}
+\definecolor{googleyellow}{RGB}{244,180,0}
+\definecolor{googlegreen}{RGB}{52,168,83}
+
+
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.2}  % Can also use green!85!black  The higher the number before black, the darker
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+
 \definecolor{googleblue}{RGB}{66,133,244}
 \definecolor{googlered}{RGB}{234,67,53}
 \definecolor{googleyellow}{RGB}{244,180,0}
@@ -25,3 +47,4 @@
 \definecolor{red}{rgb}{0.8,0.1,0.5}
 \definecolor{glaucous}{rgb}{0.38,0.51,0.71}
 \definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
+
