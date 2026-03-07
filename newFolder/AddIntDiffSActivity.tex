@@ -28,8 +28,8 @@ When adding integers with different signs, we can think of the process as a
 \textbf{battle between positive and negative numbers}, where the winner is the sign of
 the answer.
 
-\begin{enumerate}
-\item[Battle 1:] \textbf{The answer is positive, so the positive team win!}
+
+\textbf{Battle 1:}  The answer is positive, so the positive team win!
 
 
 \[ 30 + (-20) = 10 \]
@@ -38,13 +38,13 @@ the answer.
 
 
 
-\item[] \textbf{Battle 2: The answer is negative, so the negative team win!}
+\textbf{Battle 2:} The answer is negative, so the negative team win!
 
 
 \[ 30 + (-100) = -70 \]
 
 \emph{Reasoning:} \ If you have \$30 and a credit card debt of \$100, your net balance is a debt of \$70.
-\end{enumerate}
+
 
 Why did the positive team win the first battle and lose the second battle?
 
@@ -54,7 +54,7 @@ Why did the positive team win the first battle and lose the second battle?
 In any number battle, the winner is always the team with the \textbf{greatest strength}, regardless of its sign.  Mathematically, we find the \textbf{absolute value} of a number to determine its \textbf{strength} or \textbf{size}.  Recall that the absolute value of a number is its distance from 0 on a number line.  Because it represents distance, it is \textbf{always positive}.
 
 
-\textbf{Battle 1}
+\textbf{Battle 1} $30 + (-20) = 10$
 \begin{itemize}
     \item The strength of the \$30 asset is $|30| = 30$.
     \item The strength of the \$20 debt is $|-20| = 20$.
@@ -64,7 +64,7 @@ In any number battle, the winner is always the team with the \textbf{greatest st
 Since $30$ is greater than $20,$ the \textbf{positive} team was stronger and \textbf{won} the battle.
 
 
-\textbf{Battle 2}
+\textbf{Battle 2} $30 + (-100) = -70$
 \begin{itemize}
     \item The strength of the \$30 asset is $|30| = 30$.
     \item The strength of the \$100 debt is $|-100| = 100$.
@@ -72,5 +72,86 @@ Since $30$ is greater than $20,$ the \textbf{positive} team was stronger and \te
 
 Since $30$ is smaller than $100,$ the \textbf{negative} team was stronger and \textbf{won} the battle.
 
+We are now ready for a formal mathematical rule that can be applied to any problem, not just those involving money.  
+As we noticed in our earlier examples, adding numbers with different signs is a bit of a paradox: to find the sum, 
+we actually have to subtract.  From the number battles, we know that the sign of the answer depends on which number 
+has the greatest strength. To turn these observations into a formal rule, we will use absolute value.
+
+\bigskip
+
+\begin{tcolorbox}[
+    colback=blue!5!white, % Light blue background
+    colframe=glaucous, %blue!75!black, % Dark blue border
+    title=\textbf{Steps for Adding Integers with Different Signs},
+    %fonttitle=\sffamily,
+    top=10pt, % <--- Adjust this value for more or less space between the title and contents of the box
+    arc=5pt, % Rounded corners
+    boxrule=1pt
+]
+\begin{enumerate}
+    \item[1.] Find the \textbf{absolute value} or \textbf{strength} of each number.
+
+     \item[2.] Subtract the smaller absolute value from the larger absolute value.
+
+     \item[3.] Write the answer with the sign of the number with the \textbf{larger absolute value}.
+\end{enumerate}
+\end{tcolorbox}
+
+
+\subsection*{Worked Example: Applying the Rule}
+
+Let's use our three-step process to find the sum $-50 + 30.$
+
+\begin{description}[style=multiline, leftmargin=5em, font=\bfseries]
+    \item[Step 1] \textbf{Find the Absolute Values (Strengths):} \\
+    First, we determine the size of each number.
+    \[ |-50| = 50 \quad \text{and} \quad |30| = 30 \]
+
+    \item[Step 2] \textbf{Subtract the Absolute Values (The Battle):} \\
+    Since the signs are different, the numbers ``battle" by finding the difference between their strengths.
+    \[ 50 - 30 = 20 \]
+
+    \item[Step 3] \textbf{Declare the Winner (Determine the Sign):} \\
+    Now we compare the absolute values from Step 1. Since $50$ is greater than $30,$ the negative team is stronger and wins the battle!
+    \[ -50 + 30 = -20 \]
+\end{description}
+
+
+
+
+\bigskip
+
+\begin{problem}
+    Apply the steps to find the sum $15 + (-40).$
+
+    \textbf{Step 1:} Find the \textbf{absolute values} (strengths):
+    \[ |15| = \answer{15} \quad \text{and} \quad |-40| = \answer{40} \]
+
+    \textbf{Step 2:} \textbf{Subtract} the smaller absolute value from the larger one (the battle):
+    \[ 40 - 15 = \answer{25} \]
+
+    \textbf{Step 3:} Declare the winner!
+    Compare the absolute values: is $|15|$ or $|-40|$ larger?
+
+    \begin{multipleChoice}
+        \choice{$|15|$ is larger, so the answer is positive.}
+        \choice[correct]{$|-40|$ is larger, so the answer is negative.}
+    \end{multipleChoice}
+
+    \textbf{Final Answer:} $15 + (-40) = \answer{-25}$
+
+    \begin{feedback}[correct]
+        Excellent! You found the strengths, fought the battle and declared the negative team the winner.
+    \end{feedback}
+\end{problem}
+
+\begin{problem}
+Find the following sums.
+
+\begin{enumerate}
+\item
+\end{enumerate}
+
+\end{problem}
 
 \end{document}
