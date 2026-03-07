@@ -4,10 +4,24 @@
 \setitemize{itemsep=1.5ex}
 \setenumerate{itemsep=1.5ex}
 
-%Creates space between paragraphs
+%Creates space between paragraphs - Maybe???
 \setlength{\parskip}{\medskipamount}
 
+
+\title{Adding Integers With a Numberline}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
 \begin{document}
+
+\begin{abstract}
+
+\end{abstract}
+
+\maketitle
+\label{xim:AddIntNumLActivity}
+
+
 
 \section*{Adding Integers Using a Number Line}
 
@@ -22,21 +36,9 @@ Another way to visualize addition is to add on a number line.  The steps are giv
 \item If the second number is \textbf{negative}, take the absolute value of the number and move to the \textbf{left} that many units.
 \end{enumerate}
 
-\begin{steps}
-\begin{enumerate}
-\item Locate the first number on the number line.
 
-\item If the second number is \textbf{positive}, move to the \textbf{right} that many units.
-
-\item If the second number is \textbf{negative}, take the absolute value of the number and move to the \textbf{left} that many units.
-\end{enumerate}
-
-\end{steps}
-
-\textbf{Examples:}
-
-\begin{enumerate}
-\item To find the value of $3+7,$ start at $3$ then move 7 units to the \textbf{right}.  Movement is to the right, since a \textbf{positive} number is added to 3.
+\begin{example}
+To find the value of $3+7,$ start at $3$ then move 7 units to the \textbf{right}.  Movement is to the right, since a \textbf{positive} number is added to 3.
 
 
 \begin{tikzpicture}[x=0.75cm,>=latex] % Use latex arrowhead style
@@ -49,11 +51,14 @@ Another way to visualize addition is to add on a number line.  The steps are giv
     \node[color=darkgreen] at (3,-0.75) {\small \textbf{Start}};
     \node at (6.5,0.9) {$3 + 7 = 10$};
 \end{tikzpicture}
+\end{example}
 
-\item To find the value of $3+(-7),$ start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  Movement is to the left, since a \textbf{negative} number is added to 3.
+\begin{example}
+To find the value of $3+(-7),$ start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  
+Movement is to the left, since a \textbf{negative} number is added to 3.
 
 \begin{tikzpicture}[x=0.75cm,>=latex] % Use latex arrowhead style
-\begin{scope}[shift={(0, -4)}]
+%\begin{scope}[shift={(0, -4)}]
     \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
     \foreach \x in {-5,...,10}
     \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; % Tick marks for numbers
@@ -63,11 +68,11 @@ Another way to visualize addition is to add on a number line.  The steps are giv
     \node[color=darkgreen] at (3,-0.75) {\small \textbf{Start}};
     \node[color=red!65!black] at (-4,-0.75) {\small \textbf{Stop}};
     \node at (-0.5,0.9) {$3 + (-7) = -4$}; % Label for the operation
-\end{scope}
+%\end{scope}
 
 \end{tikzpicture}
 
-\end{enumerate}
+\end{example}
 
 INSERT VIDEO HERE!!  %Add -4 + 5 and -2 + (-3)  show that it doesn't matter if we start at -4 or 5 - Commutative property of addition
 
@@ -85,7 +90,6 @@ Add using the number line shown below.
 
 \end{problem}
 
-\bigskip
 
 \begin{problem}
 Add using the number line shown below.
