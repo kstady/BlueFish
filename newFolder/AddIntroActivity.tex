@@ -142,7 +142,7 @@ We will now refer to this rule as the Orange-Blue Rule.
     \end{scope}
 
     % Bottom equation
-    \node[anchor=north, black!80, font=\bfseries] at (-5, -2) {$-5 + 3 = -2$};
+    \node[anchor=north, black!80, font=\bfseries] at (-5, -5) {$-5 + 3 = -2$};
 
 \end{tikzpicture}
 
@@ -150,7 +150,7 @@ We will now refer to this rule as the Orange-Blue Rule.
 
 \bigskip
 
-\textbf{Example} \ To find the sum $-4+(-3),$ begin with \textcolor{blue!70!black}{\textbf{four blue rods}} to represent the number $-4$ and \textcolor{blue!70!black}{\textbf{three blue rods}} to represent the number $-3.$  Since there are no orange-blue pairs to remove, 7 blue rods remain, so the answer is $-7.$
+\begin{example}  To find the sum $-4+(-3),$ begin with \textcolor{blue!70!black}{\textbf{four blue rods}} to represent the number $-4$ and \textcolor{blue!70!black}{\textbf{three blue rods}} to represent the number $-3.$  Since there are no orange-blue pairs to remove, 7 blue rods remain, so the answer is $-7.$
 
 \bigskip
 
@@ -207,6 +207,8 @@ We will now refer to this rule as the Orange-Blue Rule.
 
 \end{tikzpicture}
 
+\end{example}
+
 \bigskip
 
 
@@ -224,7 +226,7 @@ Use the Blue-Orange Rule to find the sum $-2+6.$  The problem has been setup for
 % --- SECTION 1: THE SETUP (Lined up vertically) ---
 
     \begin{scope}[shift={(-5,0)}]
-    \node[font=\bfseries\small, black!80, anchor=west] at (-0.3, 2.2) {\emph{Setup}};
+    \node[font=\bfseries\small, black!80, anchor=west] at (-0.3, 2.2) {Setup};
 
 % Value: -2 (2 Blue vertical rods)
     \node[font=\bfseries, negColor, anchor=east] at (-0.2, 1.0) {$-2$};
@@ -240,7 +242,7 @@ Use the Blue-Orange Rule to find the sum $-2+6.$  The problem has been setup for
 
 % --- SECTION 2: Remove Pairs ---
     \begin{scope}[shift={(0,0)}]
-    \node[font=\bfseries\small] at (0.75, 2.2) {\emph{Remove Pairs}};
+    \node[font=\bfseries\small] at (0.75, 2.2) {Remove Pairs};
 
 % The 2 Pairs that will cancel (Inside the box)
     \foreach \x in {0, 0.4} {
@@ -258,10 +260,10 @@ Use the Blue-Orange Rule to find the sum $-2+6.$  The problem has been setup for
 
 % --- SECTION 3: THE RESULT ---
     \begin{scope}[shift={(5.5,0)}]
-    \node[font=\bfseries\small] at (0.6, 2.2) {\emph{Result}};
+    \node[font=\bfseries\small] at (0.6, 2.2) {Result};
 
 % The Result Label with Ximera prompt
-    \node[anchor=north, posColor, font=\bfseries] at (0.6, 1) {$\begin{prompt} = \answer{4} \end{prompt}$};
+    \node[anchor=north, posColor, font=\bfseries] at (0.6, 1) {\begin{prompt} = $ \answer{4} \end{prompt}$};
     \end{scope}
 
 \end{tikzpicture}
@@ -281,7 +283,7 @@ The use of colors in the Orange-Blue Rule is not necessary. Below is the first e
 
 %\paragraph{Example III}
 
-\textbf{Example} \ To find the sum $-5+3,$ begin with \textbf{five $-$ signs} to represent the number $-5$ and \textbf{three $+$ signs} to represent the number $3.$  Next remove all $+$ $-$ pairs.  Since two $-$ signs remain, the answer is $-2.$
+\begin{example} To find the sum $-5+3,$ begin with \textbf{five $-$ signs} to represent the number $-5$ and \textbf{three $+$ signs} to represent the number $3.$  Next remove all $+$ $-$ pairs.  Since two $-$ signs remain, the answer is $-2.$
 
 
 \begin{tikzpicture}[scale=0.75, font=\sffamily]
@@ -338,12 +340,11 @@ The use of colors in the Orange-Blue Rule is not necessary. Below is the first e
 
 \end{tikzpicture}
 
+\end{example}
 
 \medskip
 
 Although this modified rule isn't overly creative, it makes the answer quite clear.
-
-
 
 
 
