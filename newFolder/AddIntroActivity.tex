@@ -1,0 +1,120 @@
+\documentclass{ximera}[font=12pt]
+
+%Next 2 lines create spaces between items in itemize and enumerate
+\setitemize{itemsep=1.5ex}
+\setenumerate{itemsep=1.5ex}
+
+%Creates space between paragraphs
+\setlength{\parskip}{\medskipamount}
+
+\newtheorem{steps}{Steps} %Creates Theorem/Example like box for steps to solve a prolem
+
+
+\usepackage{tcolorbox}  %Not needed for my ximera content.  Trying it out to create a better box around my rules.
+\usepackage[dvipsnames]{xcolor}
+\usepackage{TikZlings}
+\usepackage{enumitem}  %To modify enumerate and itemize
+\usepackage{mdframed} % For the nice box around the example
+
+\definecolor{googleblue}{RGB}{66,133,244}
+\definecolor{googlered}{RGB}{234,67,53}
+\definecolor{googleyellow}{RGB}{244,180,0}
+\definecolor{googlegreen}{RGB}{52,168,83}
+
+
+\newcommand{\rulecolor}[1]{\def\CT@arc@{\color{#1}}}
+\definecolor{darkblue}{rgb}{0.4,0.5,0.85}
+\definecolor{blue}{rgb}{0.1,0.3,.95}
+\definecolor{pink}{rgb}{0.6,0.4,0.7}
+\definecolor{green}{rgb}{0.4,0.6,0.5}
+\definecolor{yellow}{rgb}{0.1,0.6,0.8}
+\definecolor{red}{rgb}{0.8,0.1,0.5}
+\definecolor{glaucous}{rgb}{0.38,0.51,0.71}
+\definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
+
+
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.2}  % Can also use green!85!black  The higher the number before black, the darker
+
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{arrows}
+
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+
+
+\title{Adding Integers}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}   %%%%%%  ERROR when I try to include tikzlings!  ewFolder/ExponentsPowers10Activity.tex: LaTeX Error: File TikZlings.sty' not found  % https://ctan.org/pkg/tikzlings
+\begin{abstract}
+An introduction to adding integers.
+\end{abstract}
+\maketitle
+\label{xim:AddIntegersActivity}
+
+
+
+\section*{The Set of Integers}
+
+In this lesson, you will learn how to add numbers that belong to the set of integers.  The set of \textbf{integers} consists of the whole numbers along with the negative counting numbers.
+
+\begin{description}[itemsep=1ex]  % an ex is the height of a lowercase x
+    \item[\textbf{Counting Numbers}] $\{ 1, 2, 3, \ldots \}$
+    \item[\textbf{Whole Numbers}] $\{0, 1, 2, 3, \ldots \}$
+    \item[\textbf{Integers}] $\{ \ldots, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, \ldots \}$
+\end{description}
+
+
+
+% Chicken with glasses
+\begin{tikzpicture}[scale=0.7]
+  \hspace{0.3in}
+  \chicken[transform shape, 3D, body=glaucous]
+
+  % --- COKE BOTTLE GLASSES ---
+  % Left Lens
+  \draw[line width=1.2pt, black, fill=cyan!10, fill opacity=0.5] (-0.18, 1.80) circle (0.18);
+  \draw[very thin, white, opacity=0.9] (-0.23, 1.90) arc (120:160:0.11);
+
+  % Right Lens
+  \draw[line width=1.2pt, black, fill=cyan!10, fill opacity=0.5] (0.23, 1.80) circle (0.18);
+  \draw[very thin, white, opacity=0.9] (0.18, 1.90) arc (120:160:0.11);
+
+  % Centered Bridge
+  \draw[line width=1.3pt, black] (0.0, 1.80) -- (0.05, 1.80);
+
+
+  % --- THE NEST (Lowered by 0.1) ---
+  % Back rim
+  %\draw[thick, brown!70!black, fill=brown!20] (1.2, 0.45)
+   %   .. controls (1.0, 0.65) and (2.2, 0.65) .. (2.5, 0.45);
+
+  % Nested eggs (Shifted down)
+  %\shade[ball color=white, opacity=0.9] (1.6, 0.55) ellipse (0.2 and 0.28);
+  %\shade[ball color=white!95!brown] (1.85, 0.5) ellipse (0.22 and 0.3);
+  %\shade[ball color=white] (2.1, 0.57) ellipse (0.18 and 0.25);
+
+  % Front of nest (Shifted down)
+  %\draw[ultra thick, brown!80!black, fill=brown!30] (1.1, 0.45)
+    %  .. controls (1.2, -0.05) and (2.4, -0.05) .. (2.6, 0.45)
+     % .. controls (2.6, 0.55) and (1.1, 0.55) .. (1.1, 0.45);
+
+  % Straw details (Shifted down)
+  %\foreach \i in {1,...,8} {
+     % \draw[very thin, brown!60!black] (1.2 + \i*0.15, 0.25) to[bend left=20] (1.4 + \i*0.15, 0.45);
+ % }
+\end{tikzpicture}
+
+\Large{\textbf{Extra Insight}}
+
+\normalsize
+Although negative numbers were understood in China more than 2000 years ago and later in India, they were not immediately accepted in Europe.
+For many centuries, European mathematicians were uncomfortable with the idea of numbers less than zero and sometimes referred to them  as ``false" or
+``absurd" numbers.  However, during the 16th and 17th centuries, as algebra and calculus developed, the importance of negative numbers became undeniable.
+Today, negative numbers are an essential part of mathematics and are commonly used to represent quantities such as losses, debts, temperatures below zero and
+elevations below sea level.
+
+\end{document}
