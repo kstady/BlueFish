@@ -49,7 +49,7 @@ elevations below sea level.
 \section*{Adding Integers}
 
 
-To understand how to add integers, we will begin by using the Chinese Red-Black Rule and then a number line to visualize addition.  Then we'll use the concepts of assets and debts to understand addition in a real-world context.  These approaches will lead us to two rules: one for adding numbers with the same sign and another for adding numbers with different signs.
+To understand how to add integers, we will begin by using the Chinese Red-Black Rule and then a number line to visualize addition.  Then we will use the concepts of assets and debts to understand addition in a real-world context.  These approaches will lead us to two rules: one for adding numbers with the same sign and another for adding numbers with different signs.
 
 
 \subsection*{Adding Integers Using The Red-Black Rule}
@@ -147,6 +147,199 @@ We will now refer to this rule as the Orange-Blue Rule.
 \end{tikzpicture}
 
 \bigskip
+
+\textbf{Example} \ To find the sum $-4+(-3),$ begin with \textcolor{blue!70!black}{\textbf{four blue rods}} to represent the number $-4$ and \textcolor{blue!70!black}{\textbf{three blue rods}} to represent the number $-3.$  Since there are no orange-blue pairs to remove, 7 blue rods remain, so the answer is $-7.$
+
+\bigskip
+
+
+\begin{tikzpicture}[scale=0.75, font=\sffamily]
+% Define Accessible Colors
+\colorlet{posColor}{orange!80!black}
+\colorlet{negColor}{blue!70!black}
+
+% --- SECTION 1: THE SETUP (Lined up vertically) ---
+    \begin{scope}[shift={(-6.5,0)}]
+        \node[font=\bfseries\small, negColor, anchor=west] at (-0.3, 2.2) {Setup};
+
+        % Value: -4 (4 Blue vertical rods)
+        \node[font=\bfseries, negColor, anchor=east] at (-0.2, 1.0) {$-4$};
+        \foreach \x in {0, 0.4, 0.8, 1.2}
+            \draw[line width=2.5pt, negColor, cap=round] (\x, 0.5) -- (\x, 1.5);
+
+        % Value: -3 (3 Blue vertical rods)
+        \node[font=\bfseries, blue!80!black, anchor=east] at (-0.2, -0.3) {$-3$};
+        \foreach \x in {0, 0.4, 0.8}
+            \draw[line width=2.5pt, negColor, cap=round] (\x, -0.8) -- (\x, 0.2);
+    \end{scope}
+
+    % --- SECTION 2: Combine Rods (No Pairs to Remove)
+    \begin{scope}[shift={(0,0)}]
+        \node[font=\bfseries\small] at (0.75, 2.2) {Remove Pairs};
+
+        % All rods are blue, so they all stay
+        \foreach \x in {0, 0.4, 0.8, 1.2}
+            \draw[line width=2.5pt, negColor, cap=round] (\x, 0.5) -- (\x, 1.5);
+
+        \foreach \x in {0, 0.4, 0.8}
+            \draw[line width=2.5pt, negColor, cap=round] (\x, -0.8) -- (\x, 0.2);
+
+        \node[black, font=\bfseries\tiny, align=center] at (0.9, -1.35) {No Pairs to Remove!};
+
+        % Transition arrow
+        \draw[->, ultra thick, glaucous] (2.2, 0.3) -- (3.2, 0.3);
+    \end{scope}
+
+    % --- SECTION 3: THE RESULT ---
+    \begin{scope}[shift={(4.5,0)}]
+        \node[font=\bfseries\small] at (1.2, 2.2) {Result};
+
+        % All 7 surviving Negative Rods
+        \foreach \x in {0, 0.4, 0.8, 1.2, 1.6, 2.0, 2.4}
+            \draw[line width=2.5pt, blue!80!black, cap=round] (\x, 0.3) -- (\x, 1.3);
+
+        % The Result Label
+        \node[anchor=north, negColor, font=\bfseries] at (1.2, -0.2) {$-7$};
+        \node[anchor=north, black, font=\bfseries] at (-10.1, -2) {$-4 + (-3) = -7$};
+    \end{scope}
+
+\end{tikzpicture}
+
+\bigskip
+
+
+\begin{problem}
+Use the Blue-Orange Rule to find the sum $-2+6.$  The problem has been setup for you below.
+
+\bigskip
+
+\begin{tikzpicture}[scale=0.75, font=\sffamily]
+
+% Define Accessible Colors
+\colorlet{posColor}{orange!85!black}
+\colorlet{negColor}{blue!70!black}
+
+% --- SECTION 1: THE SETUP (Lined up vertically) ---
+
+    \begin{scope}[shift={(-5,0)}]
+    \node[font=\bfseries\small, black!80, anchor=west] at (-0.3, 2.2) {\emph{Setup}};
+
+% Value: -2 (2 Blue vertical rods)
+    \node[font=\bfseries, negColor, anchor=east] at (-0.2, 1.0) {$-2$};
+    \foreach \x in {0, 0.4}
+    \draw[line width=2.5pt, negColor, cap=round] (\x, 0.5) -- (\x, 1.5);
+
+% Value: +6 (6 Orange vertical rods)
+    \node[font=\bfseries, posColor, anchor=east] at (-0.2, -0.3) {$+6$};
+    \foreach \x in {0, 0.4, 0.8, 1.2, 1.6, 2.0}
+    \draw[line width=2.5pt, posColor, cap=round] (\x, -0.8) -- (\x, 0.2);
+    \end{scope}
+
+
+% --- SECTION 2: Remove Pairs ---
+    \begin{scope}[shift={(0,0)}]
+    \node[font=\bfseries\small] at (0.75, 2.2) {\emph{Remove Pairs}};
+
+% The 2 Pairs that will cancel (Inside the box)
+    \foreach \x in {0, 0.4} {
+    \draw[line width=2.5pt, negColor, cap=round] (\x, 0.5) -- (\x, 1.5); % Blue
+    \draw[line width=2.5pt, posColor, cap=round] (\x, -0.8) -- (\x, 0.2); % Orange
+}
+
+% THE LEFTOVER BARS (4 orange rods remain)
+    \foreach \x in {0.8, 1.2, 1.6, 2.0}
+    \draw[line width=2.5pt, posColor, cap=round] (\x, -0.8) -- (\x, 0.2);
+
+% Transition arrow
+    \draw[->, ultra thick, glaucous] (3.2, 0.3) -- (4.2, 0.3);
+    \end{scope}
+
+% --- SECTION 3: THE RESULT ---
+    \begin{scope}[shift={(5.5,0)}]
+    \node[font=\bfseries\small] at (0.6, 2.2) {\emph{Result}};
+
+% The Result Label with Ximera prompt
+    \node[anchor=north, posColor, font=\bfseries] at (0.6, 1) {$\begin{prompt} = \answer{4} \end{prompt}$};
+    \end{scope}
+
+\end{tikzpicture}
+
+\end{problem}
+
+
+\bigskip
+
+The use of colors in the Orange-Blue Rule is not necessary. Below is the first example redone using $+$ signs for positive numbers and $-$ signs for negative numbers.  You can also use things like different colored poker chips or pennies and dimes---the sky's the limit!  Try modifying the rule using your own way to represent positive and negative numbers.  Be creative!
+
+%Trying to get vertical spacing!  See what works in the html
+
+\bigskip   %Needs space above and below it to work
+
+%\mbox{} \\[\medskipamount]   Too much spacing!
+
+%\paragraph{Example III}
+
+\textbf{Example} \ To find the sum $-5+3,$ begin with \textbf{five $-$ signs} to represent the number $-5$ and \textbf{three $+$ signs} to represent the number $3.$  Next remove all $+$ $-$ pairs.  Since two $-$ signs remain, the answer is $-2.$
+
+
+\begin{tikzpicture}[scale=0.75, font=\sffamily]
+% --- SECTION 1: THE SETUP (Lined up vertically) ---
+    \begin{scope}[shift={(-5,0)}]
+        \node[font=\bfseries\small, black!80, anchor=west] at (-0.5, 2.2) {Setup};
+
+        % Value: -5 (Increased spacing from 0.4 to 0.7)
+        \node[font=\bfseries, black, anchor=east] at (-0.3, 1.0) {$-5$};
+        \foreach \x in {0, 0.7, 1.4, 2.1, 2.8}
+            \node[black, font=\huge] at (\x, 1.0) {$-$};
+
+        % Value: +3 (Increased spacing from 0.4 to 0.7)
+        \node[font=\bfseries, black, anchor=east] at (-0.3, -0.3) {$3$};
+        \foreach \x in {0, 0.7, 1.4}
+            \node[black, font=\bfseries] at (\x, -0.3) {+};
+    \end{scope}
+
+    % --- SECTION 2: Remove Pairs
+    \begin{scope}[shift={(0,0)}]
+        \node[font=\bfseries\small] at (1.3, 2.2) {Remove Pairs};
+
+        % The 3 Pairs that will cancel (Inside the box)
+        \foreach \x in {0, 0.7, 1.4} {
+            \node[black, font=\huge] at (\x, 1.0) {$-$}; % Negative
+            \node[black, font=\bfseries] at (\x, -0.3) {+}; % Positive
+        }
+
+        % CANCELLATION BOX (Adjusted width for wider spacing)
+        \draw[dashed, black!80, line width=1.1pt, rounded corners=5pt] (-0.5, -1.0) rectangle (1.9, 1.7);
+
+        % THE LEFTOVER -s
+        \foreach \x in {2.4, 3.1}
+            \node[black, font=\huge] at (\x, 1.0) {$-$};
+
+        % Transition arrow
+        \draw[->, ultra thick, glaucous] (4.5, 0.3) -- (5.5, 0.3);
+
+    \end{scope}
+
+    % --- SECTION 3: THE RESULT ---
+    \begin{scope}[shift={(7.5,0)}] % Shifted Result section right to accommodate wider previous sections
+        \node[font=\bfseries\small] at (0.35, 2.2) {Result};
+
+        % Only the 2 surviving - signs
+        \foreach \x in {0, 0.7}
+            \node[black, font=\huge] at (\x, 0.8) {$-$};
+
+        % The Result Label
+        \node[anchor=north, black, font=\bfseries] at (0.35, -0.2) {$-2$};
+        \node[anchor=north, black, font=\bfseries] at (-12.1, -2) {$-5 +3 = -2 $};
+
+    \end{scope}
+
+\end{tikzpicture}
+
+
+\medskip
+
+Although this modified rule isn't overly creative, it makes the answer quite clear.
 
 
 
