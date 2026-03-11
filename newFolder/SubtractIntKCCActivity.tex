@@ -53,13 +53,13 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
 
     % Original Numbers (ABOVE) - Added \Large
     \node [above of=step1, yshift=-2.5cm] {\Large $-60$};
-    \node [above of=step2, yshift=-2.5.0cm] {\Large $-$};
+    \node [above of=step2, yshift=-2.5cm] {\Large $-$};
     \node [above of=step3, yshift=-2.5cm] {\Large $(-10)$};
 
     % Transformed Numbers (BELOW) - Added \Large
-    \node (new1) [below of=step1, yshift=2.0cm] {\Large $-60$};
-    \node (new2) [below of=step2, yshift=2.0cm] {\Large $+$};
-    \node (new3) [below of=step3, yshift=2.0cm] {\Large $10$};
+    \node (new1) [below of=step1, yshift=2.5cm] {\Large $-60$};
+    \node (new2) [below of=step2, yshift=2.5cm] {\Large $+$};
+    \node (new3) [below of=step3, yshift=2.5cm] {\Large $10$};
 
     % Arrows connecting the boxes
     \draw [arrow] (step1) -- (step2);
@@ -98,14 +98,14 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
     \node (step3) [box, right of=step2] {CHANGE};
 
     % Original Numbers (ABOVE) - Added \Large
-    \node [above of=step1, yshift=-2.0cm] {\Large $40$};
-    \node [above of=step2, yshift=-2.0cm] {\Large $-$};
-    \node [above of=step3, yshift=-2.0cm] {\Large $55$};
+    \node [above of=step1, yshift=-2.5cm] {\Large $40$};
+    \node [above of=step2, yshift=-2.5cm] {\Large $-$};
+    \node [above of=step3, yshift=-2.5cm] {\Large $55$};
 
     % Transformed Numbers (BELOW) - Added \Large
-    \node (new1) [below of=step1, yshift=2.0cm] {\Large $40$};
-    \node (new2) [below of=step2, yshift=2.0cm] {\Large $+$};
-    \node (new3) [below of=step3, yshift=2.0cm] {\Large $(-55)$};
+    \node (new1) [below of=step1, yshift=2.5cm] {\Large $40$};
+    \node (new2) [below of=step2, yshift=2.5cm] {\Large $+$};
+    \node (new3) [below of=step3, yshift=2.5cm] {\Large $(-55)$};
 
     % Arrows connecting the boxes
     \draw [arrow] (step1) -- (step2);
@@ -165,7 +165,7 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
     \renewcommand{\arraystretch}{2} % Adds breathing room between rows
     \begin{tabular}{rcccl}
         \textbf{Problem:} & \Large $\mathbf{4}$ & \Huge $\mathbf{-}$ & \Large $\mathbf{25}$ & \\
-        \textbf{Rule:}     & \textcolor{OliveGreen}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
+        \textbf{Rule:}     & \textcolor{OliveGreen!90!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
         \textcolor{orange!80!black}{\textbf{CHANGE}} & \\
         \textbf{Rewrite:}  &  $\answer{4}$ &  $\answer[format=string]{+}$ & $\answer{(-25)}$ &
     \end{tabular}
@@ -193,7 +193,7 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
     \renewcommand{\arraystretch}{2} % Adds breathing room between rows
     \begin{tabular}{rcccl}
         \textbf{Problem:} & \Large $\mathbf{200}$ & \Huge $\mathbf{-}$ & \Large $\mathbf{(-300)}$ & \\
-        \textbf{Rule:}     & \textcolor{ForestGreen}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
+        \textbf{Rule:}     & \textcolor{OliveGreen!90!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
         \textcolor{orange!80!black}{\textbf{CHANGE}} & \\
         \textbf{Rewrite:}  &  $\answer{200}$ &  $\answer[format=string]{+}$ & $\answer{300}$ &
     \end{tabular}
