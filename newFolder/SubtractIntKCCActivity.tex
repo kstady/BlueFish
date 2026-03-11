@@ -69,8 +69,8 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
 
     \begin{center}
     \renewcommand{\arraystretch}{2} % Adds breathing room between rows
-    \setlength{\tabcolsep}{0pt} % This reduces the space between columns
-    \begin{tabular}{rcccl}
+    % The @{\hskip 2pt} removes the default padding and sets a 2pt gap
+    \begin{tabular}{r @{\hskip 5pt} c @{\hskip 5pt} c @{\hskip 5pt} c @{\hskip 5pt} l}
         \textbf{Problem:} & \Large $-8$ & \Large $-$ & \Large $(-10)$ & \\
         \textbf{Rule:}     & \textcolor{blue!60!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & \textbf{CHANGE} & \\
         \textbf{Rewrite:}  &  $\answer{-8}$ &  $\answer[format=string]{+}$ & $\answer{10}$ &
@@ -83,9 +83,9 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
     -8 -(-10) &=& -8 + 10 \\ 
               &=& \answer{2} 
     \end{eqnarray*}   
-
     \end{problem}
 \end{problem}
+
 
                                                                         
     
