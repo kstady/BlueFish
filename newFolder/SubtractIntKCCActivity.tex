@@ -37,48 +37,34 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{problem}
-Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem. Then find the answer.
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.
 
-\begin{center}
-    % TOP HALF: The Diagram (TikZ)
-    \begin{tikzpicture}
-        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
-                 text centered, draw=black, fill=gray!10, font=\bfseries}}
-        \tikzstyle{arrow} = [thick,->,>=stealth]
+    \begin{center}
+    \begin{tabular}{c@{\hspace{1cm}}c@{\hspace{1cm}}c}
+        %% ROW 1: THE ORIGINAL NUMBERS
+        \Large $-8$ & \Large $-$ & \Large $(-10)$ \\[1ex]
+        
+        %% ROW 2: YOUR ORIGINAL TIKZ BOXES
+        \begin{tikzpicture}
+            \node[rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, draw=black, fill=gray!10, font=\bfseries] {KEEP};
+            \draw [thick,->,>=stealth] (0,-0.5) -- (0,-1.2);
+        \end{tikzpicture} & 
+        \begin{tikzpicture}
+            \node[rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, draw=black, fill=gray!10, font=\bfseries] {CHANGE};
+            \draw [thick,->,>=stealth] (0,-0.5) -- (0,-1.2);
+        \end{tikzpicture} & 
+        \begin{tikzpicture}
+            \node[rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, draw=black, fill=gray!10, font=\bfseries] {CHANGE};
+            \draw [thick,->,>=stealth] (0,-0.5) -- (0,-1.2);
+        \end{tikzpicture} \\[1ex]
 
-        % Main Action Boxes
-        \node (step1) [box] {KEEP};
-        \node (step2) [box, xshift=3.5cm] {CHANGE};
-        \node (step3) [box, xshift=7cm] {CHANGE};
+        %% ROW 3: THE INTERACTIVE ANSWER BOXES
+        \Large $\answer{-8}$ & \Large $\answer{+}$ & \Large $\answer{10}$
+    \end{tabular}
+    \end{center}
 
-        % Original Numbers (ABOVE)
-        \node at (0,1.2) {\Large $-8$};
-        \node at (3.5,1.2) {\Large $-$};
-        \node at (7,1.2) {\Large $(-10)$};
-
-        % Arrows pointing down to where the answer boxes will be
-        \draw [arrow] (0, -0.5) -- (0, -1.2);
-        \draw [arrow] (3.5, -0.5) -- (3.5, -1.2);
-        \draw [arrow] (7, -0.5) -- (7, -1.2);
-    \end{tikzpicture}
-
-    % BOTTOM HALF: The Interactive Answer Boxes (Standard LaTeX)
-    % These use horizontal spacing to match the TikZ nodes exactly
-    \vspace{0.2cm}
-    \hspace{-0.5cm} % Adjusts for alignment
-    \Large $\answer{-8}$ \hspace{2.2cm} $\answer{+}$ \hspace{2.2cm} $\answer{10}$
-\end{center}
-
-\vspace{0.5cm}
-\textbf{Work:}
-\begin{align*} % Use align* instead of flalign*
--60 - (-10) &= -60 + 10 \\
-            &= -50     
-\end{align*}
-
-Final Answer = $\answer{2}$
+    \textbf{Final Answer:} $\answer{2}$
 \end{problem}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
