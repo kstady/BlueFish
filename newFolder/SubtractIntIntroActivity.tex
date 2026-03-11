@@ -17,7 +17,7 @@
 \section*{Introduction}
 
 \textbf{Elevation} is the height of a point on earth \textbf{above} ($+$) or \textbf{below} ($-$) sea level.  In geology, the \textbf{elevation span or topographic relief} of a region is the difference between its highest and lowest elevations. Regions with large spans are typically rugged, with high mountain ranges and deep valleys, whereas regions with small spans are generally flatter and more uniform.
-\[ \textbf{\textrm{Elevation Span}} = \textrm{Highest Elevation} - \textrm{Lowest Elevation} \]
+\[ \textbf{Elevation Span} = \textrm{Highest Elevation} - \textrm{Lowest Elevation} \]
 
 By calculating the difference between the highest and lowest elevations, geologists can determine if a region is being built up by internal forces (large span) or worn away by the elements (small span).
 
@@ -32,7 +32,7 @@ However, from the diagram below, you can see that the span of the U.S. can be fo
 
 
 \begin{center}
-\begin{tikzpicture}[scale=0.3]   %USA Elevation Span
+\begin{tikzpicture}[scale=0.4]   %USA Elevation Span
     % Draw Vertical Axis
     \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\Large\textbf{Elevation (ft)}};
 
@@ -97,29 +97,29 @@ Use the diagram below to write the subtraction problem as an equivalent addition
 \begin{center}
 \begin{tikzpicture}[scale=0.3]  %China Elevation Span
     % Draw Vertical Axis
-    \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\textnormal{\Large\textbf{\emph{Elevation (ft)}}}};
+    \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\textnormal{\Large\textbf{Elevation (ft)}}};
 
     % Sea Level Line
-    \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\textnormal{\Large\textbf{\emph{Sea Level (0)}}}};
+    \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\textnormal{\Large\textbf{Sea Level (0)}}};
 
     % Mount Everest Point
-    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large\emph{Mt. Everest ($+29,032$)}}};
+    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\textnormal{\LargeMt. Everest ($+29,032$)}};
 
     % Ayding Lake Point
-    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large\emph{Ayding Lake ($-505$)}}};
+    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\textnormal{\LargeAyding Lake ($-505$)}};
 
     % Braces
     \draw [decorate, decoration={brace, amplitude=9pt, raise=5pt}, very thick] (0,-2) -- (0,0)
-        node [midway, left=25pt] {\textnormal{\Large\textbf{\emph{505 ft}}}};
+        node [midway, left=25pt] {\textnormal{\Large\textbf{505 ft}}};
 
     \draw [decorate, decoration={brace, amplitude=15pt, raise=5pt}, very thick] (0,0) -- (0,8)
-        node [midway, left=25pt] {\textnormal{\Large\textbf{\emph{29,032 ft}}}};
+        node [midway, left=25pt] {\textnormal{\Large\textbf{29,032 ft}}};
 
     % Total Span Arrow - Stacked on two lines with fixed line break
     \draw[<->, orange!80!black, line width=2pt] (-8,-2) -- (-8,8)
         node [midway, left=15pt, align=center] {
-            \textnormal{\Large\textbf{\emph{Elevation}}}\\
-            \textnormal{\Large\textbf{\emph{Span}}}};
+            \Large\textbf{Elevation}\\
+            \Large\textbf{Span};
 
     % Guides
     \draw[dashed, gray, thick] (-8,8) -- (0,8);
@@ -150,8 +150,6 @@ China's Elevation Span =  $\answer{29537}$ \ feet
 \end{problem}
 \end{problem}
 
-
-\newpage
 
 \begin{tikzpicture}[scale=0.7]
 

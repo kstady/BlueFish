@@ -1,0 +1,238 @@
+\documentclass{ximera}[font=12pt]
+
+\title{Subtracting Integers: Keep-Change-Change Rule}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+
+\begin{abstract}
+
+\end{abstract}
+
+\maketitle
+\label{xim:SubtractIntKCCActivity}
+
+\section*{Keep-Change-Change Rule}
+
+The Keep-Change-Change rule is a clever way to remember how to rewrite any subtraction problem as an addition problem.
+
+\begin{procedure}[\textbf{Keep-Change-Change Rule}]
+
+Any subtraction problem can be rewritten as an equivalent addition problem using the steps below.
+
+\begin{enumerate}
+\item \textbf{Keep} the sign of the first number.
+
+\item \textbf{Change} the operation of subtraction to addition.
+
+\item \textbf{Change} the sign of the second number.
+
+\end{enumerate}
+
+\emph{Remember:}  Subtracting a number is the same as adding the opposite of that number.
+\end{procedure}
+
+
+
+\begin{example}  The diagram below demonstrates how to rewrite the subtraction problem $-60 - (-10)$ as an addition problem.
+Starting from the left, we \textbf{keep} the sign of the first number, \textbf{change} the operation of addition to subtraction, then
+\textbf{change} the sign of the last number.  Lastly, we add to find the result.
+
+\begin{center}
+\begin{tikzpicture}[node distance=3.5cm]
+    % Style definition for the Action Boxes
+    \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
+             text centered, draw=black, fill=gray!10, font=\bfseries}}
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+
+    % Main Action Boxes
+    \node (step1) [box] {KEEP};
+    \node (step2) [box, right of=step1] {CHANGE};
+    \node (step3) [box, right of=step2] {CHANGE};
+
+    % Original Numbers (ABOVE) - Added \Large
+    \node [above of=step1, yshift=-2.0cm] {\Large $-60$};
+    \node [above of=step2, yshift=-2.0cm] {\Large $-$};
+    \node [above of=step3, yshift=-2.0cm] {\Large $(-10)$};
+
+    % Transformed Numbers (BELOW) - Added \Large
+    \node (new1) [below of=step1, yshift=2.0cm] {\Large $-60$};
+    \node (new2) [below of=step2, yshift=2.0cm] {\Large $+$};
+    \node (new3) [below of=step3, yshift=2.0cm] {\Large $10$};
+
+    % Arrows connecting the boxes
+    \draw [arrow] (step1) -- (step2);
+    \draw [arrow] (step2) -- (step3);
+
+    % Final equation result
+    %\node [below of=new2, xshift = -2cm, yshift=2.5cm] {\large $-60 - (-10) = -60 + 10$};
+\end{tikzpicture}
+\end{center}
+
+%Full left-align to make eqnarray start on left
+\begin{flalign*}
+-60 - (-10) &= -60 + 10 & \\
+            &= -50      &
+\end{flalign*}
+
+%Alt Text
+%A horizontal flowchart showing the 'Keep-Change-Change' rule for the expression negative sixty minus negative ten. Three boxes are arranged from left to right. The first box is labeled 'KEEP' with the number negative sixty above and below it. An arrow points to the second box, labeled 'CHANGE,' which shows a subtraction sign changing to an addition sign. A second arrow points to the third box, labeled 'CHANGE,' which shows negative ten changing to positive ten. Below the boxes, the final transformed expression is written as: negative sixty plus ten equals negative fifty$
+\end{example}
+
+\begin{example}  The diagram below demonstrates how to rewrite the subtraction problem $40 - 55$ as an addition problem.
+Starting from the left, we \textbf{keep} the sign of the first number, \textbf{change} the operation of addition to subtraction, then
+\textbf{change} the sign of the last number.  Lastly, we add to find the result.
+
+
+\begin{center}
+\begin{tikzpicture}[node distance=3.5cm]
+    % Style definition for the Action Boxes
+    \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
+             text centered, draw=black, fill=gray!10, font=\bfseries}}
+    \tikzstyle{arrow} = [thick,->,>=stealth]
+
+    % Main Action Boxes
+    \node (step1) [box] {KEEP};
+    \node (step2) [box, right of=step1] {CHANGE};
+    \node (step3) [box, right of=step2] {CHANGE};
+
+    % Original Numbers (ABOVE) - Added \Large
+    \node [above of=step1, yshift=-2.0cm] {\Large $40$};
+    \node [above of=step2, yshift=-2.0cm] {\Large $-$};
+    \node [above of=step3, yshift=-2.0cm] {\Large $55$};
+
+    % Transformed Numbers (BELOW) - Added \Large
+    \node (new1) [below of=step1, yshift=2.0cm] {\Large $40$};
+    \node (new2) [below of=step2, yshift=2.0cm] {\Large $+$};
+    \node (new3) [below of=step3, yshift=2.0cm] {\Large $(-55)$};
+
+    % Arrows connecting the boxes
+    \draw [arrow] (step1) -- (step2);
+    \draw [arrow] (step2) -- (step3);
+
+    % Final equation result
+    %\node [below of=new2, xshift = -2cm, yshift=2.5cm] {\large $-60 - (-10) = -60 + 10$};
+\end{tikzpicture}
+\end{center}
+
+%Full left-align to make eqnarray start on left
+\begin{flalign*}
+40 - 55 &= 40 + (-55) & \\
+            &= -15      &
+\end{flalign*}
+\end{example}
+
+\begin{problem}
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.  Then find the answer.
+
+
+%If the input boxes look too small or too large in the browser, you might need to wrap them in an \hbox or adjust the TikZ minimum width, but usually, Ximera scales them to the content.
+    \begin{center}
+    \begin{tikzpicture}[node distance=3.5cm]
+        % Style definition for the Action Boxes
+        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
+                 text centered, draw=black, fill=gray!10, font=\bfseries}}
+        \tikzstyle{arrow} = [thick,->,>=stealth]
+
+        % Main Action Boxes
+        \node (step1) [box] {KEEP};
+        \node (step2) [box, right of=step1] {CHANGE};
+        \node (step3) [box, right of=step2] {CHANGE};
+
+        % Original Numbers (ABOVE)
+        \node [above of=step1, yshift=-2.0cm] {\Large $-8$};
+        \node [above of=step2, yshift=-2.0cm] {\Large $-$};
+        \node [above of=step3, yshift=-2.0cm] {\Large $(-10)$};
+
+        % Answer Boxes (BELOW)
+        % Ximera will render these as input fields
+        \node (new1) [below of=step1, yshift=2.0cm] {\Large $\answer{-8}$};
+        \node (new2) [below of=step2, yshift=2.0cm] {\Large $\answer{+}$};
+        \node (new3) [below of=step3, yshift=2.0cm] {\Large $\answer{10}$};
+
+        % Arrows connecting the boxes
+        \draw [arrow] (step1) -- (step2);
+        \draw [arrow] (step2) -- (step3);
+    \end{tikzpicture}
+    \end{center}
+
+    Answer = $\answer{2} $
+\end{problem}
+
+\begin{problem}
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.  Then find the answer.
+
+
+%If the input boxes look too small or too large in the browser, you might need to wrap them in an \hbox or adjust the TikZ minimum width, but usually, Ximera scales them to the content.
+    \begin{center}
+    \begin{tikzpicture}[node distance=3.5cm]
+        % Style definition for the Action Boxes
+        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
+                 text centered, draw=black, fill=gray!10, font=\bfseries}}
+        \tikzstyle{arrow} = [thick,->,>=stealth]
+
+        % Main Action Boxes
+        \node (step1) [box] {KEEP};
+        \node (step2) [box, right of=step1] {CHANGE};
+        \node (step3) [box, right of=step2] {CHANGE};
+
+        % Original Numbers (ABOVE)
+        \node [above of=step1, yshift=-2.0cm] {\Large $-4$};
+        \node [above of=step2, yshift=-2.0cm] {\Large $-$};
+        \node [above of=step3, yshift=-2.0cm] {\Large $25$};
+
+        % Answer Boxes (BELOW)
+        % Ximera will render these as input fields
+        \node (new1) [below of=step1, yshift=2.0cm] {\Large $\answer{-4}$};
+        \node (new2) [below of=step2, yshift=2.0cm] {\Large $\answer{+}$};
+        \node (new3) [below of=step3, yshift=2.0cm] {\Large $\answer{(-25)}$};  %Check how answer evaluates with and without ( ) ***********************
+
+        % Arrows connecting the boxes
+        \draw [arrow] (step1) -- (step2);
+        \draw [arrow] (step2) -- (step3);
+    \end{tikzpicture}
+    \end{center}
+
+    Answer = $\answer{-29} $
+\end{problem}
+
+
+\begin{problem}
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.  Then find the answer.
+
+
+%If the input boxes look too small or too large in the browser, you might need to wrap them in an \hbox or adjust the TikZ minimum width, but usually, Ximera scales them to the content.
+    \begin{center}
+    \begin{tikzpicture}[node distance=3.5cm]
+        % Style definition for the Action Boxes
+        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
+                 text centered, draw=black, fill=gray!10, font=\bfseries}}
+        \tikzstyle{arrow} = [thick,->,>=stealth]
+
+        % Main Action Boxes
+        \node (step1) [box] {KEEP};
+        \node (step2) [box, right of=step1] {CHANGE};
+        \node (step3) [box, right of=step2] {CHANGE};
+
+        % Original Numbers (ABOVE)
+        \node [above of=step1, yshift=-2.0cm] {\Large $200$};
+        \node [above of=step2, yshift=-2.0cm] {\Large $-$};
+        \node [above of=step3, yshift=-2.0cm] {\Large $(-300)$};
+
+        % Answer Boxes (BELOW)
+        % Ximera will render these as input fields
+        \node (new1) [below of=step1, yshift=2.0cm] {\Large $\answer{200}$};
+        \node (new2) [below of=step2, yshift=2.0cm] {\Large $\answer{+}$};
+        \node (new3) [below of=step3, yshift=2.0cm] {\Large $\answer{300}$};
+
+        % Arrows connecting the boxes
+        \draw [arrow] (step1) -- (step2);
+        \draw [arrow] (step2) -- (step3);
+    \end{tikzpicture}
+    \end{center}
+
+    Answer = $\answer{500} $
+\end{problem}
+
+\end{document}
