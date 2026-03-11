@@ -48,7 +48,7 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
     \end{center}
     
 
-    begin{problem}
+    \begin{problem}
     \textbf{Final Answer:} 
     \begin{eqnarray*}
     -8 -(-10) &=& -8 + 10 \\ 
@@ -57,6 +57,42 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
 
     \end{problem}
 \end{problem}
+
+
+
+\begin{problem}
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem.
+
+    \begin{center}
+    \setlength{\tabcolsep}{15pt} % Spreads the columns out for the larger font
+    \renewcommand{\arraystretch}{2.5} % Extra vertical space
+    \begin{tabular}{rccc}
+        \textbf{\large Original:} & \Huge $-8$ & \Huge $-$ & \Huge $(-10)$ \\
+        
+        \textbf{\large Rule:}     & 
+        \begin{tikzpicture}[baseline=(n.base)]
+            \node(n)[fill=orange!15, draw=orange!60, rounded corners, inner sep=6pt, font=\bfseries\large] {KEEP};
+        \end{tikzpicture} & 
+        \begin{tikzpicture}[baseline=(n.base)]
+            \node(n)[fill=blue!10, draw=blue!60, rounded corners, inner sep=6pt, font=\bfseries\large] {CHANGE};
+        \end{tikzpicture} & 
+        \begin{tikzpicture}[baseline=(n.base)]
+            \node(n)[fill=blue!10, draw=blue!60, rounded corners, inner sep=6pt, font=\bfseries\large] {CHANGE};
+        \end{tikzpicture} \\
+        
+        \textbf{\large Rewrite:}  & \Huge $\answer{-8}$ & \Huge $\answer[format=string]{+}$ & \Huge $\answer{10}$
+    \end{tabular}
+    \end{center}
+    
+    \begin{problem}
+    \textbf{Final Answer:} 
+    \begin{eqnarray*}
+    -8 -(-10) &=& -8 + 10 \\ 
+              &=& \answer{2} 
+    \end{eqnarray*}   
+    \end{problem}
+\end{problem}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
