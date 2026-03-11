@@ -35,6 +35,34 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
 
 
 
+
+\begin{problem}
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.
+    
+    \begin{center}
+    \renewcommand{\arraystretch}{2}
+    \begin{tabular}{ccccc}
+        %% THE TOP LABELS (Styled to look like your TikZ boxes)
+        \fbox{\parbox[c][0.6cm][c]{1.8cm}{\centering \textbf{KEEP}}} & & 
+        \fbox{\parbox[c][0.6cm][c]{2cm}{\centering \textbf{CHANGE}}} & & 
+        \fbox{\parbox[c][0.6cm][c]{2cm}{\centering \textbf{CHANGE}}} \\
+        
+        %% THE ORIGINAL NUMBERS
+        \Large $-8$ & & \Large $-$ & & \Large $(-10)$ \\
+        
+        %% THE ARROWS
+        $\downarrow$ & & $\downarrow$ & & $\downarrow$ \\
+        
+        %% THE INTERACTIVE INPUTS
+        \Large $\answer{-8}$ & & \Large $\answer{+}$ & & \Large $\answer{10}$
+    \end{tabular}
+    \end{center}
+
+    \textbf{Final Answer:} $\answer{2}$
+\end{problem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{example}  The diagram below demonstrates how to rewrite the subtraction problem $-60 - (-10)$ as an addition problem.
 Starting from the left, we \textbf{keep} the sign of the first number, \textbf{change} the operation of addition to subtraction, then
 \textbf{change} the sign of the last number.  Lastly, we add to find the result.
@@ -71,10 +99,10 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
 \end{center}
 
 %Full left-align to make eqnarray start on left
-\begin{eqnarray*}
--60 - (-10) &=& -60 + 10  \\
-            &=& -50      
-\end{eqnarray*}
+\begin{flalign*}
+-60 - (-10) &= -60 + 10 & \\
+            &= -50      &
+\end{flalign*}
 
 %Alt Text
 %A horizontal flowchart showing the 'Keep-Change-Change' rule for the expression negative sixty minus negative ten. Three boxes are arranged from left to right. The first box is labeled 'KEEP' with the number negative sixty above and below it. An arrow points to the second box, labeled 'CHANGE,' which shows a subtraction sign changing to an addition sign. A second arrow points to the third box, labeled 'CHANGE,' which shows negative ten changing to positive ten. Below the boxes, the final transformed expression is written as: negative sixty plus ten equals negative fifty$
