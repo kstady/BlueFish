@@ -32,7 +32,7 @@ However, from the diagram below, you can see that the span of the U.S. can be fo
 
 
 \begin{center}
-\begin{tikzpicture}[scale=0.5]   %USA Elevation Span
+\begin{tikzpicture}[scale=0.3]   %USA Elevation Span
     % Draw Vertical Axis
     \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\Large\textbf{Elevation (ft)}};
 
@@ -95,32 +95,31 @@ Write the subtraction problem to find China's elevation span.
 Use the diagram below to write the subtraction problem as an equivalent addition problem.
 
 \begin{center}
-\begin{tikzpicture}[scale=0.5]
+\begin{tikzpicture}[scale=0.3]  %China Elevation Span
     % Draw Vertical Axis
-    \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\Large\textbf{\emph{Elevation (ft)}}};
+    \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\textnormal{\Large\textbf{\emph{Elevation (ft)}}}};
 
-    % Sea Level Line - Scaled back slightly to \Large
-    \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{\emph{Sea Level (0)}}};
+    % Sea Level Line
+    \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\textnormal{\Large\textbf{\emph{Sea Level (0)}}}};
 
     % Mount Everest Point
-    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\Large\emph{Mt. Everest ($+29,032$)}};
+    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large\emph{Mt. Everest ($+29,032$)}}};
 
     % Ayding Lake Point
-    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\Large\emph{Ayding Lake ($-505$)}};
+    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large\emph{Ayding Lake ($-505$)}}};
 
     % Braces
     \draw [decorate, decoration={brace, amplitude=9pt, raise=5pt}, very thick] (0,-2) -- (0,0)
-        node [midway, left=25pt] {\Large\textbf{\emph{505 ft}}};
+        node [midway, left=25pt] {\textnormal{\Large\textbf{\emph{505 ft}}}};
 
     \draw [decorate, decoration={brace, amplitude=15pt, raise=5pt}, very thick] (0,0) -- (0,8)
-        node [midway, left=25pt] {\Large\textbf{\emph{29,032 ft}}};
+        node [midway, left=25pt] {\textnormal{\Large\textbf{\emph{29,032 ft}}}};
 
     % Total Span Arrow - Stacked on two lines with fixed line break
     \draw[<->, orange!80!black, line width=2pt] (-8,-2) -- (-8,8)
         node [midway, left=15pt, align=center] {
-            \Large\textbf{\emph{Elevation}}\\
-            \Large\textbf{\emph{Span}}
-        };
+            \textnormal{\Large\textbf{\emph{Elevation}}}\\
+            \textnormal{\Large\textbf{\emph{Span}}}};
 
     % Guides
     \draw[dashed, gray, thick] (-8,8) -- (0,8);
