@@ -35,47 +35,36 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{problem}
-    Apply the \textbf{Keep-Change-Change!} rule to rewrite the subtraction problem as an addition problem.
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem.
 
     \begin{center}
-    \begin{tabular}{p{3cm}p{3cm}p{3cm}}
-        
-        %% ROW 1: THE ORIGINAL NUMBERS
-        \hfil \Large $-8$ \hfil & 
-        \hfil \Large $-$ \hfil & 
-        \hfil \Large $(-10)$ \hfil \tabularnewline[1ex] % Use tabularnewline
-        
-        %% ROW 2: TIKZ BOXES WITH FIXED BASELINE
-        \centering
-        \begin{tikzpicture}[baseline=(current bounding box.center)]
-            \node at (0,0) [rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, draw=black, fill=gray!10, font=\bfseries] {KEEP};
-            \draw [thick,->,>=stealth] (0,-0.5) -- (0,-1.2);
-        \end{tikzpicture} & 
-        \centering
-        \begin{tikzpicture}[baseline=(current bounding box.center)]
-            \node at (0,0) [rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, draw=black, fill=gray!10, font=\bfseries] {CHANGE};
-            \draw [thick,->,>=stealth] (0,-0.5) -- (0,-1.2);
-        \end{tikzpicture} & 
-        \centering
-        \begin{tikzpicture}[baseline=(current bounding box.center)]
-            \node at (0,0) [rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm, draw=black, fill=gray!10, font=\bfseries] {CHANGE};
-            \draw [thick,->,>=stealth] (0,-0.5) -- (0,-1.2);
-        \end{tikzpicture} \tabularnewline[1ex]
-
-        %% ROW 3: INTERACTIVE ANSWER BOXES
-        \hfil \Large $\answer{-8}$ \hfil & 
-        \hfil \Large $\answer[format=string]{+}$ \hfil & 
-        \hfil \Large $\answer{10}$ \hfil \tabularnewline
+    \renewcommand{\arraystretch}{2} % Adds breathing room between rows
+    \begin{tabular}{rcccl}
+        \textbf{Original:} & \Large $-8$ & \Large $-$ & \Large $(-10)$ & \\
+        \textbf{Rule:}     & \fbox{\small KEEP} & \fbox{\small CHANGE} & \fbox{\small CHANGE} & $\swarrow$ \\
+        \textbf{Rewrite:}  & \Large $\answer{-8}$ & \Large $\answer[format=string]{+}$ & \Large $\answer{10}$ & 
     \end{tabular}
     \end{center}
 
-    \textbf{Answer:} $\answer{2}$
-
+    \textbf{Final Answer:} $\answer{2}$
 \end{problem}
 
-       
+                                                                                                                                                                                                                             
+\begin{problem}
+    Rewrite the subtraction problem using the \textbf{Keep-Change-Change} method:
+    
+    \[ \Large -8 - (-10) \]
+
+    \begin{center}
+    \begin{tabular}{ccc}
+        \footnotesize \color{gray} (KEEP) & \footnotesize \color{gray} (CHANGE) & \footnotesize \color{gray} (CHANGE) \\
+        $\answer{-8}$ & $\answer[format=string]{+}$ & $\answer{10}$
+    \end{tabular}
+    \end{center}
+
+    \textbf{Final Answer:} $\answer{2}$
+\end{problem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
