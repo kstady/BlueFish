@@ -7,22 +7,24 @@
 %%
 % \newcommand{\R}{\mathbb{R}
 
-\usepackage{tikzlings} %Not working!!!!!
-%\usepackage{tikzlings-chickens}
+\usepackage{tikzlings}
+\newtheorem{steps}{Steps} %Creates Theorem/Example like box for steps to solve a prolem
 
 \usepackage{tcolorbox}  %Not needed for my ximera content.  Trying it out to create a better box around my rules in pdfs.
 \usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem}  %To modify enumerate and itemize
 \usepackage{xcolor}
 
+%Next 2 lines create spaces between items in itemize and enumerate
+\setitemize{itemsep=2.5ex}
+\setenumerate{itemsep=2.5ex}
 
-\newtheorem{steps}{Steps} %Creates Theorem/Example like box for steps to solve a prolem
+%Creates vertical space between paragraphs - Maybe???
+\setlength{\parskip}{\medskipamount}
 
-\definecolor{googleblue}{RGB}{66,133,244}
-\definecolor{googlered}{RGB}{234,67,53}
-\definecolor{googleyellow}{RGB}{244,180,0}
-\definecolor{googlegreen}{RGB}{52,168,83}
-\definecolor{darkgreen}{rgb}{0.0,0.5,0.2}  % Can also use green!85!black  The higher the number before black, the darker
+%Needed for Hints on OSU Server
+\def\xmNotHintAsExpandable{1}
+    \def\xmNotExpandableAsAccordion{1}
 
 \usetikzlibrary{decorations.markings}
 \usetikzlibrary{arrows}
@@ -30,6 +32,12 @@
 \tikzset{->-/.style={decoration={
   markings,
   mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
+
+\definecolor{googleblue}{RGB}{66,133,244}
+\definecolor{googlered}{RGB}{234,67,53}
+\definecolor{googleyellow}{RGB}{244,180,0}
+\definecolor{googlegreen}{RGB}{52,168,83}
+\definecolor{darkgreen}{rgb}{0.0,0.5,0.2}  % Can also use green!85!black  The higher the number before black, the darker
 
 
 \definecolor{googleblue}{RGB}{66,133,244}
@@ -48,13 +56,3 @@
 \definecolor{glaucous}{rgb}{0.38,0.51,0.71}
 \definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
 
-%Next 2 lines create spaces between items in itemize and enumerate
-\setitemize{itemsep=2.5ex}
-\setenumerate{itemsep=2.5ex}
-
-%Creates vertical space between paragraphs - Maybe???
-\setlength{\parskip}{\medskipamount}
-
-%Needed for Hints on OSU Server
-\def\xmNotHintAsExpandable{1}
-    \def\xmNotExpandableAsAccordion{1}
