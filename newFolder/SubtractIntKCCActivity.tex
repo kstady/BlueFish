@@ -30,7 +30,7 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
 
 \end{enumerate}
 
-\emph{Remember:}  Subtracting a number is the same as adding the opposite of that number.
+\textcolor{orange!80!black}{\emph{Remember:}}  Subtracting a number is the same as adding the opposite of that number.
 \end{procedure}
 
 
@@ -52,9 +52,9 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
     \node (step3) [box, right of=step2] {CHANGE};
 
     % Original Numbers (ABOVE) - Added \Large
-    \node [above of=step1, yshift=-2.0cm] {\Large $-60$};
-    \node [above of=step2, yshift=-2.0cm] {\Large $-$};
-    \node [above of=step3, yshift=-2.0cm] {\Large $(-10)$};
+    \node [above of=step1, yshift=-1.0cm] {\Large $-60$};
+    \node [above of=step2, yshift=-1.0cm] {\Large $-$};
+    \node [above of=step3, yshift=-1.0cm] {\Large $(-10)$};
 
     % Transformed Numbers (BELOW) - Added \Large
     \node (new1) [below of=step1, yshift=2.0cm] {\Large $-60$};
@@ -137,7 +137,7 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
     \renewcommand{\arraystretch}{2} % Adds breathing room between rows
     \begin{tabular}{rcccl}
         \textbf{Problem:} & \Large $\mathbf{-8}$ & \Huge $\mathbf{-}$ & \Large $\mathbf{(-10)}$ & \\
-        \textbf{Rule:}     & \textcolor{blue!60!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
+        \textbf{Rule:}     & \textcolor{glaucous!80!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
         \textcolor{orange!80!black}{\textbf{CHANGE}} & \\
         \textbf{Rewrite:}  &  $\answer{-8}$ &  $\answer[format=string]{+}$ & $\answer{10}$ &
     \end{tabular}
@@ -154,119 +154,67 @@ Starting from the left, we \textbf{keep} the sign of the first number, \textbf{c
 \end{problem}
 \end{problem}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\begin{problem}
-    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.  Then find the answer.
-
-
-   
-\begin{center}
-    \begin{tikzpicture}[node distance=3.5cm]
-        % Style definition for the Action Boxes
-        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
-                 text centered, draw=black, fill=gray!10, font=\bfseries}}
-        \tikzstyle{arrow} = [thick,->,>=stealth]
-
-        % Main Action Boxes
-        \node (step1) [box] {KEEP};
-        \node (step2) [box, right of=step1] {CHANGE};
-        \node (step3) [box, right of=step2] {CHANGE};
-
-        % Original Numbers (ABOVE)
-        \node [above of=step1, yshift=-2.0cm] {\Large $-8$};
-        \node [above of=step2, yshift=-2.0cm] {\Large $-$};
-        \node [above of=step3, yshift=-2.0cm] {\Large $(-10)$};
-
-        % Answer Boxes (BELOW)
-        % Ximera will render these as input fields
-        \node (new1) [below of=step1, yshift=2.0cm] {\Large $\answer{-8}$};
-        \node (new2) [below of=step2, yshift=2.0cm] {\Large $\answer{+}$};
-        \node (new3) [below of=step3, yshift=2.0cm] {\Large $\answer{10}$};
-
-        % Arrows connecting the boxes
-        \draw [arrow] (step1) -- (step2);
-        \draw [arrow] (step2) -- (step3);
-    \end{tikzpicture}
-    \end{center}
-
-    Answer = $\answer{2} $
-\end{problem}
+%%%%%%%%%%%%%%%%%
 
 \begin{problem}
-    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.  Then find the answer.
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem $4 -25$ as an equivalent 
+    addition problem.  
 
-
-%If the input boxes look too small or too large in the browser, you might need to wrap them in an \hbox or adjust the TikZ minimum width, but usually, Ximera scales them to the content.
+    ~ \\[2em]
     \begin{center}
-    \begin{tikzpicture}[node distance=3.5cm]
-        % Style definition for the Action Boxes
-        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
-                 text centered, draw=black, fill=gray!10, font=\bfseries}}
-        \tikzstyle{arrow} = [thick,->,>=stealth]
-
-        % Main Action Boxes
-        \node (step1) [box] {KEEP};
-        \node (step2) [box, right of=step1] {CHANGE};
-        \node (step3) [box, right of=step2] {CHANGE};
-
-        % Original Numbers (ABOVE)
-        \node [above of=step1, yshift=-2.0cm] {\Large $-4$};
-        \node [above of=step2, yshift=-2.0cm] {\Large $-$};
-        \node [above of=step3, yshift=-2.0cm] {\Large $25$};
-
-        % Answer Boxes (BELOW)
-        % Ximera will render these as input fields
-        \node (new1) [below of=step1, yshift=2.0cm] {\Large $\answer{-4}$};
-        \node (new2) [below of=step2, yshift=2.0cm] {\Large $\answer{+}$};
-        \node (new3) [below of=step3, yshift=2.0cm] {\Large $\answer{(-25)}$};  %Check how answer evaluates with and without ( ) ***********************
-
-        % Arrows connecting the boxes
-        \draw [arrow] (step1) -- (step2);
-        \draw [arrow] (step2) -- (step3);
-    \end{tikzpicture}
+    \renewcommand{\arraystretch}{2} % Adds breathing room between rows
+    \begin{tabular}{rcccl}
+        \textbf{Problem:} & \Large $\mathbf{4}$ & \Huge $\mathbf{-}$ & \Large $\mathbf{25}$ & \\
+        \textbf{Rule:}     & \textcolor{glaucous!80!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
+        \textcolor{orange!80!black}{\textbf{CHANGE}} & \\
+        \textbf{Rewrite:}  &  $\answer{4}$ &  $\answer[format=string]{+}$ & $\answer{(-25)}$ &
+    \end{tabular}
     \end{center}
+                                                                
+    \begin{problem}
+    Find the answer.                                                        
 
-    Answer = $\answer{-29} $
+    \begin{eqnarray*}
+       4 - 25 &=& 4 + (-25) \\ 
+                &=& \answer{-21} 
+    \end{eqnarray*}   
+ 
+\end{problem}
 \end{problem}
 
+%%%%%%%%%%%%%%%%
 
 \begin{problem}
-    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem as an addition problem.  Then find the answer.
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem $200 -(-300)$ as an equivalent 
+    addition problem.  
 
-
-%If the input boxes look too small or too large in the browser, you might need to wrap them in an \hbox or adjust the TikZ minimum width, but usually, Ximera scales them to the content.
+    ~ \\[2em]
     \begin{center}
-    \begin{tikzpicture}[node distance=3.5cm]
-        % Style definition for the Action Boxes
-        \tikzset{box/.style={rectangle, rounded corners, minimum width=2.2cm, minimum height=1cm,
-                 text centered, draw=black, fill=gray!10, font=\bfseries}}
-        \tikzstyle{arrow} = [thick,->,>=stealth]
-
-        % Main Action Boxes
-        \node (step1) [box] {KEEP};
-        \node (step2) [box, right of=step1] {CHANGE};
-        \node (step3) [box, right of=step2] {CHANGE};
-
-        % Original Numbers (ABOVE)
-        \node [above of=step1, yshift=-2.0cm] {\Large $200$};
-        \node [above of=step2, yshift=-2.0cm] {\Large $-$};
-        \node [above of=step3, yshift=-2.0cm] {\Large $(-300)$};
-
-        % Answer Boxes (BELOW)
-        % Ximera will render these as input fields
-        \node (new1) [below of=step1, yshift=2.0cm] {\Large $\answer{200}$};
-        \node (new2) [below of=step2, yshift=2.0cm] {\Large $\answer{+}$};
-        \node (new3) [below of=step3, yshift=2.0cm] {\Large $\answer{300}$};
-
-        % Arrows connecting the boxes
-        \draw [arrow] (step1) -- (step2);
-        \draw [arrow] (step2) -- (step3);
-    \end{tikzpicture}
+    \renewcommand{\arraystretch}{2} % Adds breathing room between rows
+    \begin{tabular}{rcccl}
+        \textbf{Problem:} & \Large $\mathbf{200}$ & \Huge $\mathbf{-}$ & \Large $\mathbf{(-300)}$ & \\
+        \textbf{Rule:}     & \textcolor{glaucous!80!black}{\textbf{KEEP}} & \textcolor{orange!80!black}{\textbf{CHANGE}} & 
+        \textcolor{orange!80!black}{\textbf{CHANGE}} & \\
+        \textbf{Rewrite:}  &  $\answer{200}$ &  $\answer[format=string]{+}$ & $\answer{300}$ &
+    \end{tabular}
     \end{center}
+                                                                
+    \begin{problem}
+    Find the answer.                                                        
 
-    Answer = $\answer{500} $
+    \begin{eqnarray*}
+       200 -(-300) &=& 200 + 300 \\ 
+                &=& \answer{500} 
+    \end{eqnarray*}   
+ 
+ $ 200 - (-300) = 200 + 300$ \\ 
+
+ \qquad $ = \answer{500} $
+ 
 \end{problem}
+\end{problem}
+
+
+      
 
 \end{document}
