@@ -93,6 +93,40 @@ Any subtraction problem can be rewritten as an equivalent addition problem using
     \end{problem}
 \end{problem}
 
+\begin{problem}
+    Apply the \textbf{Keep-Change-Change} rule to rewrite the subtraction problem.
+
+    \begin{center}
+    \setlength{\tabcolsep}{15pt} % Spreads the columns out
+    \renewcommand{\arraystretch}{2.5} % Vertical breathing room
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{\large Original:} & \Huge $-8$ & \Huge $-$ & \Huge $(-10)$ \\
+        \hline
+        \textbf{\large Rule:}     & 
+        \begin{tikzpicture}[baseline=(n.base)]
+            \node(n)[fill=orange!15, draw=orange!60, rounded corners, inner sep=6pt, font=\bfseries\large] {KEEP};
+        \end{tikzpicture} & 
+        \begin{tikzpicture}[baseline=(n.base)]
+            \node(n)[fill=blue!10, draw=blue!60, rounded corners, inner sep=6pt, font=\bfseries\large] {CHANGE};
+        \end{tikzpicture} & 
+        \begin{tikzpicture}[baseline=(n.base)]
+            \node(n)[fill=blue!10, draw=blue!60, rounded corners, inner sep=6pt, font=\bfseries\large] {CHANGE};
+        \end{tikzpicture} \\
+        \hline
+        \textbf{\large Rewrite:}  & \Huge $\answer{-8}$ & \Huge $\answer[format=string]{+}$ & \Huge $\answer{10}$ \\
+        \hline
+    \end{tabular}
+    \end{center}
+    
+    \begin{problem}
+    \textbf{Final Answer:} 
+    \begin{eqnarray*}
+    -8 -(-10) &=& -8 + 10 \\ 
+              &=& \answer{2} 
+    \end{eqnarray*}   
+    \end{problem}
+\end{problem}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
