@@ -8,7 +8,11 @@
 % \newcommand{\R}{\mathbb{R}
 
 %Changing the Font
-\usepackage{lmodern}
+\renewcommand{\rmdefault}{cmr}  % Set serif (Roman) to Computer Modern Roman
+\renewcommand{\sfdefault}{cmss} % Set sans-serif to Computer Modern Sans
+\renewcommand{\ttdefault}{cmtt} % Set monospace to Computer Modern Typewriter
+\normalfont                     % Apply the changes immediately
+
 
 
 \usepackage{tikzlings}
