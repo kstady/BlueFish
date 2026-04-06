@@ -8,21 +8,26 @@
 % \newcommand{\R}{\mathbb{R}
 
 \usepackage{tikzlings}
-\newtheorem{steps}{Steps} %Creates Theorem/Example like box for steps to solve a prolem
+
+%Creates Theorem/Example like box 
+\newtheorem{steps}{Steps} 
+\newtheorem{properties}{Properites}
+\newtheorem{myrule}{Rule}
+
 
 \usepackage{tcolorbox}  %Not needed for my ximera content.  Trying it out to create a better box around my rules in pdfs.
 \usepackage[dvipsnames]{xcolor}
 \usepackage{enumitem}  %To modify enumerate and itemize
 \usepackage{xcolor}
 
-%Next 2 lines create spaces between items in itemize and enumerate
+% Next 2 lines create spaces between items in itemize and enumerate
 \setitemize{itemsep=2.5ex}
 \setenumerate{itemsep=2.5ex}
 
-%Creates vertical space between paragraphs - Maybe???
+% Creates vertical space between paragraphs - Maybe???
 \setlength{\parskip}{\medskipamount}
 
-%Needed for Hints on OSU Server
+% Needed for Hints on OSU Server
 \def\xmNotHintAsExpandable{1}
     \def\xmNotExpandableAsAccordion{1}
 
@@ -39,14 +44,12 @@
 \definecolor{googlegreen}{RGB}{52,168,83}
 \definecolor{darkgreen}{rgb}{0.0,0.5,0.2}  % Can also use green!85!black  The higher the number before black, the darker
 
-
-\definecolor{googleblue}{RGB}{66,133,244}
-\definecolor{googlered}{RGB}{234,67,53}
-\definecolor{googleyellow}{RGB}{244,180,0}
-\definecolor{googlegreen}{RGB}{52,168,83}
+% This line, creates a custom command called \rulecolor that is used to change the color of lines (rules) in a table.
+%\newcommand{\rulecolor}[1]{\def\CT@arc@{\color{#1}}}
 
 
-\newcommand{\rulecolor}[1]{\def\CT@arc@{\color{#1}}}
+% Uses a scale from 0 to 1 for each color - the number is the intensity level of the color with 0
+% being no color and 1 full color: (1,1,1) makes white and (0,0,0) makes black
 \definecolor{darkblue}{rgb}{0.4,0.5,0.85}
 \definecolor{blue}{rgb}{0.1,0.3,.95}
 \definecolor{pink}{rgb}{0.6,0.4,0.7}
@@ -56,3 +59,13 @@
 \definecolor{glaucous}{rgb}{0.38,0.51,0.71}
 \definecolor{darkraspberry}{rgb}{0.53, 0.15, 0.34}
 
+% For Answer Boxes in pdf
+\newcommand{\answerFormatLength}{2cm}
+\newcommand{\answerFormatDots}[1]{\ldots\ldots}
+\newcommand{\answerFormatLine}[1]{\protect\rule{\answerFormatLength}{0.4pt}}
+\newcommand{\answerFormatFlexibleLine}[1]{\protect\rule{\widthof{$#1$}*2}{0.4pt}}
+\newcommand{\answerFormatFlexibleBox}[1]{\fbox{\scalebox{2}{\phantom{$#1$}}}}
+\newcommand{\answerFormatPlain}[1]{\ensuremath{#1}}
+\newcommand{\answerFormatBlue}[1]{\color{blue}\ensuremath{#1}}
+\newcommand{\answerFormatBoxed}[1]{\fbox{\ensuremath{#1}}}
+\newcommand{\answerFormatBoxedGiven}[1]{\underset{\scriptstyle\mathrm{given}}{\fbox{\ensuremath{#1}}}}
