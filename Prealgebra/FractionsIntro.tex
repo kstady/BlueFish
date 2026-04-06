@@ -38,10 +38,12 @@ of the square is $\textstyle \frac{1}{4},$ since 1 of the 4 parts is shaded.
   % Label
     \node at (0,-2) {\Large $\frac{1}{4}$};
 \end{tikzpicture}
-\end{center}
 
 %Alt Text
-%\xmalt{A square divided into four equal quadrants by a horizontal and a vertical line through its center. The top-left quadrant is shaded in glaucous blue, representing the fraction one-fourth. The fraction label 1/4 is placed centered below the square.}
+\xmalt{A square divided into four equal quadrants by a horizontal and a vertical line through its center. The top-left quadrant is shaded in glaucous blue, representing the fraction one-fourth. The fraction label 1/4 is placed centered below the square.}
+
+\end{center}
+
 
 The denominator of a fraction tells you how many equal-sized pieces a whole has been divided into.  The numerator of a fraction is how many of those pieces you are counting or considering.
 
@@ -86,7 +88,7 @@ To correct this, we redraw the lines so that every part is the exact same size, 
 \end{tikzpicture}
 
 % alt tex
-% \xmalt{Two squares side-by-side demonstrating the importance of equal parts in fractions. The left square is labeled INCORRECT with a red X; it is divided into three unequal parts with one large section shaded, showing that counting unequal pieces as one-third is incorrect. The right square is labeled CORRECT with a green checkmark; it is divided into three identical vertical rectangles with one shaded, correctly representing the fraction one-third
+ \xmalt{Two squares side-by-side demonstrating the importance of equal parts in fractions. The left square is labeled INCORRECT with a red X; it is divided into three unequal parts with one large section shaded, showing that counting unequal pieces as one-third is incorrect. The right square is labeled CORRECT with a green checkmark; it is divided into three identical vertical rectangles with one shaded, correctly representing the fraction one-third
 
 \end{center}
 
@@ -114,9 +116,8 @@ The circle below has been divided into 10 equal parts.
 \end{tikzpicture}
 
 %Alt Text
-%A circle representing a whole, divided into 10 equal pie-shaped
-% wedges. Three adjacent wedges in the top-right section are
-% shaded in glaucous blue.
+\xmalt{A circle representing a whole, divided into 10 equal pie-shaped wedges. Three adjacent wedges in the top-right section are
+ shaded blue.}
 \end{center}
 
 
@@ -134,7 +135,7 @@ A local wildlife sanctuary covers 12 acres of protected land. Recent data shows 
 
 \begin{center}
 \begin{tikzpicture}[thick]
-  % 1. Define a simple flower shape (Slightly smaller than the last version)
+  % Define a simple flower shape 
   \newcommand{\flower}[2]{
     \foreach \a in {0,72,...,288}
       \draw[very thin, fill=white] (#1,#2) +(\a:0.24) circle (0.12);
@@ -143,20 +144,21 @@ A local wildlife sanctuary covers 12 acres of protected land. Recent data shows 
     \draw[very thin, fill=orange!80!white] (#1,#2) circle (0.09);
   }
 
-  % 2. Shade the 5 restored acres (Top row and first box of middle row)
+  % Shade the 5 restored acres (Top row and first box of middle row)
   \fill[glaucous!60] (0, 2.6) rectangle (5.2, 3.9);
   \fill[glaucous!60] (0, 1.3) rectangle (1.3, 2.6);
 
-  % 3. Draw the flowers in the shaded boxes
+  % Draw the flowers in the shaded boxes
   % Top row flowers
   \flower{0.65}{3.25}
   \flower{1.95}{3.25}
   \flower{3.25}{3.25}
   \flower{4.55}{3.25}
+  
   % Middle row flower (first box)
   \flower{0.65}{1.95}
 
-  % 4. Draw the grid AFTER to ensure lines are visible on top
+  % Draw the grid after to ensure lines are visible on top
   \draw (0,0) rectangle (5.2, 3.9);
   \foreach \x in {1.3, 2.6, 3.9} \draw (\x, 0) -- (\x, 3.9);
   \draw (0, 1.3) -- (5.2, 1.3);
@@ -166,22 +168,20 @@ A local wildlife sanctuary covers 12 acres of protected land. Recent data shows 
 \end{tikzpicture}
 
 % Alt Text
-%\xmalt{A grid of 12 equal squares arranged in three rows of four. The four squares in the top row and the first square in the middle row are shaded blue with white flowers in the center.}
+\xmalt{A grid of 12 equal squares arranged in three rows of four. The four squares in the top row and the first square in
+ the middle row are shaded blue with white flowers in the center.}
 \end{center}
 
 What fraction of the sanctuary's total area has been restored with wild flowers?
 
-$\frac{\answer{5}}{\answer{12}}$
+\[ \answer{5/12} \] 
 
 
 What fraction of the sanctuary's total area has \textbf{not} been restored with wild flowers?
 
-$\frac{\answer{7}}{\answer{12}}$
+\[ \answer{7/12} \] 
 
 \end{problem}
-
-%\subsection*{Types of Fractions}
-
 
 
 \subsection*{Equivalent Fractions}
