@@ -6,6 +6,6 @@ services:
     command: /bin/sh -c "while sleep 1000; do :; done"
     network_mode: "service:ximeraserver"
   ximeraserver:
-    image: ghcr.io/ximeraproject/ximera-docker:latest
+    image: registry.gitlab.kuleuven.be/wet/ximera/ximeradocker:2.3_b
     ports:
       - "2080:2000"
