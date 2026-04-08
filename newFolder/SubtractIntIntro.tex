@@ -149,9 +149,36 @@ China's Elevation Span =  $\answer{29537}$ \ feet
 \end{problem}
 \end{problem}
 
+~ \\[2em]
 
 
-\Large{\textbf{Extra Insight}}
+% Glasses
+\begin{tikzpicture}[scale=0.4]
+    % Frames (the outer "rims")
+    \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9);
+    \draw[line width=2pt, fill=blue!5] (2.4,0) circle (0.9);
+
+    % The "Coke Bottle" Lens Effect (thin gray rings on the light background)
+    %\foreach \r in {0.7, 0.5, 0.3} {
+       % \draw[gray!40, thin] (0,0) circle (\r);
+       % \draw[gray!40, thin] (2.4,0) circle (\r);
+    %}
+
+    % Reflection glints (adds a "glass" feel)
+    \fill[white, opacity=0.8] (-0.4,0.4) circle (0.15);
+    \fill[white, opacity=0.8] (2.0,0.4) circle (0.15);
+
+    % Bridge
+    \draw[line width=2pt] (0.9,0.1) arc (150:30:0.35);
+
+    % Temples (Arms)
+    \draw[line width=2pt] (-0.9,0.3) -- (-1.8,0.7);
+    \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7);
+\end{tikzpicture}
+
+
+
+\section*{Extra Insight}
 
 \normalsize
 An \textbf{archipelagic nation} is a country made up of a group of islands and the surrounding water.
