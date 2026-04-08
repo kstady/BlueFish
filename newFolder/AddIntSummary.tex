@@ -16,46 +16,6 @@
 
 
 
-\begin{tikzpicture}[scale=0.6]
-    \begin{scope}[shift={(2,0)}]
-    % Draw the owl
-    \owl[transform shape,3D, body=glaucous]
-
-    % Approximate top of head
-    \coordinate (head) at (0,2.3);
-
-    % Tilted graduation cap (using 0 rotation as base)
-    \begin{scope}[rotate around={0:(head)}]
-        % Cap top (diamond)
-        \fill[black]
-            ($(head)+(-0.9,0)$) --
-            ($(head)+(0,0.3)$) --
-            ($(head)+(0.9,0)$) --
-            ($(head)+(0,-0.3)$) -- cycle;
-
-        % Cap base
-        \fill[black]
-            ($(head)+(-0.35,-0.35)$) rectangle ($(head)+(0.35,-0.2)$);
-
-        % --- TASSEL ---
-        % 1. Small button in the center
-        \fill[yellow!60!orange] (head) circle (0.05);
-
-        % 2. Cord: Starts at center, goes to the right-most corner
-        \draw[thick, orange!80!black] (head) -- ($(head)+(0.9,0)$);
-
-        % 3. Hanging part: Drops down from that corner
-        \draw[thick, orange!80!black] ($(head)+(0.9,0)$ ) -- ($(head)+(0.9,-0.6)$);
-
-        % 4. Tassel Brush: Fanned out bottom
-        \foreach \i in {-0.08, -0.04, 0, 0.04, 0.08} {
-            \draw[very thin, orange!60!black] ($(head)+(0.9,-0.6)$) -- ($(head)+(0.9+\i,-0.9)$);
-        }
-    \end{scope}
-    \end{scope}
-\end{tikzpicture}
-
-
 \section*{\textbf{Summary}}
 
 
