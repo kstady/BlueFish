@@ -70,3 +70,27 @@
 %\newcommand{\answerFormatBlue}[1]{\color{blue}\ensuremath{#1}}
 %\newcommand{\answerFormatBoxed}[1]{\fbox{\ensuremath{#1}}}
 %\newcommand{\answerFormatBoxedGiven}[1]{\underset{\scriptstyle\mathrm{given}}{\fbox{\ensuremath{#1}}}}
+
+
+% Custom command for the Insight Section
+\newcommand{\insightIcon}{%
+    \par\bigskip\noindent
+    \begin{tikzpicture}[scale=0.4]
+        % Temples (Arms) - Adjusted to the "back and left" perspective you liked
+        \draw[line width=2pt] (-0.8, 0.4) -- (-2.5, 1.8); 
+        \draw[line width=2pt] (1.4, 0.4) -- (-0.2, 1.8);  
+
+        % Left Lens (Perfectly Round)
+        \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9);
+        
+        % Bridge
+        \draw[line width=2pt] (0.85, 0.3) arc (150:30:0.4);
+        
+        % Right Lens (Perfectly Round, offset slightly for the "looking down" look)
+        \draw[line width=2pt, fill=blue!5] (2.4, -0.3) circle (0.9);
+
+        % Reflection glints
+        \fill[white, opacity=0.8] (-0.3, 0.4) circle (0.15);
+        \fill[white, opacity=0.8] (2.1, 0.1) circle (0.15);
+    \end{tikzpicture}
+}
