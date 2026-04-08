@@ -112,31 +112,28 @@ has the greatest strength. To turn these observations into a formal rule, we wil
 
     ~ \\[3em]
 
-    \textbf{Step 1:} Find the \textbf{absolute values} (\textbf{The Strengths}):
+    \textbf{Step 1:} \textbf{Find the absolute values. (The Strengths)}:
     \[ |15| = \answer{15} \quad \text{and} \quad |-40| = \answer{40} \]
 
     \begin{problem}
-    \textbf{Step 2:} \textbf{Subtract} the smaller absolute value from the larger one (\textbf{The Battle}):
+    \textbf{Step 2:} \textbf{Subtract the absolute values. (The Battle)}:
     \[ 40 - 15 = \answer{25} \]
 
 
 \begin{problem}
-    \textbf{Step 3:} Declare the winner! (\textbf{The Sign})
+    \textbf{Step 3:} \textbf{Declare the winner! (The Sign)}
+
     Compare the absolute values: is $|15|$ or $|-40|$ larger?
     
      ~ \\
     \begin{multipleChoice}
-        \choice{The answer is positive, since $|15|$ is larger.}
-        \choice[correct]{The answer is negative, since $|-40|$ is larger.}
+        \choice{The positive team wins, since $|15|$ is larger.}
+        \choice[correct]{The negative team wins, since $|-40|$ is larger.}
     \end{multipleChoice}
 
 
 \begin{problem}
     \textbf{Final Answer:} $15 + (-40) = \answer{-25}$
-
-    \begin{feedback}[correct]
-        Excellent! You found the strengths, fought the battle and declared the negative team the winner.
-    \end{feedback}
 
 \end{problem}
 \end{problem}
@@ -149,6 +146,39 @@ Atoms are the tiny building blocks of all matter.  An atom consists of protons, 
 Each proton has a positive charge ($+1$), each electron has a negative charge ($-1$) and neutrons have no charge (0).  
 Chemists find the charge of an atom by adding the charges of its electrons and protons.  Write the addition 
 problem to find the charge of an atom that has eight electrons and three protons.  Then find the charge of the atom.
+
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+    % Protons: 3 arranged in a triangle
+    \foreach \a in {90, 210, 330} {
+        \fill[orange!85!black] (\a:0.35) circle (0.3);
+        % Adjusted Plus Sign (slightly thinner than before)
+        \fill[white] (\a:0.35) +(-0.16,-0.03) rectangle +(0.16,0.03);
+        \fill[white] (\a:0.35) +(-0.03,-0.16) rectangle +(0.03,0.16);
+    }
+
+    % Inner shell: 2 electrons
+    \draw[gray!50, thick] (0,0) circle (1.3);
+    \foreach \a in {45, 225} {
+        \fill[glaucous] (\a:1.3) circle (0.25);
+        % Adjusted Minus Sign (0.03 thickness instead of 0.05)
+        \fill[white] (\a:1.3) +(-0.14,-0.03) rectangle +(0.14,0.03);
+    }
+
+    % Outer shell: 6 electrons
+    \draw[gray!60, thick] (0,0) circle (2.4);
+    \foreach \a in {0, 60, 120, 180, 240, 300} {
+        \fill[glaucous] (\a:2.4) circle (0.25);
+        % Adjusted Minus Sign
+        \fill[white] (\a:2.4) +(-0.14,-0.03) rectangle +(0.14,0.03);
+    }
+\end{tikzpicture}
+
+\xmalt{A model of the atom. The nucleus has 3 large orange protons with white plus signs. Two gray orbits surround it: 
+an inner orbit with 2 blue electrons and a slightly larger outer orbit with 6 blue electrons. All electrons have white minus signs.}
+
+
+\end{center}
 
 ~ \\[2em] 
 
