@@ -150,50 +150,6 @@ China's Elevation Span =  $\answer{29537}$ \ feet
 \end{problem}
 
 
-\begin{tikzpicture}[scale=0.7]
-
-  % --- THE CHICKEN ---
-  \begin{scope}[shift={(0,0)}]
-    \chicken[transform shape, 3D, body=glaucous]
-
-    % --- SNORKEL MASK (Indented for the Beak) ---
-    \draw[line width=1.5pt, black, fill=cyan, fill opacity=0.2, rounded corners=2pt]
-        (-0.45, 1.6) -- (-0.15, 1.6) -- (-0.1, 1.75) -- (0.1, 1.75) -- (0.15, 1.6) -- (0.45, 1.6)
-        -- (0.45, 2.1) -- (-0.45, 2.1) -- cycle;
-
-    % The Snorkel Tube
-    \draw[line width=3pt, black] (0.45, 1.8) -- (0.7, 1.8) -- (0.7, 2.6);
-    \draw[line width=3pt, orange] (0.68, 2.55) -- (0.72, 2.55); % Safety Tip
-
-    % --- COKE BOTTLE GLASSES ---
-    \draw[line width=1.2pt, black, fill=cyan!10, fill opacity=0.5] (-0.18, 1.80) circle (0.18);
-    \draw[very thin, white, opacity=0.9] (-0.23, 1.90) arc (120:160:0.11);
-    \draw[line width=1.2pt, black, fill=cyan!10, fill opacity=0.5] (0.23, 1.80) circle (0.18);
-    \draw[very thin, white, opacity=0.9] (0.18, 1.90) arc (120:160:0.11);
-    \draw[line width=1.3pt, black] (0.0, 1.80) -- (0.05, 1.80);
-
-    % Mask Strap
-    \draw[line width=1.5pt, black] (-0.45, 1.85) -- (-0.55, 1.85);
-    \draw[line width=1.5pt, black] (0.45, 1.85) -- (0.55, 1.85);
-  \end{scope}
-
-  % --- THE WAVEY WATER (Submerging the Chicken) ---
-  % We draw the wave as a closed path so it can be filled
-  \fill[blue!40!cyan, opacity=0.4]
-      plot[domain=-1.5:1.5, samples=50] (\x, {0.8 + 0.1*sin(\x*400)})
-      -- (1.5, 0.05) -- (-1.5, 0.05) -- cycle;
-
-  % The Wave Surface Line (Darker blue for definition)
-  \draw[blue!60!cyan, thick]
-      plot[domain=-1.5:1.5, samples=50] (\x, {0.8 + 0.1*sin(\x*400)});
-
-  % --- TINY WATER BUBBLES ---
-  \foreach \i in {1,2,3} {
-      \draw[cyan!60, thin] (0.75, 2.7 + \i*0.3) circle (0.05 + \i*0.02);
-  }
-
-\end{tikzpicture}
-
 
 \Large{\textbf{Extra Insight}}
 
