@@ -238,8 +238,14 @@ The numbers 3 and $-3$ are opposites.  Notice that they lie the same distance fr
 \end{example}
 
 
-\begin{properties}
-\textbf{Properties of Opposites}
+
+% Use a built-in Ximera environment for the box styling
+\begin{definition}[Properties]
+    
+\end{definition}
+
+
+\begin{properties}[\textbf{Properties of Opposites}]
 
 \begin{enumerate}
 \item Opposites have the same absolute value because they are equidistant from zero.
@@ -251,7 +257,8 @@ The numbers 3 and $-3$ are opposites.  Notice that they lie the same distance fr
 \item Zero is unique because it is its own opposite: $0= -0.$
 
 \end{enumerate}
-\end{properties}
+
+\end{definition}
 
 
 \begin{problem}
@@ -261,21 +268,17 @@ Complete the table:
 \setlength{\arrayrulewidth}{1pt} % Makes horizontal and vertical lines of the table thicker.  The default is 0.4pt.
 \renewcommand{\arraystretch}{1.5} % Adds space between rows. Value of 1.5 or 2 are good. This multiples the default row height by 1.5, 2, etc.
 \begin{center}
-\begin{tabular}{|c|c|c|}
-\hline
-\rowcolor{glaucous!40} % Apply color to the first row:  40% glaucous and 60% white
-%\textbf{\textcolor{white}{Sentence}} & \textbf{\textcolor{white}{Expression}} \\  % White letters
+\begin{tabular}{ccc}
 \large{\textbf{Number}} & \large{\textbf{Opposite}} & \large{\textbf{Absolute Value}} \\
-\hline
-%\multicolumn{1}{|c|}{\textbf{Sentence}} & \textbf{Expression} \\  %Centers the word Sentence - it overrides the left alignment
+& & \\
 $-15$ & $\answer{15}$ & $\answer{15}$ \\
-\hline
-$800$ & $\answer{-800}$ & $\answer{800}$ \\
-\hline
+& & \\
+$80$ & $\answer{-80}$ & $\answer{80}$ \\
+& & \\
 $0$ & $\answer{0}$ & $\answer{0}$ \\
-\hline
+& & \\
 $-2.5$ & $\answer{2.5}$ & $\answer{2.5}$ \\
-\hline
+& & \\
 \end{tabular}
 \end{center}
 
@@ -286,6 +289,52 @@ $-2.5$ & $\answer{2.5}$ & $\answer{2.5}$ \\
 
 In mathematics, the dash is used in three different ways depending on its role.
 
+\begin{description}[style=nextline, leftmargin=0pt]  %leftmargin removes the indentation of the description
+    \item[Negative] 
+    
+    When a dash is attached directly to a number, it describes its location on the number line and
+    is \textbf{read} as \textbf{negative}.
+
+    \item[Opposite]  
+    
+    A dash placed before parentheses, absolute value or a variable represents an action: changing the sign or multiplying by $-1$ and is \textbf{read} as \textbf{the opposite of}.
+
+    \item[Subtraction]  
+    
+    A dash placed between two numbers represents the operation of subtraction
+    and is \textbf{read} as \textbf{minus}.
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5} % Adds vertical breathing room
+\begin{tabular}{|l|c|l|}
+\hline
+\rowcolor{glaucous!30} % Apply color to the first row:  40% glaucous and 60% white
+\large \textbf{Role} & \large \textbf{Example} & \large \textbf{How to Read It} \\
+\hline
+\textbf{Negative} & $-8$ & ``Negative 8'' \\
+\hline
+\textbf{Opposite} & $-(-8)$ & ``The opposite of negative 8'' \\
+\hline
+\textbf{Opposite} & $-(5)$ & ``The opposite of 5'' \\
+\hline
+\textbf{Opposite} & $-|6|$ & ``The opposite of the absolute value of $6$'' \\
+\hline
+\textbf{Opposite} & $-x$ & ``The opposite of $x$'' \\
+\hline
+\textbf{Subtraction} & $10 - 8$ & ``10 minus 8'' \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\textbf{Note:} The expression $-x$ is sometimes read as negative $x.$  However, keep in mind that the expression
+could be positive, negative or even 0, depending on the value of $x.$
+
+\end{description}
+
+
+
+%%%%%%%%%%%%%%%%
 \begin{description}[style=nextline, leftmargin=0pt]  %leftmargin removes the indentation of the description
     \item[Negative] When a dash is attached directly to a number, it describes its location on the number line and
     is \textbf{read} as \textbf{negative}.
@@ -329,22 +378,20 @@ Identify the correct way to read each expression.
 
 \begin{center}
 \renewcommand{\arraystretch}{1.5}
-\begin{tabular}{|c|l|}
-\hline
-\textbf{Expression} & \textbf{How to Read It} \\ \hline
+\begin{tabular}{cl}
+\textbf{Expression} & \textbf{How to Read It} \\ 
 
-$18 - 5$ & \wordChoice{\choice{Negative 5} \choice[correct]{Eighteen minus five} \choice{The opposite of 5}} \\ \hline
+$18 - 5$ & \wordChoice{\choice{Negative 5} \choice[correct]{Eighteen minus five} \choice{The opposite of 5}} \\ 
 
-$-(-12)$ & \wordChoice{\choice{Negative negative 12} \choice{Minus negative 12} \choice[correct]{The opposite of negative 12}} \\ \hline
+$-(-12)$ & \wordChoice{\choice{Negative negative 12} \choice{Minus negative 12} \choice[correct]{The opposite of negative 12}} \\ 
 
-$-20$ & \wordChoice{\choice[correct]{Negative 20} \choice{The opposite of negative 20} \choice{Minus 20}} \\ \hline
+$-20$ & \wordChoice{\choice[correct]{Negative 20} \choice{The opposite of negative 20} \choice{Minus 20}} \\ 
 
 
 $-|-7|$ & \wordChoice{\choice[correct]{The opposite of the absolute value of negative 7} \choice{The opposite of the absolute value of 7} \choice{The absolute value
-of negative 7}} \\ \hline
+of negative 7}} \\ 
 
-
-$-k$ & \wordChoice{\choice{Negative k} \choice{Minus k} \choice[correct]{The opposite of k}} \\ \hline
+$-k$ & \wordChoice{\choice{Negative k} \choice{Minus k} \choice[correct]{The opposite of k}} \\ 
 
 \end{tabular}
 \end{center}
@@ -366,6 +413,8 @@ The expression $-(-a)$ is read as ``the opposite of negative $a$."
 \begin{problem}
 Use the Double Negative Property to simplify the following expressions.
 
+~ \\[2em]
+
 \begin{enumerate}
 \item $-(-14) = \answer{14}$
 \item $-(-100) = \answer{100}$
@@ -377,6 +426,7 @@ Use the Double Negative Property to simplify the following expressions.
 \begin{question}
 How is the expression $-(-22)$ read?
 
+~ \\[2em]
 \begin{multipleChoice}
 \choice{Negative negative 22}
 \choice{Minus negative 22}
@@ -389,6 +439,8 @@ How is the expression $-(-22)$ read?
 \begin{question}
 If $x = -10$, what is the value of $-(-x)$?
 
+~ \\[2em]
+
 \begin{multipleChoice}
     \choice{$10$}
     \choice[correct]{$-10$}
@@ -399,7 +451,6 @@ If $x = -10$, what is the value of $-(-x)$?
 Remember: $-(-x) = x,$ so since $x$ started as $-10$, the final result is also $-10$.
 \end{feedback}
 \end{question}
-
 
 
 \begin{warning}
@@ -423,31 +474,27 @@ therefore,
 
 \end{warning}
 
-
-
-
 \subsection*{Absolute Value vs. Opposite}
 
 While absolute value always results in a nonnegative (zero or positive) number, taking the opposite of a number flips its sign. Therefore, an opposite can be positive, negative or 0. Note that for the number 0, both its absolute value and its opposite are 0.
 
 Below, the concept of an opposite has been used to write a rule for finding absolute value.  Notice that this rule doesn't rely on distance.
 
-\begin{myrule}{Finding the Absolute Value of a Number}
+\begin{procedure}[\textbf{Finding the Absolute Value of a Number}]
 \begin{description}[style=nextline, leftmargin=0pt, font=\bfseries]
     \item[Positive Numbers and 0]
     The absolute value of a positive number or 0 is the number itself.
     \item[Negative Numbers]
     The absolute value of a negative number is the \textbf{opposite} of that number.
 \end{description}
-\end{myrule}
+\end{procedure}
 
 Later, you will see how these two concepts are used together to add integers.
 
-
-
-
 \begin{problem}
 \textbf{True or False}: If a number is negative, its opposite must be positive.
+
+~ \\[2em]
 
 \begin{multipleChoice}
 \choice[correct]{True}
@@ -464,6 +511,8 @@ Exactly! The opposite flips the sign, so a negative becomes positive.
 \begin{problem}
 \textbf{True or False}: Two different numbers can have the same absolute value.
 
+~ \\[2em]
+
 \begin{multipleChoice}
 \choice[correct]{True}
 \choice{False}
@@ -478,12 +527,15 @@ Yep! The numbers $2$ and $-2$ have the same absolute values.  In fact, all oppos
 \begin{problem}
 Which has a greater value: the opposite of $-10$ or the absolute value of $-10?$  Explain.
 
+~ \\[2em]
+
 \begin{multipleChoice}
 \choice[correct]{Neither, they are the same.}
 \choice{The opposite of $-10.$}
 \choice{The absolute value of $-10.$}
 \end{multipleChoice}
 
+~ \\[2em]
 
 \begin{feedback}
 The opposite of $-10$ is 10 and the absolute value of $-10$ is also 10, so they are the same.
@@ -506,6 +558,8 @@ $a$ and $b$ on a number line is 10 units, what are the two numbers?
 \begin{hint}
 Draw a number line and with $a$ and $b$ ten units apart.
 \end{hint}
+
+~ \\[2em]
 
 \begin{feedback}
 Good job!  You made it through this problem and this section.
