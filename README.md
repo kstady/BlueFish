@@ -1,4 +1,4 @@
-# My First Ximera Project :rose:   :blossom: 
+# My First Ximera Project :rose: :blossom: :tulip:
 
 This is a collection of Prealgebra lessons for college students.  I will continue to add
 content until the course is complete.  
