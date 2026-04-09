@@ -1,4 +1,4 @@
-# My First Ximera Project :rose: :blossom: :tulip: :butterfly: :hedgehog: :lady_beetle: :christmas_tree:
+# My First Ximera Project :blossom: 
 
 This is a collection of Prealgebra lessons for college students.  I will continue to add
 content until the course is complete.  
