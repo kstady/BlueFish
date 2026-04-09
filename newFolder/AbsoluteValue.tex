@@ -18,7 +18,9 @@
 
 \section*{Introduction}
 
-If you're cutting a piece of wood to be 10 inches in length, being 0.5 inches too long is just as problematic as being 0.5 inches too short. In both cases, the \textbf{size} of the error is 0.5 and this is what is most important.  The concept of \textbf{absolute value} can be used to represent the \textbf{magnitude} of a mistake, regardless of whether it was an overshot or undershot.
+If you're cutting a piece of wood to be 10 inches in length, being 0.5 inches too long is just as problematic as being 0.5 inches too short. In both cases, the \textbf{size} 
+of the error is 0.5 and this is what is most important.  The concept of \textbf{absolute value} can be used to represent the \textbf{magnitude} of a mistake, regardless 
+of whether it was an overshot or undershot.
 
 The \textbf{absolute value of a number} is its \textbf{distance from zero} on a number line.  Since distance is always positive or 0, so is absolute value.  Absolute value is represented by two vertical bars and can be interpreted as the \textbf{size}, \textbf{strength} or \textbf{magnitude} of a number.
 
@@ -55,46 +57,50 @@ The number line below shows the absolute values of $-4$ and $4.$  Since their ab
 \end{tikzpicture}
 \end{center}
 
-\textbf{To find the absolute value of a number}, think of the number line as a path and each integer as a step. The absolute value of a number is how many steps you would have to take to travel from that number to zero.  For example, you would have to take 2 steps to travel from $-2$ to $0,$ so the absolute value of $-2$ is 2.
+\textbf{To find the absolute value of a number}, think of the number line as a path and each integer as a step. The 
+absolute value of a number is how many steps you would have to take to travel from the number to zero.  For example, 
+you would have to take 2 steps to travel from $-2$ to $0,$ so the absolute value of $-2$ is 2.
 \[ |-2| = 2 \]
 
 
 \begin{problem}
 Find the absolute value of each number.
 
-\begin{enumerate}
-\item $|-1|$ = \begin{prompt} $\answer{1}$ \end{prompt}
+\[ |-1| = \begin{prompt} \answer{1} \end{prompt} \]
 
-\item $|7|$ = \begin{prompt} $\answer{7}$ \end{prompt}
+\[ |7| = \begin{prompt} \answer{7} \end{prompt} \]
 
 
-\item $|-55|$ = \begin{prompt} $\answer{55}$ \end{prompt}
-
-\end{enumerate}
+\[ |-55| = \begin{prompt} \answer{55} \end{prompt} \]
 
 \end{problem}
 
 
 
 \begin{problem}
-You are building a custom bookshelf and need wooden shelves that are $36$ inches long.  \textbf{A board will be usable if its length is within 
-$\textstyle \frac{1}{4}$ inch of the target}.
-
-Suppose you cut the first board $35.8$ inches long.  The difference between the actual board length and the target length is the error.
+You are building a custom bookshelf and need wooden shelves that are $36$ inches long.  A board will be usable if its length is off by no more than 
+$\textstyle \frac{1}{4}$ inch of the target.  Suppose you cut the first board $35.8$ inches long.  The difference 
+between the actual board length and the target length is the error.
 \begin{eqnarray*}
   \textbf{Error} &=& 35.8 - 36 \\
+        & & \\
         &=& -0.2 \  \textrm{inches}
 \end{eqnarray*}
 
-The negative sign indicates that you cut the board too short.  However, it only matters if the board is useable or not, so we take the \textbf{absolute value} to find the \textbf{distance} from the target length.  This distance is called the \textbf{absolute error}.
+The negative sign indicates that you cut the board too short.  However, it only matters if the board is useable or not, so we take the \textbf{absolute value} 
+to find the \textbf{distance} from the target length.  This distance is called the \textbf{absolute error}.
+
 \begin{eqnarray*}
 \textbf{Absolute Error} &=& |35.8 - 36| \\
+    & & \\
     &=& |-0.2| \\
+    & & \\
     &=&  \answer{0.2} \ \textrm{inches}
 \end{eqnarray*}
 
 
-Is this board usable? (Hint: $\textstyle \frac{1}{4} = 0.25$)
+Is this board usable? \textbf{Hint}: $\textstyle \frac{1}{4} = 0.25$
+
 \begin{multipleChoice}
     \choice[correct]{Yes, it is within $0.25$ inches of the target length.}
     \choice{No, it is too short.}
@@ -106,45 +112,28 @@ Is this board usable? (Hint: $\textstyle \frac{1}{4} = 0.25$)
 
 \newpage
 
-\begin{tikzpicture}[scale=0.4]
-    % Frames (the outer "rims")
-    \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9);
-    \draw[line width=2pt, fill=blue!5] (2.4,0) circle (0.9);
+~ \\[2em]
 
-    % The "Coke Bottle" Lens Effect (thin gray rings on the light background)
-    %\foreach \r in {0.7, 0.5, 0.3} {
-       % \draw[gray!40, thin] (0,0) circle (\r);
-       % \draw[gray!40, thin] (2.4,0) circle (\r);
-    %}
-
-    % Reflection glints (adds a "glass" feel)
-    \fill[white, opacity=0.8] (-0.4,0.4) circle (0.15);
-    \fill[white, opacity=0.8] (2.0,0.4) circle (0.15);
-
-    % Bridge
-    \draw[line width=2pt] (0.9,0.1) arc (150:30:0.35);
-
-    % Temples (Arms)
-    \draw[line width=2pt] (-0.9,0.3) -- (-1.8,0.7);
-    \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7);
-\end{tikzpicture}
+\insightIcon
 
 \section*{Extra Insight}
 
 In physics, the motion of an object is often described by its \textbf{velocity}, which indicates its speed \emph{and} direction.  When an object moves \textbf{upward} or to the \textbf{right} its velocity is \textbf{positive} and when it moves \textbf{downward} or to the \textbf{left} its velocity is \textbf{negative}.  We use
 absolute value to turn velocity into speed.
 
-\[ \textbf{Speed} \ = \ |\textrm{Velocity}| \]
-
-
 \begin{center}
 \begin{tikzpicture}[>=stealth, scale=1.2]
 
- % Speed = |v|
-    \node[draw, rounded corners, fill=gray!8, text width=7cm, align=center] at (1.5, -1)
+    % Equation centered above the text node
+    \node[align=center] at (1.5, -0.2)
+    {\textbf{Speed} \ = \ |\textrm{Velocity}|};
+
+    % Text node centered below the equation
+    \node[draw=black!70, rounded corners, fill=gray!8, text width=7cm, align=center] at (1.5, -1)
     {Speed is the \textbf{magnitude} or \textbf{size} of velocity.};
 
 \end{tikzpicture}
+\xmalt{A diagram showing the mathematical relationship between speed and velocity. At the top, the equation 'Speed equals the absolute value of Velocity' is displayed. Below it, a light gray box contains the text: 'Speed is the magnitude or size of velocity.}
 \end{center}
 
 When a ball is thrown straight up in the air, its velocity is positive as it moves upward, zero when it reaches its highest point and negative when
@@ -183,15 +172,16 @@ since its velocity is negative.  Since $|-15| = 15$ the ball is traveling at a s
 
 \begin{problem}
 A toy rocket was launched straight up in the air.  After 15 seconds, the velocity of the rocket was recorded as $-32$ feet per second.
-
-
 In which direction was the rocket moving 15 seconds after it was launched?
+
+~ \\[2em]
 
 \begin{multipleChoice}
 \choice[correct]{Downward}
 \choice{Upward}
 \end{multipleChoice}
 
+~ \\[2em]
 
 What was the rocket's speed at that moment?
 
@@ -203,6 +193,8 @@ Speed = $\answer{32}$ feet per second
 \subsection*{Opposites}
 
 \begin{definition}[\textbf{Opposites}]
+
+~ \\[2em]
 
 Two numbers that are the same distance from zero but on opposite sides
 of zero are called \textbf{opposites}.
