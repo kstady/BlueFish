@@ -9,22 +9,6 @@
  *   - become (almost) empty by default, because the ximeraServer default settings will becom English again
  */ 
  
- /* 1. Import the Computer Modern font from a web repository */
-@import url('https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font@master/fonts.css');
-
-/* 2. Apply it to the entire document */
-body {
-    font-family: "Computer Modern Serif", serif !important;
-    font-size: 18px; /* Standard LaTeX-like size for web */
-    line-height: 1.6;
-}
-
-/* 3. Optional: Make headers match the classic LaTeX look */
-h1, h2, h3, h4 {
-    font-family: "Computer Modern Serif", serif !important;
-    font-weight: bold;
-}
-
 .xmhint::before {
     content: "Show hint" counter(hint_number, notfirst);
 }
