@@ -1,6 +1,7 @@
-# Make a new project in Ximera
+# My First Ximera Project :blossom: :blossom: :blossom: 
 
-Use this repository to create a new Ximera project by clicking the "Use This Template" button in the upper right hand corner.
+This is a collection of Prealgebra lessons for college students.  I will continue to add
+content until the course is complete.    
 
 The key files for Ximera deployment are: 
 - .vscode (contains our VS Code scripts)
