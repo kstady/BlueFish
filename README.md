@@ -1,7 +1,7 @@
-# My First Ximera Project :blossom:
+# My First Ximera Project :blossom: :blossom: :blossom:
 
 This is a collection of Prealgebra lessons for college students.  I will continue to add
-content until the course is complete.  
+content until the course is complete.    
 
 The key files for Ximera deployment are: 
 - .vscode (contains our VS Code scripts)
