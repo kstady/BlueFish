@@ -218,46 +218,35 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 } */
 
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
-/* Add vertical space BEFORE and AFTER specific environments */
-.problem,
-.theorem,
-.procedure,
-.definition,
-.exercise,
-.example,
-.remark {
-    margin-top: 1.5rem;    /* Space above */
-    margin-bottom: 2rem;   /* Space below */
+/* Only apply spacing inside the actual lesson content */
+.ximera-content .problem, 
+.ximera-content .theorem, 
+.ximera-content .procedure, 
+.ximera-content .definition, 
+.ximera-content .exercise, 
+.ximera-content .example, 
+.ximera-content .remark {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
     display: block;
 }
 
-/* Add vertical space between paragraphs */
-p {
-    margin-top: 1rem;    /* Space above the paragraph */
-    margin-bottom: 1rem; /* Space below the paragraph */
+/* Paragraphs only in the lesson */
+.ximera-content p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
-/* Vertical space for \section*{} */
-h2,h3 {
-    margin-top: 3rem;    /* Space above the section title */
-    margin-bottom: 2rem; /* Space below the section title */
+/* Sections only in the lesson */
+.ximera-content h2, 
+.ximera-content h3 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     display: block;
 }
 
-/* Space between items in all lists */
-li {
-    margin-bottom: 1rem; /* Adjust this for the desired gap */
-    margin-top: 1rem;    /* Optional: creates a cushion above the text */
+/* List items only in the lesson (protects TOC bullets/spacing) */
+.ximera-content li {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
-
-/* Optional: remove extra space from the very last item in a list */
-li:last-child {
-    margin-bottom: 0;
-}
-
-/* Less space for sub-items (nested lists) this is not needed, but trying it out */
-li li {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
-}
-
