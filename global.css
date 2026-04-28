@@ -220,12 +220,12 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
 
 /* Add vertical space BEFORE and AFTER specific environments */
-.problem, 
-.theorem, 
-.procedure, 
-.definition, 
-.exercise, 
-.example, 
+.problem,
+.theorem,
+.procedure,
+.definition,
+.exercise,
+.example,
 .remark {
     margin-top: 1.5rem;    /* Space above */
     margin-bottom: 2rem;   /* Space below */
@@ -262,18 +262,18 @@ li li {
     margin-top: 0.5rem;
 }
 
-/* Remove bullets but match the vertical space of your other environments */
-.ximera-content ul {
-    list-style-type: none !important;
-    padding-left: 1.5rem !important; /* Standard indentation */
+/* Specifically target list items that have no content in their marker, that is makes \item[]  work */
+li::marker {
+    content: attr(data-label); /* Standard Ximera behavior */
 }
 
-.ximera-content li {
-    list-style-type: none !important;
-    /* This margin matches the 'after environment' spacing we set earlier */
-    margin-bottom: 2rem !important; 
-}
-
-.ximera-content li::marker {
+/* Hide the marker ONLY if the user provided an empty optional argument */
+li[data-label=""]::marker,
+li[data-label=" "]::marker {
     content: none !important;
+}
+
+/* Fallback: if your Ximera version uses a span for custom labels */
+li span.custom-label:empty {
+    display: none !important;
 }
