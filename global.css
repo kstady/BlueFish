@@ -262,26 +262,18 @@ li li {
     margin-top: 0.5rem;
 }
 
-
-/* Custom Indented Description List   Note: If labels (like [10.]) are getting cut off, increase the width in the dt block and match it in the dd { margin-left } block*/
-/* Force deeper indentation and tighter spacing for description lists */
-.ximera-content dl, dl {
-    margin-left: 5rem !important; /* Significantly deeper indent */
-    margin-top: 0.5rem !important;
-    margin-bottom: 0.5rem !important;
+/* Remove bullets but match the vertical space of your other environments */
+.ximera-content ul {
+    list-style-type: none !important;
+    padding-left: 1.5rem !important; /* Standard indentation */
 }
 
-.ximera-content dt, dt {
-    float: left;
-    clear: left;
-    width: 2.5rem !important; /* Fixed width for labels like [1.] or [~] */
-    font-weight: normal;
-    text-align: left;
-    margin-top: 0 !important;
+.ximera-content li {
+    list-style-type: none !important;
+    /* This margin matches the 'after environment' spacing we set earlier */
+    margin-bottom: 2rem !important; 
 }
 
-.ximera-content dd, dd {
-    margin-left: 3rem !important; /* Indents text past the label */
-    margin-bottom: 0.1rem !important; /* Minimal gap between items */
-    padding-bottom: 0.1rem !important;
+.ximera-content li::marker {
+    content: none !important;
 }
