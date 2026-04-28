@@ -218,41 +218,28 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 } */
 
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
-/* Vertical space for environments - ONLY in the lesson area */
-.ximera-content .problem, 
-.ximera-content .theorem, 
-.ximera-content .procedure, 
-.ximera-content .definition, 
-.ximera-content .exercise, 
-.ximera-content .example, 
-.ximera-content .remark {
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
+/* Add vertical space BEFORE and AFTER specific environments */
+.problem,
+.theorem,
+.procedure,
+.definition,
+.exercise,
+.example,
+.remark {
+    margin-top: 1.5rem;    /* Space above */
+    margin-bottom: 2rem;   /* Space below */
     display: block;
 }
 
-/* Vertical space for paragraphs */
-.ximera-content p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+/* Add vertical space between paragraphs */
+p {
+    margin-top: 1rem;    /* Space above the paragraph */
+    margin-bottom: 1rem; /* Space below the paragraph */
 }
 
-/* Vertical space for sections */
-.ximera-content h2, 
-.ximera-content h3 {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+/* Vertical space for \section*{} */
+h2,h3 {
+    margin-top: 3rem;    /* Space above the section title */
+    margin-bottom: 2rem; /* Space below the section title */
     display: block;
-}
-
-/* Space between items in lists - specifically avoiding the TOC */
-.ximera-content li {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-/* Tighter space for nested lists */
-.ximera-content li li {
-    margin-bottom: 0.5rem;
-    margin-top: 0.5rem;
 }
