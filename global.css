@@ -217,7 +217,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 	display: block;
 } */
 
-/* Modifications I made with the help of AI: /*
+/* %%%%%   Modifications I made with the help of AI: %%%%  /*
 
 /* Add vertical space BEFORE and AFTER specific environments */
 .problem, 
@@ -236,4 +236,11 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 p {
     margin-top: 1rem;    /* Space above the paragraph */
     margin-bottom: 1rem; /* Space below the paragraph */
+}
+
+/* Vertical space for \section*{} */
+h2 {
+    margin-top: 3rem;    /* Space above the section title */
+    margin-bottom: 2rem; /* Space below the section title */
+    display: block;
 }
