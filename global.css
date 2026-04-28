@@ -221,28 +221,35 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* Only apply spacing inside the actual lesson content */
 /* 1. APPLY SPACING (The code that worked before) */
 /* 1. APPLY SPACING ONLY IF NOT IN TOC */
-p:not(.table-of-contents *), 
-.problem, .theorem, .definition, .exercise, .remark, 
-h2:not(.table-of-contents *), 
-h3:not(.table-of-contents *) {
+/* 1. APPLY SPACING TO EVERYTHING */
+p, .problem, .theorem, .definition, .exercise, .remark, h2, h3 {
     margin-top: 1.5rem !important;
     margin-bottom: 2rem !important;
 }
 
-li:not(.table-of-contents *) {
+li {
     margin-bottom: 1rem !important;
     margin-top: 1rem !important;
 }
 
-/* 2. PROTECT THE TOC (The Hard Reset) */
-.table-of-contents, .table-of-contents *, 
-nav, nav *, 
-.sidebar, .sidebar * {
+/* 2. THE HARD RESET: Force TOC and Sidebar to be compact NO MATTER WHAT */
+/* This specifically targets Ximera's sidebar and nav structures */
+.table-of-contents li, 
+.sidebar li, 
+nav li, 
+.table-of-contents a,
+.sidebar a {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    list-style-type: none !important; /* Keeps TOC bullets hidden if desired */
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    line-height: 1.2 !important;
+}
+
+.table-of-contents h2, 
+.sidebar h2 {
+    margin-top: 0 !important;
+    margin-bottom: 5px !important;
 }
 
 /* 3. THE ITEM[] FIX */
