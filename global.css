@@ -256,8 +256,28 @@ li:last-child {
     margin-bottom: 0;
 }
 
-/* Less space for sub-items - not needed */
+/* Less space for sub-items (nested lists) this is not needed, but trying it out */
 li li {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+}
+
+
+/* Custom Indented Description List   Note: If labels (like [10.]) are getting cut off, increase the width in the dt block and match it in the dd { margin-left } block*/
+dl {
+    margin-left: 3.5rem; /* Pushes the entire list further right */
+    margin-top: 1rem;
+}
+
+dt {
+    float: left;
+    clear: left;
+    width: 3rem;         /* Space reserved for the label/number */
+    font-weight: normal;
+    text-align: left;
+}
+
+dd {
+    margin-left: 3rem;   /* Matches the width of dt to align text perfectly */
+    margin-bottom: 0.2rem; /* Reduces vertical gap between items significantly */
 }
