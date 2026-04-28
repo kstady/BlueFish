@@ -239,8 +239,25 @@ p {
 }
 
 /* Vertical space for \section*{} */
-h2 {
+h2,h3 {
     margin-top: 3rem;    /* Space above the section title */
     margin-bottom: 2rem; /* Space below the section title */
     display: block;
+}
+
+/* Space between items in all lists */
+li {
+    margin-bottom: 1rem; /* Adjust this for the desired gap */
+    margin-top: 1rem;    /* Optional: creates a cushion above the text */
+}
+
+/* Optional: remove extra space from the very last item in a list */
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Less space for sub-items - not needed */
+li li {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 }
