@@ -220,18 +220,21 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
 /* Only apply spacing inside the actual lesson content */
 /* 1. APPLY SPACING (The code that worked before) */
-p, .problem, .theorem, .definition, .exercise, .remark, h2, h3 {
+/* 1. APPLY SPACING ONLY IF NOT IN TOC */
+p:not(.table-of-contents *), 
+.problem, .theorem, .definition, .exercise, .remark, 
+h2:not(.table-of-contents *), 
+h3:not(.table-of-contents *) {
     margin-top: 1.5rem !important;
     margin-bottom: 2rem !important;
 }
 
-li {
+li:not(.table-of-contents *) {
     margin-bottom: 1rem !important;
     margin-top: 1rem !important;
 }
 
-/* 2. PROTECT THE TOC (The "Shield") */
-/* This forces the TOC back to normal regardless of the rules above */
+/* 2. PROTECT THE TOC (The Hard Reset) */
 .table-of-contents, .table-of-contents *, 
 nav, nav *, 
 .sidebar, .sidebar * {
@@ -239,6 +242,7 @@ nav, nav *,
     margin-bottom: 0 !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    list-style-type: none !important; /* Keeps TOC bullets hidden if desired */
 }
 
 /* 3. THE ITEM[] FIX */
