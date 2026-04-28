@@ -105,3 +105,10 @@
 \end{tikzpicture}
 \xmalt{} 
 }
+
+
+%Defines a custom TikZ style called ->- that allows you to place an arrow at any specific position along a path. 
+%commonly used to add "middle" arrows to lines or curves to indicate direction.
+\tikzset{->-/.style={decoration={
+  markings,
+  mark=at position #1 with {\arrow{>}}},postaction={decorate}}}
