@@ -219,27 +219,38 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
 /* Add vertical space BEFORE and AFTER specific environments */
-.problem,
-.theorem,
-.procedure,
-.definition,
-.exercise,
-.example,
-.remark {
-    margin-top: 1.5rem;    /* Space above */
-    margin-bottom: 2rem;   /* Space below */
-    display: block;
+/* Target only the main content area using common Ximera classes */
+.ximera-content .problem, .activity-canvas .problem, #main-content .problem,
+.ximera-content .theorem, .activity-canvas .theorem, #main-content .theorem,
+.ximera-content .definition, .activity-canvas .definition, #main-content .definition,
+.ximera-content .procedure, .activity-canvas .procedure, #main-content .procedure {
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
 }
 
-/* Add vertical space between paragraphs */
-p {
-    margin-top: 1rem;    /* Space above the paragraph */
-    margin-bottom: 1rem; /* Space below the paragraph */
+/* Paragraphs in the main area */
+.ximera-content p, .activity-canvas p, #main-content p {
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
 }
 
-/* Vertical space for \section*{} */
-h2,h3 {
-    margin-top: 3rem;    /* Space above the section title */
-    margin-bottom: 2rem; /* Space below the section title */
-    display: block;
+/* Headers in the main area */
+.ximera-content h2, .activity-canvas h2, #main-content h2,
+.ximera-content h3, .activity-canvas h3, #main-content h3 {
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important;
+}
+
+/* List items in the main area - this is likely what was hitting your TOC */
+.ximera-content li, .activity-canvas li, #main-content li {
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
+}
+
+/* THE ITEM[] FIX */
+.ximera-content li[data-label=""]::marker, 
+.activity-canvas li[data-label=""]::marker,
+.ximera-content li[data-label=" "]::marker, 
+.activity-canvas li[data-label=" "]::marker {
+    content: none !important;
 }
