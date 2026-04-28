@@ -216,3 +216,24 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .outcomeHead:hover + .outcomeContent {
 	display: block;
 } */
+
+/* Modifications I made with the help of AI: /*
+
+/* Add vertical space BEFORE and AFTER specific environments */
+.problem, 
+.theorem, 
+.procedure, 
+.definition, 
+.exercise, 
+.example, 
+.remark {
+    margin-top: 1.5rem;    /* Space above */
+    margin-bottom: 2rem;   /* Space below */
+    display: block;
+}
+
+/* Add vertical space between paragraphs */
+p {
+    margin-top: 1rem;    /* Space above the paragraph */
+    margin-bottom: 1rem; /* Space below the paragraph */
+}
