@@ -219,34 +219,31 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
 /* Only apply spacing inside the actual lesson content */
-.ximera-content .problem, 
-.ximera-content .theorem, 
-.ximera-content .procedure, 
-.ximera-content .definition, 
-.ximera-content .exercise, 
-.ximera-content .example, 
-.ximera-content .remark {
-    margin-top: 1.5rem;
-    margin-bottom: 2rem;
-    display: block;
+/* 1. APPLY SPACING (The code that worked before) */
+p, .problem, .theorem, .definition, .exercise, .remark, h2, h3 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 2rem !important;
 }
 
-/* Paragraphs only in the lesson */
-.ximera-content p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+li {
+    margin-bottom: 1rem !important;
+    margin-top: 1rem !important;
 }
 
-/* Sections only in the lesson */
-.ximera-content h2, 
-.ximera-content h3 {
-    margin-top: 3rem;
-    margin-bottom: 2rem;
-    display: block;
+/* 2. PROTECT THE TOC (The "Shield") */
+/* This forces the TOC back to normal regardless of the rules above */
+.table-of-contents, .table-of-contents *, 
+nav, nav *, 
+.sidebar, .sidebar * {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
-/* List items only in the lesson (protects TOC bullets/spacing) */
-.ximera-content li {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
+/* 3. THE ITEM[] FIX */
+li[data-label=""]::marker, 
+li[data-label=" "]::marker, 
+li[data-label="~"]::marker {
+    content: none !important;
 }
