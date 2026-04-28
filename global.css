@@ -264,20 +264,24 @@ li li {
 
 
 /* Custom Indented Description List   Note: If labels (like [10.]) are getting cut off, increase the width in the dt block and match it in the dd { margin-left } block*/
-dl {
-    margin-left: 3.5rem; /* Pushes the entire list further right */
-    margin-top: 1rem;
+/* Force deeper indentation and tighter spacing for description lists */
+.ximera-content dl, dl {
+    margin-left: 5rem !important; /* Significantly deeper indent */
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
-dt {
+.ximera-content dt, dt {
     float: left;
     clear: left;
-    width: 3rem;         /* Space reserved for the label/number */
+    width: 2.5rem !important; /* Fixed width for labels like [1.] or [~] */
     font-weight: normal;
     text-align: left;
+    margin-top: 0 !important;
 }
 
-dd {
-    margin-left: 3rem;   /* Matches the width of dt to align text perfectly */
-    margin-bottom: 0.2rem; /* Reduces vertical gap between items significantly */
+.ximera-content dd, dd {
+    margin-left: 3rem !important; /* Indents text past the label */
+    margin-bottom: 0.1rem !important; /* Minimal gap between items */
+    padding-bottom: 0.1rem !important;
 }
