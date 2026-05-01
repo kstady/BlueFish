@@ -259,9 +259,15 @@ div[titletext*="Problem"] {
     color: #333 !important;
 }
 
-/* 2. Style the paragraph inside */
+
+/* 2. Style the paragraph inside - added top margin for paragraph breaks */
 div[titletext*="Problem"] p {
-    margin: 0 !important;
+    margin-top: 1.2rem !important; /* This creates the space BETWEEN paragraphs */
+    margin-bottom: 0 !important;
     font-size: 1.1em !important;
 }
 
+/* 3. This ensures the VERY FIRST paragraph doesn't have an extra gap at the top */
+div[titletext*="Problem"] p:first-of-type {
+    margin-top: 0 !important;
+}

@@ -139,8 +139,6 @@ To learn mathematics, your solutions should be written using clear, logical step
 
 \begin{procedure}[\textbf{Adding and Subtracting Fractions}]
 
-~ \\[1em]
-
 \begin{description}
   \item[Find a Common Denominator:] Before adding or subtracting, the pieces must be the same size. If the denominators are different, rewrite the fractions as equivalent fractions with a common denominator.
 
@@ -157,16 +155,17 @@ To learn mathematics, your solutions should be written using clear, logical step
 \begin{problem}
 Use the visual representation to find the difference.
 
+~ \\[1em]
 
 %\[ \frac{4}{5} - \frac{1}{5} = \frac{\answer{3}}{\answer{5}} \]
 
 \begin{center}
-\begin{tikzpicture}[scale=0.8, line width=0.8pt]
+\begin{tikzpicture}[scale=0.8, line width=0.8pt, font=\Large]
 % --- 4/5 rectangle ---
 \draw (0,0) rectangle (2,2);
 \foreach \x in {1,2,3,4} { \draw (2*\x/5,0) -- (2*\x/5,2); }
 \fill[glaucous,opacity=0.5] (0,0) rectangle (1.6,2); % 4/5 of 2 units is 1.6
-\node at (1,-0.8) {$\frac{4}{5}$};
+\node at (1,-0.8) {$\displaystyle \mathbf{\frac{4}{5}}$};
 
 % minus sign (at label level)
 \node at (3,-0.8) {$-$};
@@ -175,7 +174,7 @@ Use the visual representation to find the difference.
 \draw (4,0) rectangle (6,2);
 \foreach \x in {1,2,3,4} { \draw (4+2*\x/5,0) -- (4+2*\x/5,2); }
 \fill[orange!80!black,opacity=0.5] (4,0) rectangle (4.4,2); % 1/5 of 2 units is 0.4
-\node at (5,-0.8) {$\frac{1}{5}$};
+\node at (5,-0.8) {$\displaystyle \mathbf{\frac{1}{5}}$};
 
 % equals sign (at label level)
 \node at (7,-0.8) {$=$};
@@ -213,10 +212,14 @@ The \textbf{multiples of a number} are found by multiplying the number by the co
 4, 8 and 12.
 
 \begin{problem}
-List the first five multiples of $3$, separated by commas.
-\[
-\answer[format=set]{3, 6, 9, 12, 15}
-\]
+List the first five multiples of $3.$ 
+
+\begin{multipleChoice}
+\choice{0, 3, 6, 9, 12}
+\choice[correct]{3, 6, 9, 12, 15}
+\choice{6, 9, 12, 15, 18}
+\choice{3, 9, 12, 15, 18}
+\end{multipleChoice} 
 \end{problem}
 
 \end{remark}
@@ -231,16 +234,15 @@ the multiples of only the largest denominator and stop when you find the smalles
 
 
 \begin{example}
-Find the LCD of $\textstyle \frac{3}{4}$ and $\textstyle \frac{1}{7}$ using the list of multiples given below.
-
-
+To find the LCD of $\textstyle \frac{3}{4}$ and $\textstyle \frac{1}{7},$ we list the multiples of 4 and 7 as shown below.
+Since 28 is the smallest number that appears in \textit{both} lists, the LCD = 28.  
 \begin{align*}
 \textbf{Multiples of 4: } & 4, 8, 12, 16, 20, 24, \mathbf{28}, 32, 36, \ldots \\
 \textbf{Multiples of 7: } & 7, 14, 21, \mathbf{28}, 35, 42, 49, 56, 63, \ldots
 \end{align*}
 
-The smallest number that appears in both lists is 28, so the LCD = 28.  Note that we could have saved ourselves some time by
-only listing the multiples of 7 and looking for the smallest number that is evenly divisible by 4.
+Note that it is more efficient to list only the multiples of 7 and look for the smallest number in the list that is 
+evenly divisible by 4.  Had we done so, the list would've stopped at 28.  
 
 \begin{problem}
 Now that you know the LCD = 28.  Rewrite each fraction as an equivalent fraction with a denominator of 28.
@@ -258,7 +260,7 @@ Now that you know the LCD = 28.  Rewrite each fraction as an equivalent fraction
 \begin{problem}
 A community land trust is dividing a large lot to combat food insecurity. They decide to use $\textstyle \frac{2}{3}$ of the lot for growing fresh vegetables to donate to local food pantries and $\textstyle \frac{1}{5}$ of the lot for a fruit orchard. What total fraction of the land is dedicated to food production?
 
-    First, find the Least Common Denominator (LCD) for $\frac{2}{3}$ and $\frac{1}{5}.$
+First, find the Least Common Denominator (LCD) for $\frac{2}{3}$ and $\frac{1}{5}.$
 
     \begin{hint}
       To find the LCD, look for the smallest number that is a multiple of both 3 and 5:
