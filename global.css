@@ -261,7 +261,7 @@ div[titletext*="Problem"] {
 
 /* 2. Wipe out the "Problem" label and insert the bulb */
 div[titletext*="Problem"]::before {
-    content: "💡 Extra Insight" !important;
+    content: "💡::blossom  Extra Insight" !important;
     font-size: 1.3em !important;
     font-weight: bold !important;
     color: #6082b6 !important;
