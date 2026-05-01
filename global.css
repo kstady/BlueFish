@@ -247,5 +247,5 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* Only apply spacing to multiple choice questions inside the main lesson content */
 .main-activity .multiple-choice {
-    margin-top: 1em !important;
+    margin-top: 3em !important;
 }
