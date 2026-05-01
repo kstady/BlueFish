@@ -252,18 +252,26 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 }
 
 /* Code for Extra Insight Icon to have alt text to the rihgt of the figure, rather than below it.  (Targets ONLY the insight icon container) */
-/* Targets the image environment by the width number we assigned */
-/* Targets the image/triangle layout inside the small icon box */
-/* This targets the container Ximera builds for the minipage/image combo */
-.main-activity .minipage .image-environment {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    width: 250px !important; /* Gives room for the triangle to sit on the right */
+/* 1. Make the container only as wide as the icon and keep it on the left */
+.main-activity .image-environment[id*="insight"] {
+    position: relative !important;
+    width: 60px !important; /* Forces the container to stay small */
+    margin-left: 0 !important;
+    display: inline-block !important;
 }
 
-/* Forces the triangle toggle to the right and removes the top margin */
-.main-activity .minipage .alt-text-toggle {
-    margin-top: 0 !important;
-    margin-left: 10px !important;
+/* 2. Fix the icon scaling */
+.main-activity .image-environment[id*="insight"] svg {
+    width: 60px !important;
+    height: auto !important;
+}
+
+/* 3. Pluck the triangle from underneath and move it to the right */
+.main-activity .image-environment[id*="insight"] .alt-text-toggle {
+    position: absolute !important;
+    top: 50% !important;
+    left: 70px !important; /* Moves it 70px from the left edge (to the right of the 60px icon) */
+    transform: translateY(-50%) !important; /* Perfectly centers it vertically with the glasses */
+    margin: 0 !important;
+    white-space: nowrap !important;
 }
