@@ -251,35 +251,28 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-/* 1. Style the main problem boxes with Glaucous Blue */
-.problem-environment {
-    background-color: #f0f4f9 !important; /* Very light Glaucous tint */
-    border-left: 6px solid #6082b6 !important; /* Classic Glaucous Blue */
-    padding: 1em 1.5em !important;
+/* 1. Target the box using its ID and Glaucous Blue */
+div#problem1.problem-environment {
+    background-color: #f0f4f9 !important; /* Light Glaucous background */
+    border-left: 8px solid #6082b6 !important; /* Deep Glaucous accent */
+    padding: 1.5em !important;
     margin: 2em 0 !important;
-    border-radius: 4px;
-    box-shadow: 3px 3px 10px rgba(96, 130, 182, 0.1);
+    border-radius: 4px !important;
 }
 
-
-/* 2. SILENCE the "Observation" or "Problem" auto-text */
-/* This targets the pseudo-element creating the labels */
-.problem-environment::before {
-    content: "" !important;
-    display: none !important;
-}
-
-/* 3. Style the "Extra Insight" header (h3) to match */
-.problem-environment h3.likesectionHead {
+/* 2. KILL the word "Problem" from the titletext attribute */
+div#problem1[titletext]::before, 
+div#problem1::before {
+    content: "💡 Extra Insight" !important; /* This replaces "Problem" with your bulb */
     color: #6082b6 !important;
-    margin-top: 0 !important;
+    font-weight: bold !important;
     font-size: 1.4em !important;
-    display: flex !important;
-    align-items: center !important;
+    display: block !important;
+    margin-bottom: 10px !important;
 }
 
-/* 4. Add the lightbulb emoji back in */
-.problem-environment h3.likesectionHead::before {
-    content: "💡 " !important;
-    margin-right: 10px !important;
+/* 3. Ensure the text inside is readable */
+div#problem1 p.noindent {
+    color: #333 !important;
+    font-size: 1.1em !important;
 }
