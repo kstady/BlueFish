@@ -252,20 +252,18 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 }
 
 /* Code for Extra Insight Icon to have alt text to the rihgt of the figure, rather than below it.  (Targets ONLY the insight icon container) */
-.main-activity .image-environment[id*="insight"] {
+/* Targets the image environment by the width number we assigned */
+.main-activity .image-environment[id*="200"] {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
+    justify-content: flex-start !important; /* Forces it to the left */
     gap: 15px;
-    /* This prevents the "huge" scaling */
-    width: fit-content !important; 
-    max-width: 200px; 
-    margin-left: 0; /* Keeps it left-aligned */
+    margin-left: 0 !important;
+    width: fit-content !important;
 }
 
-/* Ensures the SVG (the TikZ output) stays at its intended scale */
-.main-activity .image-environment[id*="insight"] svg {
-    width: auto !important;
-    height: auto !important;
-    flex-shrink: 0;
+/* Adjust the triangle toggle positioning */
+.main-activity .image-environment[id*="200"] .alt-text-toggle {
+    margin: 0 !important;
 }
