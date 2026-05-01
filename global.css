@@ -217,7 +217,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 	display: block;
 } */
 
-/* %%%%%   Modifications I made with the help of AI: %%%%  /*
+/* %%%%%   Modifications I made with the help of AI: %%%%  */
 /* Only applies spacing if it is inside the main-activity container, not the TOC. */
 .main-activity p, 
 .main-activity .problem, 
