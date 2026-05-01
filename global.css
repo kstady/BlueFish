@@ -250,26 +250,3 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .select-all {
     margin-top: 2em !important;
 }
-
-/* Forces the icon and the alt-text toggle/content to sit in a row */
-.main-activity .image-environment[id*="insight"] {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    width: fit-content !important;
-    margin: 0 !important;
-}
-
-/* Keeps the icon small so it doesn't take up the line */
-.main-activity .image-environment[id*="insight"] svg {
-    width: 60px !important;
-    height: auto !important;
-    flex-shrink: 0;
-}
-
-/* Moves the alt-text toggle button and the revealed text to the right */
-.main-activity .image-environment[id*="insight"] .alt-text-toggle,
-.main-activity .image-environment[id*="insight"] .alt-text {
-    margin: 0 0 0 10px !important;
-    display: inline-block !important;
-}
