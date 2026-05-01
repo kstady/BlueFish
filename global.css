@@ -252,28 +252,30 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 }
 
 
-/* Styles the observation box for Extra Insights */
-.main-activity .observation {
-    background-color: #fdf6e3 !important; /* Light cream/yellow background */
-    border-left: 6px solid #d33682 !important; /* Bold pink/magenta accent bar */
-    padding: 1em 1.5em !important;
-    margin: 2em 0 !important;
-    border-radius: 4px;
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.05);
-}
+/* Styles the observation box for Extra Insights */ 
+.main-activity .observation { 
+    background-color: #fdf6e3 !important; 
+    border-left: 6px solid #d33682 !important; 
+    padding: 1em 1.5em !important; 
+    margin: 2em 0 !important; 
+    border-radius: 4px; 
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.05); 
+} 
 
-/* Style the section header inside this specific box */
-.main-activity .observation h1 {
-    color: #d33682 !important;
-    margin-top: 0 !important;
-    font-size: 1.4em !important;
-    display: flex;
-    align-items: center;
-}
+/* Hide the original "Observation" text and set new title */ 
+.main-activity .observation h1 { 
+    color: #d33682 !important; 
+    margin-top: 0 !important; 
+    font-size: 0 !important; /* Hides the original word "Observation" */
+    display: flex; 
+    align-items: center; 
+} 
 
-/* Add an emoji before the "Extra Insight" title using CSS */
-.main-activity .observation h1::before {
-    content: "💡 "; /* The lightbulb emoji */
-    margin-right: 10px;
+/* Create the new "💡 Extra Insight" title */ 
+.main-activity .observation h1::before { 
+    content: "💡 Extra Insight"; /* Adds the icon AND your preferred title */ 
+    font-size: 1.4rem !important; /* Restores the size for the new text */
+    visibility: visible;
+    margin-right: 10px; 
 }
 
