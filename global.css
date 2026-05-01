@@ -254,14 +254,16 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* Code for Extra Insight Icon to have alt text to the rihgt of the figure, rather than below it.  (Targets ONLY the insight icon container) */
 /* Targets the image environment by the width number we assigned */
 /* Targets the image/triangle layout inside the small icon box */
+/* This targets the container Ximera builds for the minipage/image combo */
 .main-activity .minipage .image-environment {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    width: auto !important;
+    width: 250px !important; /* Gives room for the triangle to sit on the right */
 }
 
-/* Ensures the triangle sits to the right of the icon */
+/* Forces the triangle toggle to the right and removes the top margin */
 .main-activity .minipage .alt-text-toggle {
-    margin: 0 0 0 10px !important;
+    margin-top: 0 !important;
+    margin-left: 10px !important;
 }
