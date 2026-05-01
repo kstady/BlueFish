@@ -259,15 +259,6 @@ div[titletext*="Problem"] {
     color: #333 !important;
 }
 
-/* 2. Replace "Problem" label with the Daisy icon - code for daisy is \1F33C */
-div[titletext*="Problem"]::before {
-    content: "🌼 Extra Insight" !important; /* Swapped 🌸 for 🌼 */
-    font-size: 1.3em !important;
-    font-weight: bold !important;
-    color: #6082b6 !important; 
-    display: block !important;
-    margin-bottom: 0.5em !important;
-}
 
 /* 3. Style the paragraph inside */
 div[titletext*="Problem"] p {
