@@ -9,6 +9,34 @@
  *   - become (almost) empty by default, because the ximeraServer default settings will becom English again
  */ 
  
+/* Chaning the Font */
+/* 1. Import the Latin Modern font family */
+@import url('https://jsdelivr.net');
+
+/* 2. Apply to the entire lesson content */
+.main-activity, 
+.main-activity p, 
+.main-activity .problem, 
+.main-activity .theorem, 
+.main-activity .definition, 
+.main-activity h1, 
+.main-activity h2, 
+.main-activity h3 {
+    font-family: "Latin Modern Roman", serif !important;
+    -webkit-font-smoothing: antialiased; /* Makes the thin lines look better on screen */
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Adjust sizes to match PDF proportions */
+.main-activity {
+    font-size: 19px !important; /* LaTeX 12pt equivalent on most screens */
+    line-height: 1.55 !important;
+    color: #1a1a1a !important; /* Slightly off-black like ink on paper */
+}
+
+/* Done changing the font :) */
+
+
 .xmhint::before {
     content: "Show hint" counter(hint_number, notfirst);
 }
