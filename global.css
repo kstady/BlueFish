@@ -251,9 +251,8 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-
-/* 1. The main box style */
-.main-activity .observation {
+/* 1. Style the main observation box */
+.observation {
     background-color: #fdf6e3 !important;
     border-left: 6px solid #d33682 !important;
     padding: 1em 1.5em !important;
@@ -261,20 +260,24 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     border-radius: 4px;
 }
 
-/* 2. Hide the original "Observation" text completely */
-.main-activity .observation h1 {
-    visibility: hidden !important;
-    position: relative !important;
+/* 2. DELETE the word "Observation" */
+/* This targets the auto-generated text in theorem environments */
+.observation::before {
+    content: "" !important;
+    display: none !important;
 }
 
-/* 3. Force the new "💡 Extra Insight" to appear in its place */
-.main-activity .observation h1::after {
-    content: "💡 Extra Insight" !important;
-    visibility: visible !important;
-    position: absolute !important;
-    left: 0 !important;
-    top: 0 !important;
-    font-size: 1.4rem !important;
+/* 3. Style the "Extra Insight" header (h3) */
+.observation h3#extra-insight {
     color: #d33682 !important;
-    white-space: nowrap !important;
+    margin-top: 0 !important;
+    font-size: 1.4em !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 4. Add the lightbulb emoji before your H3 text */
+.observation h3#extra-insight::before {
+    content: "💡 " !important;
+    margin-right: 10px !important;
 }
