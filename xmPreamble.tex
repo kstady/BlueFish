@@ -83,18 +83,21 @@
 
 \newcommand{\insightIcon}[1]{%
     \par\bigskip\noindent
-    \begin{image}[200] % The number stops the "Missing number" error
-        \begin{tikzpicture}[scale=0.4] 
-            \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9); 
-            \draw[line width=2pt, fill=blue!5] (2.4,0) circle (0.9); 
-            \fill[white, opacity=0.8] (-0.4,0.4) circle (0.15); 
-            \fill[white, opacity=0.8] (2.0,0.4) circle (0.15); 
-            \draw[line width=2pt] (0.9,0.1) arc (150:30:0.35); 
-            \draw[line width=2pt] (-0.9,0.3) -- (-1.8,0.7); 
-            \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7); 
-        \end{tikzpicture}
-        \xmalt{#1}
-    \end{image}
+    \begin{minipage}{50px}
+        \begin{image}
+            \begin{tikzpicture}[scale=0.4] 
+                \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9); 
+                \draw[line width=2pt, fill=blue!5] (2.4,0) circle (0.9); 
+                \fill[white, opacity=0.8] (-0.4,0.4) circle (0.15); 
+                \fill[white, opacity=0.8] (2.0,0.4) circle (0.15); 
+                \draw[line width=2pt] (0.9,0.1) arc (150:30:0.35); 
+                \draw[line width=2pt] (-0.9,0.3) -- (-1.8,0.7); 
+                \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7); 
+            \end{tikzpicture}
+            \xmalt{#1}
+        \end{image}
+    \end{minipage}\hspace{10px}
 }
+
 
 

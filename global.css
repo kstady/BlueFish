@@ -253,17 +253,15 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* Code for Extra Insight Icon to have alt text to the rihgt of the figure, rather than below it.  (Targets ONLY the insight icon container) */
 /* Targets the image environment by the width number we assigned */
-.main-activity .image-environment[id*="200"] {
+/* Targets the image/triangle layout inside the small icon box */
+.main-activity .minipage .image-environment {
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    justify-content: flex-start !important; /* Forces it to the left */
-    gap: 15px;
-    margin-left: 0 !important;
-    width: fit-content !important;
+    width: auto !important;
 }
 
-/* Adjust the triangle toggle positioning */
-.main-activity .image-environment[id*="200"] .alt-text-toggle {
-    margin: 0 !important;
+/* Ensures the triangle sits to the right of the icon */
+.main-activity .minipage .alt-text-toggle {
+    margin: 0 0 0 10px !important;
 }
