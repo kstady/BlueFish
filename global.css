@@ -251,33 +251,35 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-/* 1. Style the main observation box */
-.observation {
-    background-color: #fdf6e3 !important;
-    border-left: 6px solid #d33682 !important;
+/* 1. Style the main problem boxes with Glaucous Blue */
+.problem-environment {
+    background-color: #f0f4f9 !important; /* Very light Glaucous tint */
+    border-left: 6px solid #6082b6 !important; /* Classic Glaucous Blue */
     padding: 1em 1.5em !important;
     margin: 2em 0 !important;
     border-radius: 4px;
+    box-shadow: 3px 3px 10px rgba(96, 130, 182, 0.1);
 }
 
-/* 2. DELETE the word "Observation" */
-/* This targets the auto-generated text in theorem environments */
-.observation::before {
+
+/* 2. SILENCE the "Observation" or "Problem" auto-text */
+/* This targets the pseudo-element creating the labels */
+.problem-environment::before {
     content: "" !important;
     display: none !important;
 }
 
-/* 3. Style the "Extra Insight" header (h3) */
-.observation h3#extra-insight {
-    color: #d33682 !important;
+/* 3. Style the "Extra Insight" header (h3) to match */
+.problem-environment h3.likesectionHead {
+    color: #6082b6 !important;
     margin-top: 0 !important;
     font-size: 1.4em !important;
     display: flex !important;
     align-items: center !important;
 }
 
-/* 4. Add the lightbulb emoji before your H3 text */
-.observation h3#extra-insight::before {
+/* 4. Add the lightbulb emoji back in */
+.problem-environment h3.likesectionHead::before {
     content: "💡 " !important;
     margin-right: 10px !important;
 }
