@@ -245,7 +245,8 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     content: none !important;
 }
 
-/* Only apply spacing to multiple choice questions inside the main lesson content */
-.main-activity .multiple-choice {
+/* Apply spacing to Multiple Choice and Select All questions inside the main lesson content */
+.main-activity .multiple-choice,
+.main-activity .select-all {
     margin-top: 2em !important;
 }
