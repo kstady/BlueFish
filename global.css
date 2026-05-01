@@ -250,3 +250,14 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .select-all {
     margin-top: 2em !important;
 }
+
+
+/* Add a distinct border and shadow to all remark boxes */
+.main-activity .remark {
+    border-left: 5px solid #0073e6 !important; /* Blue left accent bar */
+    background-color: #f0f7ff !important;    /* Light blue background */
+    padding: 15px !important;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    margin: 1.5em 0 !important;
+}
