@@ -218,7 +218,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 } */
 
 /* %%%%%   Modifications I made with the help of AI: %%%%  /*
-/* Only apply spacing if it is inside the main-activity container */
+/* Only applies spacing if it is inside the main-activity container, not the TOC. */
 .main-activity p, 
 .main-activity .problem, 
 .main-activity .theorem, 
@@ -249,4 +249,23 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .multiple-choice,
 .main-activity .select-all {
     margin-top: 2em !important;
+}
+
+/* Code for Extra Insight Icon to have alt text to the rihgt of the figure, rather than below it.  (Targets ONLY the insight icon container) */
+.main-activity .image-environment[id*="insight"] {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px;
+    /* This prevents the "huge" scaling */
+    width: fit-content !important; 
+    max-width: 200px; 
+    margin-left: 0; /* Keeps it left-aligned */
+}
+
+/* Ensures the SVG (the TikZ output) stays at its intended scale */
+.main-activity .image-environment[id*="insight"] svg {
+    width: auto !important;
+    height: auto !important;
+    flex-shrink: 0;
 }

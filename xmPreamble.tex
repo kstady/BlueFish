@@ -80,9 +80,11 @@
 %\newcommand{\answerFormatBoxed}[1]{\fbox{\ensuremath{#1}}}
 %\newcommand{\answerFormatBoxedGiven}[1]{\underset{\scriptstyle\mathrm{given}}{\fbox{\ensuremath{#1}}}}
 
+
 % Glasses
 % Custom command for the Insight Section Icon
-\newcommand{\insightIcon}{%
+\newcommand{\insightIcon}[1]{%
+\begin{image}[insight] 
     \par\bigskip\noindent
     \begin{tikzpicture}[scale=0.4]
     % Frames (the outer "rims")
@@ -107,6 +109,7 @@
     \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7);
 \end{tikzpicture}
 \xmalt{} 
+\end{image}
 }
 
 
