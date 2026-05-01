@@ -81,22 +81,18 @@
 %\newcommand{\answerFormatBoxedGiven}[1]{\underset{\scriptstyle\mathrm{given}}{\fbox{\ensuremath{#1}}}}
 
 
-\newcommand{\insightIcon}[1]{%  <-- The [1] MUST be right here
-    \par\bigskip\noindent
-    \mbox{%  <-- Forces everything to stay on one line
-        \begin{image}[insight]
-            \begin{tikzpicture}[scale=0.3] 
-                \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9); 
-                \draw[line width=2pt, fill=blue!5] (2.4,0) circle (0.9); 
-                \fill[white, opacity=0.8] (-0.4,0.4) circle (0.15); 
-                \fill[white, opacity=0.8] (2.0,0.4) circle (0.15); 
-                \draw[line width=2pt] (0.9,0.1) arc (150:30:0.35); 
-                \draw[line width=2pt] (-0.9,0.3) -- (-1.8,0.7); 
-                \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7); 
-            \end{tikzpicture}
-            \xmalt{#1}
-        \end{image}
-    }
+\newcommand{\insightIcon}[1]{%
+    \begin{image}[insight]
+        \begin{tikzpicture}[scale=0.3] 
+            \draw[line width=2pt, fill=blue!5] (0,0) circle (0.9); 
+            \draw[line width=2pt, fill=blue!5] (2.4,0) circle (0.9); 
+            \draw[line width=2pt] (0.9,0.1) arc (150:30:0.35); 
+            \draw[line width=2pt] (-0.9,0.3) -- (-1.8,0.7); 
+            \draw[line width=2pt] (3.3,0.3) -- (4.2,0.7); 
+        \end{tikzpicture}
+        \xmalt{#1}
+    \end{image}
 }
+
 
 
