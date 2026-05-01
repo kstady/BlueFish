@@ -250,28 +250,3 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .select-all {
     margin-top: 2em !important;
 }
-
-/* Code for Extra Insight Icon to have alt text to the rihgt of the figure, rather than below it.  (Targets ONLY the insight icon container) */
-/* 1. Make the container only as wide as the icon and keep it on the left */
-/* Keeps the glasses and triangle in a tight row on the left */
-
-/* 1. Shrink the container so it doesn't take up the whole line */
-.main-activity .image-environment[id*="insight"] {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    width: fit-content !important;
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-/* 2. Keep the glasses small */
-.main-activity .image-environment[id*="insight"] svg {
-    width: 60px !important;
-    height: auto !important;
-}
-
-/* 3. Move the triangle to the right of the glasses */
-.main-activity .image-environment[id*="insight"] .alt-text-toggle {
-    margin: 0 0 0 10px !important;
-}
