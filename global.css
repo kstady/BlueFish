@@ -251,28 +251,27 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-/* 1. Target the box using its ID and Glaucous Blue */
-div#problem1.problem-environment {
-    background-color: #f0f4f9 !important; /* Light Glaucous background */
-    border-left: 8px solid #6082b6 !important; /* Deep Glaucous accent */
+/* 1. Target by the titletext attribute itself */
+div[titletext*="Problem"] {
+    background-color: #f0f4f8 !important; /* Glaucous Blue Tint */
+    border-left: 8px solid #6082b6 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
-    margin: 2em 0 !important;
-    border-radius: 4px !important;
-}
-
-/* 2. KILL the word "Problem" from the titletext attribute */
-div#problem1[titletext]::before, 
-div#problem1::before {
-    content: "💡 Extra Insight" !important; /* This replaces "Problem" with your bulb */
-    color: #6082b6 !important;
-    font-weight: bold !important;
-    font-size: 1.4em !important;
-    display: block !important;
-    margin-bottom: 10px !important;
-}
-
-/* 3. Ensure the text inside is readable */
-div#problem1 p.noindent {
     color: #333 !important;
+}
+
+/* 2. Wipe out the "Problem" label and insert the bulb */
+div[titletext*="Problem"]::before {
+    content: "💡 Extra Insight" !important;
+    font-size: 1.3em !important;
+    font-weight: bold !important;
+    color: #6082b6 !important;
+    display: block !important;
+    margin-bottom: 0.5em !important;
+}
+
+/* 3. Style the paragraph inside */
+div[titletext*="Problem"] p {
+    margin: 0 !important;
     font-size: 1.1em !important;
 }
+
