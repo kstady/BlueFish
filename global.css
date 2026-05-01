@@ -244,3 +244,8 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity li[data-label="~"]::marker {
     content: none !important;
 }
+
+/* Only apply spacing to multiple choice questions inside the main lesson content */
+.main-activity .multiple-choice {
+    margin-top: 1em !important;
+}
