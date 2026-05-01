@@ -1,7 +1,9 @@
 # My First Ximera Project :blossom: :blossom: :blossom: 
 
-This is a collection of Prealgebra lessons for college students.  I will continue to add
-content until the course is complete.    
+This is a collection of Prealgebra lessons for college students.  I plan continue to add
+content until the course is complete.  I modified the css file to create spacing bewteen problems
+and other environments as well as before multiple-choice and select-all answer choices.  These modifcations 
+can be found at the very end of my global.css file. 
 
 The key files for Ximera deployment are: 
 - .vscode (contains our VS Code scripts)
