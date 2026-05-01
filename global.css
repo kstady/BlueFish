@@ -252,30 +252,24 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 }
 
 
-/* Styles the observation box for Extra Insights */ 
-.main-activity .observation { 
-    background-color: #fdf6e3 !important; 
-    border-left: 6px solid #d33682 !important; 
-    padding: 1em 1.5em !important; 
-    margin: 2em 0 !important; 
-    border-radius: 4px; 
-    box-shadow: 3px 3px 10px rgba(0,0,0,0.05); 
-} 
-
-/* Hide the original "Observation" text and set new title */ 
-.main-activity .observation h1 { 
-    color: #d33682 !important; 
-    margin-top: 0 !important; 
-    font-size: 0 !important; /* Hides the original word "Observation" */
-    display: flex; 
-    align-items: center; 
-} 
-
-/* Create the new "💡 Extra Insight" title */ 
-.main-activity .observation h1::before { 
-    content: "💡 Extra Insight"; /* Adds the icon AND your preferred title */ 
-    font-size: 1.4rem !important; /* Restores the size for the new text */
-    visibility: visible;
-    margin-right: 10px; 
+/* 1. Try a broader selector to find the box */
+[class*="observation"], .observation {
+    background-color: #fdf6e3 !important;
+    border-left: 6px solid #d33682 !important;
+    padding: 1em 1.5em !important;
+    border-radius: 4px !important;
 }
 
+/* 2. Hide ANY text inside the header and replace it */
+[class*="observation"] h1, .observation h1 {
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+[class*="observation"] h1::before, .observation h1::before {
+    content: "💡 Extra Insight" !important;
+    font-size: 1.4rem !important;
+    color: #d33682 !important;
+    visibility: visible !important;
+    display: block !important;
+}
