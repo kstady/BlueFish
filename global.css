@@ -327,6 +327,12 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
+/* Removes bullets from any itemize list nested inside an enumerate list for nice indenting */
+.main-activity ol li ul {
+    list-style-type: none !important;
+}
+
+
 /* Done with changes. */
 
 /* Use Ctrl F5 on webpage whenever you make changes to this file */
