@@ -353,28 +353,39 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-/* Remove bullets from any itemize list nested inside a description environment */
-.main-activity .description ul {
-    list-style-type: none !important;
-    padding-left: 1.5rem !important; /* Indents the text where the bullet used to be */
+/* 1. Aligns "Step X" and Text perfectly using Grid */
+.main-activity .description dl {
+    display: grid;
+    grid-template-columns: 5.5em 1fr; 
+    column-gap: 1rem;
+    margin-bottom: 2rem !important;
 }
 
-.main-activity .description ul li {
-    margin-bottom: 0.5rem !important; /* Adds a tiny bit of space between the sub-steps */
+.main-activity .description dt {
+    grid-column: 1;
+    font-weight: bold !important;
+    margin: 0 !important;
 }
 
-/* Specifically target the list inside Description to remove the top gap */
+.main-activity .description dd {
+    grid-column: 2;
+    margin: 0 !important;
+}
+
+/* 2. Tightens the nested list in Step 2 & removes bullets */
 .main-activity .description dd ul {
-    margin-top: -0.5rem !important; /* Negative margin 'pulls' the list up */
-    padding-top: 0 !important;
+    list-style-type: none !important;
+    margin-top: -0.2rem !important; /* Pulls list up to Step 2 text */
+    padding: 0 0 0 1.5rem !important;
 }
 
-/* Ensure the paragraph text above the list doesn't push it down */
 .main-activity .description dd p {
     margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
 }
 
+.main-activity .description dd ul li {
+    margin-bottom: 0.5rem !important;
+}
 
 
 /* Done with changes. */
