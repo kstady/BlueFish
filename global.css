@@ -363,6 +363,18 @@ div[titletext*="Problem"] p:first-of-type {
     margin-bottom: 0.5rem !important; /* Adds a tiny bit of space between the sub-steps */
 }
 
+/* Remove the gap between Step 2 text and the start of the itemized list in Fractions: Simplifying */
+.main-activity .description li ul {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Optional: Shrink the space between the sub-points themselves if they feel too spread out */
+.main-activity .description li ul li {
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
+}
+
 
 /* Done with changes. */
 
