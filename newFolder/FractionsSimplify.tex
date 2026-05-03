@@ -120,11 +120,8 @@ To find the prime factorization of any composite number, follow the steps below.
 \item[Step 1] \textbf{Find a Pair of Factors}: Identify two numbers that have a product equal to the composite number.  Draw two branches extending from the composite number
 to the factors.
 
-\item[Step 2] \textbf{Evaluate Each Factor}: \begin{itemize}
-\item If a factor is prime, circle it. This branch is now finished.
-
-\item If a factor is composite, do not circle it. Continue to the next step.
-\end{itemize}
+\item[Step 2] \textbf{Evaluate Each Factor}: If a factor is prime, circle it. This branch is now finished.  If a factor is 
+composite, do not circle it. Continue to the next step.
 
 \item[Step 3] \textbf{Repeat the Process}: For every number that is not circled, find a pair of factors and draw new branches.
 
@@ -137,6 +134,7 @@ to the factors.
 
 
 \begin{example}
+
 Use the steps given above to find the prime factorization of the number 66.  \textbf{Note}: Each composite number is written inside a square for clarity.  You can omit
 the squares when finding prime factorizations by hand, but don't forget to circle the prime numbers.
 
@@ -321,9 +319,6 @@ trees for 100.  One begins with the factors 10 and 10 and the other begins with 
 \begin{problem}
 The factorization tree for the number 30 is given below.
 
-~ \\[1em]
-
-
 \begin{center}
 \begin{tikzpicture}[
     thick,
@@ -432,7 +427,6 @@ Based on this tree, what is the prime factorization of $140$?
 \end{problem}
 
 
-
 \begin{problem} Find the prime factorization of $42$.
 
   \begin{multipleChoice}
@@ -461,10 +455,6 @@ Based on this tree, what is the prime factorization of $140$?
 
 \end{problem}
 
-
-\insightIcon
-
-
 \section*{Extra Insight:  The Power of Prime Numbers}
 
 Did you know that \textbf{prime numbers} keep your online data safe from hackers?  Secure messages and accounts are locked by a giant composite number and the key is its prime factorization.  One way this is done is through a process called \textbf{RSA Encryption}.  To create the lock, a computer picks two very large prime numbers and multiplies them together to get an enormous composite number.  A computer can multiply two very large prime numbers in less than a second to create the composite number, but finding its prime factorization isn't so easy.  It would take the fastest supercomputer billions of years.  Since its nearly impossible for hackers to find the key (the prime factorization), your accounts and messages stay locked and your information remains private!
@@ -477,10 +467,10 @@ This whole process depends on knowing two very large prime numbers. The largest 
 The \textbf{greatest common factor} is the largest whole number that divides evenly into two or more numbers.  Equivalently, it is
 the largest whole number that is a factor of each number.
 
+\end{definition}
 
 
-\begin{problem}
-\textbf{True or False}:  The GCF will always be less than or equal to the smallest number in the group.
+\begin{problem} \textcolor{glaucous!75!black}{\textbf{True or False}}:  The GCF will always be less than or equal to the smallest number in the group.
 
 \begin{multipleChoice}
 \choice[correct]{True.}
@@ -493,12 +483,14 @@ That's right!  Since the GCF evenly divides into each number, it can't be larger
 
 \end{problem}
 
-\end{definition}
 
 
-\begin{procedure}[\textbf{Finding the GCF Using a Lists of Factors}]
+\begin{procedure}[\textbf{Finding the GCF Using Lists of Factors}]
 
-List the factors of each number and look for the largest number that appears in each list.    
+List the factors of each number and look for the largest number that appears in each list.  \textbf{Alternatively}, 
+only list the factors of the smallest number then look for the largest factor that evenly divides into the other number(s).
+\end{remark}
+
 
 \end{procedure}
 
@@ -513,15 +505,13 @@ To find the GCF of 12 and 36, we begin by listing the factors of each number.
 \qquad \textbf{Factors of 36:} 1, 3, 4, 6, 9, 12, 18, 36
 
 
-The \textit{common factors} of 12 and 36 are 1, 3, 4, 6, and 12.  So, the \textbf{greatest common factor} is 12.  If the numbers are large, listing all of the factors
+The \textit{common factors} of 12 and 36 are 1, 3, 4, 6, and 12.  So, the \textbf{greatest common factor} is 12.  
+Notice that it is more efficient to list the factors of 12 and look for the largest number that evenly divides into 36.  
 
 \end{example}
 
-\begin{remark}
-A shortcut to this process is to only list the factors of the smallest number in the group and look for the largest factor that evenly divides into the other number(s).
-\end{remark}
 
-INSERT VIDEO SHOWING REMARK IDEA
+INSERT VIDEO SHOWING Alternative IDEA
 
 
 \begin{problem}
@@ -550,11 +540,11 @@ Find the GCF of 24 and 60 by listing the factors of both numbers or just the num
 
  To find the GCF of 12 and 36, using this approach, we begin with the prime factorization of both numbers.
 
-
-\qquad  $12 = 2 \cdot 2 \cdot 2 \cdot 3$  %\qquad does nothing in html :(
-
-\qquad  $36 = 2 \cdot 2 \cdot 3 \cdot 3$
-
+\begin{eqnarray*}
+12 &=& 2 \cdot 2 \cdot 2 \cdot 3 \\
+   & & \\
+36 &=& 2 \cdot 2 \cdot 3 \cdot 3 \\
+\end{eqnarray*}
 
 The common factors are 2 and 3.  There are two factors of 2 and one factor of 3 in \textit{both} factorizations, 
 so the GCF = $2 \cdot 2 \cdot 3$ which equals 12.
@@ -599,8 +589,7 @@ about finding the GCF to solve the following application problems.
 
 \begin{problem}
   You are creating identical goodie bags for a school event. You have \textbf{18} Airheads, \textbf{24} Tootsie Rolls and
-  \textbf{36} Kit-Kats.  What is the \textbf{greatest} number of identical goodie bags you can make if you want to use all the candy and 
-  leave nothing over?
+  \textbf{36} Kit-Kats.  What is the \textbf{greatest} number of identical goodie bags you can make if you want to use all of the candy?
 
   Greatest number of bags = $\answer{6}$
 
@@ -608,20 +597,6 @@ about finding the GCF to solve the following application problems.
     To solve this, you need to find the Greatest Common Factor (GCF) of 18, 24, and 36. List the factors for each number and find the largest one that appears in all three lists.
   \end{hint}
 
-  \begin{feedback}
-    The factors are:
-    \begin{itemize}
-        \item \textbf{18}: 1, 2, 3, \textbf{6}, 9, 18
-        \item \textbf{24}: 1, 2, 3, 4, \textbf{6}, 8, 12, 24
-        \item \textbf{36}: 1, 2, 3, 4, \textbf{6}, 9, 12, 18, 36
-    \end{itemize}
-    The largest common factor is 6, so you can make 6 identical bags.
-  \end{feedback}
-\end{problem}
-
-
-
-\begin{problem}
   Now that you know you can make identical goodie bags with no waste, how many of each candy will be in \textbf{each} bag?
 
   \begin{itemize}
@@ -629,7 +604,7 @@ about finding the GCF to solve the following application problems.
       \item Tootsie Rolls: $\answer{4}$
       \item Kit-Kats: $\answer{6}$
   \end{itemize}
-
+  
   \begin{hint}
     Divide the total number of each candy by the number of bags (6). For example, $18 \div 6 = 3$ Airheads.
   \end{hint}
@@ -643,7 +618,7 @@ about finding the GCF to solve the following application problems.
       \textbf{20} feet.  The carpenter wants to cut all three boards into smaller pieces of equal length,
        so that there is no scrap wood left over. What is the longest possible length for these pieces?
 
-  Longest length = $\answer{4}$ feet
+  \[ \textrm{Longest Length } = $\answer{4} \ \textrm{feet} \] 
 
   \begin{hint}
     Find the Greatest Common Factor (GCF) of 8, 12, and 20. This will be the largest number that divides evenly into all three lengths.
