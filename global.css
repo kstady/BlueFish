@@ -342,6 +342,16 @@ div[titletext*="Problem"] p:first-of-type {
     content: "(" counter(list-item, lower-alpha) ") " !important;
 }
 
+/* Adds vertical space between problem parts (a, b, c...) */
+.main-activity .problem ol > li {
+    margin-bottom: 2.5rem !important;
+}
+
+/* Ensures the Multiple Choice options themselves aren't too cramped */
+.main-activity .multiple-choice {
+    margin-bottom: 1rem !important;
+}
+
 /* Done with changes. */
 
 /* Use Ctrl F5 on webpage whenever you make changes to this file */
