@@ -15,23 +15,30 @@
 /* 1. Import the Latin Modern font family */
 @import url('https://jsdelivr.net');
 
-/* 2. Apply LaTeX font to EVERYTHING: paragraphs, headers, and Ximera specific titles */
+
+
+/* 1. Apply font to EVERYTHING, but keep standard text at normal weight */
 .main-activity, 
-.main-activity p,
-.main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4,
+.main-activity p {
+    font-family: "Latin Modern Roman", serif !important;
+    font-weight: normal !important; /* Forces paragraphs to NOT be bold */
+}
+
+/* 2. Apply font AND bold weight ONLY to headers and titles */
+.main-activity h1, 
+.main-activity h2, 
+.main-activity h3, 
+.main-activity h4,
 .main-activity .liketitleHead,
 .main-activity .likesectionHead,
 .main-activity .likesubsectionHead,
-.main-activity .likesubsectionHead a,
 .main-activity .problem-title,
 .main-activity .theorem-title,
-.main-activity .definition-title,
-.main-activity .observation-title,
-.main-activity .remark-title,
 .main-activity div[titletext]::before {
     font-family: "Latin Modern Roman", serif !important;
-    font-weight: bold !important; /* Force LaTeX-style bold weight */
+    font-weight: bold !important; /* Only these elements get bold */
 }
+
 
 /* 3. Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
