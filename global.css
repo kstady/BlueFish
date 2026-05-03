@@ -332,6 +332,15 @@ div[titletext*="Problem"] p:first-of-type {
     list-style-type: none !important;
 }
 
+/* Force the first level of lists inside a problem to use (a), (b), (c) */
+.main-activity .problem ol {
+    list-style-type: lower-alpha !important;
+}
+
+/* Adds the parentheses around the letter: (a), (b), etc. */
+.main-activity .problem ol > li::marker {
+    content: "(" counter(list-item, lower-alpha) ") " !important;
+}
 
 /* Done with changes. */
 
