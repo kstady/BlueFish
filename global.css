@@ -353,34 +353,36 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 /* New */
-/* Universal Fix for Ximera Description Alignment */
-.main-activity .description ul, 
-.main-activity .description ol {
-    list-style-type: none !important;
-    padding-left: 0 !important;
-}
-
-.main-activity .description li {
+/* 1. Target only the main list items (Steps) for alignment */
+.main-activity .description > ul > li, 
+.main-activity .description > ol > li,
+.main-activity .description > dl > div {
     display: flex !important;
     align-items: flex-start !important;
     margin-bottom: 1.5rem !important;
 }
 
-/* This targets the "Step X" label specifically */
+/* 2. Style the "Step X" label specifically */
 .main-activity .description li > strong:first-child,
 .main-activity .description li > b:first-child {
     min-width: 5.5em !important;
-    display: inline-block !important;
     flex-shrink: 0 !important;
+    display: inline-block !important;
 }
 
-/* Fixes the gap before the nested itemize in Step 2 */
+/* 3. Fix the nested list: remove flex and restore indentation */
 .main-activity .description li ul {
-    display: block !important;
-    margin-top: -0.2rem !important;
-    padding-left: 1.5rem !important;
+    display: block !important; /* Forces it out of flex behavior */
+    list-style-type: none !important;
+    margin-top: -0.3rem !important; /* Pulls it up to the Step 2 text */
+    padding-left: 1.5rem !important; /* Restores the indentation */
 }
 
+/* 4. Tighten spacing between the sub-items */
+.main-activity .description li ul li {
+    display: list-item !important; /* Restores standard list look */
+    margin-bottom: 0.3rem !important;
+}
 
 /* Done with changes. */
 
