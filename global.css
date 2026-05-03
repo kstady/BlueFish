@@ -30,6 +30,7 @@
 .main-activity .remark-title,
 .main-activity div[titletext]::before {
     font-family: "Latin Modern Roman", serif !important;
+    font-weight: bold !important; /* Force LaTeX-style bold weight */
 }
 
 /* 3. Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
