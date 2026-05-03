@@ -353,53 +353,21 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 /* New */
-/* 1. Target only the main list items (Steps) for alignment */
-.main-activity .description > ul > li, 
-.main-activity .description > ol > li,
-.main-activity .description > dl > div {
-    display: flex !important;
-    align-items: flex-start !important;
-    margin-bottom: 1.5rem !important;
-}
-
-/* 2. Style the "Step X" label specifically */
-.main-activity .description li > strong:first-child,
-.main-activity .description li > b:first-child {
-    min-width: 5.5em !important;
-    flex-shrink: 0 !important;
-    display: inline-block !important;
-}
-
-/* 3. Fix the nested list: remove flex and restore indentation */
+/* 1. Aggressively pull the sub-list up toward "Step 2" text */
+.main-activity .description dd ul,
 .main-activity .description li ul {
-    display: block !important; /* Forces it out of flex behavior */
-    list-style-type: none !important;
-    margin-top: -0.3rem !important; /* Pulls it up to the Step 2 text */
-    padding-left: 1.5rem !important; /* Restores the indentation */
-}
-
-/* 4. Tighten spacing between the sub-items */
-.main-activity .description li ul li {
-    display: list-item !important; /* Restores standard list look */
-    margin-bottom: 0.3rem !important;
-}
-
-/* 1. Specifically tighten the gap BEFORE the first nested item */
-.main-activity .description li ul {
-    margin-top: -0.8rem !important; /* Pulls the first item up closer to Step 2 text */
+    margin-top: -1.2rem !important; /* Increased pull to eliminate the gap */
     padding-top: 0 !important;
 }
 
-/* 2. Tighten the space BETWEEN each sub-item */
+/* 2. Shrink the gaps between each sub-item */
 .main-activity .description li ul li {
     margin-top: 0 !important;
-    margin-bottom: 0.2rem !important; /* Smaller gap between the sub-steps */
+    margin-bottom: 0.2rem !important; /* Tightens the "Step 2" breakdown */
     padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    display: list-item !important; /* Ensures they stay as separate lines */
 }
 
-/* 3. Kill the bottom margin of the paragraph text inside Step 2 */
+/* 3. Ensure the Step 2 text paragraph doesn't push the list away */
 .main-activity .description li p {
     margin-bottom: 0 !important;
 }
