@@ -9,6 +9,8 @@
  *   - become (almost) empty by default, because the ximeraServer default settings will becom English again
  */ 
  
+/* Use Ctrl F5 on the webpage whenever you make changes to this file */
+
 /* Chaning the Font */
 /* 1. Import the Latin Modern font family */
 @import url('https://jsdelivr.net');
@@ -301,3 +303,16 @@ div[titletext*="Problem"] p {
 div[titletext*="Problem"] p:first-of-type {
     margin-top: 0 !important;
 }
+
+
+/* Adds vertical space before and after TikZ/Image environments */
+.main-activity .image-environment {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+}
+
+
+/* Done with changes. */
+
+/* Use Ctrl F5 on webpage whenever you make changes to this file */
