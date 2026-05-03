@@ -12,19 +12,19 @@
 /* Use Ctrl F5 on the webpage whenever you make changes to this file */
 
 /* Chaning the Font */
-/* 1. Import the Latin Modern font family */
-@import url('https://jsdelivr.net');
+
+/* Import the Latin Modern font family */
+@import url('https://+cdn.jsdelivr.net+/npm/@fontsource/latin-modern-roman@5.0.12/index.css');
 
 
-
-/* 1. Apply font to EVERYTHING, but keep standard text at normal weight */
+/* Apply font to EVERYTHING, but keep standard text at normal weight */
 .main-activity, 
 .main-activity p {
     font-family: "Latin Modern Roman", serif !important;
     font-weight: normal !important; /* Forces paragraphs to NOT be bold */
 }
 
-/* 2. Apply font AND bold weight ONLY to headers and titles */
+/* Apply font AND bold weight ONLY to headers and titles */
 .main-activity h1, 
 .main-activity h2, 
 .main-activity h3, 
@@ -40,7 +40,7 @@
 }
 
 
-/* 3. Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
+/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
     font-size: 21px !important;  
     line-height: 1.55 !important;
