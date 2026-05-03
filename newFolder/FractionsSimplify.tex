@@ -121,7 +121,6 @@ To find the prime factorization of any composite number, follow the steps below.
 to the factors.
 
 \item[Step 2] \textbf{Evaluate Each Factor}:
-
 \begin{itemize}
 \item If a factor is prime, circle it. This branch is now finished.
 
@@ -145,24 +144,23 @@ the squares when finding prime factorizations by hand, but don't forget to circl
 
 \begin{description}[style=multiline, leftmargin=5em, font=\bfseries]
 
-
-    \item[Step 1] \textbf{Find a Pair of Factors}:  The numbers 6 and 11 have a product of 66.
+\item[Step 1] \textbf{Find a Pair of Factors}:  The numbers 6 and 11 have a product of 66.
 
     \begin{center}
-\begin{tikzpicture}[
+    \begin{tikzpicture}[
     thick,
     level distance=1.5cm,
     sibling distance=2cm,
     edge from parent/.style={draw, -},
-% Composite style: Stays in Glaucous to differentiate from primes
+    % Composite style: Stays in Glaucous to differentiate from primes
     composite/.style={
         rectangle,
         draw=black,
         fill=white,
         minimum size=8mm,
         },
-]
-\node [composite] {66}
+    ]
+    \node [composite] {66}
     child {node {6}
     }
     child {node {11}};
