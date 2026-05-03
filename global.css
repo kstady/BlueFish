@@ -312,6 +312,12 @@ div[titletext*="Problem"] p:first-of-type {
     margin-top: 0 !important;
 }
 
+/* Adds spacing to anything inside a center environment */
+.main-activity .center {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+}
 
 /* Adds vertical space before and after TikZ/Image environments */
 .main-activity .image-environment {
