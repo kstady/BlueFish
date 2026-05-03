@@ -353,24 +353,6 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 /* New */
-/* 1. Aggressively pull the sub-list up toward "Step 2" text */
-.main-activity .description dd ul,
-.main-activity .description li ul {
-    margin-top: -1.2rem !important; /* Increased pull to eliminate the gap */
-    padding-top: 0 !important;
-}
-
-/* 2. Shrink the gaps between each sub-item */
-.main-activity .description li ul li {
-    margin-top: 0 !important;
-    margin-bottom: 0.2rem !important; /* Tightens the "Step 2" breakdown */
-    padding-top: 0 !important;
-}
-
-/* 3. Ensure the Step 2 text paragraph doesn't push the list away */
-.main-activity .description li p {
-    margin-bottom: 0 !important;
-}
 
 /* Done with changes. */
 
