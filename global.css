@@ -352,7 +352,20 @@ div[titletext*="Problem"] p:first-of-type {
     margin-bottom: 1rem !important;
 }
 
-/* New */
+
+/* Remove bullets from itemize lists inside a description environment */
+.main-activity .description ul {
+    list-style-type: none !important;
+    list-style: none !important;
+    padding-left: 1.5rem !important; /* This creates the indentation */
+    margin-top: 0 !important;
+}
+
+/* Ensure the individual items don't have bullets or extra markers */
+.main-activity .description ul li {
+    list-style-type: none !important;
+    display: block !important;
+}
 
 /* Done with changes. */
 
