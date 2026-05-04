@@ -385,41 +385,45 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* Color the 'Part' headers on the main course page */
+/* Color the 'Part' headers on the course page */
 .activity-tile.part, 
 .card.part {
     background-color: #6082b6 !important; /* Glaucous Blue */
     color: white !important;
+    border-left: 8px solid #f4b943 !important; /* Orange accent bar */
 }
 
-/* Change the orange progress bar or highlight color */
+/* Ensure the title text is white on the blue background */
+.activity-tile.part h1, 
+.activity-tile.part h2 {
+    color: white !important;
+}
+
+/* Style the progress/score bar with your Orange */
 .progress-bar-success, 
 .progress-bar {
-    background-color: #f4b943 !important; /* Your theme's Orange */
+    background-color: #f4b943 !important;
 }
 
-/* Highlight the active lesson tile */
-.activity-tile.active {
-    border: 3px solid #f4b943 !important;
-}
-
-/* Sidebar background */
-.navbar-default.sidebar,
-.sidebar-nav {
+/* Sidebar container background */
+.sidebar, 
+.nav-sidebar, 
+#sidebar-wrapper {
     background-color: #6082b6 !important; /* Glaucous Blue */
 }
 
-/* Links inside the sidebar */
-.sidebar-nav li a {
-    color: white !important;
+/* Base link color in the sidebar */
+.nav-sidebar li a {
+    color: #ffffff !important;
 }
 
-/* The 'Active' section link (currently viewed page) */
-.sidebar-nav li.active a,
-.sidebar-nav li a:active,
-.sidebar-nav li a.active {
-    background-color: #f4b943 !important; /* Orange highlight */
-    color: white !important;
+/* The 'Active' section link (the page you are currently on) */
+.nav-sidebar li.active a,
+.nav-sidebar li a:hover,
+.nav-sidebar li a:focus {
+    background-color: #f4b943 !important; /* Your theme's Orange */
+    color: #ffffff !important;
+    font-weight: bold !important;
 }
 
 /* Done with changes. */
