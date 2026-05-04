@@ -391,7 +391,6 @@ div[titletext*="Problem"] p:first-of-type {
 .activity-card.part {
     background-color: #6082b6 !important;
     color: white !important;
-    border-left: 12px solid #DD8A2E !important;
     padding: 1.5rem !important;
 }
 
