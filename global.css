@@ -398,6 +398,8 @@ div[titletext*="Problem"] p:first-of-type {
     border-left: 10px solid #f4b943 !important;
     padding: 1.5rem !important;
     box-shadow: none !important;
+    outline: none !important;
+
 }
 
 /* 3. ACTIVITY TILES: White with Blue border */
