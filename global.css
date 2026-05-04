@@ -385,18 +385,20 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. RESET: Prevent unwanted background colors from bleeding through */
-.activity-tile, .card {
+/* 1. Global Reset for TOC containers to stop "color bleed" */
+.activity-tile, .card, .panel, .panel-default {
     background-color: transparent !important;
     border: none !important;
+    box-shadow: none !important;
 }
 
-/* 2. THE PART BAR: Solid Glaucous Blue with Orange accent */
-.activity-tile.part, .card.part {
-    background-color: #6082b6 !important;
+/* 2. THE PART BAR: Solid Glaucous Blue */
+.activity-tile.part, .card.part, div.part {
+    background-color: #6082b6 !important; /* Glaucous Blue */
     color: white !important;
-    border-left: 10px solid #f4b943 !important; /* Thick orange bar on the left */
+    border-left: 10px solid #f4b943 !important; /* Your theme's Orange */
     padding: 1.5rem !important;
+    margin-top: 2rem !important;
     margin-bottom: 1rem !important;
     display: block !important;
 }
@@ -405,30 +407,25 @@ div[titletext*="Problem"] p:first-of-type {
     color: white !important;
 }
 
-/* 3. ACTIVITY TILES: White background, Blue border, Orange hover */
-.activity-tile.activity, .card.activity, 
-.activity-tile.practice, .card.practice {
+/* 3. ACTIVITY TILES: White with Blue border */
+.activity-tile.activity, .card.activity, .activity-list-item {
     background-color: #ffffff !important;
-    border: 2px solid #6082b6 !important; /* Glaucous Blue border */
-    border-left: 8px solid #6082b6 !important; /* Slightly thicker blue side */
-    transition: all 0.3s ease;
+    border: 2px solid #6082b6 !important;
+    border-left: 8px solid #6082b6 !important;
+    margin-bottom: 10px !important;
+    padding: 1rem !important;
 }
 
-/* 4. HOVER STATE: Turn everything Orange when pointing at it */
-.activity-tile.activity:hover, .card.activity:hover,
-.activity-tile.practice:hover, .card.practice:hover {
+/* 4. HOVER: Orange transition */
+.activity-tile.activity:hover, .card.activity:hover {
     border-color: #f4b943 !important;
-    background-color: #fffaf0 !important; /* Very light orange tint on hover */
-    box-shadow: 0 4px 12px rgba(244, 185, 67, 0.3) !important;
+    background-color: #fffdf9 !important; /* Very subtle orange tint */
 }
 
-/* 5. TEXT & PROGRESS: Orange accents */
-.activity-tile .title a, .activity-tile .title {
-    color: #6082b6 !important; /* Blue text for lesson names */
-}
-
-.progress-bar, .progress-bar-success {
-    background-color: #f4b943 !important; /* Orange fill for completion */
+/* 5. TEXT: Glaucous Blue for titles */
+.activity-tile .title a, .activity-tile a {
+    color: #6082b6 !important;
+    text-decoration: none !important;
 }
 
 /* Done with changes. */
