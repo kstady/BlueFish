@@ -385,57 +385,44 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. THE PART BAR: Original solid style (No ghosting/orange bleed) */
-.activity-card.part, 
-.card.part, 
-.card-sectionheading.part {
+/* 1. THE PART BAR: Simple solid block */
+.activity-card.part {
     background-color: #6082b6 !important;
     color: white !important;
-    border-left: 10px solid #f4b943 !important; /* Your theme orange */
+    border-left: 12px solid #f4b943 !important;
     padding: 1.5rem !important;
-    display: block !important;
-    position: static !important; /* Disables the absolute positioning causing bleed */
-    box-shadow: none !important;
 }
 
-.activity-card.part h1, .activity-card.part a {
-    color: white !important;
+/* 2. THE SECTIONS: Glaucous and Orange on Click */
+.activity-card.section {
+    background-color: #9fb4d3 !important;
 }
-
-/* 2. SECTIONS & SUBSECTIONS: Standardized Orange (#f4b943) */
-/* Hover & Active states for Sections */
-.activity-card.section:hover,
-.activity-card.section.active,
+.activity-card.section.active, 
 .activity-card.section:active {
     background-color: #f4b943 !important; /* Your preferred orange */
-    color: white !important;
-    border-color: #f4b943 !important;
 }
 
-/* Hover & Active states for Subsections (Activities) */
-.activity-card.activity:hover,
-.activity-card.activity.active,
+/* 3. THE SUBSECTIONS: White and Orange on Click */
+.activity-card.activity {
+    background-color: #ffffff !important;
+    border: 2px solid #6082b6 !important;
+}
+.activity-card.activity.active, 
 .activity-card.activity:active {
-    background-color: #f4b943 !important; /* Matches the section orange */
-    color: white !important;
-    border-color: #f4b943 !important;
+    background-color: #f4b943 !important; /* Same orange */
 }
 
-/* 3. SIDEBAR: Matching Orange for the active link */
+/* 4. THE SIDEBAR: Tiered Blue (No teal) */
 .sidebar, .nav-sidebar {
-    background-color: #cfd9e9 !important; /* Light Glaucous */
+    background-color: #cfd9e9 !important;
 }
-
-.nav-sidebar li.active > a, 
-.nav-sidebar li a.active {
-    background-color: #f4b943 !important; /* Consistent orange */
-    color: white !important;
-}
-
-/* Subsection Background (Mid-Light Glaucous - No teal) */
 .nav-sidebar ul.nav, .nav-sidebar .nav-second-level {
     background-color: #9fb4d3 !important;
 }
+.nav-sidebar li.active > a {
+    background-color: #f4b943 !important;
+}
+
 /* Done with changes. */
 
 /* Use Ctrl F5 on webpage whenever you make changes to this file */
