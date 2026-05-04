@@ -257,7 +257,11 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 	display: block;
 } */
 
+
+
 /* %%%%%   Modifications I made with the help of AI: %%%%  */
+
+
 /* Only applies spacing if it is inside the main-activity container, not the TOC. */
 .main-activity p, 
 .main-activity .problem, 
@@ -293,7 +297,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Target by the titletext attribute itself */
 div[titletext*="Problem"] {
-    background-color: #f0f4f8 !important; /* Glaucous Blue Tint */
+    /* background-color: #f0f4f8 !important; /* Glaucous Blue Tint */  */
     border-left: 8px solid #6082b6 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
