@@ -385,74 +385,54 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. Kill the orange background on the list container itself */
-.activity-list, .course-toc, ul[data-nav-counter] {
+/* 1. Eliminate the "Orange Bleed" behind the Part bars */
+.activity-list, 
+.panel-group, 
+.panel, 
+.panel-default {
     background-color: transparent !important;
     background: none !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
-/* 2. THE PART BAR: Solid Glaucous Blue (Targeting the specific card class) */
+/* 2. THE PART BAR: Solid Glaucous Blue */
+.activity-card.part, 
 .card-sectionheading.part {
     background-color: #6082b6 !important;
     color: white !important;
     border-left: 10px solid #f4b943 !important;
     padding: 1.5rem !important;
-    box-shadow: none !important;
-    outline: none !important;
-
+    display: block !important;
 }
 
-/* 3. ACTIVITY TILES: White with Blue border */
-.activity-card.activity, .activity-card.practice {
-    background-color: #ffffff !important;
-    border: 2px solid #6082b6 !important;
-    border-left: 8px solid #6082b6 !important;
+/* 3. THE SIDEBAR: Tiered Blue to Orange */
+/* Main Sidebar Background (Lightest Glaucous) */
+.sidebar, 
+.nav-sidebar, 
+#sidebar-wrapper {
+    background-color: #e7ecf4 !important; 
 }
 
-/* 4. SIDEBAR: Lighter Glaucous Shades */
-/* The main sidebar background */
-.sidebar, .nav-sidebar {
-    background-color: #cfd9e9 !important; /* Light Glaucous */
+/* Subsection Background (Mid-Light Glaucous - Replaces Teal) */
+.nav-sidebar ul.nav, 
+.nav-sidebar .nav-second-level,
+.nav-sidebar li ul {
+    background-color: #cfd9e9 !important; 
 }
 
-/* The Subsections (unselected) */
-.nav-sidebar li ul li a {
-    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
-    color: #1a1a1a !important;
+/* Normal links (Dark Blue for readability) */
+.nav-sidebar li a {
+    color: #4a6a96 !important;
 }
 
-/* The Active Section/Subsection (Orange) */
+/* Active links (Orange) */
 .nav-sidebar li.active a, 
-.nav-sidebar li a:active,
-.nav-sidebar li a.active {
+.nav-sidebar li a.active,
+.nav-sidebar li a:active {
     background-color: #f4b943 !important;
     color: white !important;
 }
-
-/* 1. Force the Glaucous Blue theme on all subsection levels */
-.nav-sidebar .nav li a,
-.sidebar .nav li a,
-.nav-sidebar li ul li a {
-    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
-    color: #1a1a1a !important; /* Dark text for readability */
-    border-left: 4px solid #6082b6 !important; /* Blue accent bar */
-}
-
-/* 2. Style the hover state for subsections */
-.nav-sidebar .nav li a:hover,
-.nav-sidebar li ul li a:hover {
-    background-color: #f4b943 !important; /* Turns Orange on hover */
-    color: white !important;
-}
-
-/* 3. Style the Active subsection (the one you are currently on) */
-.nav-sidebar .nav li.active a,
-.nav-sidebar li ul li.active a {
-    background-color: #f4b943 !important; /* Orange for Active */
-    color: white !important;
-    font-weight: bold !important;
-}
-
 
 /* Done with changes. */
 
