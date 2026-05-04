@@ -297,7 +297,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #f4f7fa !important; /* Lighter Glaucous Blue Tint */
+    background-color: #f0f4f8 !important; /* Glaucous Blue Tint */
     border-left: 8px solid #8ca9d4 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
@@ -421,6 +421,7 @@ li.activity-card.part,
     color: #ffffff !important;
     font-weight: bold !important;
     text-decoration: none !important;
+    outline: none !important; border-top: none !important; border-right: none !important; border-bottom: none !important;
 }
 
 
