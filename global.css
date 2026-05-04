@@ -385,77 +385,86 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. THE TOC RESET: Kill the hidden orange background layer */
-.course-list, .activity-list, .card-columns, .panel-group, 
-.activity-card-container, ul[data-nav-counter] {
-    background-color: white !important;
-    background: white !important;
+/* --- TABLE OF CONTENTS (TOC) & SIDEBAR THEME --- */
+
+/* 1. TOC CONTAINER RESET: Kill background bleed */
+.course-list, .activity-list, .card-columns, .panel-group, .activity-card-container {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-/* 2. THE PART BAR FIX: Solid Glaucous Blue with thick Orange bar */
-/* THE PART BAR: Solid Glaucous Blue (Nuclear Fix) */
+/* 2. THE PART BAR: Solid Glaucous Blue with Orange accent */
 .activity-card.card-sectionheading.part,
 li.activity-card.part,
 .card-sectionheading.part {
-    background-color: #6082B6 !important; /* Force Solid Glaucous Blue */
+    background-color: #6082b6 !important;
     color: #ffffff !important;
-    border-left: 12px solid #f4b943 !important; /* Thick Orange Accent */
+    border-left: 12px solid #f4b943 !important;
     padding: 1.5rem !important;
-    
-    /* Layout Fixes: Prevent shrinking and orange bleed */
     display: block !important;
     width: 100% !important;
-    min-height: 3.5rem !important;
-    position: relative !important; /* Overrides Ximera's 'absolute' positioning */
-    z-index: 50 !important; /* Pushes it above the background grid */
-    margin-bottom: 1rem !important;
+    position: relative !important;
+    z-index: 50 !important;
+    margin-bottom: 1.5rem !important;
     box-shadow: none !important;
 }
 
-/* Ensure the text inside the Part bar is visible and white */
-.activity-card.part a,
-.activity-card.part h1,
-.activity-card.part h2 {
+/* Ensure Part text remains white */
+.activity-card.part a, .activity-card.part h1, .activity-card.part h2 {
     color: #ffffff !important;
-    font-weight: bold !important;
     text-decoration: none !important;
-    outline: none !important; border-top: none !important; border-right: none !important; border-bottom: none !important;
 }
 
-
-/* 3. THE TEAL KILLER: Target 'card section' specifically from your inspect */
-.activity-card.card.section, 
+/* 3. SECTIONS & SUBSECTIONS: Glaucous Shades */
 .activity-card.section {
-    background-color: #afc0da !important; /* Lighter Glaucous Blue */
-    border: 1px solid #6082B6 !important;
+    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
+    border: 1px solid #6082b6 !important;
     color: #1a1a1a !important;
 }
 
-/* Ensure the links inside those blue tiles aren't teal or underlined */
-.activity-card.section a {
-    color: #1a1a1a !important;
-    text-decoration: none !important;
+.activity-card.activity {
+    background-color: #ffffff !important;
+    border: 2px solid #6082b6 !important;
+    border-left: 8px solid #6082b6 !important;
 }
 
-/* 4. SIDEBAR: Tiered Blue with Orange Active highlight */
-.sidebar, .nav-sidebar {
-    background-color: #dfe6f0 !important; /* Lightest Glaucous */
-}
-
-/* Subsections in sidebar (Mid-Light Glaucous) */
-.nav-sidebar ul.nav, 
-.nav-sidebar .nav-second-level,
-.nav-sidebar li ul {
-    background-color: #afc0da !important; 
-}
-
-/* Active Highlight (Orange) */
-.nav-sidebar li.active > a, 
-.nav-sidebar li a.active {
+/* 4. ACTIVE/CLICK STATE: Orange highlight for all tiles */
+.activity-card.section:active,
+.activity-card.section.active,
+.activity-card.section:focus,
+.activity-card.activity:active,
+.activity-card.activity.active {
     background-color: #f4b943 !important;
-    color: white !important;
+    border-color: #d49a2d !important;
+    color: #ffffff !important;
+}
+
+.activity-card.section.active a, .activity-card.activity.active a {
+    color: #ffffff !important;
+}
+
+/* 5. SIDEBAR: Tiered Blue with Orange Active */
+.sidebar, .nav-sidebar, #sidebar-wrapper {
+    background-color: #e7ecf4 !important; /* Lightest Glaucous Background */
+}
+
+/* Subsections in sidebar (Kill Teal) */
+.nav-sidebar ul.nav, .nav-sidebar .nav-second-level, .nav-sidebar li ul {
+    background-color: #9fb4d3 !important;
+}
+
+/* Sidebar subsection links */
+.nav-sidebar li ul li a, .nav-sidebar .nav-second-level li a {
+    background-color: transparent !important;
+    color: #1a1a1a !important;
+}
+
+/* Active Sidebar Item (Orange) */
+.nav-sidebar li.active > a, .nav-sidebar li a.active {
+    background-color: #f4b943 !important;
+    color: #ffffff !important;
     font-weight: bold !important;
 }
 
