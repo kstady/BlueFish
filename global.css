@@ -385,42 +385,54 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* THE PART BAR: Solid Glaucous Blue (Forcing full-width and opacity) */
-.activity-card.card-sectionheading.part,
-li.activity-card.part,
-.card-sectionheading.part,
-.part-open {
-    background-color: #6082b6 !important; /* Solid Glaucous Blue */
-    background: #6082b6 !important;
-    color: #ffffff !important;
-    border-left: 15px solid #f4b943 !important; /* Thick Orange Accent */
+/* 1. THE PART BAR: Original working style */
+div[titletext*="Part"], 
+.activity-tile.part, 
+.card.part {
+    background-color: #6082b6 !important;
+    color: white !important;
+    border-left: 10px solid #f4b943 !important;
     padding: 1.5rem !important;
-    
-    /* These three lines are the 'magic' for absolute-positioned grids */
     display: block !important;
-    width: 100% !important; 
-    box-sizing: border-box !important;
-    
-    /* Pushes the bar in front of the 'ghost' orange/white layers */
-    position: relative !important; 
-    z-index: 100 !important;
-    
-    /* Remove any default Ximera shadows or outlines causing the white/orange border */
-    box-shadow: none !important;
-    outline: none !important;
-    border-top: none !important;
-    border-right: none !important;
-    border-bottom: none !important;
 }
 
-/* Force the Part text to stay white and bold */
-.activity-card.part a, 
-.activity-card.part h1, 
-.activity-card.part h2 {
+.activity-tile.part h1, 
+.activity-tile.part h2 {
+    color: white !important;
+}
+
+/* 2. THE SECTIONS & SUBSECTIONS: (Keep these, they are working) */
+.activity-card.section {
+    background-color: #9fb4d3 !important; 
+    border: 1px solid #6082b6 !important;
+}
+
+.activity-card.activity {
+    background-color: #ffffff !important;
+    border: 2px solid #6082b6 !important;
+    border-left: 8px solid #6082b6 !important;
+}
+
+/* 3. ACTIVE/CLICK STATE: Orange highlight (Keep these) */
+.activity-card.section:active,
+.activity-card.section.active,
+.activity-card.activity.active {
+    background-color: #f4b943 !important;
     color: #ffffff !important;
-    font-weight: bold !important;
-    text-decoration: none !important;
-    font-family: inherit !important;
+}
+
+/* 4. SIDEBAR: (Keep these to prevent teal) */
+.sidebar, .nav-sidebar {
+    background-color: #cfd9e9 !important;
+}
+
+.nav-sidebar ul.nav, .nav-sidebar .nav-second-level {
+    background-color: #9fb4d3 !important;
+}
+
+.nav-sidebar li.active > a {
+    background-color: #f4b943 !important;
+    color: white !important;
 }
 
 /* Done with changes. */
