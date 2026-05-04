@@ -385,53 +385,46 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. Kill the "Orange Bleed" behind Part and Activity bars */
-.panel-group, .panel, .panel-default, .panel-heading, .panel-body {
+/* 1. Kill the orange background on the list container itself */
+.activity-list, .course-toc, ul[data-nav-counter] {
     background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
+    background: none !important;
 }
 
-/* 2. THE PART BAR: Solid Glaucous Blue with Orange accent */
-/* Targeting the heading inside the panel to ensure no orange shows around it */
-.panel.part .panel-heading,
-.activity-tile.part,
-.card.part {
+/* 2. THE PART BAR: Solid Glaucous Blue (Targeting the specific card class) */
+.card-sectionheading.part {
     background-color: #6082b6 !important;
     color: white !important;
     border-left: 10px solid #f4b943 !important;
     padding: 1.5rem !important;
+    box-shadow: none !important;
 }
 
-/* 3. TOC TILES: Clean White background with Blue border */
-.activity-tile.activity, .card.activity, .panel.activity {
+/* 3. ACTIVITY TILES: White with Blue border */
+.activity-card.activity, .activity-card.practice {
     background-color: #ffffff !important;
     border: 2px solid #6082b6 !important;
     border-left: 8px solid #6082b6 !important;
-    margin-bottom: 12px !important;
 }
 
-/* 4. SIDEBAR: Lighter Glaucous for non-active items */
-.sidebar, .nav-sidebar, #sidebar-wrapper {
-    background-color: #e7ecf4 !important; /* Lighter Glaucous Blue */
+/* 4. SIDEBAR: Lighter Glaucous Shades */
+/* The main sidebar background */
+.sidebar, .nav-sidebar {
+    background-color: #cfd9e9 !important; /* Light Glaucous */
 }
 
-/* Normal sidebar links */
-.nav-sidebar li a {
-    color: #4a6a96 !important; /* Darker blue for contrast */
+/* The Subsections (unselected) */
+.nav-sidebar li ul li a {
+    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
+    color: #1a1a1a !important;
 }
 
-/* Active sidebar item (Orange) */
-.nav-sidebar li.active a,
-.nav-sidebar li.active a:hover {
+/* The Active Section/Subsection (Orange) */
+.nav-sidebar li.active a, 
+.nav-sidebar li a:active,
+.nav-sidebar li a.active {
     background-color: #f4b943 !important;
     color: white !important;
-}
-
-/* Subsection Sidebar Items (Indented or sub-links) */
-.nav-sidebar .nav li a {
-    background-color: #cfd9e9 !important; /* Mid-light Glaucous for sub-sections */
-    padding-left: 30px !important;
 }
 
 /* Done with changes. */
