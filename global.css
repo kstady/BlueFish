@@ -385,23 +385,22 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. Reset the background of the main course list to kill 'orange bleed' */
+/* 1. Global Reset to kill orange bleed behind tiles */
 .course-list, .activity-list, .card-columns, .panel-group {
-    background-color: transparent !important;
-    background-image: none !important;
+    background-color: #ffffff !important; /* Force page background to white */
+    background: #ffffff !important;
     border: none !important;
 }
 
-/* 2. THE PART BAR: Solid Glaucous Blue with Orange Bar */
-/* Target card-sectionheading specifically from your inspect */
-.activity-card.card-sectionheading.part {
+/* 2. THE PART BAR: Solid Glaucous Blue (Restoring previous working style) */
+.activity-card.card-sectionheading.part,
+.card-sectionheading.part {
     background-color: #6082b6 !important;
     color: white !important;
-    border-left: 10px solid #f4b943 !important; /* Your Orange */
+    border-left: 12px solid #f4b943 !important; /* Thick Orange Bar */
     padding: 1.5rem !important;
-    position: relative !important; /* Fixes potential 'absolute' positioning issues */
     display: block !important;
-    box-shadow: none !important;
+    position: relative !important;
 }
 
 /* 3. ACTIVITY TILES: White with Blue border */
@@ -412,33 +411,23 @@ div[titletext*="Problem"] p:first-of-type {
     margin-bottom: 15px !important;
 }
 
-/* HOVER: Turn tiles Orange */
-.activity-card:hover {
-    border-color: #f4b943 !important;
-}
-
-/* Sidebar Background: Lighter Glaucous */
+/* Sidebar Background: Lighter Glaucous Blue */
 .sidebar, .nav-sidebar {
-    background-color: #e7ecf4 !important;
+    background-color: #cfd9e9 !important; /* Light Glaucous */
 }
 
-/* Kill the Teal: Target subsection backgrounds */
-.nav-sidebar ul.nav, .nav-sidebar .nav-second-level {
-    background-color: #cfd9e9 !important; /* Mid-Light Glaucous */
+/* Subsection Background: Mid-Light Glaucous (Kills the Teal) */
+.nav-sidebar ul.nav, 
+.nav-sidebar .nav-second-level,
+.nav-sidebar li ul {
+    background-color: #9fb4d3 !important; 
 }
 
-/* Subsection links (Non-active) */
-.nav-sidebar li ul li a {
-    color: #4a6a96 !important;
-    background-color: transparent !important;
-}
-
-/* Active Page Highlight: Orange */
+/* Active Highlight: Orange */
 .nav-sidebar li.active > a, 
 .nav-sidebar li a.active {
     background-color: #f4b943 !important;
     color: white !important;
-    font-weight: bold !important;
 }
 
 /* Done with changes. */
