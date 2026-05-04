@@ -297,8 +297,8 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #f8fafc !important; /* Lighter Glaucous Blue Tint */
-    border-left: 8px solid #6082b6 !important; /* Glaucous Blue Bar */
+    background-color: #f4f7fa !important; /* Lighter Glaucous Blue Tint */
+    border-left: 8px solid #8ca9d4 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
 }
@@ -382,6 +382,43 @@ div[titletext*="Problem"] p:first-of-type {
 .main-activity .problem ul li {
     list-style-type: none !important;
 }
+
+
+/* Changing color of TOC */
+/* Sidebar background and base text color */
+.sidebar, .nav-sidebar {
+    background-color: #6082b6 !important; /* Glaucous Blue */
+    color: white !important;
+}
+
+/* Specific styling for the 'active' (selected) section */
+.sidebar .nav-sidebar li.active > a,
+.sidebar .nav-sidebar li.active > a:hover,
+.sidebar .nav-sidebar li.active > a:focus {
+    background-color: #f4b943 !important; /* Your theme's Orange */
+    color: white !important;
+    font-weight: bold !important;
+}
+
+/* Hover effect for non-active links */
+.sidebar .nav-sidebar li a:hover {
+    background-color: #4a6a96 !important; /* Slightly darker blue for hover */
+    color: white !important;
+}
+
+/* Styling for 'Part' tiles in the course overview */
+.activity-tile.part, 
+div.part-tile {
+    background-color: #6082b6 !important; /* Glaucous Blue */
+    color: white !important;
+    border-left: 10px solid #f4b943 !important; /* Optional: adds your orange as an accent bar */
+}
+
+.activity-tile.part h1, 
+.activity-tile.part h2 {
+    color: white !important;
+}
+
 
 /* Done with changes. */
 
