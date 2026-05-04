@@ -295,13 +295,14 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-/* 1. Target by the titletext attribute itself */
+/* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
+    background-color: transparent !important; 
     border-left: 8px solid #6082b6 !important; /* Glaucous Blue Bar */
-    padding: 1.5em !important;
+    padding: 1rem 1.5rem !important;
+    margin-bottom: 2rem !important;
     color: #333 !important;
 }
-
 
 /* 2. Style the paragraph inside - added top margin for paragraph breaks */
 div[titletext*="Problem"] p {
