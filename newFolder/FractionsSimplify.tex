@@ -30,8 +30,56 @@ $\begin{aligned}
 \end{flushleft}
 
 
-Notice that the only difference between these two sets of numbers is 0.  While these sets are almost identical, having distinct names 
-is useful when we discuss concepts and mathematical rules because sometimes we want to include 0 and sometimes we don't.  
+While these sets differ only by the number 0, having distinct names is useful when discussing concepts in which it may or
+may not make sense to include 0.  Whole numbers are used when 0 is needed to represet a starting point or the total absence of something, while
+counting numbers are used when a concept requires at least one of something to exist.  
+
+%Notice that the only difference between these two sets of numbers is 0.  While these sets are almost identical, having distinct names 
+%is useful when we discuss concepts and mathematical rules.  
+
+
+\begin{problem}
+For each scenario below, determine whether the set of \textbf{counting numbers} or the set of 
+\textbf{whole numbers} is the most appropriate to use.
+
+\begin{enumerate}
+    \item \textbf{Rankings in a race}: Identifying the top 3 winners in a race. 
+    \begin{multipleChoice}
+        \choice[correct]{Counting numbers}
+        \choice{Whole numbers}
+    \end{multipleChoice}
+    \begin{feedback}
+        Correct! There is no such thing as a 0th place in a race.  The winners are 1st, 2nd and 3rd.
+    \end{feedback}
+
+    \item \textbf{Points scored in a basketball game}: Tracking the total score for a team.
+    \begin{multipleChoice}
+        \choice{Counting numbers}
+        \choice[correct]{Whole numbers}
+    \end{multipleChoice}
+    \begin{feedback}
+        Correct! A team can be held to 0 points (a shutout).
+    \end{feedback}
+
+    \item \textbf{Defining Polygons}: Stating how many sides a specific geometric shape has.
+    \begin{multipleChoice}
+        \choice[correct]{Counting numbers}
+        \choice{Whole numbers}
+    \end{multipleChoice}
+    \begin{feedback}
+        Correct! A shape cannot have 0 sides; it must have at least 3 sides to be a polygon.
+    \end{feedback}
+
+    \item \textbf{Store Inventory}: Keeping track of how many laptops are left in stock.
+    \begin{multipleChoice}
+        \choice{Counting numbers}
+        \choice[correct]{Whole numbers}
+    \end{multipleChoice}
+    \begin{feedback}
+        Correct! If a store sells out of an item, the inventory count is 0.
+    \end{feedback}
+\end{enumerate}
+\end{problem}
 
 
 \section*{Factors of Whole Numbers}
@@ -57,6 +105,30 @@ List all factors of the number 20.
 \choice{$1, 2, 4, 5, 10$}
 \end{multipleChoice}
 
+\end{problem}
+
+\begin{problem}
+List all factors of the number 24.
+\begin{multipleChoice}
+    \choice{$1, 2, 3, 4, 6, 8, 24$}
+    \choice{$1, 2, 3, 4, 6, 12, 24$}
+    \choice[correct]{$1, 2, 3, 4, 6, 8, 12, 24$}
+    \choice{$2, 3, 4, 6, 8, 12$}
+\end{multipleChoice}
+\end{problem}
+
+
+\begin{problem}
+List all factors of the number 36.
+\begin{multipleChoice}
+    \choice{$1, 2, 3, 4, 9, 12, 18, 36$}
+    \choice{$1, 2, 3, 4, 6, 8, 9, 12, 18, 36$}
+    \choice[correct]{$1, 2, 3, 4, 6, 9, 12, 18, 36$}
+    \choice{$1, 2, 3, 4, 6, 6, 9, 12, 18, 36$}
+\end{multipleChoice}
+\begin{feedback}
+    Correct! While $6 \times 6 = 36$, we only list the number 6 once when writing out the set of factors.
+\end{feedback}
 \end{problem}
 
 
@@ -97,7 +169,7 @@ Which of the following numbers are \textbf{prime}?
 \end{multipleChoice}
 
 \begin{feedback}[correct]
-That's right!  Since all even numbers are evenly divisible by 2, the only even number that is prime is 2.
+That's right!  Since all even numbers are evenly divisible by 2, the only one that can be prime is 2.
 \end{feedback}
 
 \end{problem}
@@ -117,8 +189,8 @@ To find the prime factorization of any composite number, follow the steps below.
 
 \begin{description}[style=multiline, leftmargin=5em, font=\bfseries]
 
-\item[Step 1] \textbf{Find a Pair of Factors}: Identify two numbers that have a product equal to the composite number.  Draw two branches extending from the composite number
-to the factors.
+\item[Step 1] \textbf{Find a Pair of Factors}: Identify two numbers that have a product equal to the composite number.  
+Draw two branches extending from the composite number to the factors.
 
 \item[Step 2] \textbf{Evaluate Each Factor}: If a factor is prime, circle it. This branch is now finished.  If a factor is 
 composite, do not circle it. Continue to the next step.
@@ -136,7 +208,7 @@ composite, do not circle it. Continue to the next step.
 \begin{example}
 
 Use the steps given above to find the prime factorization of the number 66.  \textbf{Note}: Each composite number is written inside a square for clarity.  You can omit
-the squares when finding prime factorizations by hand, but don't forget to circle the prime numbers.
+the squares when finding prime factorizations by hand, but don't forget to circle the prime numbers!
 
 \begin{description}[style=multiline, leftmargin=5em, font=\bfseries]
 
@@ -166,7 +238,8 @@ the squares when finding prime factorizations by hand, but don't forget to circl
 \end{center}
 
 
-\item[Step 2] \textbf{Evaluate Each Factor}: \ Since 11 is prime it's circled.
+\item[Step 2] \textbf{Evaluate Each Factor}: \ Since 11 is prime it's circled.  The number 6 is not prime, so the process is repeated
+in the next step.  
 
 \begin{center}
 \begin{tikzpicture}[
@@ -203,7 +276,7 @@ the squares when finding prime factorizations by hand, but don't forget to circl
 \end{center}
 
 
-\item[Step 3]  \textbf{Repeat the Process}:  \ The number 6 is not prime, so we write it as the product of 2 and 3.  Since both 2 and 3 are prime, they are circled
+\item[Step 3]  \textbf{Repeat the Process}:  \ We can write 6 as the product of 2 and 3.  Since both 2 and 3 are prime, they are circled
 and the tree is finished.
 
 
@@ -557,7 +630,7 @@ Find the GCF of 60 and 75 using their prime factorizations shown below.
 75 &=& 3 \cdot 5 \cdot 3 \\
 \end{eqnarray*}
 
-\[ \textbf{GCF} = \answer{15} \]
+\textbf{GCF} = $\answer{15}$
 
 \begin{feedback}
 Excellent!  The common factors are 3 and 5.  There is one factor of 3 and one factor of 5 in \textbf{both} factorizations, so the GCF = $3 \cdot 5$ which equals 15.
@@ -577,7 +650,7 @@ Find the GCF of 85 and 150 using their prime factorizations shown below.
 \end{eqnarray*}
 
 
-\[ \textbf{GCF} = \answer{5} \]
+\textbf{GCF} = $\answer{5}$
 
 \end{problem}
 
@@ -652,13 +725,14 @@ process of writing a fraction in simplest form is called \textbf{simplifying} th
 We will consider two methods to simplify fractions.  The first method uses the GCF and the second
 method uses prime factorizations.
 
-\begin{procedure}[Simplifying Fractions Using the GCF]
+\begin{procedure}[\textbf{Simplifying Fractions Using the GCF}]
 
     Divide the numerator and denominator by the GCF.
 
 \end{procedure}
 
 \begin{example}
+
 The fraction $\textstyle \frac{4}{12}$ can be simplified by dividing the numerator and denominator by the GCF = 4.
 
 \begin{align*}
@@ -714,13 +788,14 @@ the fraction $\textstyle \frac{4}{12}.$
   \end{hint}
 \end{problem}
 
-\begin{procedure}[Simplyfing Fractions Using Prime Factorizations]
+\begin{procedure}[\textbf{Simplyfing Fractions Using Prime Factorizations}]
 
 Write the prime factorization of the numbers in the numerator and denominator, then cancel the common prime factors.
 
 \end{procedure}
 
 \begin{example}
+
 The fraction $\textstyle \frac{20}{25}$ is simplified below using prime factorizations.
 
 \begin{align*}
@@ -735,16 +810,14 @@ The fraction $\textstyle \frac{20}{25}$ is simplified below using prime factoriz
 INSERT VIDEO of simplifying a fraction using one of these facts.
 
 \begin{problem}
+Simplify the fraction using the prime factorizations.
 
-Simplify the fraction below using prime factorizations.
+\begin{eqnarray*}
+    42 &=& 2 \cdot 3 \cdot 7 \\
+    70 &=& 2 \cdot 5 \cdot 7
+\end{eqnarray*}
 
-
-\[ 42 = 2 \cdot 3 \cdot 7 \]
-\[ 70 = 2 \cdot 5 \cdot 7 \]
-
-  \[
-  \frac{42}{70} = \frac{\answer{3}}{\answer{5}}
-  \]
+$ \frac{42}{70} = \frac{\answer{3}}{\answer{5}} $
 
   \begin{hint}
     Write the prime factorizations in the fraction, then cancel the common prime numbers.
