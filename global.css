@@ -427,6 +427,31 @@ div[titletext*="Problem"] p:first-of-type {
     color: white !important;
 }
 
+/* 1. Force the Glaucous Blue theme on all subsection levels */
+.nav-sidebar .nav li a,
+.sidebar .nav li a,
+.nav-sidebar li ul li a {
+    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
+    color: #1a1a1a !important; /* Dark text for readability */
+    border-left: 4px solid #6082b6 !important; /* Blue accent bar */
+}
+
+/* 2. Style the hover state for subsections */
+.nav-sidebar .nav li a:hover,
+.nav-sidebar li ul li a:hover {
+    background-color: #f4b943 !important; /* Turns Orange on hover */
+    color: white !important;
+}
+
+/* 3. Style the Active subsection (the one you are currently on) */
+.nav-sidebar .nav li.active a,
+.nav-sidebar li ul li.active a {
+    background-color: #f4b943 !important; /* Orange for Active */
+    color: white !important;
+    font-weight: bold !important;
+}
+
+
 /* Done with changes. */
 
 /* Use Ctrl F5 on webpage whenever you make changes to this file */
