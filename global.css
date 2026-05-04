@@ -391,7 +391,7 @@ div[titletext*="Problem"] p:first-of-type {
 .activity-card.part {
     background-color: #6082b6 !important;
     color: white !important;
-    border-left: 12px solid #f4b943 !important;
+    border-left: 12px solid #DD8A2E !important;
     padding: 1.5rem !important;
 }
 
@@ -401,7 +401,7 @@ div[titletext*="Problem"] p:first-of-type {
 }
 .activity-card.section.active,
 .activity-card.section:active {
-    background-color: #f4b943 !important; /* Your preferred orange */
+    background-color: #DD8A2E !important; /* Your preferred orange */
 }
 
 /* 3. THE SUBSECTIONS: White and Orange on Click */
@@ -411,7 +411,7 @@ div[titletext*="Problem"] p:first-of-type {
 }
 .activity-card.activity.active,
 .activity-card.activity:active {
-    background-color: #f4b943 !important; /* Same orange */
+    background-color: #DD8A2E !important; /* Same orange */
 }
 
 /* 4. THE SIDEBAR: Tiered Blue (No teal) */
@@ -422,9 +422,8 @@ div[titletext*="Problem"] p:first-of-type {
     background-color: #9fb4d3 !important;
 }
 .nav-sidebar li.active > a {
-    background-color: #f4b943 !important;
+    background-color: #DD8A2E !important;
 }
-
 
 /* Done with changes. */
 
