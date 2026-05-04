@@ -385,59 +385,54 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. TOC FIX: Kill orange bleed and style Part Bars */
-/* Force the background of the main course list containers to clear any ghost orange */
-.course-list, .activity-list, .card-columns, .panel-group, .panel {
-    background-color: #ffffff !important; 
-    background: #ffffff !important;
-    border: none !important;
-    box-shadow: none !important;
-}
-
-/* THE PART BAR: Solid Glaucous Blue with Orange accent */
+/* 1. TABLE OF CONTENTS: KILL ORANGE BLEED & FIX PART BAR */
+/* Target the actual list item that wraps the Part bar */
 .activity-card.card-sectionheading.part,
-.card-sectionheading.part {
-    background-color: #6082b6 !important;
+li.activity-card.part {
+    background-color: #6082b6 !important; /* Glaucous Blue */
     color: white !important;
     border-left: 12px solid #f4b943 !important; /* Thick Orange Bar */
     padding: 1.5rem !important;
-    display: block !important;
     position: relative !important;
-    margin-bottom: 10px !important;
+    z-index: 10 !important; /* Forces it to the front */
 }
 
-/* ACTIVITY TILES: White with Blue border */
-.activity-card.activity, .activity-card.practice {
-    background-color: #ffffff !important;
-    border: 2px solid #6082b6 !important;
-    border-left: 8px solid #6082b6 !important;
-    margin-bottom: 15px !important;
+/* Force the background of the ENTIRE TOC list to white to hide orange bleed */
+ul.activity-list, 
+.activity-list, 
+.course-list,
+.panel-group {
+    background-color: white !important;
+    background: white !important;
+    border: none !important;
 }
 
-/* 2. SIDEBAR FIX: Teal Killer & Tiered Blue Shades */
-/* Main Sidebar Background: Lightest Glaucous */
-.sidebar, .nav-sidebar {
+/* 2. THE SIDEBAR: TEAL KILLER */
+/* Main Sidebar Area: Light Glaucous */
+.sidebar, .nav-sidebar, #sidebar-wrapper {
     background-color: #cfd9e9 !important; 
 }
 
-/* THE TEAL KILLER: Target nested subsections specifically */
-.nav-sidebar ul.nav, 
-.nav-sidebar .nav-second-level,
-.nav-sidebar li ul {
+/* TEAL KILLER: Target every possible nested menu level in Ximera */
+.nav-sidebar li ul, 
+.nav-sidebar .nav-second-level, 
+.nav-sidebar .nav,
+.nav-sidebar li.nav-header + li,
+.nav-sidebar li ul li {
     background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
 }
 
-/* Force links in subsections to NOT be teal */
-.nav-sidebar li ul li a, 
+/* Force the actual links inside those nested levels to not be teal */
+.nav-sidebar li ul li a,
 .nav-sidebar .nav-second-level li a {
     background-color: transparent !important;
-    color: #1a1a1a !important; /* Dark text for readability */
+    color: #1a1a1a !important; /* Dark text for contrast */
 }
 
-/* Active Highlight: Theme Orange */
+/* ACTIVE HIGHLIGHT: Orange for the page you are on */
 .nav-sidebar li.active > a, 
 .nav-sidebar li a.active,
-.nav-sidebar li.active > a:hover {
+.nav-sidebar li a:active {
     background-color: #f4b943 !important;
     color: white !important;
     font-weight: bold !important;
