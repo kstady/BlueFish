@@ -385,54 +385,57 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. TABLE OF CONTENTS: KILL ORANGE BLEED & FIX PART BAR */
-/* Target the actual list item that wraps the Part bar */
-.activity-card.card-sectionheading.part,
-li.activity-card.part {
-    background-color: #6082b6 !important; /* Glaucous Blue */
-    color: white !important;
-    border-left: 12px solid #f4b943 !important; /* Thick Orange Bar */
-    padding: 1.5rem !important;
-    position: relative !important;
-    z-index: 10 !important; /* Forces it to the front */
-}
-
-/* Force the background of the ENTIRE TOC list to white to hide orange bleed */
-ul.activity-list, 
-.activity-list, 
-.course-list,
-.panel-group {
+/* 1. THE TOC RESET: Kill the hidden orange background layer */
+.course-list, .activity-list, .card-columns, .panel-group, 
+.activity-card-container, ul[data-nav-counter] {
     background-color: white !important;
     background: white !important;
     border: none !important;
+    box-shadow: none !important;
 }
 
-/* 2. THE SIDEBAR: TEAL KILLER */
-/* Main Sidebar Area: Light Glaucous */
-.sidebar, .nav-sidebar, #sidebar-wrapper {
-    background-color: #cfd9e9 !important; 
+/* 2. THE PART BAR FIX: Solid Glaucous Blue with thick Orange bar */
+.activity-card.card-sectionheading.part, 
+li.activity-card.part {
+    background-color: #6082B6 !important; /* Solid Glaucous Blue */
+    color: white !important;
+    border-left: 12px solid #f4b943 !important; /* Thick Orange Bar */
+    padding: 1.5rem !important;
+    display: block !important;
+    height: auto !important; /* Prevents the 'shrinking' blue look */
+    min-height: 50px !important;
+    z-index: 10 !important; /* Pulls it in front of the orange bleed */
 }
 
-/* TEAL KILLER: Target every possible nested menu level in Ximera */
-.nav-sidebar li ul, 
-.nav-sidebar .nav-second-level, 
-.nav-sidebar .nav,
-.nav-sidebar li.nav-header + li,
-.nav-sidebar li ul li {
-    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
+/* 3. THE TEAL KILLER: Target 'card section' specifically from your inspect */
+.activity-card.card.section, 
+.activity-card.section {
+    background-color: #afc0da !important; /* Lighter Glaucous Blue */
+    border: 1px solid #6082B6 !important;
+    color: #1a1a1a !important;
 }
 
-/* Force the actual links inside those nested levels to not be teal */
-.nav-sidebar li ul li a,
-.nav-sidebar .nav-second-level li a {
-    background-color: transparent !important;
-    color: #1a1a1a !important; /* Dark text for contrast */
+/* Ensure the links inside those blue tiles aren't teal or underlined */
+.activity-card.section a {
+    color: #1a1a1a !important;
+    text-decoration: none !important;
 }
 
-/* ACTIVE HIGHLIGHT: Orange for the page you are on */
+/* 4. SIDEBAR: Tiered Blue with Orange Active highlight */
+.sidebar, .nav-sidebar {
+    background-color: #dfe6f0 !important; /* Lightest Glaucous */
+}
+
+/* Subsections in sidebar (Mid-Light Glaucous) */
+.nav-sidebar ul.nav, 
+.nav-sidebar .nav-second-level,
+.nav-sidebar li ul {
+    background-color: #afc0da !important; 
+}
+
+/* Active Highlight (Orange) */
 .nav-sidebar li.active > a, 
-.nav-sidebar li a.active,
-.nav-sidebar li a:active {
+.nav-sidebar li a.active {
     background-color: #f4b943 !important;
     color: white !important;
     font-weight: bold !important;
