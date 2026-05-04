@@ -385,14 +385,16 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. Global Reset to kill orange bleed behind tiles */
-.course-list, .activity-list, .card-columns, .panel-group {
-    background-color: #ffffff !important; /* Force page background to white */
+/* 1. TOC FIX: Kill orange bleed and style Part Bars */
+/* Force the background of the main course list containers to clear any ghost orange */
+.course-list, .activity-list, .card-columns, .panel-group, .panel {
+    background-color: #ffffff !important; 
     background: #ffffff !important;
     border: none !important;
+    box-shadow: none !important;
 }
 
-/* 2. THE PART BAR: Solid Glaucous Blue (Restoring previous working style) */
+/* THE PART BAR: Solid Glaucous Blue with Orange accent */
 .activity-card.card-sectionheading.part,
 .card-sectionheading.part {
     background-color: #6082b6 !important;
@@ -401,9 +403,10 @@ div[titletext*="Problem"] p:first-of-type {
     padding: 1.5rem !important;
     display: block !important;
     position: relative !important;
+    margin-bottom: 10px !important;
 }
 
-/* 3. ACTIVITY TILES: White with Blue border */
+/* ACTIVITY TILES: White with Blue border */
 .activity-card.activity, .activity-card.practice {
     background-color: #ffffff !important;
     border: 2px solid #6082b6 !important;
@@ -411,23 +414,33 @@ div[titletext*="Problem"] p:first-of-type {
     margin-bottom: 15px !important;
 }
 
-/* Sidebar Background: Lighter Glaucous Blue */
+/* 2. SIDEBAR FIX: Teal Killer & Tiered Blue Shades */
+/* Main Sidebar Background: Lightest Glaucous */
 .sidebar, .nav-sidebar {
-    background-color: #cfd9e9 !important; /* Light Glaucous */
+    background-color: #cfd9e9 !important; 
 }
 
-/* Subsection Background: Mid-Light Glaucous (Kills the Teal) */
+/* THE TEAL KILLER: Target nested subsections specifically */
 .nav-sidebar ul.nav, 
 .nav-sidebar .nav-second-level,
 .nav-sidebar li ul {
-    background-color: #9fb4d3 !important; 
+    background-color: #9fb4d3 !important; /* Mid-Light Glaucous */
 }
 
-/* Active Highlight: Orange */
+/* Force links in subsections to NOT be teal */
+.nav-sidebar li ul li a, 
+.nav-sidebar .nav-second-level li a {
+    background-color: transparent !important;
+    color: #1a1a1a !important; /* Dark text for readability */
+}
+
+/* Active Highlight: Theme Orange */
 .nav-sidebar li.active > a, 
-.nav-sidebar li a.active {
+.nav-sidebar li a.active,
+.nav-sidebar li.active > a:hover {
     background-color: #f4b943 !important;
     color: white !important;
+    font-weight: bold !important;
 }
 
 /* Done with changes. */
