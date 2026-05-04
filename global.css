@@ -395,17 +395,34 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 /* 2. THE PART BAR FIX: Solid Glaucous Blue with thick Orange bar */
-.activity-card.card-sectionheading.part, 
-li.activity-card.part {
-    background-color: #6082B6 !important; /* Solid Glaucous Blue */
-    color: white !important;
-    border-left: 12px solid #f4b943 !important; /* Thick Orange Bar */
+/* THE PART BAR: Solid Glaucous Blue (Nuclear Fix) */
+.activity-card.card-sectionheading.part,
+li.activity-card.part,
+.card-sectionheading.part {
+    background-color: #6082B6 !important; /* Force Solid Glaucous Blue */
+    color: #ffffff !important;
+    border-left: 12px solid #f4b943 !important; /* Thick Orange Accent */
     padding: 1.5rem !important;
+    
+    /* Layout Fixes: Prevent shrinking and orange bleed */
     display: block !important;
-    height: auto !important; /* Prevents the 'shrinking' blue look */
-    min-height: 50px !important;
-    z-index: 10 !important; /* Pulls it in front of the orange bleed */
+    width: 100% !important;
+    min-height: 3.5rem !important;
+    position: relative !important; /* Overrides Ximera's 'absolute' positioning */
+    z-index: 50 !important; /* Pushes it above the background grid */
+    margin-bottom: 1rem !important;
+    box-shadow: none !important;
 }
+
+/* Ensure the text inside the Part bar is visible and white */
+.activity-card.part a,
+.activity-card.part h1,
+.activity-card.part h2 {
+    color: #ffffff !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+}
+
 
 /* 3. THE TEAL KILLER: Target 'card section' specifically from your inspect */
 .activity-card.card.section, 
