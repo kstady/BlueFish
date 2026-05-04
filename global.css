@@ -385,47 +385,53 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 /* Changing color of TOC */
-/* 1. Global Reset for TOC containers to stop "color bleed" */
-.activity-tile, .card, .panel, .panel-default {
+/* 1. Kill the "Orange Bleed" behind Part and Activity bars */
+.panel-group, .panel, .panel-default, .panel-heading, .panel-body {
     background-color: transparent !important;
     border: none !important;
     box-shadow: none !important;
 }
 
-/* 2. THE PART BAR: Solid Glaucous Blue */
-.activity-tile.part, .card.part, div.part {
-    background-color: #6082b6 !important; /* Glaucous Blue */
+/* 2. THE PART BAR: Solid Glaucous Blue with Orange accent */
+/* Targeting the heading inside the panel to ensure no orange shows around it */
+.panel.part .panel-heading,
+.activity-tile.part,
+.card.part {
+    background-color: #6082b6 !important;
     color: white !important;
-    border-left: 10px solid #f4b943 !important; /* Your theme's Orange */
+    border-left: 10px solid #f4b943 !important;
     padding: 1.5rem !important;
-    margin-top: 2rem !important;
-    margin-bottom: 1rem !important;
-    display: block !important;
 }
 
-.activity-tile.part h1, .activity-tile.part h2, .activity-tile.part a {
-    color: white !important;
-}
-
-/* 3. ACTIVITY TILES: White with Blue border */
-.activity-tile.activity, .card.activity, .activity-list-item {
+/* 3. TOC TILES: Clean White background with Blue border */
+.activity-tile.activity, .card.activity, .panel.activity {
     background-color: #ffffff !important;
     border: 2px solid #6082b6 !important;
     border-left: 8px solid #6082b6 !important;
-    margin-bottom: 10px !important;
-    padding: 1rem !important;
+    margin-bottom: 12px !important;
 }
 
-/* 4. HOVER: Orange transition */
-.activity-tile.activity:hover, .card.activity:hover {
-    border-color: #f4b943 !important;
-    background-color: #fffdf9 !important; /* Very subtle orange tint */
+/* 4. SIDEBAR: Lighter Glaucous for non-active items */
+.sidebar, .nav-sidebar, #sidebar-wrapper {
+    background-color: #e7ecf4 !important; /* Lighter Glaucous Blue */
 }
 
-/* 5. TEXT: Glaucous Blue for titles */
-.activity-tile .title a, .activity-tile a {
-    color: #6082b6 !important;
-    text-decoration: none !important;
+/* Normal sidebar links */
+.nav-sidebar li a {
+    color: #4a6a96 !important; /* Darker blue for contrast */
+}
+
+/* Active sidebar item (Orange) */
+.nav-sidebar li.active a,
+.nav-sidebar li.active a:hover {
+    background-color: #f4b943 !important;
+    color: white !important;
+}
+
+/* Subsection Sidebar Items (Indented or sub-links) */
+.nav-sidebar .nav li a {
+    background-color: #cfd9e9 !important; /* Mid-light Glaucous for sub-sections */
+    padding-left: 30px !important;
 }
 
 /* Done with changes. */
