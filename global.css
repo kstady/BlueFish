@@ -424,12 +424,6 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-
-
-
-
-/* --- START OF NEW MATH & FONT FIX --- */
-
 /* Fix for top bar (navbar), download settings, and contact links */
 nav, .navbar, .navbar *, .navbar-brand, .nav-link, .navbar-nav > li > a {
     font-family: 'MLModern', serif !important;
