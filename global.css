@@ -9,13 +9,19 @@
  *   - become (almost) empty by default, because the ximeraServer default settings will becom English again
  */ 
  
-/* Use Ctrl F5 on the webpage whenever you make changes to this file */
 
-/* Chaning the Font */
+
+
+/* ****   Use Ctrl F5 on the webpage whenever you make changes to this fil****   */
+
+
+/* Chaning the Font ***********************************************   */
 
 /* Import the Latin Modern font family */
-@import url('https://+cdn.jsdelivr.net+/npm/@fontsource/latin-modern-roman@5.0.12/index.css');
+@import url('https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-roman.css');
 
+
+body {font-family: 'Latin Modern Roman', serif;}
 
 /* Apply font to EVERYTHING, but keep standard text at normal weight */
 .main-activity, 
@@ -47,7 +53,7 @@
     color: #1a1a1a !important;
 }
 
-/* Done changing the font :) */
+/* Done changing the font ******************************************   :) */
 
 .xmhint::before {
     content: "Show hint" counter(hint_number, notfirst);
@@ -297,8 +303,8 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #f0f4f8 !important; /* Glaucous Blue Tint */
-    border-left: 8px solid #8ca9d4 !important; /* Glaucous Blue Bar */
+    background-color: #ffffff !important; /* Glaucous Blue Tint */
+    border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
 }
@@ -328,7 +334,6 @@ div[titletext*="Problem"] p:first-of-type {
     margin-bottom: 2rem !important;
     display: block !important;
 }
-
 
 /* Removes bullets from any itemize list nested inside an enumerate list for nice indenting */
 .main-activity ol li ul {
@@ -442,4 +447,4 @@ div[titletext*="Problem"] p:first-of-type {
 
 /* Done with changes. */
 
-/* Use Ctrl F5 on webpage whenever you make changes to this file */
+/* **** Use Ctrl F5 on webpage whenever you make changes to this file **** */
