@@ -448,29 +448,32 @@ div[titletext*="Problem"] p:first-of-type {
     display: inline-block !important;
 }
 
-/* 4. FINAL FIX: Force font on generated labels (Problem, Definition, etc.) */
+/* 4. FINAL GLOBAL FIX: Force Font & Correct Size */
+.main-activity, 
+.main-activity .problem, 
+.main-activity .definition, 
+.main-activity .theorem, 
+.main-activity .procedure, 
+.main-activity .example, 
+.main-activity .remark,
+.main-activity .sectionHead,
+.main-activity .subSectionHead {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.25rem !important; /* Fixed base size for readability */
+}
+
+/* Target the specific labels Ximera generates (the bold headers) */
 .main-activity .problem::before, 
 .main-activity .definition::before, 
 .main-activity .theorem::before, 
 .main-activity .procedure::before, 
 .main-activity .example::before, 
-.main-activity .remark::before, 
-.main-activity .exploration::before,
-.main-activity .exercise::before,
-.main-activity .question::before,
-.main-activity .sectionHead, 
-.main-activity .subSectionHead, 
-.main-activity [class*="-title"] { 
-    font-family: 'MLModern', serif !important; 
-    font-weight: 800 !important;
-}
-
-/* Force the font on the titles and their internal text */
-.main-activity [class*="-title"], 
-.main-activity [class*="-title"] * {
+.main-activity .remark::before,
+.main-activity [class*="-title"] {
     font-family: 'MLModern', serif !important;
+    font-weight: 800 !important;
+    font-size: 1.1em !important; /* Slightly larger than body text */
 }
-
 
 /* --- END OF NEW MATH & FONT FIX --- */
 
