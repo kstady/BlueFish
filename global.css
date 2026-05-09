@@ -423,6 +423,11 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
+
+
+
+
+
 /* --- START OF NEW MATH & FONT FIX --- */
 
 /* 1. Set font and fix the "small" look without breaking layout */
@@ -466,7 +471,7 @@ h1 *, h2 *, h3 *,
 .problem::before, .definition::before, .theorem::before, 
 .example::before, .remark::before, .procedure::before { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 900 !important; 
+    font-weight: 700 !important; 
     -webkit-text-stroke: 0.5px currentColor; /* Makes thin font look thicker */
 }
 
