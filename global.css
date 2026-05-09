@@ -20,14 +20,7 @@
 /* 1. Import the darker MLModern font */
 @import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
 
-
 body {font-family: 'MLModern', serif;}
-
-mi, .mjx-mi, .mjx-it {
-    font-family: 'MLModern', serif !important;
-    font-style: italic !important;
-}
-
 
 /* 2. Apply MLModern to everything, but keep standard text at normal weight */
 .main-activity, .main-activity p, .main-activity li, .main-activity span {
@@ -464,18 +457,25 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-/* Force the specific MathJax variable container to slant */
-mjx-mi > mjx-c {
+/* 1. Target the internal MathJax character containers specifically */
+mjx-mi > mjx-c, 
+.mjx-i > mjx-c, 
+.mjx-it > mjx-c {
     font-style: italic !important;
     font-family: 'MLModern', serif !important;
 }
 
-/* Fallback for standard MathJax classes */
-.mjx-i, .mjx-mi, .mjx-it, .MathJax mi {
+/* 2. Target the math italic elements directly */
+mi, .mjx-mi, .mjx-it {
     font-style: italic !important;
     font-family: 'MLModern', serif !important;
+    display: inline-block !important; /* Forces the browser to recognize style changes */
 }
 
+/* 3. If it is STILL upright, force a physical tilt */
+mi, .mjx-mi {
+    transform: skewX(-8deg) !important;
+}
 
 
 /* ****************************** Done with changes! ********************************  */
