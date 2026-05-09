@@ -448,43 +448,29 @@ div[titletext*="Problem"] p:first-of-type {
     display: inline-block !important;
 }
 
-/* 4. Complete Coverage for Ximera Labels & Headers */
-/* Force the font on every single Ximera-specific content block */
+/* 4. FINAL FIX: Force font on generated labels (Problem, Definition, etc.) */
+.main-activity .problem::before, 
+.main-activity .definition::before, 
+.main-activity .theorem::before, 
+.main-activity .procedure::before, 
+.main-activity .example::before, 
+.main-activity .remark::before, 
+.main-activity .exploration::before,
+.main-activity .exercise::before,
+.main-activity .question::before,
 .main-activity .sectionHead, 
 .main-activity .subSectionHead, 
-.main-activity .problem-title, 
-.main-activity .example-title, 
-.main-activity .definition-title, 
-.main-activity .theorem-title, 
-.main-activity .remark-title, 
-.main-activity .procedure-title, 
-.main-activity .exploration-title,
-.main-activity .question-title,
-.main-activity .exercise-title,
-.main-activity .abstract,
-.main-activity .problem, 
-.main-activity .definition, 
-.main-activity .theorem, 
-.main-activity .example { 
+.main-activity [class*="-title"] { 
     font-family: 'MLModern', serif !important; 
-}
-
-/* Force weight and consistent size for all headers */
-.main-activity .sectionHead, 
-.main-activity .subSectionHead, 
-.main-activity [class*="-title"] {
     font-weight: 800 !important;
-    font-size: 1.15em !important;
-    display: block !important;
 }
 
-/* Fix for those parenthetical names (the text inside brackets/parentheses) */
-.main-activity [class*="-title"] span, 
-.main-activity [class*="-title"] small {
-    font-size: 0.9em !important;
-    font-weight: normal !important;
+/* Force the font on the titles and their internal text */
+.main-activity [class*="-title"], 
+.main-activity [class*="-title"] * {
     font-family: 'MLModern', serif !important;
 }
+
 
 /* --- END OF NEW MATH & FONT FIX --- */
 
