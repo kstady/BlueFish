@@ -58,7 +58,6 @@ body {font-family: 'MLModern', serif;}
 }
 
 
-
 /* *********************************** Done changing the font ****************************************** */
 
 .xmhint::before {
@@ -309,7 +308,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #c2d5ef !important; /* Glaucous Blue Tint */
+    background-color: #e3ebf8 !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
