@@ -44,7 +44,7 @@ body {
 .main-activity h2, 
 .main-activity h3 {
     font-family: 'MLModern', serif !important;
-    font-weight: 500 !important; /* Lighter than 'bold', much cleaner */
+    font-weight: 500 !important; /* Change font wieght if bold is too thick  */
     letter-spacing: -0.02em;     /* Tightens the wide characters slightly */
 }
 
