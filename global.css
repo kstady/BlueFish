@@ -44,7 +44,7 @@ body {
 .main-activity h2, 
 .main-activity h3 {
     font-family: 'MLModern', serif !important;
-    font-weight: 600 !important; /* Change font wieght if bold is too thick  */
+    font-weight: 550 !important; /* Change font wieght if bold is too thick  */
     letter-spacing: -0.02em;     /* Tightens the wide characters slightly */
 }
 
@@ -454,7 +454,7 @@ div[titletext*="Problem"] p:first-of-type {
 .main-activity .mjx-bold, 
 .main-activity b, 
 .main-activity strong {
-    font-size: 0.94em !important;
+    font-size: 0.9em !important;
 }
 
 ******** Done with changes! ********************************  */
