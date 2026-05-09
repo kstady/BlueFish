@@ -39,27 +39,21 @@ body {
     font-family: 'MLModern', serif;
 }
 
-/* 2. Apply MLModern to everything (Old Structure) */
-.main-activity, .main-activity p, .main-activity li { 
+/* 2. Your OLD STRUCTURE - Apply font to EVERYTHING */
+.main-activity, .main-activity p, .main-activity li, .main-activity span, .main-activity div { 
     font-family: 'MLModern', serif !important; 
-    font-weight: normal; 
-    font-size: 21px !important; 
-    line-height: 1.55 !important; 
-    color: #1a1a1a !important; 
+    font-weight: normal !important; 
 }
 
-/* Fix for headers that are too thick */
-.main-activity .sectionHead, 
-.main-activity .subsectionHead, 
-.main-activity .likesectionHead, 
-.main-activity .likesubsectionHead, 
-.main-activity .titleHead,
-.main-activity h1, 
-.main-activity h2, 
-.main-activity h3 {
-    font-family: 'MLModern', serif !important;
-    font-weight: 550 !important; /* Change font wieght if bold is too thick  */
-    letter-spacing: -0.02em;     /* Tightens the wide characters slightly */
+/* 3. Your OLD STRUCTURE - Apply to headers, titles, and labels */
+.main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, 
+.main-activity .liketitleHead, .main-activity .likesectionHead, .main-activity .likesubsectionHead, 
+.main-activity .problem-title, .main-activity .theorem-title, 
+.main-activity .example-title, .main-activity .definition-title,
+.main-activity div[titletext]::before,
+.main-activity b, .main-activity strong { 
+    font-family: 'MLModern', serif !important; 
+    font-weight: bold !important; 
 }
 
 /* *********************************** Done changing the font ****************************************** */
@@ -490,25 +484,19 @@ div[titletext*="Problem"] p:first-of-type {
     font-weight: 600 !important;
 }
 
+/* Sizing and Math Slant */
+.main-activity { 
+    font-size: 21px !important; 
+    line-height: 1.55 !important; 
+    color: #1a1a1a !important; 
+}
 
-
-/* 4. The "Nuclear Option" to force the math slant for variables like n */
-.main-activity mi, 
-.main-activity .mjx-mi, 
-.main-activity .mjx-it, 
-.main-activity mjx-mi {
+.main-activity mi, .main-activity .mjx-mi, .main-activity .mjx-it {
     display: inline-block !important;
-    font-style: italic !important;
-    transform: skewX(-11deg) !important;
+    transform: skewX(-10deg) !important;
 }
 
-/* Shrink the bold math variables slightly to match the text height */
-.main-activity .mjx-b, 
-.main-activity .mjx-bold, 
-.main-activity b, 
-.main-activity strong {
-    font-size: 0.9em !important;
-}
+
 
 ******** Done with changes! ********************************  */
 
