@@ -415,6 +415,17 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
+/* Target all standard Ximera section and subsection classes */
+.main-activity .sectionHead, 
+.main-activity .subsectionHead, 
+.main-activity .likesectionHead, 
+.main-activity .likesubsectionHead,
+.main-activity .titleHead {
+    font-family: 'MLModern', serif !important;
+    font-weight: bold !important;
+    /* You can adjust header size here if needed */
+    display: block; 
+}
 
 
 /* AT THE BOTTOM (OR REPLACE EVERYTHING ELSE WITH THIS) */
