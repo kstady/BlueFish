@@ -475,6 +475,14 @@ div[titletext*="Problem"] p:first-of-type {
     font-size: 1.1em !important; /* Slightly larger than body text */
 }
 
+/* Force MLModern on Section/Subsection text and their numbering */
+.main-activity .sectionHead, 
+.main-activity .subSectionHead,
+.main-activity .sectionHead *, 
+.main-activity .subSectionHead * {
+    font-family: 'MLModern', serif !important;
+}
+
 /* --- END OF NEW MATH & FONT FIX --- */
 
 /* ******** Done with changes ********************************  */
