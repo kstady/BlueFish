@@ -442,59 +442,32 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
-
-/* Target the actual LABELS like "Problem 1", "Example", "Definition" */
-.problem-environment b,
-.example-environment b,
-.definition-environment b,
-.theorem-environment b,
-.exercise-environment b,
-.remark-environment b,
-.problem-environment .title,
-.example-environment .title,
-.definition-environment .title {
-    font-family: 'MLModern', serif !important;
-    font-weight: 600 !important; /* Semi-bold to stay crisp */
-}
-
-/* Target the actual LABELS like "Problem 1", "Example", "Definition" */
-.problem-environment b,
-.example-environment b,
-.definition-environment b,
-.theorem-environment b,
-.exercise-environment b,
-.remark-environment b,
-.problem-environment .title,
-.example-environment .title,
-.definition-environment .title {
-    font-family: 'MLModern', serif !important;
-    font-weight: 600 !important; /* Semi-bold to stay crisp */
-}
-
-/* Target the body text inside these boxes */
-.problem-environment, 
-.example-environment, 
-.definition-environment {
-    font-family: 'MLModern', serif !important;
-}
-
-/* Ensure the labels (e.g., "Problem 1") are the correct weight */
-.problem-title, .example-title, .definition-title, .theorem-title {
-    font-weight: 600 !important;
-}
-
-/* 4. Sizing */
+/* 1. SIZING & COLORS */
 .main-activity { 
     font-size: 21px !important; 
     line-height: 1.55 !important; 
     color: #1a1a1a !important; 
 }
 
-/* 5. THE MATH FIX: Force the slant back onto the variables */
-.main-activity mi, .main-activity .mjx-mi, .main-activity .mjx-it, .main-activity mjx-mi {
+/* 2. LABELS (Problem, Example, Definition, etc.) */
+.problem-environment b, .example-environment b, .definition-environment b, 
+.theorem-environment b, .exercise-environment b, .problem-title, .example-title {
+    font-family: 'MLModern', serif !important;
+    font-weight: bold !important;
+}
+
+/* 3. THE MATH FIX (Only tilts variables, NOT the minus sign) */
+.main-activity mi, .main-activity .mjx-mi, .main-activity .mjx-it {
     display: inline-block !important;
     font-style: italic !important;
     transform: skewX(-11deg) !important;
+}
+
+/* 4. PROTECT THE MINUS SIGN (Forces it to stay upright and centered) */
+.main-activity .mjx-mo, .main-activity mjx-mo {
+    transform: none !important;
+    display: inline-block !important;
+    vertical-align: 0.1em;
 }
 
 ******** Done with changes! ********************************  */
