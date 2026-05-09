@@ -484,19 +484,19 @@ div[titletext*="Problem"] p:first-of-type {
     font-weight: 600 !important;
 }
 
-/* Sizing and Math Slant */
+/* 4. Sizing */
 .main-activity { 
     font-size: 21px !important; 
     line-height: 1.55 !important; 
     color: #1a1a1a !important; 
 }
 
-.main-activity mi, .main-activity .mjx-mi, .main-activity .mjx-it {
+/* 5. THE MATH FIX: Force the slant back onto the variables */
+.main-activity mi, .main-activity .mjx-mi, .main-activity .mjx-it, .main-activity mjx-mi {
     display: inline-block !important;
-    transform: skewX(-10deg) !important;
+    font-style: italic !important;
+    transform: skewX(-11deg) !important;
 }
-
-
 
 ******** Done with changes! ********************************  */
 
