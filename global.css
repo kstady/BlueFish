@@ -21,6 +21,9 @@
 @import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
 
 
+body {
+    font-family: 'MLModern', serif;
+}
 
 
 /* *********************************** Done changing the font ****************************************** */
