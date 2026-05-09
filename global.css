@@ -315,7 +315,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #eaf0f9 !important; /* Glaucous Blue Tint */
+    background-color: #f0f0f0 !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
