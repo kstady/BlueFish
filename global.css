@@ -17,22 +17,6 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-@font-face {
-    font-family: 'MLModern';
-    src: url('https://jsdelivr.net') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* Fix Navbar and Lesson Title Font/Size */
-.navbar, .navbar *, .activity-title, .xmtitle {
-    font-family: 'MLModern', serif !important;
-}
-
-.activity-title, .xmtitle { font-size: 2.2rem !important; font-weight: 600 !important; }
-.navbar a, .navbar-brand { font-size: 1.2rem !important; }
-
-
 @import url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2');
 
 
@@ -446,26 +430,28 @@ div[titletext*="Problem"] p:first-of-type {
 
 /* --- START OF NEW MATH & FONT FIX --- */
 
-/* --- SECTION & HEADER FONT FIX --- */
-h1, h2, h3, h4, 
-.sectionHead, .subSectionHead, 
-[class*="-title"],
-.problem::before, .definition::before, .theorem::before, 
-.example::before, .remark::before, .procedure::before { 
-    font-family: 'MLModern', serif !important; 
+/* Fix for top bar (navbar), download settings, and contact links */
+nav, .navbar, .navbar *, .navbar-brand, .nav-link, .navbar-nav > li > a {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.5rem !important; /* Adjust this to make it bigger */
+}
+
+/* Specific target for the buttons/links on the right side */
+.navbar-right, .navbar-right *, .navbar-text {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.15rem !important;
+}
+
+
+/* Fix for the Main Lesson Title */
+.activity-title, h1.activity-title, .main-activity h1:first-of-type {
+    font-family: 'MLModern', serif !important;
+    font-size: 2.2rem !important; /* Makes the main title stand out */
     font-weight: 600 !important;
+    display: block !important;
+    margin-bottom: 0.5em !important;
 }
 
-/* Ensure the numbers (1.1, 1.2) inside headers also switch */
-h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * { 
-    font-family: 'MLModern', serif !important; 
-}
-
-/* Keep names in parentheses from getting too bold or huge */
-[class*="-title"] span, [class*="-title"] small {
-    font-size: 0.85em !important;
-    font-weight: 400 !important;
-}
 
 /* ******** Done with changes ********************************  */
 
