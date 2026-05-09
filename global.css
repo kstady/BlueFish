@@ -21,61 +21,6 @@
 @import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
 
 
-/* 1. The Import must stay at the very top */
-@import url('https://jsdelivr.net');
-
-
-/* 2. TOP: General Text & Page Settings */
-body, .main-activity, .main-activity p, .main-activity li, .main-activity span {
-    font-family: 'MLModern', serif !important;
-    font-weight: normal !important;
-    font-size: 21px !important;
-    line-height: 1.55 !important;
-    color: #1a1a1a !important;
-}
-
-/* 3. MIDDLE: Header Boldness */
-.main-activity h1, .main-activity h2, .main-activity h3, .main-activity .problem-title {
-    font-family: 'MLModern', serif !important;
-    font-weight: bold !important;
-}
-
-
-/* 3. Apply font and bold weight ONLY to headers and titles */
-.main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, 
-.main-activity .liketitleHead, .main-activity .likesectionHead, .main-activity .likesubsectionHead, 
-.main-activity .problem-title, .main-activity .theorem-title, 
-.main-activity div[titletext]::before {
-    font-family: 'MLModern', serif !important;
-    font-weight: bold !important;
-}
-
-/* 4. Overall page sizing and color */
-.main-activity {
-    font-size: 21px !important;
-    line-height: 1.55 !important;
-    color: #1a1a1a !important;
-}
-
-
-/* Force MathJax to use the MLModern font but ALLOW italics */
-.mjx-chtml, .MathJax, .MathJax_Display {
-    font-family: 'MLModern', serif !important;
-}
-
-/* Ensure math variables stay italicized */
-.mjx-it {
-    font-style: italic !important;
-    font-family: 'MLModern', serif !important;
-}
-
-/* Ensure bold text inside math still works */
-.mjx-b, .mjx-bold {
-    font-family: 'MLModern', serif !important;
-    font-weight: bold !important;
-    font-style: normal !important;
-}
-
 
 
 /* *********************************** Done changing the font ****************************************** */
@@ -469,10 +414,32 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
-/* The "Nuclear" Slant Fix for Math - yea right */
-mi, .mjx-mi, .mjx-it, mjx-mi {
+
+
+
+/* AT THE BOTTOM (OR REPLACE EVERYTHING ELSE WITH THIS) */
+.main-activity {
+    font-family: 'MLModern', serif !important;
+    font-size: 21px;
+    line-height: 1.55;
+    color: #1a1a1a;
+}
+
+.main-activity b, 
+.main-activity strong, 
+.main-activity h1, 
+.main-activity h2, 
+.main-activity .problem-title {
+    font-weight: bold !important;
+}
+
+.main-activity mi, 
+.main-activity .mjx-mi, 
+.main-activity .mjx-it,
+.main-activity mjx-mi {
     display: inline-block !important;
-    transform: skewX(-12deg) !important;
+    font-style: italic !important;
+    transform: skewX(-10deg) !important;
 }
 
 /* ****************************** Done with changes! ********************************  */
