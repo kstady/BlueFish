@@ -24,24 +24,22 @@
 /* 1. The Import must stay at the very top */
 @import url('https://jsdelivr.net');
 
-/* 2. This changes your regular text (Keep this!) */
-body {
-    font-family: 'MLModern', serif;
-}
 
-/* 3. This forces the math variables to slant (Add this below the body) */
-mi, .mjx-mi, .mjx-it, mjx-mi > mjx-c {
-    font-family: 'MLModern', serif !important;
-    font-style: italic !important;
-}
-
-
-
-/* 2. Apply MLModern to everything, but keep standard text at normal weight */
-.main-activity, .main-activity p, .main-activity li, .main-activity span {
+/* 2. TOP: General Text & Page Settings */
+body, .main-activity, .main-activity p, .main-activity li, .main-activity span {
     font-family: 'MLModern', serif !important;
     font-weight: normal !important;
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    color: #1a1a1a !important;
 }
+
+/* 3. MIDDLE: Header Boldness */
+.main-activity h1, .main-activity h2, .main-activity h3, .main-activity .problem-title {
+    font-family: 'MLModern', serif !important;
+    font-weight: bold !important;
+}
+
 
 /* 3. Apply font and bold weight ONLY to headers and titles */
 .main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, 
@@ -330,7 +328,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #f7f7f7 !important; /* Glaucous Blue Tint */
+    background-color: #eff1fc !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
@@ -471,27 +469,11 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
-
-/* 1. Target the internal MathJax character containers specifically */
-mjx-mi > mjx-c, 
-.mjx-i > mjx-c, 
-.mjx-it > mjx-c {
-    font-style: italic !important;
-    font-family: 'MLModern', serif !important;
+/* The "Nuclear" Slant Fix for Math - yea right */
+mi, .mjx-mi, .mjx-it, mjx-mi {
+    display: inline-block !important;
+    transform: skewX(-12deg) !important;
 }
-
-/* 2. Target the math italic elements directly */
-mi, .mjx-mi, .mjx-it {
-    font-style: italic !important;
-    font-family: 'MLModern', serif !important;
-    display: inline-block !important; /* Forces the browser to recognize style changes */
-}
-
-/* 3. If it is STILL upright, force a physical tilt */
-mi, .mjx-mi {
-    transform: skewX(-8deg) !important;
-}
-
 
 /* ****************************** Done with changes! ********************************  */
 
