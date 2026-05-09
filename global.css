@@ -23,6 +23,12 @@
 
 body {font-family: 'MLModern', serif;}
 
+mi, .mjx-mi, .mjx-it {
+    font-family: 'MLModern', serif !important;
+    font-style: italic !important;
+}
+
+
 /* 2. Apply MLModern to everything, but keep standard text at normal weight */
 .main-activity, .main-activity p, .main-activity li, .main-activity span {
     font-family: 'MLModern', serif !important;
