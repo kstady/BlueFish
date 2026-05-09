@@ -448,7 +448,7 @@ h1 *, h2 *, h3 *,
 .problem::before, .definition::before, .theorem::before, 
 .example::before, .remark::before, .procedure::before { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 800 !important; /* Proper bold without the extra thickness */
+    font-weight: 600 !important; /* Proper bold without the extra thickness */
     -webkit-text-stroke: 0px !important; /* Removes the fake thickness */
 }
 
