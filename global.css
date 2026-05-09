@@ -39,19 +39,18 @@ body {
     font-family: 'MLModern', serif;
 }
 
-/* 2. Your OLD STRUCTURE - Apply font to EVERYTHING */
+
+/* 2. APPLY TO EVERYTHING (Removed !important from weight) */
 .main-activity, .main-activity p, .main-activity li, .main-activity span, .main-activity div { 
     font-family: 'MLModern', serif !important; 
-    font-weight: normal !important; 
+    font-weight: normal; 
 }
 
-/* 3. Your OLD STRUCTURE - Apply to headers, titles, and labels */
+/* 3. HEADERS & LABELS (Keep !important here) */
 .main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, 
 .main-activity .liketitleHead, .main-activity .likesectionHead, .main-activity .likesubsectionHead, 
-.main-activity .problem-title, .main-activity .theorem-title, 
-.main-activity .example-title, .main-activity .definition-title,
-.main-activity div[titletext]::before,
-.main-activity b, .main-activity strong { 
+.main-activity .problem-title, .main-activity .theorem-title, .main-activity .example-title, .main-activity .definition-title,
+.main-activity div[titletext]::before, .main-activity b, .main-activity strong { 
     font-family: 'MLModern', serif !important; 
     font-weight: bold !important; 
 }
