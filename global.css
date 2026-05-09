@@ -449,15 +449,24 @@ div[titletext*="Problem"] p:first-of-type {
     display: inline-block !important;
 }
 
-/* 4. Fix for Labels and Headers */ 
-.main-activity [class*="title"], .main-activity [class*="Head"], .main-activity .abstract, .main-activity .theorem, .main-activity .definition, .main-activity .remark, .main-activity .problem { 
+/* 4. Fix for Labels, Headers, and Environment Blocks */
+.main-activity .sectionHead, 
+.main-activity .subSectionHead, 
+.main-activity [class*="title"], 
+.main-activity .theorem, 
+.main-activity .definition, 
+.main-activity .remark, 
+.main-activity .problem,
+.main-activity .example { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 800 !important; 
-    font-size: 1.15em !important;
-} 
+}
 
-.main-activity .sectionHead, .main-activity .problem-title, .main-activity .example-title, .main-activity b, .main-activity strong { 
-    font-weight: bold !important; 
+/* Force the weight and a slight size boost for headers only */
+.main-activity .sectionHead, 
+.main-activity .subSectionHead, 
+.main-activity [class*="title"] {
+    font-weight: 800 !important;
+    font-size: 1.15em !important;
 }
 
 
