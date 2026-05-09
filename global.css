@@ -464,6 +464,13 @@ h1 *, h2 *, h3 *,
     font-weight: 400 !important;
 }
 
+/* Fix for the Ximera top navigation/orange bar */
+.navbar, .navbar *, .navbar-brand, .nav-link {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.1rem !important; /* Adjust this number to your liking */
+}
+
+
 /* ******** Done with changes ********************************  */
 
 /* **** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
