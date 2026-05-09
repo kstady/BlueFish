@@ -25,6 +25,29 @@ body {
     font-family: 'MLModern', serif;
 }
 
+/* 2. Apply MLModern to everything (Old Structure) */
+.main-activity, .main-activity p, .main-activity li { 
+    font-family: 'MLModern', serif !important; 
+    font-weight: normal !important; 
+    font-size: 21px !important; 
+    line-height: 1.55 !important; 
+    color: #1a1a1a !important; 
+}
+
+/* 3. Apply font AND bold weight ONLY to headers and titles (Old Structure) */
+.main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, 
+.main-activity .liketitleHead, .main-activity .likesectionHead, .main-activity .likesubsectionHead, 
+.main-activity .sectionHead, .main-activity .subsectionHead,
+.main-activity .problem-title, .main-activity .theorem-title, 
+.main-activity div[titletext]::before { 
+    font-family: 'MLModern', serif !important; 
+    font-weight: bold !important; 
+}
+
+
+
+
+
 
 /* *********************************** Done changing the font ****************************************** */
 
@@ -418,44 +441,20 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-/* Target all standard Ximera section and subsection classes */
-.main-activity .sectionHead, 
-.main-activity .subsectionHead, 
-.main-activity .likesectionHead, 
-.main-activity .likesubsectionHead,
-.main-activity .titleHead {
-    font-family: 'MLModern', serif !important;
-    font-weight: bold !important;
-    /* You can adjust header size here if needed */
-    display: block; 
-}
 
 
-/* AT THE BOTTOM (OR REPLACE EVERYTHING ELSE WITH THIS) */
-.main-activity {
-    font-family: 'MLModern', serif !important;
-    font-size: 21px;
-    line-height: 1.55;
-    color: #1a1a1a;
-}
 
-.main-activity b, 
-.main-activity strong, 
-.main-activity h1, 
-.main-activity h2, 
-.main-activity .problem-title {
-    font-weight: bold !important;
-}
-
+/* 4. The "Nuclear Option" to force the math slant for variables like n */
 .main-activity mi, 
 .main-activity .mjx-mi, 
-.main-activity .mjx-it,
+.main-activity .mjx-it, 
 .main-activity mjx-mi {
     display: inline-block !important;
     font-style: italic !important;
-    transform: skewX(-10deg) !important;
+    transform: skewX(-11deg) !important;
 }
 
-/* ****************************** Done with changes! ********************************  */
+
+******** Done with changes! ********************************  */
 
 /* **** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
