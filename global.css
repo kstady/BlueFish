@@ -484,7 +484,7 @@ nav, .navbar, .navbar *, .navbar-brand, .nav-link, .navbar-nav > li > a {
 /* Fix for the Main Lesson Title */
 .activity-title, h1.activity-title, .main-activity h1:first-of-type {
     font-family: 'MLModern', serif !important;
-    font-size: 2.1rem !important; /* Makes the main title stand out */
+    font-size: 2.2rem !important; /* Makes the main title stand out */
     font-weight: 600 !important;
     display: block !important;
     margin-bottom: 0.5em !important;
