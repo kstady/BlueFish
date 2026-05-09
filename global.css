@@ -430,66 +430,31 @@ div[titletext*="Problem"] p:first-of-type {
 
 /* --- START OF NEW MATH & FONT FIX --- */
 
-/* 4. CLEAN BOLD: No stroking, just proper weight */
-.main-activity, 
-.main-activity p, 
-.main-activity li {
+/* --- TOP BAR, TITLE, AND UI FIX --- */
+
+/* Target the Lesson Title at the very top */
+h1, .activity-title, .xmtitle {
     font-family: 'MLModern', serif !important;
-    font-size: 1.25rem !important;
-    line-height: 1.6;
-}
-
-/* Headers and Labels */
-h1, h2, h3, h4, 
-.sectionHead, .subSectionHead, 
-[class*="title"], [class*="Head"],
-h1 *, h2 *, h3 *, 
-.sectionHead *, .subSectionHead *,
-.problem::before, .definition::before, .theorem::before, 
-.example::before, .remark::before, .procedure::before { 
-    font-family: 'MLModern', serif !important; 
-    font-weight: 600 !important; /* Proper bold without the extra thickness */
-    -webkit-text-stroke: 0px !important; /* Removes the fake thickness */
-}
-
-/* Specific size for titles */
-[class*="-title"] {
-    font-size: 1.1em !important;
-}
-
-/* Keep parentheses thin and proportional */
-[class*="-title"] span, 
-[class*="-title"] small {
-    font-size: 0.85em !important;
-    font-weight: 400 !important;
-}
-
-
-
-
-
-/* Fix for top bar (navbar), download settings, and contact links */
-nav, .navbar, .navbar *, .navbar-brand, .nav-link, .navbar-nav > li > a {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.5rem !important; /* Adjust this to make it bigger */
-}
-
-/* Specific target for the buttons/links on the right side */
-.navbar-right, .navbar-right *, .navbar-text {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.15rem !important;
-}
-
-
-/* Fix for the Main Lesson Title */
-.activity-title, h1.activity-title, .main-activity h1:first-of-type {
-    font-family: 'MLModern', serif !important;
-    font-size: 2.2rem !important; /* Makes the main title stand out */
+    font-size: 2.2rem !important; /* Forces the main title to be big again */
     font-weight: 600 !important;
-    display: block !important;
-    margin-bottom: 0.5em !important;
 }
 
+/* Target the Orange Navbar, Links, and Buttons (Download, Contact, etc.) */
+.navbar, 
+.navbar a, 
+.navbar button, 
+.nav-link, 
+.navbar-brand,
+[class*="navbar"] {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.2rem !important; /* Increases size for top bar tools */
+}
+
+/* Ensure the font is forced onto those stubborn Sections and Problems */
+.sectionHead, .subSectionHead, [class*="-title"], .problem::before {
+    font-family: 'MLModern', serif !important;
+    font-weight: 600 !important;
+}
 
 
 /* ******** Done with changes ********************************  */
