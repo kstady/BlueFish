@@ -482,21 +482,21 @@ h1, h2, h3, h4, h5, h6,
 .sectionHead, .subSectionHead, 
 [class*="title"], [class*="Head"] { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 900 !important; 
+    font-weight: 1000 !important; 
 }
 
 /* Force the font and weight on everything nested inside those headers */
 h1 *, h2 *, h3 *, 
 .sectionHead *, .subSectionHead * { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 900 !important;
+    font-weight: 1000 !important;
 }
 
 /* Ensure the bold titles for problems/definitions also switch */
 .problem::before, .definition::before, .theorem::before, 
 .example::before, .remark::before, .procedure::before { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 900 !important; 
+    font-weight: 1000 !important; 
 }
 
 
