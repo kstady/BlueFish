@@ -12,10 +12,10 @@
 
 
 
-/* ************* Save, then use Ctrl F5 on the webpage whenever you make changes to this file. **********   */
+/* *************************** Save, then use Ctrl F5 on the webpage whenever you make changes to this file. **********   */
 
 
-/* ***************************** Changing the Font! ***********************************************   */
+/* ************************************** Changing the Font! ***********************************************   */
 
 /* 1. Import the darker MLModern font */
 @import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
@@ -46,16 +46,24 @@ body {font-family: 'MLModern', serif;}
 }
 
 
-/* Force MathJax to inherit your MLModern font for text commands like \textbf */
+/* Force MathJax to use the MLModern font but ALLOW italics */
 .mjx-chtml, .MathJax, .MathJax_Display {
-    font-family: inherit !important;
+    font-family: 'MLModern', serif !important;
 }
 
-/* Specifically target the bold math text */
-.mjx-b, .mjx-bold, .mjx-test-bold {
+/* Ensure math variables stay italicized */
+.mjx-it {
+    font-style: italic !important;
+    font-family: 'MLModern', serif !important;
+}
+
+/* Ensure bold text inside math still works */
+.mjx-b, .mjx-bold {
     font-family: 'MLModern', serif !important;
     font-weight: bold !important;
+    font-style: normal !important;
 }
+
 
 
 /* *********************************** Done changing the font ****************************************** */
