@@ -40,19 +40,15 @@ body {
 }
 
 
-/* 2. APPLY TO EVERYTHING (Removed !important from weight) */
-.main-activity, .main-activity p, .main-activity li, .main-activity span, .main-activity div { 
-    font-family: 'MLModern', serif !important; 
-    font-weight: normal; 
+/* 2. Style everything EXCEPT math variables first */
+.main-activity, .main-activity * {
+    font-family: 'MLModern', serif !important;
 }
 
-/* 3. HEADERS & LABELS (Keep !important here) */
-.main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, 
-.main-activity .liketitleHead, .main-activity .likesectionHead, .main-activity .likesubsectionHead, 
-.main-activity .problem-title, .main-activity .theorem-title, .main-activity .example-title, .main-activity .definition-title,
-.main-activity div[titletext]::before, .main-activity b, .main-activity strong { 
-    font-family: 'MLModern', serif !important; 
-    font-weight: bold !important; 
+.main-activity {
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    color: #1a1a1a !important;
 }
 
 /* *********************************** Done changing the font ****************************************** */
@@ -442,18 +438,27 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
-/* Force math variables to use MLModern and stay slanted */
-mi, .mjx-mi, .mjx-it, mjx-mi > mjx-c {
-    font-family: 'MLModern', serif !important;
+/* 3. THE TARGETED SLANT (Only hits letters like n, x, y) */
+/* We target 'mi' but EXCLUDE numbers and operators specifically */
+.main-activity mi, 
+.main-activity .mjx-mi, 
+.main-activity .mjx-it {
+    display: inline-block !important;
     font-style: italic !important;
-    transform: none !important; 
+    transform: skewX(-12deg) !important;
 }
 
-/* Keep minus signs and operators from floating or tilting */
-.mjx-mo, mjx-mo {
-    transform: none !important;
-    vertical-align: baseline !important;
-}
+/* 4. THE PROTECTOR (Forces numbers and minus signs to stay straight) */
+/* This overrides the slant for things that should not lean */
+.main-activity mn, 
+.main-activity .mjx-mn, 
+.main-activity mo, 
+.main-activity .mjx-mo,
+.main-activity mjx-mo,
+.main-activity .mjx-n {
+    display: inline-block !important;
+    transform: skewX(0deg) !important; /* Forces them upright */
+    vertical-align: 0em !important;    /* Keeps minus sign on the line */
 
 
 ******** Done with changes! ********************************  */
