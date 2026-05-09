@@ -450,17 +450,38 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-/* Target Ximera environments: Problem, Example, Definition, Theorem, etc. */
+/* Target the actual LABELS like "Problem 1", "Example", "Definition" */
+.problem-environment b,
+.example-environment b,
+.definition-environment b,
+.theorem-environment b,
+.exercise-environment b,
+.remark-environment b,
+.problem-environment .title,
+.example-environment .title,
+.definition-environment .title {
+    font-family: 'MLModern', serif !important;
+    font-weight: 600 !important; /* Semi-bold to stay crisp */
+}
+
+/* Target the actual LABELS like "Problem 1", "Example", "Definition" */
+.problem-environment b,
+.example-environment b,
+.definition-environment b,
+.theorem-environment b,
+.exercise-environment b,
+.remark-environment b,
+.problem-environment .title,
+.example-environment .title,
+.definition-environment .title {
+    font-family: 'MLModern', serif !important;
+    font-weight: 600 !important; /* Semi-bold to stay crisp */
+}
+
+/* Target the body text inside these boxes */
 .problem-environment, 
-.exercise-environment, 
 .example-environment, 
-.definition-environment, 
-.theorem-environment,
-.remark-environment,
-.problem-title,
-.example-title,
-.definition-title,
-.theorem-title {
+.definition-environment {
     font-family: 'MLModern', serif !important;
 }
 
