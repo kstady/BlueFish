@@ -456,23 +456,27 @@ div[titletext*="Problem"] p:first-of-type {
 .main-activity .theorem, 
 .main-activity .definition, 
 .main-activity .remark, 
-.main-activity .problem,
-.main-activity .example { 
+.main-activity .problem, 
+.main-activity .example,
+.main-activity .procedure,
+.main-activity .exploration { 
     font-family: 'MLModern', serif !important; 
 }
 
-/* Force the weight and a slight size boost for headers only */
+/* Make headers bold and set a consistent size */
 .main-activity .sectionHead, 
 .main-activity .subSectionHead, 
-.main-activity [class*="title"] {
-    font-weight: 800 !important;
-    font-size: 1.15em !important;
+.main-activity [class*="title"] { 
+    font-weight: 800 !important; 
+    font-size: 1.12em !important; 
 }
 
+/* Fix for the text in parentheses (the name of the theorem/def) */
 .main-activity [class*="title"] span, 
 .main-activity [class*="title"] small { 
     font-size: 0.85em !important; 
-    font-weight: normal !important; 
+    font-weight: 400 !important;
+    display: inline-block;
 }
 
 /* --- END OF NEW MATH & FONT FIX --- */
