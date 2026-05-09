@@ -17,9 +17,23 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-/* 1. Import the darker MLModern font */
-@import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
 
+/* 1. REPLACE THE @IMPORT WITH THESE TWO BLOCKS (FOR SPEED) */
+@font-face {
+    font-family: 'MLModern';
+    src: url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2') format('woff2');
+    font-weight: 400; /* Regular */
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'MLModern';
+    src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-bold.woff2') format('woff2');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+    font-display: swap;
+}
 
 body {
     font-family: 'MLModern', serif;
@@ -28,7 +42,7 @@ body {
 /* 2. Apply MLModern to everything (Old Structure) */
 .main-activity, .main-activity p, .main-activity li { 
     font-family: 'MLModern', serif !important; 
-    font-weight: normal !important; 
+    font-weight: normal; 
     font-size: 21px !important; 
     line-height: 1.55 !important; 
     color: #1a1a1a !important; 
@@ -436,6 +450,24 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
+/* Target Ximera environments: Problem, Example, Definition, Theorem, etc. */
+.problem-environment, 
+.exercise-environment, 
+.example-environment, 
+.definition-environment, 
+.theorem-environment,
+.remark-environment,
+.problem-title,
+.example-title,
+.definition-title,
+.theorem-title {
+    font-family: 'MLModern', serif !important;
+}
+
+/* Ensure the labels (e.g., "Problem 1") are the correct weight */
+.problem-title, .example-title, .definition-title, .theorem-title {
+    font-weight: 600 !important;
+}
 
 
 
