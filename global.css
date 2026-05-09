@@ -477,26 +477,25 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 
-/* 4. FORCE FONT ON ALL HEADERS & TITLES */
-/* We target the headers and every single element inside them (like spans/numbers) */
-.main-activity .sectionHead, 
-.main-activity .subSectionHead,
-.main-activity .sectionHead *, 
-.main-activity .subSectionHead * {
+/* 4. FORCE FONT ON ALL HEADERS & TITLE BLOCKS */
+h1, h2, h3, h4, h5, h6,
+.sectionHead, .subSectionHead,
+[class*="title"], [class*="Head"] {
     font-family: 'MLModern', serif !important;
 }
 
-/* Force the font on Problem, Definition, and Theorem labels specifically */
-.main-activity .problem-title, 
-.main-activity .definition-title, 
-.main-activity .theorem-title, 
-.main-activity .procedure-title,
-.main-activity .example-title,
-.main-activity .remark-title {
+/* Force the font on everything nested inside those headers */
+h1 *, h2 *, h3 *, 
+.sectionHead *, .subSectionHead * {
+    font-family: 'MLModern', serif !important;
+}
+
+/* Ensure the bold titles for problems/definitions also switch */
+.problem::before, .definition::before, .theorem::before, 
+.example::before, .remark::before, .procedure::before {
     font-family: 'MLModern', serif !important;
     font-weight: 800 !important;
 }
-
 
 /* ******** Done with changes ********************************  */
 
