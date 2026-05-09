@@ -448,55 +448,39 @@ div[titletext*="Problem"] p:first-of-type {
     display: inline-block !important;
 }
 
-/* 4. FINAL GLOBAL FIX: Force Font & Correct Size */
+/* 4. FINAL CLEANUP: Font, Size, and Extra Boldness */
 .main-activity, 
-.main-activity .problem, 
-.main-activity .definition, 
-.main-activity .theorem, 
-.main-activity .procedure, 
-.main-activity .example, 
-.main-activity .remark,
-.main-activity .sectionHead,
-.main-activity .subSectionHead {
+.main-activity p, 
+.main-activity li {
     font-family: 'MLModern', serif !important;
-    font-size: 1.25rem !important; /* Fixed base size for readability */
+    font-size: 1.25rem !important;
+    line-height: 1.6;
 }
 
-/* Target the specific labels Ximera generates (the bold headers) */
-.main-activity .problem::before, 
-.main-activity .definition::before, 
-.main-activity .theorem::before, 
-.main-activity .procedure::before, 
-.main-activity .example::before, 
-.main-activity .remark::before,
-.main-activity [class*="-title"] {
-    font-family: 'MLModern', serif !important;
-    font-weight: 800 !important;
-    font-size: 1.1em !important; /* Slightly larger than body text */
-}
-
-/* 4. FORCE FONT AND "EXTRA" BOLDNESS */
-h1, h2, h3, h4, h5, h6, 
+/* Target all headers, labels, and their internal text */
+h1, h2, h3, h4, 
 .sectionHead, .subSectionHead, 
 [class*="title"], [class*="Head"],
+h1 *, h2 *, h3 *, 
+.sectionHead *, .subSectionHead *,
 .problem::before, .definition::before, .theorem::before, 
 .example::before, .remark::before, .procedure::before { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 900 !important;
-    /* This adds a tiny "outline" to fake a heavier weight */
-    -webkit-text-stroke: 0.5px currentColor;
+    font-weight: 900 !important; 
+    -webkit-text-stroke: 0.5px currentColor; /* Makes thin font look thicker */
 }
 
-/* Force everything nested inside headers to match */
-h1 *, h2 *, h3 *, 
-.sectionHead *, .subSectionHead * { 
-    font-family: 'MLModern', serif !important; 
-    font-weight: 900 !important;
-    -webkit-text-stroke: 0.5px currentColor;
+/* Ensure title font size stays proportional */
+[class*="-title"] {
+    font-size: 1.1em !important;
 }
 
-
-
+/* Parentheses text fix */
+[class*="-title"] span {
+    font-size: 0.85em !important;
+    font-weight: normal !important;
+    -webkit-text-stroke: 0px !important; /* Keep parentheses thin */
+}
 
 
 /* ******** Done with changes ********************************  */
