@@ -84,10 +84,6 @@ body {
     content: "Answer: ";
 	font-weight: bold;
 }
-
-
-
-
 .exercise::before {
 	content: "exercise" attr(numbered) ".";
 }
