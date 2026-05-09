@@ -475,13 +475,25 @@ div[titletext*="Problem"] p:first-of-type {
     font-size: 1.1em !important; /* Slightly larger than body text */
 }
 
-/* Force MLModern on Section/Subsection text and their numbering */
+/* Force font on the raw header tags and their generated numbers */
+.main-activity h1, 
+.main-activity h2, 
+.main-activity h3, 
+.main-activity h4,
 .main-activity .sectionHead, 
-.main-activity .subSectionHead,
-.main-activity .sectionHead *, 
-.main-activity .subSectionHead * {
+.main-activity .subSectionHead {
     font-family: 'MLModern', serif !important;
 }
+
+/* Specifically target the numbers that Ximera injects before headers */
+.main-activity h1::before, 
+.main-activity h2::before, 
+.main-activity h3::before,
+.main-activity .sectionHead::before,
+.main-activity .subSectionHead::before {
+    font-family: 'MLModern', serif !important;
+}
+
 
 /* --- END OF NEW MATH & FONT FIX --- */
 
