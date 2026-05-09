@@ -430,32 +430,26 @@ div[titletext*="Problem"] p:first-of-type {
 
 /* --- START OF NEW MATH & FONT FIX --- */
 
-/* --- TOP BAR, TITLE, AND UI FIX --- */
-
-/* Target the Lesson Title at the very top */
-h1, .activity-title, .xmtitle {
-    font-family: 'MLModern', serif !important;
-    font-size: 2.2rem !important; /* Forces the main title to be big again */
+/* --- SECTION & HEADER FONT FIX --- */
+h1, h2, h3, h4, 
+.sectionHead, .subSectionHead, 
+[class*="-title"],
+.problem::before, .definition::before, .theorem::before, 
+.example::before, .remark::before, .procedure::before { 
+    font-family: 'MLModern', serif !important; 
     font-weight: 600 !important;
 }
 
-/* Target the Orange Navbar, Links, and Buttons (Download, Contact, etc.) */
-.navbar, 
-.navbar a, 
-.navbar button, 
-.nav-link, 
-.navbar-brand,
-[class*="navbar"] {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.2rem !important; /* Increases size for top bar tools */
+/* Ensure the numbers (1.1, 1.2) inside headers also switch */
+h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * { 
+    font-family: 'MLModern', serif !important; 
 }
 
-/* Ensure the font is forced onto those stubborn Sections and Problems */
-.sectionHead, .subSectionHead, [class*="-title"], .problem::before {
-    font-family: 'MLModern', serif !important;
-    font-weight: 600 !important;
+/* Keep names in parentheses from getting too bold or huge */
+[class*="-title"] span, [class*="-title"] small {
+    font-size: 0.85em !important;
+    font-weight: 400 !important;
 }
-
 
 /* ******** Done with changes ********************************  */
 
