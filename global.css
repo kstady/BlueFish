@@ -12,12 +12,10 @@
 
 
 
-/* ****   Use Ctrl F5 on the webpage whenever you make changes to this fil****   */
+/* ************* Save, then use Ctrl F5 on the webpage whenever you make changes to this file. **********   */
 
 
-/* Chaning the Font ***********************************************   */
-
-
+/* ***************************** Changing the Font! ***********************************************   */
 
 /* 1. Import the darker MLModern font */
 @import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
@@ -46,6 +44,19 @@ body {font-family: 'MLModern', serif;}
     line-height: 1.55 !important;
     color: #1a1a1a !important;
 }
+
+
+/* Force MathJax to inherit your MLModern font for text commands like \textbf */
+.mjx-chtml, .MathJax, .MathJax_Display {
+    font-family: inherit !important;
+}
+
+/* Specifically target the bold math text */
+.mjx-b, .mjx-bold, .mjx-test-bold {
+    font-family: 'MLModern', serif !important;
+    font-weight: bold !important;
+}
+
 
 
 /* *********************************** Done changing the font ****************************************** */
@@ -260,7 +271,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 
 
-/* %%%%%   Modifications I made with the help of AI: %%%%  */
+/*  **************************** Modifications made with the help of AI. *****************************  */
 
 
 /* Only applies spacing if it is inside the main-activity container, not the TOC. */
@@ -298,7 +309,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #ffffff !important; /* Glaucous Blue Tint */
+    background-color: #c2d5ef !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
@@ -439,7 +450,6 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
+/* ****************************** Done with changes! ********************************  */
 
-/* Done with changes. */
-
-/* **** Use Ctrl F5 on webpage whenever you make changes to this file **** */
+/* **** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
