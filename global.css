@@ -449,47 +449,43 @@ div[titletext*="Problem"] p:first-of-type {
     display: inline-block !important;
 }
 
-/* --- GLOBAL FONT & SIZE RESET --- */
-/* This forces the font and a massive size on every single element in the activity */
-.main-activity, 
-.main-activity div, 
-.main-activity p, 
-.main-activity span, 
-.main-activity li, 
-.main-activity section {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.6rem !important; /* Huge base size to compensate for thin font */
-}
 
-/* --- HEADERS, TITLES, & BLOCKS --- */
-/* Target every possible Ximera header/label to force font and extra boldness */
+/* 4. Complete Coverage for Ximera Labels & Headers */
+/* Force the font on every single Ximera-specific content block */
 .main-activity .sectionHead, 
 .main-activity .subSectionHead, 
-.main-activity [class*="-title"],
+.main-activity .problem-title, 
+.main-activity .example-title, 
+.main-activity .definition-title, 
+.main-activity .theorem-title, 
+.main-activity .remark-title, 
+.main-activity .procedure-title, 
+.main-activity .exploration-title,
+.main-activity .question-title,
+.main-activity .exercise-title,
+.main-activity .abstract,
 .main-activity .problem, 
 .main-activity .definition, 
 .main-activity .theorem, 
-.main-activity .example, 
-.main-activity .remark, 
-.main-activity .procedure, 
-.main-activity .exploration { 
+.main-activity .example { 
     font-family: 'MLModern', serif !important; 
 }
 
-/* Force Headers to be even larger and extra thick */
+/* Force weight and consistent size for all headers */
 .main-activity .sectionHead, 
 .main-activity .subSectionHead, 
 .main-activity [class*="-title"] {
-    font-weight: 900 !important; 
-    font-size: 1.2em !important; 
+    font-weight: 800 !important;
+    font-size: 1.15em !important;
     display: block !important;
 }
 
-/* Fix for those parenthetical names (e.g., Theorem Name) */
+/* Fix for those parenthetical names (the text inside brackets/parentheses) */
 .main-activity [class*="-title"] span, 
 .main-activity [class*="-title"] small {
-    font-size: 0.8em !important;
-    font-weight: 400 !important;
+    font-size: 0.9em !important;
+    font-weight: normal !important;
+    font-family: 'MLModern', serif !important;
 }
 
 /* --- END OF NEW MATH & FONT FIX --- */
