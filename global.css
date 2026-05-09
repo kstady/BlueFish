@@ -20,7 +20,22 @@
 /* 1. Import the darker MLModern font */
 @import url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css');
 
-body {font-family: 'MLModern', serif;}
+
+/* 1. The Import must stay at the very top */
+@import url('https://jsdelivr.net');
+
+/* 2. This changes your regular text (Keep this!) */
+body {
+    font-family: 'MLModern', serif;
+}
+
+/* 3. This forces the math variables to slant (Add this below the body) */
+mi, .mjx-mi, .mjx-it, mjx-mi > mjx-c {
+    font-family: 'MLModern', serif !important;
+    font-style: italic !important;
+}
+
+
 
 /* 2. Apply MLModern to everything, but keep standard text at normal weight */
 .main-activity, .main-activity p, .main-activity li, .main-activity span {
@@ -315,7 +330,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 /* 1. Removes the default lavender background and keeps the blue bar */
 div[titletext*="Problem"] {
-    background-color: #f0f0f0 !important; /* Glaucous Blue Tint */
+    background-color: #f7f7f7 !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
     padding: 1.5em !important;
     color: #333 !important;
