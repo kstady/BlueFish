@@ -20,7 +20,15 @@
 @import url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2');
 
 
-body {font-family: 'MLModern', serif !important;}
+body {
+    font-family: 'MLModern', serif !important; 
+    font-size: 1.18rem !important; /* Increases text size to compensate for MLModern's thinness */
+    }
+
+/* Keep math at 100% of the new, larger text size */
+.mjx-container {
+    font-size: 100% !important;
+}
 
 /* *********************************** Done changing the font ****************************************** */
 
@@ -414,28 +422,31 @@ div[titletext*="Problem"] p:first-of-type {
 /* Force the MLModern font on everything in the activity */
 .main-activity, .main-activity * {
     font-family: 'MLModern', serif !important;
-}
+    }
 
-/* Force variables (like n, x) to slant */
-.main-activity mi, .main-activity .mjx-mi, .main-activity .mjx-it {
+/* Force variables to slant by targeting the specific MathJax character container */
+.main-activity .mjx-mi > mjx-c, 
+.main-activity mi, 
+.main-activity .mjx-i {
     display: inline-block !important;
     transform: skewX(-11deg) !important;
 }
 
-/* PROTECTOR: Stop numbers and minus signs from tilting or floating */
-.main-activity mn, .main-activity .mjx-mn, 
-.main-activity mo, .main-activity .mjx-mo, 
-.main-activity mjx-mo {
-    display: inline-block !important;
-    transform: skewX(0deg) !important;
-    vertical-align: baseline !important;
-}
 
-/* Fix for Problem/Example labels and Headers */
-.main-activity .sectionHead, .main-activity .problem-title, 
-.main-activity .example-title, .main-activity b, .main-activity strong {
-    font-weight: bold !important;
-}
+/* PROTECTOR: Stop numbers and minus signs from tilting or floating */
+            .main-activity mn, .main-activity .mjx-mn, 
+            .main-activity mo, .main-activity .mjx-mo, 
+            .main-activity mjx-mo {
+                display: inline-block !important;
+                    transform: skewX(0deg) !important;
+                        vertical-align: baseline !important;
+                        }
+
+                        /* Fix for Problem/Example labels and Headers */
+                        .main-activity .sectionHead, .main-activity .problem-title, 
+                        .main-activity .example-title, .main-activity b, .main-activity strong {
+                            font-weight: bold !important;
+                            }
 
 /* --- END OF NEW MATH & FONT FIX --- */
 
