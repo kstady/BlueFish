@@ -440,15 +440,13 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 /* 3. PROTECTOR: Ensure everything else stays upright */
-/* We target the character level (mjx-c) to override the slant rule above */
 .main-activity mjx-mn mjx-c, 
 .main-activity mjx-mo mjx-c, 
-.main-activity mjx-stex mjx-c,
-.main-activity .mjx-n mjx-c {
+.main-activity mjx-stex mjx-c, 
+.main-activity mjx-n mjx-c {
     transform: skewX(0deg) !important;
     display: inline-block !important;
 }
-
 
 /* 4. Complete Coverage for Ximera Labels & Headers */
 /* Force the font on every single Ximera-specific content block */
