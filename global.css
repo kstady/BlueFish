@@ -430,30 +430,7 @@ div[titletext*="Problem"] p:first-of-type {
 
 /* --- START OF NEW MATH & FONT FIX --- */
 
-/* 1. Set font and fix the "small" look without breaking layout */
-.main-activity {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.08em !important; 
-}
-
-/* 2. Slant ONLY the characters inside variables, not the containers */
-/* This prevents fractions and spacing from breaking */
-.main-activity mjx-mi mjx-c {
-    display: inline-block !important;
-    transform: skewX(-11deg) !important;
-    margin-right: 0.05em !important; /* Prevents slanted letters from hitting the next character */
-}
-
-/* 3. PROTECTOR: Ensure everything else stays upright */
-.main-activity mjx-mn mjx-c, 
-.main-activity mjx-mo mjx-c, 
-.main-activity mjx-stex mjx-c, 
-.main-activity mjx-n mjx-c {
-    transform: skewX(0deg) !important;
-    display: inline-block !important;
-}
-
-/* 4. FINAL CLEANUP: Font, Size, and Extra Boldness */
+/* 4. CLEAN BOLD: No stroking, just proper weight */
 .main-activity, 
 .main-activity p, 
 .main-activity li {
@@ -462,7 +439,7 @@ div[titletext*="Problem"] p:first-of-type {
     line-height: 1.6;
 }
 
-/* Target all headers, labels, and their internal text */
+/* Headers and Labels */
 h1, h2, h3, h4, 
 .sectionHead, .subSectionHead, 
 [class*="title"], [class*="Head"],
@@ -471,22 +448,21 @@ h1 *, h2 *, h3 *,
 .problem::before, .definition::before, .theorem::before, 
 .example::before, .remark::before, .procedure::before { 
     font-family: 'MLModern', serif !important; 
-    font-weight: 600 !important; 
-    -webkit-text-stroke: 0.5px currentColor; /* Makes thin font look thicker */
+    font-weight: 800 !important; /* Proper bold without the extra thickness */
+    -webkit-text-stroke: 0px !important; /* Removes the fake thickness */
 }
 
-/* Ensure title font size stays proportional */
+/* Specific size for titles */
 [class*="-title"] {
     font-size: 1.1em !important;
 }
 
-/* Parentheses text fix */
-[class*="-title"] span {
+/* Keep parentheses thin and proportional */
+[class*="-title"] span, 
+[class*="-title"] small {
     font-size: 0.85em !important;
-    font-weight: normal !important;
-    -webkit-text-stroke: 0px !important; /* Keep parentheses thin */
+    font-weight: 400 !important;
 }
-
 
 /* ******** Done with changes ********************************  */
 
