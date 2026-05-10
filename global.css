@@ -41,7 +41,7 @@ html, body {
 /* Download, Settings, Contact: Correct Font & Size */
 .navbar a, .navbar-brand, #download-link, #settings-link, #contact-link {
     font-family: 'MLModern', serif !important;
-    font-size: 1.5rem !important; 
+    font-size: 1rem !important; 
     line-height: 44px !important;
 }
 
