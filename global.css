@@ -18,68 +18,45 @@
 /* ************************************** Changing the Font! ***********************************************   */
 
 
-/* First: Manual font loading */
+/* 1. LOAD THE FONT */
 @font-face {
     font-family: 'MLModern';
-    src: url('https://jsdelivr.net') format('woff2');
+    src: url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
-
-@import url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2');
-
-
-/* Set the base font for the document */
-body {
-    font-family: 'MLModern', serif !important;
+/* 2. GLOBAL & NAVBAR SETTINGS */
+body { 
+    font-family: 'MLModern', serif !important; 
 }
 
-
-/* Third: Now you can add your navbar and title fixes */
+/* Fixes the Orange Bar and the Lesson Title */
 .navbar, .navbar *, .activity-title, .xmtitle {
     font-family: 'MLModern', serif !important;
 }
 
+/* Size for Download/Contact links */
+.navbar a, .navbar-brand, .nav-link { 
+    font-size: 1.1rem !important; 
+}
+
+/* Size for Main Lesson Title */
 .activity-title, .xmtitle { 
     font-size: 2.2rem !important; 
-    font-weight: 600 !important; 
-}
-
-.navbar a, .navbar-brand { 
-    font-size: 1.2rem !important; 
-}
-
-
-/* Adjust size ONLY for the content area to prevent UI breaking */
-.main-activity {
-    font-size: 1.1rem !important;
-    line-height: 1.5;
-}
-
-/* Ensure math scales naturally with the text */
-mjx-container {
-    font-size: inherit !important;
-}
-
-
-/* --- TOP BAR & LESSON TITLE FIX --- */
-/* Target the orange navbar, its links, and the main lesson title */
-.navbar, .navbar *, .activity-title, .xmtitle {
-    font-family: 'MLModern', serif !important;
-}
-
-/* Set the lesson title size without shifting the layout */
-.activity-title, .xmtitle {
-    font-size: 2.2rem !important;
     font-weight: 600 !important;
-    margin-top: 10px !important;
+    margin-top: 20px !important;
+    display: block !important;
 }
 
-/* Set the top-bar links (Download, Contact, etc.) to a standard readable size */
-.navbar a, .navbar button, .navbar-brand {
-    font-size: 1.1rem !important;
+/* 3. CONTENT AREA SETTINGS */
+.main-activity {
+    font-size: 1.15rem !important;
+    line-height: 1.5;
+    margin-top: 30px !important; 
 }
+
+mjx-container { font-size: inherit !important; }
 
 
 /* *********************************** Done changing the font ****************************************** */
