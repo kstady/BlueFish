@@ -22,49 +22,41 @@
 @font-face {
     font-family: 'MLModern';
     src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+    
 }
 
-/* 2. KILL WHITE BAR & SET GLOBAL FONT */
+/* 2. KILL WHITE GAP & SET FONT */
 html, body {
     margin: 0 !important;
     padding: 0 !important;
-}
-
-body, .main-activity, .navbar, .navbar * {
     font-family: 'MLModern', serif !important;
 }
 
-/* 3. SLIM ORANGE BAR & BIG UTILITY LINKS */
+/* 3. SLIM BAR & READABLE UTILITIES */
 .navbar {
-    height: 50px !important;
-    min-height: 50px !important;
+    height: 44px !important;
+    min-height: 44px !important;
 }
 
-/* Make Download, Settings, Contact bigger and centered */
-.navbar-right a, .navbar-nav > li > a, #download-link, #settings-link, #contact-link {
-    font-size: 1.2rem !important; 
-    line-height: 50px !important;
-    padding: 0 15px !important;
+/* Download, Settings, Contact: Correct Font & Size */
+.navbar a, .navbar-brand, #download-link, #settings-link, #contact-link {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.1rem !important; 
+    line-height: 44px !important;
 }
 
-/* Shrink Arrows */
-.navbar .glyphicon, .navbar .fa {
-    font-size: 1.1rem !important;
-    line-height: 50px !important;
-}
-
-/* 4. BIG LESSON TITLE */
+/* 4. BALANCED LESSON TITLE */
+/* Using padding instead of margin to prevent the white gap */
 .activity-title, .xmtitle {
-    font-size: 2.5rem !important;
+    font-family: 'MLModern', serif !important;
+    font-size: 1.8rem !important;
     font-weight: 600 !important;
-    margin-top: 70px !important; 
+    padding-top: 60px !important; 
     display: block !important;
     text-align: center;
 }
 
-/* 5. MAIN TEXT SIZE */
+/* 5. CONTENT AREA */
 .main-activity {
     font-size: 1.15rem !important;
 }
