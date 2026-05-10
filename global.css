@@ -18,53 +18,42 @@
 /* ************************************** Changing the Font! ***********************************************   */
 
 
-/* 1. LOAD FONT CORRECTLY */
+/* LOAD FONT */
 @font-face {
     font-family: 'MLModern';
     src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css') format('woff2');
     
 }
 
-/* 2. KILL WHITE GAP & SET FONT */
-html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: 'MLModern', serif !important;
+/* Apply font to EVERYTHING, but keep standard text at normal weight */
+.main-activity,
+.main-activity p {
+    font-family: "MLModern", serif !important;
+    font-weight: normal !important; /* Forces paragraphs to NOT be bold */
 }
 
-/* 3. SLIM BAR & READABLE UTILITIES */
-.navbar {
-    height: 44px !important;
-    min-height: 44px !important;
+/* Apply font AND bold weight ONLY to headers and titles */
+.main-activity h1,
+.main-activity h2,
+.main-activity h3,
+.main-activity h4,
+.main-activity .liketitleHead,
+.main-activity .likesectionHead,
+.main-activity .likesubsectionHead,
+.main-activity .problem-title,
+.main-activity .theorem-title,
+.main-activity div[titletext]::before {
+    font-family: "MLModern", serif !important;
+    font-weight: bold !important; /* Only these elements get bold */
 }
 
-/* Download, Settings, Contact: Correct Font & Size */
-.navbar a, .navbar-brand, #download-link, #settings-link, #contact-link {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.8rem !important; 
-    line-height: 74px !important;
-}
 
-/* 4. BALANCED LESSON TITLE in Orange */ 
-.activity-title, .xmtitle { 
-    font-family: 'MLModern', serif !important; 
-    font-size: 1.8rem !important; 
-    font-weight: 600 !important; 
-    padding-top: 60px !important; 
-    margin-top: 0 !important; /* THIS KILLS THE WHITE BAR */
-    display: block !important; 
-    text-align: center; 
-}
-
-/* 5. CONTENT AREA */
+/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
-    font-size: 1.15rem !important;
+    font-size: 21px !important;
+    line-height: 1.55 !important;
+    color: #1a1a1a !important;
 }
-
-mjx-container { font-size: inherit !important; }
-
-
-
 
 /* *********************************** Done changing the font ****************************************** */
 
