@@ -486,13 +486,13 @@ h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * {
 /* Change only this to make "Prealgebra Lessons" large with the new font */
 .navbar-brand { 
     font-family: 'MLModern', serif !important; 
-    font-size: 2.2rem !important; 
+    font-size: 4.2rem !important; 
     font-weight: 800 !important; 
 }
 
 /* Change only this to make Download, Settings, and Contact readable */
 #download-link, #settings-link, #contact-link, .navbar-right a { 
-    font-size: 1.3rem !important; 
+    font-size: 3.3rem !important; 
 }
 
 
