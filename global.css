@@ -483,12 +483,16 @@ h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * {
     margin-top: 20px !important; /* Adds space so it doesn't hide under the navbar */
 }
 
-/* Change only this to make "Prealgebra Lessons" large with the new font */
-.navbar-brand { 
+
+/* Change this to fix the course title (Prealgebra Lessons) font and size */
+.navbar-brand, .navbar-brand a { 
     font-family: 'MLModern', serif !important; 
-    font-size: 4.2rem !important; 
+    font-size: 2.2rem !important; 
     font-weight: 800 !important; 
+    display: flex !important;
+    align-items: center !important;
 }
+
 
 /* Change only this to make Download, Settings, and Contact readable */
 #download-link, #settings-link, #contact-link, .navbar-right a { 
