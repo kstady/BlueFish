@@ -41,14 +41,14 @@ html, body {
 /* Download, Settings, Contact: Correct Font & Size */
 .navbar a, .navbar-brand, #download-link, #settings-link, #contact-link {
     font-family: 'MLModern', serif !important;
-    font-size: 2rem !important; 
+    font-size: 1.4rem !important; 
     line-height: 44px !important;
 }
 
 /* 4. BALANCED LESSON TITLE */ 
 .activity-title, .xmtitle { 
     font-family: 'MLModern', serif !important; 
-    font-size: 1.5rem !important; 
+    font-size: 3.2rem !important; 
     font-weight: 600 !important; 
     padding-top: 60px !important; 
     margin-top: 0 !important; /* THIS KILLS THE WHITE BAR */
