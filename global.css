@@ -48,7 +48,7 @@ html, body {
 /* 4. BALANCED LESSON TITLE in Orange */ 
 .activity-title, .xmtitle { 
     font-family: 'MLModern', serif !important; 
-    font-size: 2.5rem !important; 
+    font-size: 1.5rem !important; 
     font-weight: 600 !important; 
     padding-top: 60px !important; 
     margin-top: 0 !important; /* THIS KILLS THE WHITE BAR */
