@@ -42,7 +42,7 @@ html, body {
 .navbar a, .navbar-brand, #download-link, #settings-link, #contact-link {
     font-family: 'MLModern', serif !important;
     font-size: 1.8rem !important; 
-    line-height: 54px !important;
+    line-height: 74px !important;
 }
 
 /* 4. BALANCED LESSON TITLE in Orange */ 
