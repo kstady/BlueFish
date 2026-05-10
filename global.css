@@ -485,14 +485,15 @@ h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * {
 
 
 /* Change this to fix the course title (Prealgebra Lessons) font and size */
+/* Change this to fix the "Prealgebra Lessons" title on the landing page */
 .navbar-brand, .navbar-brand a {
     font-family: 'MLModern', serif !important;
-    font-size: 4.2rem !important;
+    font-size: 2.2rem !important; 
     font-weight: 800 !important;
     display: inline-block !important;
-    padding-left: 10px !important; /* Space it away from the word Ximera */
     vertical-align: middle !important;
 }
+
 
 
 
