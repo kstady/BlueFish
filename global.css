@@ -299,7 +299,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-/* 1. Removes the default lavender background and keeps the blue bar */
+/* 1. Removes the default lavender background for Problem */
 div[titletext*="Problem"] {
     background-color: #fdfdfd !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
@@ -403,7 +403,7 @@ div[titletext*="Problem"] p:first-of-type {
 }
 .activity-card.section.active,
 .activity-card.section:active {
-    background-color: #DD8A2E !important; /* Your preferred orange */
+    background-color: #DD8A2E !important; 
 }
 
 /* 3. THE SUBSECTIONS: White and Orange on Click */
@@ -413,7 +413,7 @@ div[titletext*="Problem"] p:first-of-type {
 }
 .activity-card.activity.active,
 .activity-card.activity:active {
-    background-color: #DD8A2E !important; /* Same orange */
+    background-color: #DD8A2E !important; 
 }
 
 /* 4. THE SIDEBAR: Tiered Blue (No teal) */
