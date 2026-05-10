@@ -45,15 +45,15 @@ html, body {
     line-height: 44px !important;
 }
 
-/* 4. BALANCED LESSON TITLE */
-/* Using padding instead of margin to prevent the white gap */
-.activity-title, .xmtitle {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.8rem !important;
-    font-weight: 600 !important;
+/* 4. BALANCED LESSON TITLE */ 
+.activity-title, .xmtitle { 
+    font-family: 'MLModern', serif !important; 
+    font-size: 1.8rem !important; 
+    font-weight: 600 !important; 
     padding-top: 60px !important; 
-    display: block !important;
-    text-align: center;
+    margin-top: 0 !important; /* THIS KILLS THE WHITE BAR */
+    display: block !important; 
+    text-align: center; 
 }
 
 /* 5. CONTENT AREA */
