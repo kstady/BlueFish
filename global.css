@@ -19,7 +19,7 @@
 
 @font-face {
     font-family: 'MLModern';
-    src: url('https://jsdelivr.net') format('woff2');
+    src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
@@ -31,9 +31,41 @@ body, .main-activity {
     margin-top: 0 !important;
 }
 
-/* Fix Navbar and Lesson Title */
-.navbar, .navbar *, .activity-title, .xmtitle {
+/* --- TOP OF PAGE FIX --- */
+
+/* 1. Shrink the orange bar and arrows */
+.navbar {
+    min-height: 50px !important; /* Forces the bar to stay slim */
+    height: 50px !important;
+}
+
+/* Shrink the navigation arrows on the sides */
+.navbar .glyphicon, 
+.navbar .fa, 
+.navbar [class*="arrow"] {
+    font-size: 1.2rem !important; /* Makes arrows smaller */
+    line-height: 50px !important;
+}
+
+/* 2. Boost the Main Title (Make it stand out) */
+.activity-title, .xmtitle, h1.activity-title {
     font-family: 'MLModern', serif !important;
+    font-size: 2.4rem !important; /* Larger title */
+    font-weight: 600 !important;
+    margin-top: 25px !important;
+    display: block !important;
+}
+
+/* 3. Fix small utility links (Download, Settings, Contact) */
+.navbar-right a, 
+.navbar-nav > li > a, 
+#download-link, 
+#settings-link, 
+#contact-link {
+    font-size: 1.15rem !important; /* Specifically makes these bigger */
+    line-height: 50px !important; /* Centers them vertically in the slim bar */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .activity-title, .xmtitle { 
