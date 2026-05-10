@@ -443,34 +443,6 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-/* --- SECTION, PROBLEM, & HEADER FONT FIX --- */
-h1, h2, h3, h4, 
-.sectionHead, .subSectionHead, 
-[class*="-title"],
-.problem::before, .definition::before, .theorem::before, 
-.example::before, .remark::before, .procedure::before { 
-    font-family: 'MLModern', serif !important; 
-    font-weight: 600 !important;
-}
-
-/* Force everything nested inside headers (like numbers) to match */
-h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * { 
-    font-family: 'MLModern', serif !important; 
-}
-
-/* Fix for the text in parentheses (Theorem/Definition names) */
-[class*="-title"] span, [class*="-title"] small {
-    font-size: 0.85em !important;
-    font-weight: 400 !important;
-    font-family: 'MLModern', serif !important;
-}
-
-/* --- MAIN CONTENT AREA --- */
-.main-activity {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.15rem !important; /* Standard reading size */
-    margin-top: 20px !important; /* Adds space so it doesn't hide under the navbar */
-}
 
 
 
