@@ -17,6 +17,16 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
+
+/* First: Manual font loading */
+@font-face {
+    font-family: 'MLModern';
+    src: url('https://jsdelivr.net') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 @import url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2');
 
 
@@ -24,6 +34,22 @@
 body {
     font-family: 'MLModern', serif !important;
 }
+
+
+/* Third: Now you can add your navbar and title fixes */
+.navbar, .navbar *, .activity-title, .xmtitle {
+    font-family: 'MLModern', serif !important;
+}
+
+.activity-title, .xmtitle { 
+    font-size: 2.2rem !important; 
+    font-weight: 600 !important; 
+}
+
+.navbar a, .navbar-brand { 
+    font-size: 1.2rem !important; 
+}
+
 
 /* Adjust size ONLY for the content area to prevent UI breaking */
 .main-activity {
@@ -424,27 +450,28 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
-/* Fix for top bar (navbar), download settings, and contact links */
-nav, .navbar, .navbar *, .navbar-brand, .nav-link, .navbar-nav > li > a {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.5rem !important; /* Adjust this to make it bigger */
-}
-
-/* Specific target for the buttons/links on the right side */
-.navbar-right, .navbar-right *, .navbar-text {
-    font-family: 'MLModern', serif !important;
-    font-size: 1.15rem !important;
-}
-
-
-/* Fix for the Main Lesson Title */
-.activity-title, h1.activity-title, .main-activity h1:first-of-type {
-    font-family: 'MLModern', serif !important;
-    font-size: 2.2rem !important; /* Makes the main title stand out */
+/* --- SECTION, PROBLEM, & HEADER FONT FIX --- */
+h1, h2, h3, h4, 
+.sectionHead, .subSectionHead, 
+[class*="-title"],
+.problem::before, .definition::before, .theorem::before, 
+.example::before, .remark::before, .procedure::before { 
+    font-family: 'MLModern', serif !important; 
     font-weight: 600 !important;
-    display: block !important;
-    margin-bottom: 0.5em !important;
 }
+
+/* Force everything nested inside headers (like numbers) to match */
+h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * { 
+    font-family: 'MLModern', serif !important; 
+}
+
+/* Fix for the text in parentheses (Theorem/Definition names) */
+[class*="-title"] span, [class*="-title"] small {
+    font-size: 0.85em !important;
+    font-weight: 400 !important;
+    font-family: 'MLModern', serif !important;
+}
+
 
 
 /* ******** Done with changes ********************************  */
