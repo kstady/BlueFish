@@ -62,6 +62,26 @@ mjx-container {
     font-size: inherit !important;
 }
 
+
+/* --- TOP BAR & LESSON TITLE FIX --- */
+/* Target the orange navbar, its links, and the main lesson title */
+.navbar, .navbar *, .activity-title, .xmtitle {
+    font-family: 'MLModern', serif !important;
+}
+
+/* Set the lesson title size without shifting the layout */
+.activity-title, .xmtitle {
+    font-size: 2.2rem !important;
+    font-weight: 600 !important;
+    margin-top: 10px !important;
+}
+
+/* Set the top-bar links (Download, Contact, etc.) to a standard readable size */
+.navbar a, .navbar button, .navbar-brand {
+    font-size: 1.1rem !important;
+}
+
+
 /* *********************************** Done changing the font ****************************************** */
 
 .xmhint::before {
@@ -472,6 +492,12 @@ h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * {
     font-family: 'MLModern', serif !important;
 }
 
+/* --- MAIN CONTENT AREA --- */
+.main-activity {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.15rem !important; /* Standard reading size */
+    margin-top: 20px !important; /* Adds space so it doesn't hide under the navbar */
+}
 
 
 /* ******** Done with changes ********************************  */
