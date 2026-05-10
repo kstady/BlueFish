@@ -483,12 +483,18 @@ h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * {
     margin-top: 20px !important; /* Adds space so it doesn't hide under the navbar */
 }
 
-/* This targets the title on the main course landing page: Prealgebra Lessons  */
-.course-title, .page-title, h1.page-title { 
+/* Change only this to make "Prealgebra Lessons" large with the new font */
+.navbar-brand { 
     font-family: 'MLModern', serif !important; 
-    font-size: 3.5rem !important; 
+    font-size: 2.2rem !important; 
     font-weight: 800 !important; 
 }
+
+/* Change only this to make Download, Settings, and Contact readable */
+#download-link, #settings-link, #contact-link, .navbar-right a { 
+    font-size: 1.3rem !important; 
+}
+
 
 
 /* ******** Done with changes ********************************  */
