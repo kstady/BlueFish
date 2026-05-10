@@ -495,16 +495,14 @@ h1 *, h2 *, h3 *, .sectionHead *, .subSectionHead * {
 }
 
 
-/* Fix title size and drop the search bar into place */
-.navbar-brand, .navbar-brand a { font-size: 2.2rem !important; }
-.navbar-form { margin-top: 10px !important; }
-
-
 /* Change only this to make Download, Settings, and Contact readable */
 #download-link, #settings-link, #contact-link, .navbar-right a { 
     font-size: 3.3rem !important; 
 }
 
+/* Fix title size and drop the search bar into place */
+.navbar-brand, .navbar-brand a { font-size: 2.2rem !important; }
+.navbar-form { margin-top: 10px !important; }
 
 
 /* ******** Done with changes ********************************  */
