@@ -45,10 +45,10 @@ html, body {
     line-height: 44px !important;
 }
 
-/* 4. BALANCED LESSON TITLE */ 
+/* 4. BALANCED LESSON TITLE in Orange */ 
 .activity-title, .xmtitle { 
     font-family: 'MLModern', serif !important; 
-    font-size: 4.2rem !important; 
+    font-size: 3.5rem !important; 
     font-weight: 600 !important; 
     padding-top: 60px !important; 
     margin-top: 0 !important; /* THIS KILLS THE WHITE BAR */
