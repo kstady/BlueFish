@@ -17,44 +17,31 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-
-/* 1. LOAD THE FONT */
 @font-face {
     font-family: 'MLModern';
-    src: url('https://jsdelivr.netgh/u-foka/mlmodern-web@1.0.1/fonts/mlmodern-regular.woff2') format('woff2');
+    src: url('https://jsdelivr.net') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
-/* 2. GLOBAL & NAVBAR SETTINGS */
-body { 
-    font-family: 'MLModern', serif !important; 
+/* Global Font and Text Size */
+body, .main-activity {
+    font-family: 'MLModern', serif !important;
+    font-size: 1.15rem !important;
+    margin-top: 0 !important;
 }
 
-/* Fixes the Orange Bar and the Lesson Title */
+/* Fix Navbar and Lesson Title */
 .navbar, .navbar *, .activity-title, .xmtitle {
     font-family: 'MLModern', serif !important;
 }
 
-/* Size for Download/Contact links */
-.navbar a, .navbar-brand, .nav-link { 
-    font-size: 1.1rem !important; 
-}
-
-/* Size for Main Lesson Title */
 .activity-title, .xmtitle { 
     font-size: 2.2rem !important; 
     font-weight: 600 !important;
-    margin-top: 20px !important;
-    display: block !important;
 }
 
-/* 3. CONTENT AREA SETTINGS */
-.main-activity {
-    font-size: 1.15rem !important;
-    line-height: 1.5;
-    margin-top: 30px !important; 
-}
+.navbar a, .navbar-brand { font-size: 1.1rem !important; }
 
 mjx-container { font-size: inherit !important; }
 
