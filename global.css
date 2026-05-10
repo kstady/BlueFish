@@ -17,6 +17,8 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
+
+/* 1. LOAD FONT CORRECTLY */
 @font-face {
     font-family: 'MLModern';
     src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css') format('woff2');
@@ -24,58 +26,52 @@
     font-style: normal;
 }
 
-/* Global Font and Text Size */
-body, .main-activity {
+/* 2. KILL WHITE BAR & SET GLOBAL FONT */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body, .main-activity, .navbar, .navbar * {
     font-family: 'MLModern', serif !important;
-    font-size: 1.15rem !important;
-    margin-top: 0 !important;
 }
 
-/* --- TOP OF PAGE FIX --- */
-
-/* 1. Shrink the orange bar and arrows */
+/* 3. SLIM ORANGE BAR & BIG UTILITY LINKS */
 .navbar {
-    min-height: 50px !important; /* Forces the bar to stay slim */
     height: 50px !important;
+    min-height: 50px !important;
 }
 
-/* Shrink the navigation arrows on the sides */
-.navbar .glyphicon, 
-.navbar .fa, 
-.navbar [class*="arrow"] {
-    font-size: 1.2rem !important; /* Makes arrows smaller */
+/* Make Download, Settings, Contact bigger and centered */
+.navbar-right a, .navbar-nav > li > a, #download-link, #settings-link, #contact-link {
+    font-size: 1.2rem !important; 
+    line-height: 50px !important;
+    padding: 0 15px !important;
+}
+
+/* Shrink Arrows */
+.navbar .glyphicon, .navbar .fa {
+    font-size: 1.1rem !important;
     line-height: 50px !important;
 }
 
-/* 2. Boost the Main Title (Make it stand out) */
-.activity-title, .xmtitle, h1.activity-title {
-    font-family: 'MLModern', serif !important;
-    font-size: 2.4rem !important; /* Larger title */
+/* 4. BIG LESSON TITLE */
+.activity-title, .xmtitle {
+    font-size: 2.5rem !important;
     font-weight: 600 !important;
-    margin-top: 25px !important;
+    margin-top: 70px !important; 
     display: block !important;
+    text-align: center;
 }
 
-/* 3. Fix small utility links (Download, Settings, Contact) */
-.navbar-right a, 
-.navbar-nav > li > a, 
-#download-link, 
-#settings-link, 
-#contact-link {
-    font-size: 1.15rem !important; /* Specifically makes these bigger */
-    line-height: 50px !important; /* Centers them vertically in the slim bar */
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+/* 5. MAIN TEXT SIZE */
+.main-activity {
+    font-size: 1.15rem !important;
 }
-
-.activity-title, .xmtitle { 
-    font-size: 2.2rem !important; 
-    font-weight: 600 !important;
-}
-
-.navbar a, .navbar-brand { font-size: 1.1rem !important; }
 
 mjx-container { font-size: inherit !important; }
+
+
 
 
 /* *********************************** Done changing the font ****************************************** */
