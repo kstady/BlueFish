@@ -44,14 +44,16 @@ elevations below sea level.
 
 \section*{Adding Integers}
 
-To understand how to add integers, we will begin by using the Chinese Red-Black Rule and then a number line to visualize addition.  Then we will use the concepts of assets and debts to understand addition in a real-world context.  These approaches will lead us to two rules: one for adding numbers with the same sign and another for adding numbers with different signs.
+To understand how to add integers, we will begin with the Chinese Red-Black Rule and then a number line to visualize addition.  Then we will 
+use the concepts of assets and debts to understand addition in a real-world context.  These approaches will lead us to two rules: one for adding 
+numbers with the same sign and another for adding numbers with different signs.
 
 \subsection*{The Red-Black Rule}
 
 Negative numbers were first used systematically in ancient China. In \emph{The Nine Chapters on the Mathematical Art} (written between about 200 BC and 100 AD), Chinese mathematicians used counting rods to represent numbers.  Red rods were used for positive numbers and black rods for negative numbers.  For example, the number 3 was
 represented by three red rods and the number $-2$ was represented by two black rods.  These rods were used as a calculator of sorts for financial transactions involving profits and losses and to solve simple equations.  The Red-Black Rule is described below.
 
-\begin{enumerate}[itemsep=2ex]
+\begin{enumerate}%[itemsep=2ex]
 \item A red rod represents $1$ and a black rod $-1.$
 
 \item To find the total of profits (red) and losses (black), begin by placing rods on a board to represent each number.
@@ -68,7 +70,45 @@ We will now refer to this rule as the Orange-Blue Rule.
 
 \begin{example} 
     
-To find the sum $-5+3,$ begin with \textcolor{blue!70!black}{\textbf{five blue rods}} to represent the number $-5$ and \textcolor{orange!85!black}{\textbf{three orange rods}} to represent the number $3.$  Next remove all pairs of orange and blue rods.  Since two blue rods remain, the answer is $-2.$
+Find the sum $-5+3$ using the Orange-Black Rule.
+
+\begin{explanation}
+
+We begin with \textcolor{blue!70!black}{\textbf{five blue rods}} to represent the number $-5$ and 
+\textcolor{orange!85!black}{\textbf{three orange rods}} to represent the number $3.$  
+
+\begin{center}
+\begin{tikzpicture}[scale=0.75, font=\sffamily]
+     
+% Define Accessible Colors
+\colorlet{posColor}{orange!85!black}  % 85% orange, 15% black
+\colorlet{negColor}{blue!70!black}
+
+% --- SECTION 1: THE SETUP ---
+    \begin{scope}[shift={(-5,0)}]
+        \node[font=\bfseries\small, black!80, anchor=west] at (-0.3, 2.4) {Setup};
+
+        % Value: -5
+        \node[font=\bfseries, negColor, anchor=east] at (-0.2, 1.0) {$-5$};
+        \foreach \x in {0, 0.4, 0.8, 1.2, 1.6} {
+            \draw[line width=2.5pt, negColor, cap=round] (\x, 0.5) -- (\x, 1.5);
+            %\node[negColor, font=\tiny\bfseries] at (\x, 1.7) {$-$};  % - Signs above Bars
+        }
+
+        % Value: +3
+        \node[font=\bfseries, posColor, anchor=east] at (-0.2, -0.3) {$3$};
+        \foreach \x in {0, 0.4, 0.8} {
+            \draw[line width=2.5pt, posColor, cap=round] (\x, -0.8) -- (\x, 0.2);
+            %\node[posColor, font=\tiny\bfseries] at (\x, -1.0) {$+$}; % + Signs above Bars
+        }
+    \end{scope}
+
+\end{tikzpicture}
+% Alt text \xmalt{}
+\end{center}
+\end{example}
+
+Next, we remove all pairs of orange and blue rods.  The sum is what remains.  
 
 \begin{center}
 \begin{tikzpicture}[scale=0.75, font=\sffamily]
@@ -128,18 +168,25 @@ To find the sum $-5+3,$ begin with \textcolor{blue!70!black}{\textbf{five blue r
             \draw[line width=3pt, negColor, cap=round] (\x, 0.3) -- (\x, 1.3);
             %\node[negColor, font=\tiny\bfseries] at (\x, 1.5) {$-$};
         }
-
         % The Result Label
-        \node[anchor=north, negColor, font=\bfseries] at (0.1, -0.2) {$-2$};
+        %\node[anchor=north, negColor, font=\bfseries] at (0.1, -0.2) {$-2$};
     \end{scope}
 
     % Bottom equation
-    \node[anchor=north, black!80, font=\bfseries] at (-5, -2) {$-5 + 3 = -2$};
+    %\node[anchor=north, black!80, font=\bfseries] at (-5, -2) {$-5 + 3 = -2$};
 
 \end{tikzpicture}
 % Alt text \xmalt{}
+
+$-5 + 3 = \answer{-2}$
+
+\end{explanation}
 \end{center}
+
+
+
 \end{example}
+
 
 
 \begin{example}  
