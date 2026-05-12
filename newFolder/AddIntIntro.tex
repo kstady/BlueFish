@@ -108,7 +108,7 @@ We begin with \textcolor{blue!70!black}{\textbf{five blue rods}} to represent th
 
 \end{tikzpicture}
 % Alt text 
-\xmalt{The `Setup' showing five blue vertical bars to represent $-5$ and three orange vertical bars to represent $3.$}
+\xmalt{The `Setup' showing five blue vertical bars to represent $-5$ and below are three orange vertical bars representing $3.$}
 \end{center}
 
 
@@ -181,10 +181,10 @@ Next, we remove all pairs of orange and blue rods.  The sum is what remains.
 \end{tikzpicture}
 % Alt text 
 \xmalt{A visual representation of the addition problem $-5$ plus $3$ equals $-2$ using a three-step model. 
-In the `Setup' section, five blue vertical bars represent $-5$ and three orange vertical bars represent 3. 
-In the `Remove Pairs' section, the three orange bars are paired vertically with three of the blue bars 
-inside a dashed box to show they cancel each other out, leaving two blue bars outside the box. 
-The final `Sum' section shows only the two remaining blue vertical bars.}
+In the `Setup' section, on the left, five blue vertical bars represent $-5$ and below are three orange vertical bars representing 3. 
+In the `Remove Pairs' section, in the middle, the three orange bars are paired vertically with three of the blue bars 
+inside a dashed box to show they cancel each other out, leaving two blue bars outside the box.  A black arrow points to 
+sum. The `Sum' section shows the two remaining blue bars.}
 
 \end{center}
 
@@ -224,9 +224,9 @@ We begin with \textcolor{blue!70!black}{\textbf{four blue rods}} to represent th
 
 \end{tikzpicture}
 % Alt text 
-\xmalt{A visual representation of the addition problem $-4$ plus $-3,$ using a 3-step model. 
-In the `Setup' section the number $-4$ is represented by four blue rods and below it the number $-3$ is represented by three blue rods.}
+\xmalt{The `Setup' showing four blue vertical bars to represent $-4$ and below are three blue vertical bars representing $-3.$}
 \end{center}
+
 
 Since we started with only blue rods, there are no orange-blue pairs to remove.  
 
@@ -280,10 +280,10 @@ Since we started with only blue rods, there are no orange-blue pairs to remove.
 
 \end{tikzpicture}
 % Alt text 
-\xmalt{A visual representation of adding two negative numbers, $-4$ and $-3,$ using a 3-step model. In the `Setup' section, the number $-4$ is 
-represented by four blue rods and below it the number $-3$ is represented by three blue rods. The `Remove Pairs' section is the same as the 
-'Setup' section.  A caption below the rods reads ``No Pairs to Remove!" because all rods are the same color. An arrow points to the `Sum' 
-section, which displays all blue rods together.}
+\xmalt{A visual representation of adding $-4$ and $-3.$
+In the `Setup' section, on the left, there are four blue vertical bars to represent $-4$ and below are three blue vertical bars representing $-3.$
+The `Remove Pairs' section, in the middle, is the same as the 'Setup' section.  A caption below the rods reads ``No Pairs to Remove!" 
+because all rods are the same color. A black arrow points to the `Sum' section, which shows all blue rods together.}
 \end{center}
 
 \begin{flushright}
@@ -344,15 +344,40 @@ $-2 + 6 \begin{prompt} =  \answer{4} \end{prompt}$
 
 \end{problem}
 
-The use of colors in the Orange-Blue Rule is not necessary. Below is the first example redone using plus signs ($+$) for 
-positive numbers and minus signs ($-$) signs for negative numbers.  You can also use things like rocks and sticks or
+The use of colors in the Orange-Blue Rule is not necessary. Below, the first example has been redone using a plus sign ($+$) for 
+positive $1$ and a minus sign ($-$) for $-1.$  You can also use things like rocks and sticks or
 pennies and dimes---the sky's the limit!  Try modifying the rule, using your own way to represent positive and negative 
 numbers.  Be creative!
 
 
-\begin{example} To find the sum $-5+3,$ begin with \textbf{five minus signs} $(-)$ to represent the number $-5$ and 
-    \textbf{three plus signs} $(+)$ to represent the number $3.$  Next remove all $+$ $-$ pairs.  
-    Since two minus ($-$) signs remain, the answer is $-2.$  
+\begin{example} Find the sum $-5+3$ using a plus sign for $1$ and a minus sign for $-1.$
+    
+\begin{explanation}
+
+    We begin with \textbf{five minus signs} $(-)$ to represent the number $-5$ and 
+    \textbf{three plus signs} $(+)$ to represent the number $3.$  
+    
+    
+\begin{center}
+\begin{tikzpicture}[scale=0.75, font=\sffamily]
+% --- SETUP ---
+        \node[font=\bfseries\small, black!80, anchor=west] at (-0.5, 2.2) {Setup};
+
+        % Value: -5 (Increased spacing from 0.4 to 0.7)
+        \node[font=\bfseries, black, anchor=east] at (-0.3, 1.0) {$-5$};
+        \foreach \x in {0, 0.7, 1.4, 2.1, 2.8}
+            \node[black, font=\huge] at (\x, 1.0) {$-$};
+
+        % Value: +3 (Increased spacing from 0.4 to 0.7)
+        \node[font=\bfseries, black, anchor=east] at (-0.3, -0.3) {$3$};
+        \foreach \x in {0, 0.7, 1.4}
+            \node[black, font=\bfseries] at (\x, -0.3) {+};
+\end{tikzpicture}
+% Alt Text \xmalt{}
+\end{center}
+
+
+Next, we remove all $+$ $-$ pairs.  The sum is what remains.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.75, font=\sffamily]
@@ -389,7 +414,7 @@ numbers.  Be creative!
             \node[black, font=\huge] at (\x, 1.0) {$-$};
 
         % Transition arrow
-        \draw[->, ultra thick, glaucous] (4.5, 0.3) -- (5.5, 0.3);
+        \draw[->, thick, black] (4.5, 0.3) -- (5.5, 0.3);
 
     \end{scope}
 
@@ -401,15 +426,22 @@ numbers.  Be creative!
         \foreach \x in {0, 0.7}
             \node[black, font=\huge] at (\x, 0.8) {$-$};
 
-        % The Result Label
+        % The Sum Label
         \node[anchor=north, black, font=\bfseries] at (0.35, -0.2) {$-2$};
-        \node[anchor=north, black, font=\bfseries] at (-12.1, -2) {$-5 +3 = -2 $};
+        %\node[anchor=north, black, font=\bfseries] at (-12.1, -2) {$-5 +3 = -2 $};
 
     \end{scope}
 
 \end{tikzpicture}
-% Alt Text \xmalt{}
+% Alt Text 
+\xmalt{A visual representation of adding $-5$ and $3.$ In the `Setup' section, on the left, five minus signs represent 
+$-5$ and below three plus signs represent $3.$  In the `Remove Pairs' section, in the middle, three minus signs and three plus signs are 
+grouped inside a dashed box to show that they cancel.  Two minus signs remain outside the box.  A black arrow points to the sum.  The `Sum' 
+section shows two minus signs labeled $-2$ below.}
 \end{center}
+
+$-5 +3 = -2 $
+
 \end{example}
 
 Although this modified rule isn't overly creative, it makes the answer quite clear.
