@@ -64,13 +64,14 @@ represented by three red rods and the number $-2$ was represented by two black r
 \end{enumerate}
 
 
-Since red and black can be difficult for some people to distinguish, we will use \textcolor{orange!85!black}{\textbf{orange rods}} to represent \textcolor{orange!85!black}{\textbf{positive numbers}} and \textcolor{blue!70!black}{\textbf{blue rods}} to represent \textcolor{blue!70!black}{\textbf{negative numbers}}.
+Since red and black can be difficult for some people to distinguish, we will use \textcolor{orange!85!black}{\textbf{orange rods}} to 
+represent \textcolor{orange!85!black}{\textbf{positive numbers +}} and \textcolor{blue!70!black}{\textbf{blue rods --}} to represent \textcolor{blue!70!black}{\textbf{negative numbers}}.
 We will now refer to this rule as the Orange-Blue Rule.
 
 
 \begin{example} 
     
-Find the sum $-5+3$ using the Orange-Black Rule.
+Find the sum $-5+3$ using the Orange-Blue Rule.
 
 \begin{explanation}
 
@@ -78,14 +79,14 @@ We begin with \textcolor{blue!70!black}{\textbf{five blue rods}} to represent th
 \textcolor{orange!85!black}{\textbf{three orange rods}} to represent the number $3.$  
 
 \begin{center}
-\begin{tikzpicture}[scale=0.75, font=\sffamily]
+\begin{tikzpicture}[scale=0.75, font=\sffamily, >=Latex] % >=Latex for nice arrows 
      
 % Define Accessible Colors
 \colorlet{posColor}{orange!85!black}  % 85% orange, 15% black
 \colorlet{negColor}{blue!70!black}
 
 % --- SECTION 1: THE SETUP ---
-    \begin{scope}[shift={(-5,0)}]
+    %\begin{scope}[shift={(-5,0)}]
         \node[font=\bfseries\small, black!80, anchor=west] at (-0.3, 2.4) {Setup};
 
         % Value: -5
@@ -101,7 +102,7 @@ We begin with \textcolor{blue!70!black}{\textbf{five blue rods}} to represent th
             \draw[line width=2.5pt, posColor, cap=round] (\x, -0.8) -- (\x, 0.2);
             %\node[posColor, font=\tiny\bfseries] at (\x, -1.0) {$+$}; % + Signs above Bars
         }
-    \end{scope}
+    %\end{scope}
 
 \end{tikzpicture}
 % Alt text \xmalt{}
@@ -161,7 +162,7 @@ Next, we remove all pairs of orange and blue rods.  The sum is what remains.
 
     % --- SECTION 3: THE RESULT ---
     \begin{scope}[shift={(5.5,0)}]
-        \node[font=\bfseries\small] at (0.2, 2.4) {Result};
+        \node[font=\bfseries\small] at (0.2, 2.4) {Sum};
 
         % Only the 2 surviving Negative Rods
         \foreach \x in {0, 0.4} {
