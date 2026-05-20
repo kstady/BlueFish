@@ -66,7 +66,6 @@ However, from the diagram below, you can see that the span of the U.S. can be fo
 \end{center}
 
 
-%Has old data 20,320 instead of 20,310 for Denali
 %\emph{Source:} Elevation data provided by the U.S. Geological Survey (USGS), Highest and Lowest Elevations table. Available at %\href{https://www.usgs.gov/educational-resources/highest-and-lowest-elevations}{\textcolor{darkraspberry}{\textbf{usgs.gov}}}.
 
 
@@ -78,10 +77,9 @@ Although it seems paradoxical, this illustrates a key concept: \textbf{subtracti
 
 
 \begin{problem}
-China has the largest elevation span in the world. Its highest elevation is 29,032 feet \textbf{above} sea level on Mount Everest and its lowest elevation is
-505 feet \textbf{below} sea level at Ayding Lake.
-
-Write the subtraction problem to find China's elevation span.
+China has the largest elevation span in the world.  Its highest elevation is 29,032 feet \textbf{above} sea level 
+on Mount Everest and its lowest elevation is 505 feet \textbf{below} sea level at Ayding Lake.  Write the subtraction 
+problem to find China's elevation span.
 
 \begin{multipleChoice}
 \choice{$29,032 - 505 $}
@@ -90,8 +88,6 @@ Write the subtraction problem to find China's elevation span.
 \choice{$-29,032 - 505$}
 \end{multipleChoice}
 
-
-\begin{problem}
 Use the diagram below to write the subtraction problem as an equivalent addition problem.
 
 \begin{center}
@@ -125,12 +121,10 @@ Use the diagram below to write the subtraction problem as an equivalent addition
     \draw[dashed, gray, thick] (-8,8) -- (0,8);
     \draw[dashed, gray, thick] (-8,-2) -- (0,-2);
 \end{tikzpicture}
-
+\xmalt{Vertical number line showing the elevation span for China.  Points are plotted at 29,032 (Mount Everest) and 
+negative 505 (Ayding Lake).  Braces indicate a distance of 29,032 units above zero and 505 units below zero.  The 
+total elevation span is shown as the combined vertical distance from  negativve 505 to 29,032.}
 \end{center}
-
-
-%Alt Text
-%Vertical number line showing topographic relief in China. Points are plotted at +29,032 (Mount Everest) and -505 (Ayding Lake). Braces indicate a distance of 29,032 units above zero and 505 units below zero. The total elevation span is shown as the combined vertical distance from -505 to +29,032
 
 \begin{multipleChoice}
 \choice{$29,032 - (-505) = -29,032 + (-505)$}
@@ -140,32 +134,28 @@ Use the diagram below to write the subtraction problem as an equivalent addition
 \end{multipleChoice}
 
 
-\begin{problem}
 Find the elevation span.  \textbf{Do not include commas in your answer}.
 
-China's Elevation Span =  $\answer{29537}$ \ feet
+\textcolor{orange!75!black}{China's Elevation Span} =  $\answer{29537}$ \ feet
 
 \end{problem}
-\end{problem}
-\end{problem}
-
-~ \\[2em]
 
 
-\insightIcon
-
-\section*{Extra Insight}
+\section*{Extra Insight: The Drowning of the Maldives}
 
 \normalsize
-An \textbf{archipelagic nation} is a country made up of a group of islands and the surrounding water.
-The Maldives is an archipelagic nation of over 1,000 islands located in the Indian Ocean. It is the lowest-lying country on Earth, with an average ground level elevation of less than 5 feet above sea level. It also has the world's smallest elevation span: just 16.7 feet above sea level. The islands are very flat!
+An \textbf{archipelagic nation} is a country made up of a group of islands and the surrounding water.  The Maldives 
+is an archipelagic nation of over 1,000 islands located in the Indian Ocean.  It is the lowest-lying country on Earth, 
+with an average ground level elevation of less than 5 feet above sea level.  It also has the world's smallest elevation 
+span: just 16.7 feet above sea level.  The islands are very flat!
 
 \textbf{Highest Elevation:} 16.7 feet \textbf{above} sea level (Villingili Island)
 
-\textbf{Lowest Elevation:} 0 feet, at sea level (Indian Ocean)
+\textbf{Lowest Elevation:} 0 feet, \textbf{at} sea level (Indian Ocean)
 
 
-Scientists predict that most of the Maldives will be uninhabitable or completely submerged by the year 2100 if sea levels continue to rise at current rates.
+Scientists predict that most of the Maldives will be uninhabitable or completely submerged by the year 2100 if sea 
+levels continue to rise at current rates.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
@@ -196,6 +186,31 @@ Scientists predict that most of the Maldives will be uninhabitable or completely
 \end{tikzpicture}
 \end{center}
 
+
+\begin{center} 
+\begin{tikzpicture}[scale=0.35] % Reduced scale so the 16.7 height fits nicely on screen
+
+% Draw Vertical Axis 
+\draw[ultra thick, <->] (0,-2) -- (0,18) node[above, yshift=5pt] {\Large\textbf{Elevation (ft)}}; 
+
+% Current Sea Level Line 
+\draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{Sea Level (0)}}; 
+
+% Villingili Island Point (+16.7) - NOW MATCHES MATHEMATICALLY
+\filldraw[black] (0,16.7) circle (5pt) node[right, xshift=8pt] {\Large Villingili Island (+16.7)}; 
+
+% Braces 
+\draw [decorate, decoration={brace, amplitude=10pt, raise=5pt}, very thick] (0,0) -- (0,16.7) node [midway, left=20pt] {\Large\textbf{16.7 ft}}; 
+
+% Total Span Arrow
+\draw[<->, orange!80!black, line width=2pt] (-6,0) -- (-6,16.7) node [midway, left=15pt, align=center] {\Large\textbf{Elevation}\\\Large\textbf{Span}}; 
+
+% Guides 
+\draw[dashed, gray, thick] (-6,16.7) -- (0,16.7); 
+\draw[dashed, gray, thick] (-6,0) -- (0,0); 
+
+\end{tikzpicture} 
+\end{center}
 
 
 \end{document}
