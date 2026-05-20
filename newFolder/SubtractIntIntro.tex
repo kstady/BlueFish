@@ -188,7 +188,7 @@ levels continue to rise at current rates.
 
 
 \begin{center} 
-\begin{tikzpicture}[scale=0.35] % Reduced scale so the 16.7 height fits nicely on screen
+\begin{tikzpicture}[scale=0.35] % Keeping the accurate mathematical scale
 
 % Draw Vertical Axis 
 \draw[ultra thick, <->] (0,-2) -- (0,18) node[above, yshift=5pt] {\Large\textbf{Elevation (ft)}}; 
@@ -196,20 +196,23 @@ levels continue to rise at current rates.
 % Current Sea Level Line 
 \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{Sea Level (0)}}; 
 
-% Villingili Island Point (+16.7) - NOW MATCHES MATHEMATICALLY
+% Villingili Island Point (+16.7)
 \filldraw[black] (0,16.7) circle (5pt) node[right, xshift=8pt] {\Large Villingili Island (+16.7)}; 
 
 % Braces 
 \draw [decorate, decoration={brace, amplitude=10pt, raise=5pt}, very thick] (0,0) -- (0,16.7) node [midway, left=20pt] {\Large\textbf{16.7 ft}}; 
 
-% Total Span Arrow
-\draw[<->, orange!80!black, line width=2pt] (-6,0) -- (-6,16.7) node [midway, left=15pt, align=center] {\Large\textbf{Elevation}\\\Large\textbf{Span}}; 
+% Total Span Arrow (SHIFTED LEFT: Changed from -6 to -9)
+\draw[<->, orange!80!black, line width=2pt] (-9,0) -- (-9,16.7) node [midway, left=15pt, align=center] {\Large\textbf{Elevation}\\\Large\textbf{Span}}; 
 
-% Guides 
-\draw[dashed, gray, thick] (-6,16.7) -- (0,16.7); 
-\draw[dashed, gray, thick] (-6,0) -- (0,0); 
+% Guides (SHIFTED LEFT: Changed starting point from -6 to -9)
+\draw[dashed, gray, thick] (-9,16.7) -- (0,16.7); 
+\draw[dashed, gray, thick] (-9,0) -- (0,0); 
 
 \end{tikzpicture} 
+\xmalt{Vertical number line showing the elevation span for the Maldives.  A point is plotted at 16.7 for Villingili Island, 
+and sea level is marked at zero.  A brace indicates a distance of 16.7 units above zero.  The total elevation span is shown 
+to the left as the vertical distance from zero to 16.7.}
 \end{center}
 
 
