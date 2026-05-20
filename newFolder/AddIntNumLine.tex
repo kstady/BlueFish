@@ -39,9 +39,11 @@ Another way to visualize addition is to add on a number line.
 
 
 \begin{example}
+
 Use a numberline to find the sum $3+7.$ 
 
 \begin{explanation}
+
 Start at $3,$ then move 7 units to the \textbf{right}.  Movement is to the right, since a \textbf{positive} number is added to 3.
 
 \begin{center}
@@ -55,10 +57,10 @@ Start at $3,$ then move 7 units to the \textbf{right}.  Movement is to the right
 \node[color=orange!80!black] at (10,-0.75) {\small \textbf{Stop}};
 \node at (6.5,0.9) {$3 + 7 = 10$};
 \end{tikzpicture}
-\xmalt{Horizontal number line from negative 5 to 10, with tick marks and labels for each integer.  There is a solid black dot at 
-$3$ and the word 'Start' is written in green below it.  A series of connected, arched blue curves move 
-to the right from 3, landing on each integer until stopping at 10, with an arrow pointing to 10. The word 'Stop' is written in 
-orange below the number 10.  The equation "3 plus 7 equals 10" is displayed centered above the arches.}
+\xmalt{Horizontal number line from negative 5 to 10, with tick marks and labels for each integer.  There is a solid black dot at 3.  
+The word ``Start'' is written below the number 3 in green.  A series of connected, blue arches move rightward from 3, landing 
+on each integer until stopping with a right-pointing arrow at 10.  The word ``Stop'' is written below the number 10 in orange. 
+The equation ''3 plus 7 equals 10'' is displayed centered above the arches.}
 
 \end{center}
 \end{explanation}
@@ -82,11 +84,10 @@ Start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  Movement is to th
     \node[color=orange!80!black] at (-4,-0.75) {\small \textbf{Stop}};
     \node at (-0.5,0.9) {$3 + (-7) = -4$}; % Label for the operation
 \end{tikzpicture}
-\xmalt{Horizontal number line from negative 5 to 10, with tick marks and labels for each integer.  There is a solid black dot at 
-$3$ and the word 'Start' is written in green below it. A series of connected, arched blue curves move 
-leftward from 3, landing on each integer until stopping at negative 4, with an arrow pointing to negative 4.  The word 'Stop' is
-written in orange below negative 4.  The equation "3 plus negative 7 equals negative 4" 
-is displayed centered above the arches.}
+
+\xmalt{Horizontal number line from $-5$ to 10, with tick marks and labels for each integer.  There is a solid black dot at 3.  The word ``Start'' is written below the number 3 in green.  
+A series of connected, blue arches move leftward from 3, landing on each integer until stopping with a left-pointing arrow at $-4.$  The word
+``Stop'' is written below the number $-4$ in orange.  The equation ``3 plus negative 7 equals negative 4'' is displayed centered above the arches.}
 \end{center}
 
 \end{explanation}
@@ -98,12 +99,14 @@ Add using the number line shown below.
 
 \[ -2 + 3 \begin{prompt}=\answer{1}\end{prompt}\]
 
+\begin{center}
 \begin{tikzpicture}[x=0.75cm,>=stealth]
         \draw[thick, <->] (-6,0)--(6,0);
         \foreach \x in {-5,...,5}
         \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
 \end{tikzpicture}
-
+\xmalt{Horizontal number line from $-5$ to 5, with tick marks and labels for each integer.}
+\end{center}
 \end{problem}
 
 
@@ -112,26 +115,30 @@ Add using the number line shown below.
 
 \[ -12 + (-3) \begin{prompt}=\answer{-15}\end{prompt} \]
 
+\begin{center}
 \begin{tikzpicture}[x=0.75cm,>=stealth]
         \draw[thick, <->] (-19,0)--(-7,0);
         \foreach \x in {-18,...,-8}
         \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
 \end{tikzpicture}
-
+\xmalt{Horizontal number line from $-18$ to 8, with tick marks and labels for each integer.}
+\end{center}
 \end{problem}
+
 
 \begin{problem}
 Add using the number line shown below.
 
 \[ -1 + 4 \begin{prompt}=\answer{3}\end{prompt} \]
 
-
+\begin{center}
 \begin{tikzpicture}[x=0.75cm,>=stealth]
         \draw[thick, <->] (-6,0)--(6,0);
         \foreach \x in {-5,...,5}
         \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
 \end{tikzpicture}
-
+\end{center}
+\xmalt{Horizontal number line from $-5$ to 5, with tick marks and labels for each integer.}
 \end{problem}
 
 
