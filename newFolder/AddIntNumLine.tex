@@ -39,29 +39,39 @@ Another way to visualize addition is to add on a number line.
 
 
 \begin{example}
-To find the value of $3+7,$ start at $3$ then move 7 units to the \textbf{right}.  
-%Movement is to the right, since a \textbf{positive} number is added to 3.
+Use a numberline to find the sum $3+7.$ 
 
-~ \\[3em]  %Creates vertical space
+\begin{explanation}
+Start at $3,$ then move 7 units to the \textbf{right}.  Movement is to the right, since a \textbf{positive} number is added to 3.
+
+\begin{center}
 \begin{tikzpicture}[x=0.75cm,>=latex] % Use latex arrowhead style
-    \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
-    \foreach \x in {-5,...,10}
-    \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-    \fill (3,0) circle (1.8pt);
-    \draw[->,out=60,in=120,color=glaucous, thick] (3,0) to (4,0) to (5,0) to (6,0) to (7,0) to (8,0) to (9,0) to (10,0); % Curves
-    \node[color=OliveGreen!90!black] at (3,-0.75) {\small \textbf{Start}};
-    \node[color=orange!80!black] at (10,-0.75) {\small \textbf{Stop}};
-    \node at (6.5,0.9) {$3 + 7 = 10$};
+\draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
+\foreach \x in {-5,...,10}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\fill (3,0) circle (1.8pt);
+\draw[->,out=60,in=120,color=glaucous, thick] (3,0) to (4,0) to (5,0) to (6,0) to (7,0) to (8,0) to (9,0) to (10,0); % Curves
+\node[color=OliveGreen!90!black] at (3,-0.75) {\small \textbf{Start}};
+\node[color=orange!80!black] at (10,-0.75) {\small \textbf{Stop}};
+\node at (6.5,0.9) {$3 + 7 = 10$};
 \end{tikzpicture}
+\xmalt{Horizontal number line from negative 5 to 10, with tick marks and labels for each integer.  There is a solid black dot at 
+$3$ and the word 'Start' is written in green below it.  A series of connected, arched blue curves move 
+to the right from 3, landing on each integer until stopping at 10, with an arrow pointing to 10. The word 'Stop' is written in 
+orange below the number 10.  The equation "3 plus 7 equals 10" is displayed centered above the arches.}
+
+\end{center}
+\end{explanation}
 \end{example}
 
 \begin{example}
-To find the value of $3+(-7),$ start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  
-%Movement is to the left, since a \textbf{negative} number is added to 3.
+Use a numberline to find the sum $3+(-7).$ 
 
-~ \\[3em]
+\begin{explanation}
+Start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  Movement is to the left, since a \textbf{negative} number is added to 3.
+
+\begin{center}
 \begin{tikzpicture}[x=0.75cm,>=latex] % Use latex arrowhead style
-%\begin{scope}[shift={(0, -4)}]
     \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
     \foreach \x in {-5,...,10}
     \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; % Tick marks for numbers
@@ -71,13 +81,16 @@ To find the value of $3+(-7),$ start at $3$ then move $|-7| = 7$ units to the \t
     \node[color=OliveGreen!90!black] at (3,-0.75) {\small \textbf{Start}};
     \node[color=orange!80!black] at (-4,-0.75) {\small \textbf{Stop}};
     \node at (-0.5,0.9) {$3 + (-7) = -4$}; % Label for the operation
-%\end{scope}
-
 \end{tikzpicture}
+\xmalt{Horizontal number line from negative 5 to 10, with tick marks and labels for each integer.  There is a solid black dot at 
+$3$ and the word 'Start' is written in green below it. A series of connected, arched blue curves move 
+leftward from 3, landing on each integer until stopping at negative 4, with an arrow pointing to negative 4.  The word 'Stop' is
+written in orange below negative 4.  The equation "3 plus negative 7 equals negative 4" 
+is displayed centered above the arches.}
+\end{center}
 
+\end{explanation}
 \end{example}
-
-INSERT VIDEO HERE!!  %Add -4 + 5 and -2 + (-3)  show that it doesn't matter if we start at -4 or 5 - Commutative property of addition
 
 
 \begin{problem}
@@ -123,8 +136,7 @@ Add using the number line shown below.
 
 
 \begin{problem}
-
-    Does the answer to the previous problem change if you switch the order of the numbers and find the value of $4 + (-1)?$
+Does the answer to the previous problem change if you switch the order of the numbers and find the value of $4 + (-1)?$
 
 \begin{multipleChoice}
 \choice[correct]{No.}
