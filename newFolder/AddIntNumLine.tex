@@ -118,10 +118,11 @@ Add using the number line shown below.
 \[ -12 + (-3) = \answer{-15} \]
 
 \begin{center}
-\begin{tikzpicture}[x=0.75cm,>=stealth]%
+\begin{tikzpicture}[x=0.75cm,>=stealth]
         \draw[thick, <->] (-19,0)--(-7,0);
         \foreach \x in {-18,...,-8}
-        \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};  %Draws tick marks.  Footnotesize shrinks the numbers 
+        %Draws tick marks. Footnotesize shrinks the numbers 
+        \draw[shift={(\x,0)}, color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};  
 \end{tikzpicture}
 \xmalt{Horizontal number line from $-18$ to 8, with tick marks and labels for each integer.}
 \end{center}
