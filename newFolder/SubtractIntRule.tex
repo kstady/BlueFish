@@ -75,8 +75,8 @@ Rewrite the subtraction problem as an equivalent addition problem.  Then find th
 \begin{multipleChoice}
 \choice{$-2 - 10 = 2 + (-10)$}
 \choice{$-2 - 10 = 2 + 10$}
-\choice{$-2 - 10 = -2 + 10$}
 \choice[correct]{$-2 - 10 = -2 + (-10)$}
+\choice{$-2 - 10 = -2 + 10$}
 \end{multipleChoice}
 
 \textcolor{orange!80!black}{\textbf{Answer}} $ = \answer{-12}$
@@ -87,10 +87,11 @@ Rewrite the subtraction problem as an equivalent addition problem.  Then find th
 Rewrite the subtraction problem as an equivalent addition problem. Then find the answer. 
 \[ 5 - 8 \] 
 \begin{multipleChoice} 
-\choice{$5 - 8 = -5 + 8$} 
+\choice{$5 - 8 = -5 + 8$}
+\choice[correct]{$5 - 8 = 5 + (-8)$}  
 \choice{$5 - 8 = -5 + (-8)$} 
 \choice{$5 - 8 = 5 + 8$} 
-\choice[correct]{$5 - 8 = 5 + (-8)$} 
+
 \end{multipleChoice} 
 \textcolor{orange!80!black}{\textbf{Answer}} $ = \answer{-3}$ 
 \end{problem}
@@ -99,10 +100,10 @@ Rewrite the subtraction problem as an equivalent addition problem. Then find the
 Rewrite the subtraction problem as an equivalent addition problem. Then find the answer. 
 \[ -16 - (-1) \] 
 \begin{multipleChoice} 
+\choice[correct]{$-16 - (-1) = -16 + 1$} 
 \choice{$-16 - (-1) = -16 + (-1)$} 
 \choice{$-16 - (-1) = 16 + 1$} 
 \choice{$-16 - (-1) = 16 + (-1)$} 
-\choice[correct]{$-16 - (-1) = -16 + 1$} 
 \end{multipleChoice} 
 \textcolor{orange!80!black}{\textbf{Answer}} $ = \answer{-15}$ 
 \end{problem}
@@ -112,24 +113,82 @@ Rewrite the subtraction problem as an equivalent addition problem. Then find the
 \[ 30 - (-10) \] 
 \begin{multipleChoice} 
 \choice{$30 - (-10) = 30 + (-10)$} 
+\choice[correct]{$30 - (-10) = 30 + 10$}
 \choice{$30 - (-10) = -30 + 10$} 
 \choice{$30 - (-10) = -30 + (-10)$} 
-\choice[correct]{$30 - (-10) = 30 + 10$} 
 \end{multipleChoice} 
 \textcolor{orange!80!black}{\textbf{Answer}} $ = \answer{40}$ 
 \end{problem}
 
+
+\begin{problem} 
+A researcher stands on a cliff $250$ feet above sea level. Directly below them, a submarine cruises at $180$ feet below sea level ($-180$ feet). 
+
+
+\begin{center}
+\begin{tikzpicture}[scale = 0.6, y=0.4mm, x=1mm, >=stealth]
+
+% --- BACKGROUND & WATER ---
+% Sky/Background (Fill above sea level)
+\fill[blue!5] (-40,0) rectangle (40,300);
+% Ocean Block (Fill below sea level)
+\fill[blue!15] (-40,-220) rectangle (40,0);
+% Sea Level Line
+\draw[blue!60!black, dashed, line width=1.5pt] (-40,0) -- (40,0) node[right, black] {\Large\textnormal{\textbf{0 (Sea Level)}}};
+
+% --- CLIFF (Left Side) ---
+\draw[line width=2.5pt, brown!40!black, fill=brown!20] (-40,-220) -- (-25,-220) -- (-25,250) -- (-40,250) -- cycle;
+% Researcher Dot on Cliff
+\filldraw[black] (-25,250) circle (4pt) node[above left, yshift=2pt] {\Large\textbf{Researcher}};
+
+% --- SUBMARINE (Right Side) ---
+% Submarine Hull
+\filldraw[gray!70, draw=black, line width=2pt, rounded corners=8pt] (15,-190) rectangle (35,-170);
+% Conning Tower / Sail
+\filldraw[gray!70, draw=black, line width=2pt] (22,-170) rectangle (28,-160);
+% Periscope
+\draw[line width=2pt, black] (24,-160) -- (24,-153) -- (27,-153);
+% Submarine Label
+\node[below, black] at (25,-192) {\Large\textbf{Submarine}};
+
+% --- KEY HEIGHT POINTS ---
+% Cliff Height Marker
+\draw[ultra thick] (-27,250) -- (-23,250);
+\node[right, xshift=5pt] at (-23,250) {\Large\textnormal{\textbf{250 ft}}};
+
+% Submarine Depth Marker
+\draw[ultra thick] (13,-180) -- (17,-180);
+\node[left, xshift=-5pt] at (13,-180) {\Large\textnormal{\textbf{$-180$ ft}}};
+
+% --- TOTAL DISTANCE ARROW ---
+\draw[<->, orange!80!black, line width=2.5pt] (0,-180) -- (0,250) node[midway, fill=blue!5, inner sep=4pt, text=orange!80!black, align=center] {\textnormal{\Large \textbf{Total Distance}}};
+
+% --- DASHED GUIDES ---
+\draw[dashed, gray!80, thick] (-25,250) -- (0,250);
+\draw[dashed, gray!80, thick] (15,-180) -- (0,-180);
+
+\end{tikzpicture}
+\xmalt{}
+\end{center}
+
+
+Write a subtraction expression to find the vertical distance between the researcher and the submarine, rewrite it as an equivalent addition problem, and find the distance.
+\[ 250 - (-180) \] 
+\begin{multipleChoice} 
+\choice{$250 - (-180) = 250 + (-180)$} 
+\choice{$250 - (-180) = -250 + 180$} 
+\choice{$250 - (-180) = -250 + (-180)$} 
+\choice[correct]{$250 - (-180) = 250 + 180$} 
+\end{multipleChoice} 
+\textcolor{orange!80!black}{\textbf{Answer}} $ = \answer{430}\text{ feet}$ 
+
+
+\end{problem}
+
+
+
 \begin{problem}
-How many degrees warmer is $100^\circ$F than $-80^\circ$F?  Begin by writing the subtraction problem.   
-
-\begin{multipleChoice}
-\choice{$100 - 80$}
-\choice[correct]{$100 - (-80)$}
-\choice{$-100 - 80$}
-\choice{$-100 - (-80)$}
-\end{multipleChoice}
-
-
+How many degrees warmer is $100^\circ$F than $-80^\circ$F?  
 
 \begin{center}
 \begin{tikzpicture}[scale = 0.7, y=0.4mm, x=1mm, >=stealth]
@@ -182,6 +241,15 @@ brackets measure the distances from negative 80 to 0 (labeled 80) and from 0 to 
 Further to the left, a double-headed orange arrow spans the entire height from negative 80 to 100, 
 labeled ``Difference`` with dashed gray guide lines connecting it to the temperature marks.}
 \end{center}
+
+Write the subtraction problem.   
+
+\begin{multipleChoice}
+\choice{$100 - 80$}
+\choice[correct]{$100 - (-80)$}
+\choice{$-100 - 80$}
+\choice{$-100 - (-80)$}
+\end{multipleChoice}
 
 Use the figure to rewrite the subtraction problem as an equivalent addition problem.  Then find the answer. 
 
