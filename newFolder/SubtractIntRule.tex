@@ -121,56 +121,6 @@ Rewrite the subtraction problem as an equivalent addition problem. Then find the
 \end{problem}
 
 
-\begin{problem} 
-A researcher stands on a cliff $250$ feet above sea level. Directly below them, a submarine cruises at $180$ feet below sea level ($-180$ feet). 
-
-
-\begin{center}
-\begin{tikzpicture}[scale = 0.6, y=0.4mm, x=1mm, >=stealth]
-
-% --- BACKGROUND & WATER ---
-% Sky/Background (Fill above sea level)
-\fill[blue!5] (-40,0) rectangle (40,300);
-% Ocean Block (Fill below sea level)
-\fill[blue!15] (-40,-220) rectangle (40,0);
-% Sea Level Line
-\draw[blue!60!black, dashed, line width=1.5pt] (-40,0) -- (40,0) node[right, black] {\Large\textnormal{\textbf{0 (Sea Level)}}};
-
-% --- CLIFF (Left Side) ---
-\draw[line width=2.5pt, brown!40!black, fill=brown!20] (-40,-220) -- (-25,-220) -- (-25,250) -- (-40,250) -- cycle;
-% Researcher Dot on Cliff
-\filldraw[black] (-25,250) circle (4pt) node[above left, yshift=2pt] {\Large\textbf{Researcher}};
-
-% --- SUBMARINE (Right Side) ---
-% Submarine Hull
-\filldraw[gray!70, draw=black, line width=2pt, rounded corners=8pt] (15,-190) rectangle (35,-170);
-% Conning Tower / Sail
-\filldraw[gray!70, draw=black, line width=2pt] (22,-170) rectangle (28,-160);
-% Periscope
-\draw[line width=2pt, black] (24,-160) -- (24,-153) -- (27,-153);
-% Submarine Label
-\node[below, black] at (25,-192) {\Large\textbf{Submarine}};
-
-% --- KEY HEIGHT POINTS ---
-% Cliff Height Marker
-\draw[ultra thick] (-27,250) -- (-23,250);
-\node[right, xshift=5pt] at (-23,250) {\Large\textnormal{\textbf{250 ft}}};
-
-% Submarine Depth Marker
-\draw[ultra thick] (13,-180) -- (17,-180);
-\node[left, xshift=-5pt] at (13,-180) {\Large\textnormal{\textbf{$-180$ ft}}};
-
-% --- TOTAL DISTANCE ARROW ---
-\draw[<->, orange!80!black, line width=2.5pt] (0,-180) -- (0,250) node[midway, fill=blue!5, inner sep=4pt, text=orange!80!black, align=center] {\textnormal{\Large \textbf{Total Distance}}};
-
-% --- DASHED GUIDES ---
-\draw[dashed, gray!80, thick] (-25,250) -- (0,250);
-\draw[dashed, gray!80, thick] (15,-180) -- (0,-180);
-
-\end{tikzpicture}
-\xmalt{}
-\end{center}
-
 
 Write a subtraction expression to find the vertical distance between the researcher and the submarine, rewrite it as an equivalent addition problem, and find the distance.
 \[ 250 - (-180) \] 
@@ -185,6 +135,64 @@ Write a subtraction expression to find the vertical distance between the researc
 
 \end{problem}
 
+\begin{center}
+\begin{tikzpicture}[scale = 0.6, y=0.4mm, x=1mm, >=stealth, decoration={random steps, segment length=3mm, amplitude=1.5mm}]
+
+% --- BACKGROUND & WATER ---
+% Sky Block
+\fill[blue!5] (-55,0) rectangle (40,300);
+% Ocean Block
+\fill[blue!15] (-55,-220) rectangle (40,0);
+% Sea Level Line
+\draw[blue!60!black, dashed, line width=1.5pt] (-55,0) -- (40,0) node[right, black] {\Large\textnormal{\textbf{0 (Sea Level)}}};
+
+% --- SUBMARINE (Far Left) ---
+% Submarine Hull
+\filldraw[gray!70, draw=black, line width=2pt, rounded corners=8pt] (-50,-190) rectangle (-30,-170);
+% Conning Tower
+\filldraw[gray!70, draw=black, line width=2pt] (-43,-170) rectangle (-37,-160);
+% Periscope
+\draw[line width=2pt, black] (-41,-160) -- (-41,-153) -- (-38,-153);
+% Submarine Label
+\node[below, black] at (-40,-192) {\Large\textbf{Submarine}};
+
+% --- BETTER JAGGED CLIFF (Center-Right) ---
+% Ground fill with a randomized rocky edge on the left
+\fill[brown!20] decorate { (0,250) -- (0,-220) } -- (40,-220) -- (40,250) -- cycle;
+% Dark accent rock border line
+\draw[line width=2.5pt, brown!40!black] decorate { (0,250) -- (0,-220) };
+% Top cliff edge line
+\draw[line width=2.5pt, brown!40!black] (0,250) -- (40,250);
+
+% --- STICK FIGURE MAN (Top Left Edge of Cliff) ---
+% Legs
+\draw[line width=1.5pt, black] (2,250) -- (4,258) -- (6,250);
+% Torso
+\draw[line width=1.5pt, black] (4,258) -- (4,270);
+% Arms
+\draw[line width=1.5pt, black] (1,266) -- (7,266);
+% Head
+\filldraw[black] (4,273) circle (3pt);
+\node[above, black, yshift=6pt] at (4,273) {\Large\textbf{Researcher}};
+
+% --- TOTAL DISTANCE ARROW (Between Sub and Cliff) ---
+\draw[<->, orange!80!black, line width=2.5pt] (-20,-180) -- (-20,250) node[midway, left=8pt, align=center] {\textnormal{\Large \textbf{Total Distance}}};
+
+% --- ALIGNED LABELS & MARKERS (Right Side of Cliff) ---
+% 250 ft Marker
+\draw[ultra thick] (23,250) -- (27,250);
+\node[right] at (28,250) {\Large\textnormal{\textbf{250 ft}}};
+
+% -180 ft Marker (Perfect vertical alignment with the 250 ft text)
+\draw[ultra thick] (23,-180) -- (27,-180);
+\node[right] at (28,-180) {\Large\textnormal{\textbf{$-180$ ft}}};
+
+% --- DASHED GUIDES ---
+\draw[dashed, gray!80, thick] (-20,250) -- (25,250);
+\draw[dashed, gray!80, thick] (-50,-180) -- (25,-180);
+
+\end{tikzpicture}
+\end{center}
 
 
 \begin{problem}
