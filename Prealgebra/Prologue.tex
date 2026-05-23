@@ -1,0 +1,63 @@
+\documentclass{ximera}[font=12pt]
+
+
+\title{Prologue}   % Use xmlatex all -s to compile when SERVE refuses to work.
+\author{Kelly Stady}
+\license{CC: 0}         % replace with an appropriate license, or set it in xmPreamble
+
+\begin{document}
+
+\begin{abstract}
+
+\end{abstract}
+
+\maketitle
+\label{xim:prologue}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+  % Define flower colors
+  \colorlet{petalColor}{white}
+  \colorlet{centerColor}{orange!90!yellow}
+  \colorlet{stemColor}{green!60!black}
+
+  % Optional: Gentle background gradient shadow for contrast on white web pages
+  \radialshade (-1.5,-1.5) rectangle (1.5,1.5);
+  \fill[white!90!black, opacity=0.15] (0,0) circle (1.4);
+
+  % Draw Stem and Leaf
+  \draw[line width=3.5pt, stemColor, cap=round] (0, -0.4) to[out=-90, in=100] (0.2, -2.0);
+  \fill[stemColor] (0.08, -1.0) to[out=30, in=-60] (0.6, -0.6) to[out=120, in=30] (0.05, -0.8) -- cycle;
+
+  % Draw 12 Petals using a loop (Rotated every 30 degrees)
+  \foreach \angle in {0, 30, ..., 330} {
+    \begin{scope}[rotate=\angle]
+      % Smooth teardrop shaped petals
+      \filldraw[fill=petalColor, draw=black!30, line width=0.6pt] 
+        (0, 0.15) 
+        to[out=45, in=-45] (1.1, 0) 
+        to[out=135, in=-135] (0, -0.15) 
+        -- cycle;
+      % Subtle inner detail line for texture on each petal
+      \draw[black!15, line width=0.4pt] (0.2, 0) -- (0.8, 0);
+    \end{scope}
+  }
+
+  % Draw Golden Center (Disc Florets)
+  \filldraw[fill=centerColor, draw=orange!70!black, line width=1pt] (0,0) circle (0.38);
+  
+  % Add texturing dots to the flower center for realism
+  \foreach \r in {0.12, 0.22, 0.3} {
+    \foreach \a in {0, 45, ..., 315} {
+      \fill[orange!40!yellow] (\a:\r) circle (0.7pt);
+    }
+  }
+  \foreach \a in {22.5, 67.5, ..., 337.5} {
+    \fill[white, opacity=0.6] (\a:0.26) circle (0.5pt);
+  }
+  \xmalt{A stylized graphic of a single daisy flower.}
+
+\end{tikzpicture}
+\end{center}
+
+\end{document}
