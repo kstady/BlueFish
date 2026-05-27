@@ -43,17 +43,28 @@
 
 
 
-/* 1. Reset text and link sizes */
-html body li a, 
-html body ul li a, 
-html body ol li a,
-li a span,
-ol li a span,
-ul li a span {
+
+/* 1. Only resize actual text anchors and text spans, EXCLUDING MathJax math mode elements */
+html body li a:not([class*="mjx"]), 
+html body ul li a:not([class*="mjx"]), 
+html body ol li a:not([class*="mjx"]),
+li a span:not([class*="mjx"]),
+ol li a span:not([class*="mjx"]),
+ul li a span:not([class*="mjx"]) {
     font-size: 16px !important;
 }
 
-/* 2. Reset section and chapter number sizes */
+/* 2. Explicitly protect MathJax fonts to ensure variables stay italicized */
+.MathJax, 
+.MathJax *, 
+.mjx-chtml, 
+.mjx-mi, 
+[class*="mjx"] {
+    font-style: italic !important; /* Forces variables to keep their italics */
+    font-family: MathJax_Math-italic, MathJax_Main, sans-serif !important; 
+}
+
+/* 3. Keep numbers size unchanged but properly isolated */
 html body li::before, 
 html body ol li::before, 
 html body ul li::before,
@@ -61,12 +72,12 @@ nav li::before,
 li::marker,
 .number, 
 .prefix,
-span[class*="number"],
-span[class*="prefix"] {
+span[class*="number"]:not([class*="mjx"]),
+span[class*="prefix"]:not([class*="mjx"]) {
     font-size: 16px !important;
 }
 
-/* 3. Keep a balanced space between numbers and titles */
+/* 4. Balanced spacing between numbers and titles */
 html body li, 
 html body ol li, 
 html body ul li {
@@ -82,7 +93,6 @@ ol li::before {
     margin-right: 8px !important;
     display: inline-block;
 }
-
 
 
 
