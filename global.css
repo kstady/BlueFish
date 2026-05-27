@@ -17,15 +17,6 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-.main-activity, .main-activity p, .main-activity span, .main-activity li {
-    font-family: "EB Garamond", "Garamond", serif !important;
-    font-weight: 400 !important;
-}
-.main-activity h1, .main-activity h2, .main-activity h3, .main-activity h4, .main-activity .problem-title {
-    font-family: "EB Garamond", "Garamond", serif !important;
-    font-weight: 700 !important;
-}
-
 
 
 /* *********************************** Done changing the font ****************************************** */
