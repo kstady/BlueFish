@@ -46,7 +46,7 @@
 html body li a, 
 html body ul li a, 
 html body ol li a {
-    font-size: 25px !important;
+    font-size: 18px !important;
 }
 
 /* 2. Target the exact layout IDs used by the KU Leuven sidebar template */
@@ -56,16 +56,15 @@ html body ol li a {
 .sidebar a,
 .navigation a,
 .toc a {
-    font-size: 25px !important;
+    font-size: 18px !important;
 }
 
 /* 3. Deep target into text spans inside navigation links */
 li a span,
 ol li a span,
 ul li a span {
-    font-size: 25px !important;
+    font-size: 18px !important;
 }
-
 
 
 
