@@ -45,26 +45,24 @@
 
 
 /* 1. Only resize actual text anchors and text spans, EXCLUDING MathJax math mode elements */
-html body li a:not([class*="mjx"]), 
-html body ul li a:not([class*="mjx"]), 
-html body ol li a:not([class*="mjx"]),
-li a span:not([class*="mjx"]),
-ol li a span:not([class*="mjx"]),
-ul li a span:not([class*="mjx"]) {
+html body li a:not([class*="mjx"]):not([id*="mjx"]), 
+html body ul li a:not([class*="mjx"]):not([id*="mjx"]), 
+html body ol li a:not([class*="mjx"]):not([id*="mjx"]),
+li a span:not([class*="mjx"]):not([id*="mjx"]),
+ol li a span:not([class*="mjx"]):not([id*="mjx"]),
+ul li a span:not([class*="mjx"]):not([id*="mjx"]) {
     font-size: 16px !important;
 }
 
-/* 2. Explicitly protect MathJax fonts to ensure variables stay italicized */
+/* 2. PROTECT MATHJAX: Let MathJax render naturally without forced CSS slants */
 .MathJax, 
 .MathJax *, 
-.mjx-chtml, 
-.mjx-mi, 
+mjx-container,
 [class*="mjx"] {
-    font-style: italic !important; /* Forces variables to keep their italics */
-    font-family: MathJax_Math-italic, MathJax_Main, sans-serif !important; 
+    font-style: normal !important; /* Disables the artificial browser-forced slant */
 }
 
-/* 3. Keep numbers size unchanged but properly isolated */
+/* 3. Keep list structural numbers sized correctly at 16px */
 html body li::before, 
 html body ol li::before, 
 html body ul li::before,
@@ -77,7 +75,7 @@ span[class*="prefix"]:not([class*="mjx"]) {
     font-size: 16px !important;
 }
 
-/* 4. Balanced spacing between numbers and titles */
+/* 4. Keep balanced spacing between numbers and titles */
 html body li, 
 html body ol li, 
 html body ul li {
