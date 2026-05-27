@@ -19,9 +19,9 @@
 
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
-    font-size: 25px !important;
+    font-size: 23px !important;
     line-height: 1.55 !important;
-    color: #1a1a1a !important;
+    color: hsl(0, 0%, 10%) !important;
 }
 
 /* *********************************** Done changing the font ****************************************** */
