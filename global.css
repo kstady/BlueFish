@@ -44,52 +44,37 @@
 
 
 
-/* 1. Only resize actual text anchors and text spans, EXCLUDING MathJax math mode elements */
-html body li a:not([class*="mjx"]):not([id*="mjx"]), 
-html body ul li a:not([class*="mjx"]):not([id*="mjx"]), 
-html body ol li a:not([class*="mjx"]):not([id*="mjx"]),
-li a span:not([class*="mjx"]):not([id*="mjx"]),
-ol li a span:not([class*="mjx"]):not([id*="mjx"]),
-ul li a span:not([class*="mjx"]):not([id*="mjx"]) {
+/* 1. Scale the entire navigation container proportionally */
+nav, 
+.xourse-navigation, 
+.xourse-toc, 
+#sidebar {
     font-size: 16px !important;
 }
 
-/* 2. PROTECT MATHJAX: Let MathJax render naturally without forced CSS slants */
-.MathJax, 
-.MathJax *, 
-mjx-container,
-[class*="mjx"] {
-    font-style: normal !important; /* Disables the artificial browser-forced slant */
-}
-
-/* 3. Keep list structural numbers sized correctly at 16px */
-html body li::before, 
-html body ol li::before, 
-html body ul li::before,
-nav li::before,
-li::marker,
-.number, 
-.prefix,
-span[class*="number"]:not([class*="mjx"]),
-span[class*="prefix"]:not([class*="mjx"]) {
-    font-size: 16px !important;
-}
-
-/* 4. Keep balanced spacing between numbers and titles */
-html body li, 
-html body ol li, 
-html body ul li {
-    padding-left: 8px !important; 
+/* 2. Re-balance the spacing between numbers and titles at this scale */
+nav li, 
+.xourse-navigation li {
+    padding-left: 6px !important; 
 }
 
 .number, 
 .prefix,
 span[class*="number"],
 span[class*="prefix"],
-li::before,
-ol li::before {
+nav li::before {
     margin-right: 8px !important;
     display: inline-block;
+}
+
+/* 3. CLEAN SLATE: Wipe out all forced overrides on MathJax elements */
+.MathJax, 
+.MathJax *, 
+mjx-container, 
+[class*="mjx"] {
+    font-size: inherit !important;
+    font-style: inherit !important;
+    font-family: inherit !important;
 }
 
 
