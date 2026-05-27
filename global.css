@@ -24,8 +24,6 @@
 
 }
 
-
-
 /* Apply font AND bold weight ONLY to headers and titles */
 .main-activity h1,
 .main-activity h2,
@@ -42,123 +40,6 @@
 }
 
 
-
-/* ==========================================
-   TABLE OF CONTENTS (TOC) UPGRADES & FIXES
-   ========================================== */
-
-/* 1. Increase TOC font size slightly & add breathing room between items */
-nav li, 
-.xourse-navigation li, 
-.xourse-toc li {
-    font-size: 16px !important; /* Slightly larger than your old 14px rules */
-    line-height: 1.4 !important;
-    padding-left: 6px !important;
-}
-
-/* 2. Fix subsection numbers running into titles (Provides uniform spacing) */
-nav li::before, 
-html body ol li::before, 
-html body ul li::before,
-li::marker,
-.number, 
-.prefix,
-span[class*="number"]:not([class*="mjx"]),
-span[class*="prefix"]:not([class*="mjx"]) {
-    font-size: 16px !important;
-    margin-right: 10px !important; /* Forces physical space after the 1.5.1 numbers */
-    display: inline-block;
-}
-
-/* ==========================================================================
-   1. TABLE OF CONTENTS (TOC) LAYOUT & SUBSECTION NUMBER FIXES
-   ========================================================================== */
-
-/* Scale up the layout font size of the TOC links safely */
-nav a, 
-.xourse-navigation a, 
-.xourse-toc a {
-    font-size: 16px !important;
-}
-
-/* Fix subsection numbers running into text (Forces spacing) */
-nav li::before, 
-html body ol li::before, 
-html body ul li::before,
-li::marker,
-.number, 
-.prefix,
-span[class*="number"]:not([class*="mjx"]):not([class*="MathJax"]),
-span[class*="prefix"]:not([class*="mjx"]):not([class*="MathJax"]) {
-    font-size: 16px !important;
-    margin-right: 12px !important; /* Punches a physical 12px gap after 1.5.1 numbers */
-    display: inline-block;
-}
-
-/* Give items clean vertical breathing room */
-nav li {
-    padding-left: 6px !important;
-    line-height: 1.45 !important;
-}
-
-
-/* ==========================================================================
-   2. SYSTEM PROSE FONTS (PROTECTED TO PREVENT MATH OVERRIDES)
-   ========================================================================== */
-
-/* Apply the custom font system-wide to standard textual layouts only */
-html, body, ximera-nav, .navbar, .main-activity, .main-activity p, .main-activity li {
-    font-family: "Latin Modern Roman", serif; /* Removed !important to stop crushing MathJax */
-    font-weight: 400;
-}
-
-/* Target plain content spans while tightly shielding math spans */
-.main-activity span:not([class*="mjx"]):not([class*="MathJax"]):not([class*="mjx-"]) {
-    font-family: "Latin Modern Roman", serif !important;
-    font-weight: 400 !important;
-}
-
-/* Force bold formatting onto headings, page elements, and titles */
-h1, h2, h3, h4, h5, ximera-nav a, .navbar-brand, [class*="title"], [class*="Head"] {
-    font-family: "Latin Modern Roman", serif !important;
-    font-weight: bold !important;
-}
-
-/* Core main body text configurations */
-.main-activity {
-    font-size: 22px !important;
-    line-height: 1.55 !important;
-    color: #1a1a1a !important;
-}
-
-
-/* ==========================================================================
-   3. ABSOLUTE SHIELD FOR MATHJAX (RESTORES NATIVE MATH MODE ITALICS)
-   ========================================================================== */
-
-/* Force browser engines to yield completely to MathJax font styling rules */
-.MathJax, 
-.MathJax *, 
-mjx-container, 
-mjx-container *,
-[class*="mjx"] {
-    font-family: MathJax_Math-italic, MathJax_Main, sans-serif !important; /* Re-injects math engine faces */
-    font-style: normal !important; /* Disables artificial browser slants so native variables italicize correctly */
-}
-
-/* Force math text identifiers (variables like x, y, n) to execute their native italics */
-.mjx-mi, 
-mi, 
-[class*="mjx-mi"],
-.MathJax_MathItalic {
-    font-style: italic !important;
-}
-
-/* Synchronize math display sizing perfectly with the new 22px content layout */
-.main-activity .mjx-chtml,
-mjx-container {
-    font-size: 105% !important;
-}
 
 /* *********************************** Done changing the font ****************************************** */
 
