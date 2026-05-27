@@ -17,29 +17,6 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-/* LOAD FONT */
-@font-face {
-    font-family: 'Latin Modern Roman';
-    src: url('https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-roman.css') format('woff2');
-
-}
-
-/* Apply font AND bold weight ONLY to headers and titles */
-.main-activity h1,
-.main-activity h2,
-.main-activity h3,
-.main-activity h4,
-.main-activity .liketitleHead,
-.main-activity .likesectionHead,
-.main-activity .likesubsectionHead,
-.main-activity .problem-title,
-.main-activity .theorem-title,
-.main-activity div[titletext]::before {
-    font-family: "Latin Modern Roman", serif !important;
-    font-weight: bold !important; /* Only these elements get bold */
-}
-
-
 
 /* *********************************** Done changing the font ****************************************** */
 
