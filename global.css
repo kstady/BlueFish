@@ -41,8 +41,18 @@
     font-weight: bold !important; /* Only these elements get bold */
 }
 
-.table-of-contents {
-    font-size: 20px; /* Adjust size as needed */
+/* Force font size change on all list links within the navigation/xourse menu */
+.xourse-navigation a,
+.xourse-toc a,
+nav ol li a,
+nav ul li a {
+    font-size: 20px !important;
+}
+
+/* Optional: Keep child sections slightly smaller than chapters for structure */
+nav ol li ol li a,
+nav ul li ul li a {
+    font-size: 16px !important;
 }
 
 
