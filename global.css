@@ -24,35 +24,54 @@
 
 }
 
-/* Apply font to EVERYTHING, but keep standard text at normal weight */
-.main-activity,
-.main-activity p {
-    font-family: "Latin Modern Roman", serif !important;
-    font-weight: normal !important; /* Forces paragraphs to NOT be bold */
+
+/* 1. TARGET THE TOP BAR, CHAPTER TITLES, AND CORE CONTENT TOGETHER */
+.navbar,
+.navbar a,
+.navbar-brand,
+.card-header,
+.chapter-title,
+.part-title,
+.main-activity, 
+.main-activity p,
+.main-activity span:not([class*="mjx"]),
+.main-activity li,
+.main-activity td,
+.main-activity th { 
+    font-family: "Latin Modern Roman", serif !important; 
+    font-weight: 400 !important; /* Regular text weight */
+} 
+
+/* 2. TARGET ALL SITE HEADERS, SITE TITLE, AND SECTION TITLES FOR BOLDING */ 
+.navbar-brand,
+.part-title,
+.chapter-title,
+.main-activity h1, 
+.main-activity h2, 
+.main-activity h3, 
+.main-activity h4, 
+.main-activity .liketitleHead, 
+.main-activity .likesectionHead, 
+.main-activity .likesubsectionHead, 
+.main-activity .problem-title, 
+.main-activity .theorem-title, 
+.main-activity div[titletext]::before { 
+    font-family: "Latin Modern Roman", serif !important; 
+    font-weight: bold !important; /* Bold headers */
+} 
+
+/* 3. CORE SIZE CONFIGURATION */ 
+.main-activity { 
+    font-size: 21px !important; 
+    line-height: 1.55 !important; 
+    color: #1a1a1a !important; 
 }
 
-/* Apply font AND bold weight ONLY to headers and titles */
-.main-activity h1,
-.main-activity h2,
-.main-activity h3,
-.main-activity h4,
-.main-activity .liketitleHead,
-.main-activity .likesectionHead,
-.main-activity .likesubsectionHead,
-.main-activity .problem-title,
-.main-activity .theorem-title,
-.main-activity div[titletext]::before {
-    font-family: "Latin Modern Roman", serif !important;
-    font-weight: bold !important; /* Only these elements get bold */
+/* 4. KEEP MATH SYMBOLS SCALED PROPORTIONALLY */
+.main-activity .mjx-chtml {
+    font-size: 105% !important;
 }
 
-
-/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
-.main-activity {
-    font-size: 21px !important;
-    line-height: 1.55 !important;
-    color: #1a1a1a !important;
-}
 
 /* *********************************** Done changing the font ****************************************** */
 
