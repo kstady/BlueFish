@@ -25,53 +25,44 @@
 }
 
 
-/* 1. TARGET THE TOP BAR, CHAPTER TITLES, AND CORE CONTENT TOGETHER */
+/* 1. FORCE THE FONT SYSTEM-WIDE ON ALL PROSE AND THE NAVIGATION HEADER */
+html,
+body,
+ximera-nav,
 .navbar,
-.navbar a,
-.navbar-brand,
-.card-header,
-.chapter-title,
-.part-title,
 .main-activity, 
 .main-activity p,
 .main-activity span:not([class*="mjx"]),
-.main-activity li,
-.main-activity td,
-.main-activity th { 
+.main-activity li { 
     font-family: "Latin Modern Roman", serif !important; 
-    font-weight: 400 !important; /* Regular text weight */
+    font-weight: 400 !important; 
 } 
 
-/* 2. TARGET ALL SITE HEADERS, SITE TITLE, AND SECTION TITLES FOR BOLDING */ 
+/* 2. FORCE BOLD WEIGHT ON THE SITE TITLE, CHAPTER LABELS, AND HEADERS */ 
+h1,
+h2,
+h3,
+h4,
+h5,
+ximera-nav a,
 .navbar-brand,
-.part-title,
-.chapter-title,
-.main-activity h1, 
-.main-activity h2, 
-.main-activity h3, 
-.main-activity h4, 
-.main-activity .liketitleHead, 
-.main-activity .likesectionHead, 
-.main-activity .likesubsectionHead, 
-.main-activity .problem-title, 
-.main-activity .theorem-title, 
-.main-activity div[titletext]::before { 
+[class*="title"],
+[class*="Head"] { 
     font-family: "Latin Modern Roman", serif !important; 
-    font-weight: bold !important; /* Bold headers */
+    font-weight: bold !important; 
 } 
 
-/* 3. CORE SIZE CONFIGURATION */ 
+/* 3. CORE CONTENT SIZE CONFIGURATION */ 
 .main-activity { 
     font-size: 21px !important; 
     line-height: 1.55 !important; 
     color: #1a1a1a !important; 
 }
 
-/* 4. KEEP MATH SYMBOLS SCALED PROPORTIONALLY */
+/* 4. PROTECT MATHJAX DISPLAY ALIGNMENT WITH THE NEW FONT SIZE */
 .main-activity .mjx-chtml {
     font-size: 105% !important;
 }
-
 
 /* *********************************** Done changing the font ****************************************** */
 
