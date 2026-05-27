@@ -121,7 +121,7 @@ Add using the number line shown below.
 
 \begin{center} 
   \begin{tikzpicture}[x=0.75cm,>=stealth] 
-    % The line spans symmetrically from -6 to +6 around 0
+    % The line spans symmetrically from -6 to 6 around 0 so numberline is centered on html
     \draw[thick, <->] (-6,0) -- (6,0); 
     
     % Maps -18 to the left edge (-5) all the way to -8 at the right edge (+5)
@@ -131,19 +131,6 @@ Add using the number line shown below.
   \xmalt{Horizontal number line from negative 18 to negative 8, with tick marks and labels for each integer spanning the full width.} 
 \end{center}
 
-
-
-\begin{center} 
-  \begin{tikzpicture}[x=0.75cm,>=stealth] 
-    % The line spans symmetrically from -6 to +6 around 0
-    \draw[thick, <->] (-7,0) -- (7,0); 
-    
-    % \x is the physical geometry coordinate, \label is the text printed underneath
-    \foreach \x/\label in {-6/-18, -5/-17, -4/-16, -3/-15, -2/-14, -1/-13, 0/-12, 1/-11, 2/-10, 3/-9, 4/-8} 
-      \draw[shift={(\x,0)}, color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\label$}; 
-  \end{tikzpicture}
-  \xmalt{Horizontal number line from negative 18 to 8, with tick marks and labels for each integer.} 
-\end{center}
 
 \end{problem}
 
