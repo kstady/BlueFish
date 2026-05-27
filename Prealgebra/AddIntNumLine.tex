@@ -47,7 +47,7 @@ Use a numberline to find the sum $3+7.$
 Start at $3,$ then move $7$ units to the \textbf{right}.  Movement is to the right, since a \textbf{positive} number is added to $3.$
 
 \begin{center}
-\begin{tikzpicture}[x=0.75cm,>=latex] % Use latex arrowhead style
+\begin{tikzpicture}[x=0.75cm,>=latex, scale=1.5] % Use latex arrowhead style
 \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
 \foreach \x in {-5,...,10}
 \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
@@ -75,7 +75,7 @@ Use a numberline to find the sum $3+(-7).$
 Start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  Movement is to the left, since a \textbf{negative} number is added to $3.$
 
 \begin{center}
-\begin{tikzpicture}[x=0.75cm,>=latex] % Use latex arrowhead style
+\begin{tikzpicture}[x=0.75cm,>=latex, scale=1.5] % Use latex arrowhead style
     \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
     \foreach \x in {-5,...,10}
     \draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; % Tick marks for numbers
