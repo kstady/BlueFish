@@ -41,19 +41,32 @@
     font-weight: bold !important; /* Only these elements get bold */
 }
 
-/* Force font size change on all list links within the navigation/xourse menu */
-.xourse-navigation a,
-.xourse-toc a,
-nav ol li a,
-nav ul li a {
+
+/* 1. Universal List Link Target (Overcomes strict framework rules) */
+html body li a, 
+html body ul li a, 
+html body ol li a {
     font-size: 25px !important;
 }
 
-/* Optional: Keep child sections slightly smaller than chapters for structure */
-nav ol li ol li a,
-nav ul li ul li a {
-    font-size: 16px !important;
+/* 2. Target the exact layout IDs used by the KU Leuven sidebar template */
+#sidebar a,
+#navigation a,
+#toc a,
+.sidebar a,
+.navigation a,
+.toc a {
+    font-size: 25px !important;
 }
+
+/* 3. Deep target into text spans inside navigation links */
+li a span,
+ol li a span,
+ul li a span {
+    font-size: 25px !important;
+}
+
+
 
 
 /* 1. FORCE THE FONT SYSTEM-WIDE ON ALL PROSE AND THE NAVIGATION HEADER */
