@@ -118,6 +118,21 @@ Add using the number line shown below.
 
 \[ -12 + (-3) = \answer{-15} \]
 
+\begin{center} 
+  \begin{tikzpicture}[x=0.75cm,>=stealth] 
+    % The line spans symmetrically from -6 to +6 around 0
+    \draw[thick, <->] (-7,0) -- (7,0); 
+    
+    % \x is the physical geometry coordinate, \label is the text printed underneath
+    \foreach \x/\label in {-6/-18, -5/-17, -4/-16, -3/-15, -2/-14, -1/-13, 0/-12, 1/-11, 2/-10, 3/-9, 4/-8} 
+      \draw[shift={(\x,0)}, color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\label$}; 
+  \end{tikzpicture}
+  \xmalt{Horizontal number line from negative 18 to 8, with tick marks and labels for each integer.} 
+\end{center}
+
+
+
+
 \begin{center}
 \begin{tikzpicture}[>=stealth]  %Added scale and transform to get line centered
         \draw[thick, <->] (-19,0)--(-7,0);
@@ -127,19 +142,6 @@ Add using the number line shown below.
 \end{tikzpicture}
 
 \xmalt{Horizontal number line from negative 18 to 8, with tick marks and labels for each integer.}
-\end{center}
-
-
-\begin{center} 
-  \begin{tikzpicture}[x=0.75cm,>=stealth] 
-    % This invisible path forces the bounding box to be perfectly balanced around 0 so the numberline is centered
-    \path (-19,0) -- (19,0); 
-    
-    \draw[thick, <->] (-19,0)--(-7,0); 
-    \foreach \x in {-18,...,-8} 
-      \draw[shift={(\x,0)}, color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$}; 
-  \end{tikzpicture}
-  \xmalt{Horizontal number line from negative 18 to 8, with tick marks and labels for each integer.} 
 \end{center}
 
 
