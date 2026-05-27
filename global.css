@@ -41,6 +41,9 @@
     font-weight: bold !important; /* Only these elements get bold */
 }
 
+.table-of-contents {
+    font-size: 16px; /* Adjust size as needed */
+}
 
 
 /* 1. FORCE THE FONT SYSTEM-WIDE ON ALL PROSE AND THE NAVIGATION HEADER */
@@ -79,7 +82,7 @@ ximera-nav a,
 
 /* 4. PROTECT MATHJAX DISPLAY ALIGNMENT WITH THE NEW FONT SIZE */
 .main-activity .mjx-chtml {
-    font-size: 125% !important;
+    font-size: 105% !important;
 }
 
 /* *********************************** Done changing the font ****************************************** */
