@@ -19,15 +19,15 @@
 
 /* LOAD FONT */
 @font-face {
-    font-family: 'MLModern';
-    src: url('https://jsdelivr.net/gh/u-foka/mlmodern-web@1.0.1/style/mlmodern.css') format('woff2');
+    font-family: 'Latin Modern Roman';
+    src: url('https://cdn.jsdelivr.net/gh/sugina-dev/latin-modern-web@1.0.1/style/latinmodern-roman.css') format('woff2');
 
 }
 
 /* Apply font to EVERYTHING, but keep standard text at normal weight */
 .main-activity,
 .main-activity p {
-    font-family: "MLModern", serif !important;
+    font-family: "Latin Modern Roman", serif !important;
     font-weight: normal !important; /* Forces paragraphs to NOT be bold */
 }
 
@@ -42,7 +42,7 @@
 .main-activity .problem-title,
 .main-activity .theorem-title,
 .main-activity div[titletext]::before {
-    font-family: "MLModern", serif !important;
+    font-family: "Latin Modern Roman", serif !important;
     font-weight: bold !important; /* Only these elements get bold */
 }
 
