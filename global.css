@@ -449,19 +449,24 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 
-/* 1. Target ONLY the main section/chapter links, leaving subsections completely alone */
-.activity-card.chapter > a,
-.activity-card.section > a,
-div[class*="chapter"] > a,
-div[class*="section"] > a {
-    padding-left: 20px !important; /* Increase this number to push main sections right, lower it to pull them left */
+/* ==========================================================================
+   STRICT STRUCTURAL REALIGNMENT FOR SECTIONS & SUBSECTIONS
+   ========================================================================== */
+
+/* 1. Target elements explicitly tagged as sections or chapters */
+.activity-card[data-type="section"] a,
+.activity-card[data-type="chapter"] a,
+[class*="sectionHead"] a,
+[class*="chapterHead"] a {
+    padding-left: 22px !important; /* Larger padding to shift main sections further right */
 }
 
-/* 2. Keep subsections locked exactly where you had them working */
-.activity-card.subsection a,
-div[class*="subsection"] a {
-    padding-left: 12px !important; 
+/* 2. Lock your subsections into a tighter padding bracket */
+.activity-card[data-type="subsection"] a,
+[class*="subsectionHead"] a {
+    padding-left: 12px !important; /* Smaller padding to keep subsections closer to their numbers */
 }
+
 
 
 
