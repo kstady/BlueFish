@@ -449,6 +449,15 @@ nav ol {
 }
 
 
+/* Allow regular activity titles to wrap, but strictly exclude the part bars */
+nav a:not(.part), 
+.xourse-navigation a:not(.part), 
+.xourse-toc a:not(.part) {
+    white-space: normal !important;   /* Regular links can still wrap safely */
+    word-wrap: break-word !important; 
+    display: inline-block !important;
+    max-width: 90% !important;        
+}
 
 
 
