@@ -412,6 +412,32 @@ div[titletext*="Problem"] p:first-of-type {
     display: none !important;
 }
 
+/* ******** Shrinking the width of the TOC ******************* */
+
+/* ==========================================================================
+   SHRINK THE ENTIRE TOC SIDEBAR PANEL WIDTH
+   ========================================================================= */
+
+/* Adjust the physical width boundaries of the navigation drawer */
+nav, 
+#sidebar, 
+.sidebar,
+.xourse-navigation, 
+.xourse-toc {
+    width: 260px !important;      /* Forces a smaller, uniform width (Default is often 320px+) */
+    max-width: 280px !important;  /* Strict upper limit constraint */
+    min-width: 200px !important;  /* Prevents it from collapsing too far on tight screens */
+}
+
+/* Ensure long titles cleanly wrap onto a new line instead of breaking the layout */
+nav a, 
+.xourse-navigation a, 
+.xourse-toc a {
+    white-space: normal !important;   /* Forces text to wrap beautifully */
+    word-wrap: break-word !important; /* Prevents long terms from clipping past the edge */
+    display: inline-block !important;
+    max-width: 90% !important;        /* Keeps text inside the boundaries of the narrowed bar */
+}
 
 /* ******** Done with changes ********************************  */
 
