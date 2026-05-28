@@ -425,10 +425,10 @@ aside,
 .xourse-navigation, 
 .xourse-toc, 
 nav {
-    flex: 0 0 150px !important;       /* Forces the flexbox engine to lock at 220px wide */
-    flex-basis: 150px !important;     /* Strictly overrides the template's baseline basis */
-    width: 150px !important;          /* Sets fallback structural sizing box */
-    max-width: 150px !important;
+    flex: 0 0 50px !important;       /* Forces the flexbox engine to lock at 220px wide */
+    flex-basis: 50px !important;     /* Strictly overrides the template's baseline basis */
+    width: 50px !important;          /* Sets fallback structural sizing box */
+    max-width: 50px !important;
 }
 
 /* 2. Push inner list structures to align cleanly inside the 220px box */
@@ -438,7 +438,7 @@ nav {
 .xourse-toc ol,
 nav ul, 
 nav ol {
-    max-width: 150px !important;
+    max-width: 50px !important;
 }
 
 /* 3. Keep main content layout flush against the newly narrowed TOC column */
