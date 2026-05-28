@@ -364,7 +364,7 @@ div[titletext*="Problem"] p:first-of-type {
 .activity-card.part {
     background-color: #6082b6 !important;
     color: white !important;
-    padding: 1.5rem !important;
+    padding: 0.5rem 1.5rem !important; /* Shorter top/bottom padding, keeps wide side padding */
 }
 
 /* 2. THE SECTIONS: Glaucous and Orange on Click */
@@ -411,80 +411,6 @@ div[titletext*="Problem"] p:first-of-type {
 .activity-card.part [data-part-counter] {
     display: none !important;
 }
-
-
-/* ******** New font changes ********** */
-
-
-/* ==========================================================================
-   1. INCREASE TOC FONT SIZE & FIX SUBSECTION NUMBERS
-   ========================================================================== */
-
-/* Target the precise text wrappers inside the KU Leuven sidebar navigation */
-nav a, 
-.xourse-navigation a, 
-.xourse-toc a,
-nav li a,
-nav li a span,
-.xourse-navigation a span,
-.xourse-toc a span {
-    font-size: 18px !important; /* Forces the text title links to 18px */
-}
-
-/* Force layout base items to match */
-nav li,
-.xourse-navigation li,
-.xourse-toc li {
-    font-size: 18px !important;
-}
-
-/* Maintain proper spacing so larger section numbers don't run into titles */
-nav li::before, 
-html body ol li::before, 
-html body ul li::before,
-li::marker,
-.number, 
-.prefix,
-span[class*="number"]:not([class*="mjx"]):not([class*="MathJax"]),
-span[class*="prefix"]:not([class*="mjx"]):not([class*="MathJax"]) {
-    font-size: 18px !important; /* Matches the new larger TOC size */
-    margin-right: 12px !important; /* Ensures a clean physical gap after the numbers */
-    display: inline-block;
-}
-
-/* Give the larger TOC list items clean vertical padding */
-nav li {
-    padding-left: 6px !important;
-    line-height: 1.5 !important;
-}
-
-
-/* ==========================================================================
-   2. MATCH PROBLEM SIZE TO THE SMALLER EXAMPLE SIZE
-   ========================================================================== */
-
-/* Downscale the problem environment to match the smaller explanation size */
-.problem,
-.main-activity .problem,
-div[class*="problem"] {
-    font-size: 22px !important; /* Matches the smaller standard text size */
-    line-height: 1.45 !important;
-}
-
-/* Ensure descriptions and text lists inside problems scale down too */
-.problem p,
-.problem li,
-.problem span:not([class*="mjx"]):not([class*="MathJax"]) {
-    font-size: 22px !important;
-}
-
-/* Keep the interactive choice elements cleanly scaled */
-.problem .multiple-choice,
-.problem .choice {
-    font-size: 18px !important;
-}
-
-
 
 
 /* ******** Done with changes ********************************  */
