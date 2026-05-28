@@ -449,16 +449,20 @@ div[titletext*="Problem"] p:first-of-type {
 
 
 
-/* Push main section titles an extra bit to the right to line up perfectly with subsections */
-.activity-card.section a,
-.activity-card.chapter a {
-    padding-left: 20px !important; /* Increase or decrease this number to get a perfect vertical line */
+/* 1. Target ONLY the main section/chapter links, leaving subsections completely alone */
+.activity-card.chapter > a,
+.activity-card.section > a,
+div[class*="chapter"] > a,
+div[class*="section"] > a {
+    padding-left: 20px !important; /* Increase this number to push main sections right, lower it to pull them left */
 }
 
-/* Keep subsections locked at your working padding value */
-.activity-card.subsection a {
+/* 2. Keep subsections locked exactly where you had them working */
+.activity-card.subsection a,
+div[class*="subsection"] a {
     padding-left: 12px !important; 
 }
+
 
 
 
