@@ -29,13 +29,22 @@
    1. INCREASE TOC FONT SIZE & FIX SUBSECTION NUMBERS
    ========================================================================== */
 
-/* Target and increase the font size of the TOC links */
+/* Target the precise text wrappers inside the KU Leuven sidebar navigation */
 nav a, 
 .xourse-navigation a, 
 .xourse-toc a,
+nav li a,
+nav li a span,
+.xourse-navigation a span,
+.xourse-toc a span {
+    font-size: 18px !important; /* Forces the text title links to 18px */
+}
+
+/* Force layout base items to match */
 nav li,
-.xourse-navigation li {
-    font-size: 18px !important; /* Increased from 16px to make it clearly larger */
+.xourse-navigation li,
+.xourse-toc li {
+    font-size: 18px !important;
 }
 
 /* Maintain proper spacing so larger section numbers don't run into titles */
@@ -67,7 +76,7 @@ nav li {
 .problem,
 .main-activity .problem,
 div[class*="problem"] {
-    font-size: 16px !important; /* Matches the smaller standard text size */
+    font-size: 22px !important; /* Matches the smaller standard text size */
     line-height: 1.45 !important;
 }
 
@@ -75,13 +84,13 @@ div[class*="problem"] {
 .problem p,
 .problem li,
 .problem span:not([class*="mjx"]):not([class*="MathJax"]) {
-    font-size: 16px !important;
+    font-size: 22px !important;
 }
 
 /* Keep the interactive choice elements cleanly scaled */
 .problem .multiple-choice,
 .problem .choice {
-    font-size: 16px !important;
+    font-size: 18px !important;
 }
 
 /* *********************************** Done changing the font ****************************************** */
