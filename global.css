@@ -423,7 +423,7 @@ nav,
 aside, 
 .xourse-navigation, 
 .xourse-toc {
-    font-size: 18px !important; /* Adjust this to 19px or 20px if you want it even larger */
+    font-size: 22px !important; /* Adjust this to 19px or 20px if you want it even larger */
 }
 
 /* 2. Force all text strings and hyperlinks inside that block to follow suit */
