@@ -448,6 +448,21 @@ div[titletext*="Problem"] p:first-of-type {
 }
 
 
+
+/* Push main section titles an extra bit to the right to line up perfectly with subsections */
+.activity-card.section a,
+.activity-card.chapter a {
+    padding-left: 20px !important; /* Increase or decrease this number to get a perfect vertical line */
+}
+
+/* Keep subsections locked at your working padding value */
+.activity-card.subsection a {
+    padding-left: 12px !important; 
+}
+
+
+
+
 /* Keep main content layout flush against the newly narrowed TOC column */
 .main-activity, 
 main, 
