@@ -415,34 +415,30 @@ div[titletext*="Problem"] p:first-of-type {
 /* ******** TOC Changes ******************* */
 
 /* ==========================================================================
-   INCREASE TEXT FONT SIZE IN THE SIDEBAR TOC UNIFORMLY
+   FORCE TOC FONT SIZE UP VIA INDEPENDENT CONTAINER SCALING
    ========================================================================== */
 
-/* 1. Target text links inside the navigation structure strictly */
-.xourse-navigation a,
-.xourse-toc a,
-nav li a,
-.sidebar a,
-#sidebar a {
-    font-size: 20px !important; /* Adjust this value up or down to find your ideal text size */
+/* 1. Force the font size directly on the entire navigation sidebar block */
+nav, 
+aside, 
+.xourse-navigation, 
+.xourse-toc {
+    font-size: 18px !important; /* Adjust this to 19px or 20px if you want it even larger */
 }
 
-/* 2. Target numbers to scale cleanly alongside the text titles */
-.xourse-navigation .number,
-.xourse-navigation .prefix,
-.xourse-toc .number,
-.xourse-toc .prefix,
-nav li::before,
-.number,
-.prefix {
-    font-size: 20px !important; /* Keeps structural numbers matching your new text size */
+/* 2. Force all text strings and hyperlinks inside that block to follow suit */
+nav *, 
+aside *, 
+.xourse-navigation *, 
+.xourse-toc * {
+    font-size: inherit !important; /* Forces lists, links, and text to scale cleanly to 18px */
 }
 
-/* 3. Keep child sections slightly smaller if you want a clean visual hierarchy */
-/* Delete this specific sub-rule if you prefer absolutely everything at 18px */
-nav li li a,
-.xourse-navigation li li a {
-    font-size: 18px !important; 
+/* 3. STRICT MATH EXCLUSION: Shield MathJax from inheriting this layout scaling */
+nav .MathJax, 
+nav .MathJax *, 
+nav [class*="mjx"] {
+    font-size: 100% !important; /* Keeps math sizes native and untouched */
 }
 
 /* Keep main content layout flush against the newly narrowed TOC column */
