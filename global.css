@@ -424,7 +424,7 @@ nav,
 .sidebar,
 .xourse-navigation, 
 .xourse-toc {
-    width: 160px !important;      /* Forces a smaller, uniform width (Default is often 320px+) */
+    width: 260px !important;      /* Forces a smaller, uniform width (Default is often 320px+) */
     max-width: 280px !important;  /* Strict upper limit constraint */
     min-width: 200px !important;  /* Prevents it from collapsing too far on tight screens */
 }
