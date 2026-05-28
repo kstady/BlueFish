@@ -415,33 +415,28 @@ div[titletext*="Problem"] p:first-of-type {
 /* ******** Shrinking the width of the TOC ******************* */
 
 /* ==========================================================================
-   NARROW TOC WIDTH & FIX THE MAIN CONTENT GAP
+   FORCE DEFINE THE GRID LAYOUT SYSTEM WIDTH
    ========================================================================== */
 
-:root {
-    /* 1. Directly adjust the theme's core width variables down */
-    --sidebar-width: 220px !important; 
-    --nav-width: 220px !important;
-    --toc-width: 220px !important;
+/* 1. Smash the structural layout grid columns down to 220px */
+html body,
+.xourse-layout,
+.ximera-layout,
+div[class*="layout-wrapper"],
+main[class*="grid"] {
+    grid-template-columns: 200px 1fr !important; /* Forces a tight 220px left bar, main content takes the rest */
+    display: grid !important;
 }
 
-/* 2. Lock the sidebar container to respect the new core variable width */
+/* 2. Push the inner visual containers to strictly conform to the 220px boundary */
 .sidebar,
 #sidebar,
 aside,
 .xourse-navigation,
-.xourse-toc {
-    width: var(--sidebar-width) !important;
-    max-width: var(--sidebar-width) !important;
-    flex: 0 0 var(--sidebar-width) !important; 
-}
-
-/* 3. FIX WHITE SPACE: Let the template position the main area natively */
-.main-activity,
-main,
-#main-content {
-    margin-left: 0 !important; /* Strips the manual extra push so it sits flush */
-    padding-left: 20px !important; /* Adds just a tiny, clean gap between text and TOC */
+.xourse-toc,
+nav {
+    width: 200px !important;
+    max-width: 200px !important;
 }
 
 /* ******** Done with changes ********************************  */
