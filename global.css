@@ -415,29 +415,39 @@ div[titletext*="Problem"] p:first-of-type {
 /* ******** Shrinking the width of the TOC ******************* */
 
 /* ==========================================================================
-   FORCE DEFINE THE GRID LAYOUT SYSTEM WIDTH
+   SAFE HORIZONTAL WIDTH CONTROL FOR THE TOC SIDEBAR
    ========================================================================== */
 
-/* 1. Smash the structural layout grid columns down to 220px */
-html body,
-.xourse-layout,
-.ximera-layout,
-div[class*="layout-wrapper"],
-main[class*="grid"] {
-    grid-template-columns: 200px 1fr !important; /* Forces a tight 220px left bar, main content takes the rest */
-    display: grid !important;
-}
-
-/* 2. Push the inner visual containers to strictly conform to the 220px boundary */
+/* 1. Pull the visible right edge of the TOC container inward to the left */
 .sidebar,
 #sidebar,
 aside,
 .xourse-navigation,
 .xourse-toc,
 nav {
-    width: 200px !important;
-    max-width: 200px !important;
+    max-width: 220px !important;  /* Narrows the maximum allowable width limit */
+    width: 220px !important;      /* Locks the layout box size */
+    margin-right: auto !important; /* Locks it firmly against the left edge of its frame */
 }
+
+/* 2. Pull the list elements down to cleanly match the 220px boundary box */
+.xourse-navigation ul, 
+.xourse-navigation ol,
+.xourse-toc ul, 
+.xourse-toc ol,
+nav ul, 
+nav ol {
+    max-width: 210px !important;
+}
+
+/* 3. Keep the content frame pulled up left next to the narrowed TOC bar */
+.main-activity,
+main,
+#main-content {
+    width: auto !important;
+    padding-left: 15px !important; /* Tiny, clean padding gap between lesson text and TOC */
+}
+
 
 /* ******** Done with changes ********************************  */
 
