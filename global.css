@@ -415,51 +415,38 @@ div[titletext*="Problem"] p:first-of-type {
 /* ******** Shrinking the width of the TOC ******************* */
 
 /* ==========================================================================
-   SHRINK THE ENTIRE TOC SIDEBAR PANEL WIDTH
-   ========================================================================= */
-
-
-
-/* ==========================================================================
-   RESTRICT CONTENT WIDTH WITHOUT BLOWING OUT PART BLOCK HEIGHTS
+   FORCE SIDEBAR GRID AND TRACK WIDTH DOWN
    ========================================================================== */
 
-/* 1. Target the interior structural components to narrow their visual field */
-.xourse-navigation ul, 
-.xourse-navigation ol,
-.xourse-toc ul, 
-.xourse-toc ol,
-nav ul, 
-nav ol {
-    max-width: 250px !important; /* Safely narrows the list columns horizontally */
+/* 1. Target the grid layout columns used by the KU Leuven template */
+div[class*="sidebar-container"],
+div[class*="nav-container"],
+.sidebar-wrapper,
+#sidebar-wrapper,
+aside,
+.col-md-3, /* If using a standard 12-column grid layout system */
+.col-lg-3 {
+    width: 250px !important;
+    max-width: 250px !important;
+    flex: 0 0 250px !important; /* Prevents the flexbox engine from expanding it */
 }
 
-/* 2. Prevent the activity card lists from over-extending horizontally */
-.activity-list, 
-.xourse-toc .activity-card {
+/* 2. Adjust the main activity text content area so it fills the newly opened space */
+.main-activity,
+div[class*="main-content"],
+.col-md-9,
+.col-lg-9 {
+    max-width: calc(100% - 270px) !important; /* Pushes the body text to take up remaining space */
+    width: auto !important;
+}
+
+/* 3. Keep the inner list tracking boxes bound tightly to the new 250px limit */
+.xourse-navigation, 
+.xourse-toc, 
+nav {
+    width: 100% !important;
     max-width: 250px !important;
 }
-
-/* 3. Keep text strings flat on a single line so they cannot expand container heights */
-.activity-card.part,
-.activity-card.part * {
-    white-space: nowrap !important; /* Strictly forbids text from wrapping down and growing taller */
-    overflow: hidden !important;    /* Hides text overflow if a name is exceptionally long */
-    text-overflow: ellipsis !important; /* Smoothly fades out text with "..." if edge is reached */
-}
-
-
-/* Allow regular activity titles to wrap, but strictly exclude the part bars */
-nav a:not(.part), 
-.xourse-navigation a:not(.part), 
-.xourse-toc a:not(.part) {
-    white-space: normal !important;   /* Regular links can still wrap safely */
-    word-wrap: break-word !important; 
-    display: inline-block !important;
-    max-width: 90% !important;        
-}
-
-
 
 /* ******** Done with changes ********************************  */
 
