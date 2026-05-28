@@ -418,26 +418,39 @@ div[titletext*="Problem"] p:first-of-type {
    SHRINK THE ENTIRE TOC SIDEBAR PANEL WIDTH
    ========================================================================= */
 
-/* Adjust the physical width boundaries of the navigation drawer */
-nav, 
-#sidebar, 
-.sidebar,
-.xourse-navigation, 
-.xourse-toc {
-    width: 260px !important;      /* Forces a smaller, uniform width (Default is often 320px+) */
-    max-width: 280px !important;  /* Strict upper limit constraint */
-    min-width: 200px !important;  /* Prevents it from collapsing too far on tight screens */
+
+
+/* ==========================================================================
+   RESTRICT CONTENT WIDTH WITHOUT BLOWING OUT PART BLOCK HEIGHTS
+   ========================================================================== */
+
+/* 1. Target the interior structural components to narrow their visual field */
+.xourse-navigation ul, 
+.xourse-navigation ol,
+.xourse-toc ul, 
+.xourse-toc ol,
+nav ul, 
+nav ol {
+    max-width: 250px !important; /* Safely narrows the list columns horizontally */
 }
 
-/* Ensure long titles cleanly wrap onto a new line instead of breaking the layout */
-nav a, 
-.xourse-navigation a, 
-.xourse-toc a {
-    white-space: normal !important;   /* Forces text to wrap beautifully */
-    word-wrap: break-word !important; /* Prevents long terms from clipping past the edge */
-    display: inline-block !important;
-    max-width: 90% !important;        /* Keeps text inside the boundaries of the narrowed bar */
+/* 2. Prevent the activity card lists from over-extending horizontally */
+.activity-list, 
+.xourse-toc .activity-card {
+    max-width: 250px !important;
 }
+
+/* 3. Keep text strings flat on a single line so they cannot expand container heights */
+.activity-card.part,
+.activity-card.part * {
+    white-space: nowrap !important; /* Strictly forbids text from wrapping down and growing taller */
+    overflow: hidden !important;    /* Hides text overflow if a name is exceptionally long */
+    text-overflow: ellipsis !important; /* Smoothly fades out text with "..." if edge is reached */
+}
+
+
+
+
 
 /* ******** Done with changes ********************************  */
 
