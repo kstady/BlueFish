@@ -425,8 +425,8 @@ aside,
 .xourse-navigation,
 .xourse-toc,
 nav {
-    max-width: 150px !important;  /* Narrows the maximum allowable width limit */
-    width: 150px !important;      /* Locks the layout box size */
+    max-width: 100px !important;  /* Narrows the maximum allowable width limit */
+    width: 100px !important;      /* Locks the layout box size */
     margin-right: auto !important; /* Locks it firmly against the left edge of its frame */
 }
 
@@ -437,7 +437,7 @@ nav {
 .xourse-toc ol,
 nav ul, 
 nav ol {
-    max-width: 150px !important;
+    max-width: 100px !important;
 }
 
 /* 3. Keep the content frame pulled up left next to the narrowed TOC bar */
@@ -445,7 +445,7 @@ nav ol {
 main,
 #main-content {
     width: auto !important;
-    padding-left: 15px !important; /* Tiny, clean padding gap between lesson text and TOC */
+    padding-left: 10px !important; /* Tiny, clean padding gap between lesson text and TOC */
 }
 
 
