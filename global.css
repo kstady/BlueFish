@@ -430,13 +430,21 @@ div[titletext*="Problem"] p:first-of-type {
     font-size: 18px !important; 
 }
 
-/* Add physical spacing after numbers inside the activity cards */
-.activity-card .number,
-.activity-card .prefix,
-.activity-card span[class*="number"],
-.activity-card span[class*="prefix"] {
-    margin-right: 10px !important; /* Injects a clean gap after the subsection number */
+
+
+/* ==========================================================================
+   FORCE SPACE BETWEEN SUBSECTION NUMBERS AND TITLES
+   ========================================================================== */
+
+/* 1. Add horizontal padding inside the title anchor tags to separate numbers and text */
+.activity-card a {
+    padding-left: 12px !important; /* Creates a clean, protective gap between the 1.5.1 numbers and titles */
     display: inline-block !important;
+}
+
+/* 2. Alternative fix if the template uses a hidden inline separator span */
+.activity-card span {
+    margin-right: 10px !important;
 }
 
 
