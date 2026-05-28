@@ -426,9 +426,9 @@ div[class*="nav-container"],
 aside,
 .col-md-3, /* If using a standard 12-column grid layout system */
 .col-lg-3 {
-    width: 250px !important;
-    max-width: 250px !important;
-    flex: 0 0 250px !important; /* Prevents the flexbox engine from expanding it */
+    width: 200px !important;
+    max-width: 200px !important;
+    flex: 0 0 200px !important; /* Prevents the flexbox engine from expanding it */
 }
 
 /* 2. Adjust the main activity text content area so it fills the newly opened space */
@@ -445,7 +445,7 @@ div[class*="main-content"],
 .xourse-toc, 
 nav {
     width: 100% !important;
-    max-width: 250px !important;
+    max-width: 200px !important;
 }
 
 /* ******** Done with changes ********************************  */
