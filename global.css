@@ -458,7 +458,7 @@ div[titletext*="Problem"] p:first-of-type {
 .activity-card[data-type="chapter"] a,
 [class*="sectionHead"] a,
 [class*="chapterHead"] a {
-    padding-left: 22px !important; /* Larger padding to shift main sections further right */
+    padding-left: 24px !important; /* Larger padding to shift main sections further right */
 }
 
 /* 2. Lock your subsections into a tighter padding bracket */
