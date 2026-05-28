@@ -24,6 +24,66 @@
     color: hsl(0, 0%, 10%) !important;
 }
 
+
+/* ==========================================================================
+   1. INCREASE TOC FONT SIZE & FIX SUBSECTION NUMBERS
+   ========================================================================== */
+
+/* Target and increase the font size of the TOC links */
+nav a, 
+.xourse-navigation a, 
+.xourse-toc a,
+nav li,
+.xourse-navigation li {
+    font-size: 18px !important; /* Increased from 16px to make it clearly larger */
+}
+
+/* Maintain proper spacing so larger section numbers don't run into titles */
+nav li::before, 
+html body ol li::before, 
+html body ul li::before,
+li::marker,
+.number, 
+.prefix,
+span[class*="number"]:not([class*="mjx"]):not([class*="MathJax"]),
+span[class*="prefix"]:not([class*="mjx"]):not([class*="MathJax"]) {
+    font-size: 18px !important; /* Matches the new larger TOC size */
+    margin-right: 12px !important; /* Ensures a clean physical gap after the numbers */
+    display: inline-block;
+}
+
+/* Give the larger TOC list items clean vertical padding */
+nav li {
+    padding-left: 6px !important;
+    line-height: 1.5 !important;
+}
+
+
+/* ==========================================================================
+   2. MATCH PROBLEM SIZE TO THE SMALLER EXAMPLE SIZE
+   ========================================================================== */
+
+/* Downscale the problem environment to match the smaller explanation size */
+.problem,
+.main-activity .problem,
+div[class*="problem"] {
+    font-size: 16px !important; /* Matches the smaller standard text size */
+    line-height: 1.45 !important;
+}
+
+/* Ensure descriptions and text lists inside problems scale down too */
+.problem p,
+.problem li,
+.problem span:not([class*="mjx"]):not([class*="MathJax"]) {
+    font-size: 16px !important;
+}
+
+/* Keep the interactive choice elements cleanly scaled */
+.problem .multiple-choice,
+.problem .choice {
+    font-size: 16px !important;
+}
+
 /* *********************************** Done changing the font ****************************************** */
 
 .xmhint::before {
