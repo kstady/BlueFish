@@ -421,13 +421,13 @@ div[titletext*="Problem"] p:first-of-type {
 /* 1. Scale up the text size for all structural activity cards in the TOC */
 .activity-card,
 .activity-card * {
-    font-size: 17px !important; /* Forces the text inside the TOC cards up to 18px */
+    font-size: 16px !important; /* Forces the text inside the TOC cards up to 18px */
 }
 
 /* 2. Re-scale the part labels to match or sit slightly larger if desired */
 .activity-card.part,
 .activity-card.part * {
-    font-size: 20px !important; 
+    font-size: 21px !important; 
 }
 
 
