@@ -415,31 +415,21 @@ div[titletext*="Problem"] p:first-of-type {
 /* ******** TOC Changes ******************* */
 
 /* ==========================================================================
-   FORCE TOC FONT SIZE UP VIA INDEPENDENT CONTAINER SCALING
+   TARGET THE ACTIVE ACTIVITY-CARDS TO INCREASE TOC FONT SIZE
    ========================================================================== */
 
-/* 1. Force the font size directly on the entire navigation sidebar block */
-nav, 
-aside, 
-.xourse-navigation, 
-.xourse-toc {
-    font-size: 22px !important; /* Adjust this to 19px or 20px if you want it even larger */
+/* 1. Scale up the text size for all structural activity cards in the TOC */
+.activity-card,
+.activity-card * {
+    font-size: 18px !important; /* Forces the text inside the TOC cards up to 18px */
 }
 
-/* 2. Force all text strings and hyperlinks inside that block to follow suit */
-nav *, 
-aside *, 
-.xourse-navigation *, 
-.xourse-toc * {
-    font-size: inherit !important; /* Forces lists, links, and text to scale cleanly to 18px */
+/* 2. Re-scale the part labels to match or sit slightly larger if desired */
+.activity-card.part,
+.activity-card.part * {
+    font-size: 18px !important; 
 }
 
-/* 3. STRICT MATH EXCLUSION: Shield MathJax from inheriting this layout scaling */
-nav .MathJax, 
-nav .MathJax *, 
-nav [class*="mjx"] {
-    font-size: 100% !important; /* Keeps math sizes native and untouched */
-}
 
 /* Keep main content layout flush against the newly narrowed TOC column */
 .main-activity, 
