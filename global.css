@@ -18,11 +18,12 @@
 /* ************************************** Changing the Font! ***********************************************   */
 
 
-@import url('https://cdn.jsdelivr.net/npm/computer-modern-web-font@1.0.0/css/cmun-serif.css');
+@import url('https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts/fonts/latin-modern-roman.css');
 
 body {
-    font-family: "CMU Serif", serif;
+  font-family: "Latin Modern Roman", serif;
 }
+
 
 
 body,
