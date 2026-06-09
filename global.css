@@ -17,11 +17,22 @@
 
 /* ************************************** Changing the Font! ***********************************************   */
 
-/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
-.main-activity {
-    font-size: 22px !important;
-    line-height: 1.55 !important;
-    color: hsl(0, 0%, 10%) !important;
+
+/* ==========================================================================
+   LATEX-STYLE FONT OVERRIDE
+   ========================================================================== */
+
+body,
+html,
+.main-activity,
+.activity-card,
+.sidebar,
+.nav-sidebar,
+button,
+input,
+select,
+textarea {
+    font-family: "CMU Serif", "Computer Modern Serif", "Latin Modern Roman", serif !important;
 }
 
 
@@ -270,7 +281,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     margin-top: 2em !important;
 }
 
-/* 1. Removes the default lavender background for Problem */
+/* 1. Removes the default lavender background for Problem and uses Glaucous Blue */
 div[titletext*="Problem"] {
     background-color: #fdfdfd !important; /* Glaucous Blue Tint */
     border-left: 8px solid #9fb4d3 !important; /* Glaucous Blue Bar */
