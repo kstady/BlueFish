@@ -18,39 +18,6 @@
 /* ************************************** Changing the Font! ***********************************************   */
 
 
-@import url('https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts/fonts/latin-modern-roman.css');
-
-body {
-  font-family: "Latin Modern Roman", serif;
-}
-
-
-
-body,
-p,
-li,
-div,
-span {
-    font-family: "CMU Serif", serif;
-}
-
-
-.MathJax {
-    font-size: 110%;
-}
-
-
-body {
-    font-family: "CMU Serif", serif;
-    line-height: 1.45;
-    text-align: justify;
-}
-
-h1, h2, h3 {
-    font-family: "CMU Serif", serif;
-    font-weight: normal;
-}
-
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
     font-size: 22px !important;
