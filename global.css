@@ -18,24 +18,15 @@
 /* ************************************** Changing the Font! ***********************************************   */
 
 
-/* ==========================================================================
-   LATEX-STYLE FONT OVERRIDE
-   ========================================================================== */
+@import url('https://fonts.cdnfonts.com/css/latin-modern-roman');
 
-body,
-html,
+
 .main-activity,
-.activity-card,
-.sidebar,
-.nav-sidebar,
-button,
-input,
-select,
-textarea {
-    font-family: "CMU Serif", "Computer Modern Serif", "Latin Modern Roman", serif !important;
+.main-activity p,
+.main-activity li,
+.main-activity td {
+    font-family: 'Latin Modern Roman', serif !important;
 }
-
-
 
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
