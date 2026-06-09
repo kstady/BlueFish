@@ -37,6 +37,14 @@ textarea {
 
 
 
+/* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
+.main-activity {
+    font-size: 22px !important;
+    line-height: 1.55 !important;
+    color: hsl(0, 0%, 10%) !important;
+}
+
+
 /* *********************************** Done changing the font ****************************************** */
 
 .xmhint::before {
