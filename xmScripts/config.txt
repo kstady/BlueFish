@@ -56,3 +56,4 @@ YOUR_EMAIL="Kelly.Stady@tri-c.edu"
 # export XM_SETTINGSFILE=config.lua          # yet another way to set some options/Settings
 # export XM_ONLY_CHECK=1                     # do not actually compile/clean anything  (NOT IMPLEMENTED for frost/serve!)
 # export XM_FORCE=1                          # force build (even if uptodate) and serve (use push -f)
+keyid=D4FE3BDABE7BCEFA
