@@ -273,11 +273,11 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     content: none !important;
 }
 
-/* Apply spacing to Multiple Choice and Select All questions inside the main lesson content */
+/* Reduce extra spacing around multiple-choice and select-all blocks */
 .main-activity .multiple-choice,
 .main-activity .select-all {
-    margin-top: 5em !important;
-    margin-bottom: 5em !important;
+    margin-top: 0.75em !important;
+    margin-bottom: 0.75em !important;
 }
 
 
