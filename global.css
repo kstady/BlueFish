@@ -460,35 +460,6 @@ main,
 }
 
 
-/* --- FIX FOR FIRST-LINE FONT SIZE BUG --- */
-/* Match the parent problem blocks to the 22px main activity font size */
-.problem-environment, 
-.exercise,
-.environment {
-    font-size: 22px !important; 
-    line-height: 1.55 !important;
-}
-
-/* --- CRITICAL FONT RESET FOR MAIN ACTIVITY --- */
-/* Force all structural blocks, paragraphs, and list items to exactly 22px */
-.main-activity,
-.main-activity p,
-.main-activity div,
-.main-activity li,
-.problem-environment,
-.problem-environment p,
-.exercise,
-.exercise p {
-    font-size: 22px !important;
-    line-height: 1.55 !important;
-}
-
-/* Fix TeX4ht custom font spans that might be forcing an auto-scale */
-.main-activity span[class*="cm"], 
-.main-activity span[class*="ec"] {
-    font-size: 100% !important; 
-}
-
 
 
 /* ******** Done with changes ********************************  */
