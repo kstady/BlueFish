@@ -459,6 +459,24 @@ main,
     padding-left: 10px !important;    /* Clean spacing padding between lesson layout and TOC */
 }
 
+
+/* --- FIX FOR FIRST-LINE FONT SIZE BUG --- */
+/* Match the parent problem blocks to the 22px main activity font size */
+.problem-environment, 
+.exercise,
+.environment {
+    font-size: 22px !important; 
+    line-height: 1.55 !important;
+}
+
+/* Ensure nested paragraphs inside problems inherit the exact same size */
+.problem-environment p,
+.exercise p {
+    font-size: 22px !important; 
+    line-height: 1.55 !important;
+}
+
+
 /* ******** Done with changes ********************************  */
 
 /* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
