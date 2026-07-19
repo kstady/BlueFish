@@ -276,10 +276,20 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* Give multiple-choice and select-all blocks a balanced gap before and after */
 .main-activity .multiple-choice,
 .main-activity .select-all {
-    margin-top: 0.75em !important;
-    margin-bottom: 0.75em !important;
+    margin-top: 0.35rem !important;
+    margin-bottom: 0.75rem !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    display: block !important;
+}
+
+/* Make the span-based choices sit with a little room between them */
+.main-activity .multiple-choice > .choice,
+.main-activity .select-all > .choice {
+    display: inline-block !important;
+    margin-right: 0.5rem !important;
+    margin-top: 0.15rem !important;
+    margin-bottom: 0.15rem !important;
 }
 
 /* Keep the paragraph before the choices from stealing the top margin */
@@ -287,7 +297,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .noindent + .multiple-choice,
 .main-activity p + .select-all,
 .main-activity .noindent + .select-all {
-    margin-top: 0.75em !important;
+    margin-top: 0.35rem !important;
 }
 
 /* Avoid a double-gap when a paragraph follows the choices */
@@ -295,7 +305,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .multiple-choice + .noindent,
 .main-activity .select-all + p,
 .main-activity .select-all + .noindent {
-    margin-top: 0.75em !important;
+    margin-top: 0.4rem !important;
 }
 
 
