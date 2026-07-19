@@ -276,8 +276,8 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* Give multiple-choice and select-all blocks a balanced gap before and after */
 .main-activity .multiple-choice,
 .main-activity .select-all {
-    margin-top: 0.35rem !important;
-    margin-bottom: 0.75rem !important;
+    margin-top: 0.2rem !important;
+    margin-bottom: 1rem !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     display: block !important;
@@ -297,15 +297,15 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .noindent + .multiple-choice,
 .main-activity p + .select-all,
 .main-activity .noindent + .select-all {
-    margin-top: 0.35rem !important;
+    margin-top: 0.2rem !important;
 }
 
-/* Avoid a double-gap when a paragraph follows the choices */
+/* Give the following paragraph a bit more breathing room after the choices */
 .main-activity .multiple-choice + p,
 .main-activity .multiple-choice + .noindent,
 .main-activity .select-all + p,
 .main-activity .select-all + .noindent {
-    margin-top: 0.4rem !important;
+    margin-top: 0.6rem !important;
 }
 
 
