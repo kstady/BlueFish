@@ -341,7 +341,7 @@ div[titletext*="Problem"] {
     line-height: 1.55 !important;
 }
 
-/* Let MathJax handle its own superscripts and degree symbols instead of forcing a global descendant size */
+/* Let MathJax handle superscripts and degree symbols without clipping them */
 .problem-environment .mathjax-inline,
 .problem-environment .mathjax-env,
 .problem-environment .MathJax,
@@ -350,7 +350,8 @@ div[titletext*="Problem"] {
 .problem-environment .mjx-container,
 .problem-environment .mjx-math {
     font-size: inherit !important;
-    line-height: 1.1 !important;
+    line-height: 1.35 !important;
+    overflow: visible !important;
 }
 
 .problem-environment p,
