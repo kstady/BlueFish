@@ -273,39 +273,51 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     content: none !important;
 }
 
-/* Give multiple-choice and select-all blocks a balanced gap before and after */
-.main-activity .multiple-choice,
-.main-activity .select-all {
-    margin-top: 0.2rem !important;
-    margin-bottom: 1rem !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+/* Make the Ximera multiple-choice container sit closer to the preceding sentence */
+.problem-environment div.multiple-choice,
+.problem-environment div.select-all,
+.main-activity div.multiple-choice,
+.main-activity div.select-all {
+    margin-top: 0.1rem !important;
+    margin-bottom: 0.4rem !important;
     display: block !important;
 }
 
-/* Make the span-based choices sit with a little room between them */
-.main-activity .multiple-choice > .choice,
-.main-activity .select-all > .choice {
+/* Give the choice buttons a bit of separation without adding extra top space */
+.problem-environment div.multiple-choice > span.choice,
+.problem-environment div.select-all > span.choice,
+.main-activity div.multiple-choice > span.choice,
+.main-activity div.select-all > span.choice {
     display: inline-block !important;
-    margin-right: 0.5rem !important;
-    margin-top: 0.15rem !important;
-    margin-bottom: 0.15rem !important;
+    margin-right: 0.4rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 0.1rem !important;
 }
 
-/* Keep the paragraph before the choices from stealing the top margin */
-.main-activity p + .multiple-choice,
-.main-activity .noindent + .multiple-choice,
-.main-activity p + .select-all,
-.main-activity .noindent + .select-all {
-    margin-top: 0.2rem !important;
+/* Reduce the gap between the preceding math block and the choices block */
+.problem-environment .mathjax-block + div.multiple-choice,
+.problem-environment .mathjax-block + div.select-all {
+    margin-top: 0.1rem !important;
 }
 
-/* Give the following paragraph a bit more breathing room after the choices */
-.main-activity .multiple-choice + p,
-.main-activity .multiple-choice + .noindent,
-.main-activity .select-all + p,
-.main-activity .select-all + .noindent {
-    margin-top: 0.6rem !important;
+/* Reduce the gap between the paragraph before the choices and the choices block */
+.problem-environment p + div.multiple-choice,
+.problem-environment .noindent + div.multiple-choice,
+.problem-environment p + div.select-all,
+.problem-environment .noindent + div.select-all,
+.main-activity p + div.multiple-choice,
+.main-activity .noindent + div.multiple-choice,
+.main-activity p + div.select-all,
+.main-activity .noindent + div.select-all {
+    margin-top: 0.1rem !important;
+}
+
+/* Give the following answer paragraph a bit more room after the choices */
+.problem-environment div.multiple-choice + p,
+.problem-environment div.multiple-choice + .noindent,
+.problem-environment div.select-all + p,
+.problem-environment div.select-all + .noindent {
+    margin-top: 0.35rem !important;
 }
 
 
