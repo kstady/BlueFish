@@ -273,11 +273,29 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
     content: none !important;
 }
 
-/* Reduce extra spacing around multiple-choice and select-all blocks */
+/* Give multiple-choice and select-all blocks a balanced gap before and after */
 .main-activity .multiple-choice,
 .main-activity .select-all {
     margin-top: 0.75em !important;
     margin-bottom: 0.75em !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Keep the paragraph before the choices from stealing the top margin */
+.main-activity p + .multiple-choice,
+.main-activity .noindent + .multiple-choice,
+.main-activity p + .select-all,
+.main-activity .noindent + .select-all {
+    margin-top: 0.75em !important;
+}
+
+/* Avoid a double-gap when a paragraph follows the choices */
+.main-activity .multiple-choice + p,
+.main-activity .multiple-choice + .noindent,
+.main-activity .select-all + p,
+.main-activity .select-all + .noindent {
+    margin-top: 0.75em !important;
 }
 
 
