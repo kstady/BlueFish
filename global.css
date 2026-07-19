@@ -267,9 +267,10 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* Apply spacing to Multiple Choice and Select All questions inside the main lesson content */
 .main-activity .multiple-choice,
 .main-activity .select-all {
-    margin-top: 4em !important;s
-    margin-bottom: 4em !important;
+    margin-top: 5em !important;
+    margin-bottom: 5em !important;
 }
+
 
 /* 1. Removes the default lavender background for Problem and uses Glaucous Blue */
 div[titletext*="Problem"] {
