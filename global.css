@@ -278,7 +278,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .problem-environment div.select-all,
 .main-activity div.multiple-choice,
 .main-activity div.select-all {
-    margin-top: -0.1rem !important;
+    margin-top: -1rem !important;
     margin-bottom: 0.3rem !important;
     display: block !important;
 }
@@ -309,7 +309,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .noindent + div.multiple-choice,
 .main-activity p + div.select-all,
 .main-activity .noindent + div.select-all {
-    margin-top: -0.1rem !important;
+    margin-top: -1rem !important;
 }
 
 /* Give the following answer paragraph a bit more room after the choices */
