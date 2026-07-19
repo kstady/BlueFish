@@ -268,6 +268,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 .main-activity .multiple-choice,
 .main-activity .select-all {
     margin-top: 2em !important;
+    margin-bottom: 2em !important;
 }
 
 /* 1. Removes the default lavender background for Problem and uses Glaucous Blue */
