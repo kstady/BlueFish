@@ -25,6 +25,15 @@
     color: hsl(0, 0%, 10%) !important;
 }
 
+/* Keep paragraphs produced inside problems and theorem-like blocks at the normal lesson size. */
+p.noindent,
+.problem-environment p,
+.problem-environment .noindent,
+.theorem-like p,
+.theorem-like .noindent {
+    font-size: inherit !important;
+    line-height: 1.55 !important;
+}
 
 /* *********************************** Done changing the font ****************************************** */
 
