@@ -280,16 +280,24 @@ div[titletext*="Problem"] {
     color: #333 !important;
 }
 
-/* Keep problem-body text at the same size even when a line break creates a new paragraph */
+/* Keep all problem and theorem-like content at the normal lesson size even when it wraps or uses line breaks */
 .problem-environment,
-.problem-environment > p,
-.problem-environment > .noindent {
-    font-size: inherit !important;
+.problem-environment *,
+.problem-environment p,
+.problem-environment .noindent,
+.problem-environment span,
+.problem-environment strong,
+.problem-environment em,
+.problem-environment a,
+.problem-environment li,
+.problem-environment .mathjax-inline,
+.problem-environment .mathjax-env {
+    font-size: 22px !important;
     line-height: 1.55 !important;
 }
 
-.problem-environment > p,
-.problem-environment > .noindent {
+.problem-environment p,
+.problem-environment .noindent {
     margin-top: 1rem !important;
     margin-bottom: 0 !important;
 }
