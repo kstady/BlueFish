@@ -284,7 +284,7 @@ div[titletext*="Problem"] {
 div[titletext*="Problem"] p {
     margin-top: 1rem !important; /* This creates the space BETWEEN paragraphs */
     margin-bottom: 0 !important;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
 }
 
 /* 3. This ensures the VERY FIRST paragraph doesn't have an extra gap at the top */
