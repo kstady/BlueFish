@@ -350,7 +350,7 @@ div[titletext*="Problem"] {
 .problem-environment .mjx-container,
 .problem-environment .mjx-math {
     font-size: inherit !important;
-    line-height: 1.35 !important;
+    line-height: 1.45 !important;
     overflow: visible !important;
 }
 
