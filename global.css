@@ -331,18 +331,26 @@ div[titletext*="Problem"] {
 
 /* Keep all problem and theorem-like content at the normal lesson size even when it wraps or uses line breaks */
 .problem-environment,
-.problem-environment *,
 .problem-environment p,
 .problem-environment .noindent,
-.problem-environment span,
 .problem-environment strong,
 .problem-environment em,
 .problem-environment a,
-.problem-environment li,
-.problem-environment .mathjax-inline,
-.problem-environment .mathjax-env {
+.problem-environment li {
     font-size: 22px !important;
     line-height: 1.55 !important;
+}
+
+/* Let MathJax handle its own superscripts and degree symbols instead of forcing a global descendant size */
+.problem-environment .mathjax-inline,
+.problem-environment .mathjax-env,
+.problem-environment .MathJax,
+.problem-environment .MathJax span,
+.problem-environment .mjx-chtml,
+.problem-environment .mjx-container,
+.problem-environment .mjx-math {
+    font-size: inherit !important;
+    line-height: 1.1 !important;
 }
 
 .problem-environment p,
