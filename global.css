@@ -281,20 +281,22 @@ div[titletext*="Problem"] {
 }
 
 /* Keep problem-body text at the same size even when a line break creates a new paragraph */
-.main-activity .problem-environment,
-.main-activity .problem-environment p,
-.main-activity .problem-environment .noindent {
-    font-size: 1em !important;
+.problem-environment,
+.problem-environment > p,
+.problem-environment > .noindent {
+    font-size: inherit !important;
     line-height: 1.55 !important;
 }
 
-.main-activity .problem-environment p {
+.problem-environment > p,
+.problem-environment > .noindent {
     margin-top: 1rem !important;
     margin-bottom: 0 !important;
 }
 
 /* This ensures the VERY FIRST paragraph doesn't have an extra gap at the top */
-.main-activity .problem-environment p:first-of-type {
+.problem-environment > p:first-of-type,
+.problem-environment > .noindent:first-of-type {
     margin-top: 0 !important;
 }
 
