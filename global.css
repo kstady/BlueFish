@@ -250,46 +250,44 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
    XIMERA MULTIPLE-CHOICE & SELECT-ALL LAYOUT FIX
    ========================================================================== */
 
-/* Force the entire block and its text elements to left-align */
-.problem-environment .multiple-choice, 
-.problem-environment .select-all, 
-.main-activity .multiple-choice, 
-.main-activity .select-all,
-[class*="multiple-choice"], 
-[class*="select-all"] {
+/* Target ONLY the true block container for multiple choice, leaving inline answers alone */
+div.multiple-choice,
+div.select-all {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
   display: block !important;
   clear: both !important;
-  text-align: left !important; /* Fixes centered buttons */
+  text-align: left !important;
 }
 
-/* Make the "Multiple Choice" text label bold and left-aligned */
-.multiple-choice::before,
-.select-all::before {
+/* Format the header label inside the actual multiple choice blocks */
+div.multiple-choice::before,
+div.select-all::before {
+  content: "Multiple Choice" !important;
   font-weight: bold !important;
   display: block !important;
   text-align: left !important;
-  margin-bottom: 0.75rem !important; /* Space between label and boxes */
+  margin-bottom: 0.75rem !important;
+}
+/* For select-all question blocks, make the label match */
+div.select-all::before {
+  content: "Select All That Apply" !important;
 }
 
-/* Ensure the choice button items align cleanly on the left margin */
-.problem-environment .choice, 
-.main-activity .choice,
-span.choice {
+/* Target ONLY the spans that are direct children of the multiple choice block container */
+div.multiple-choice > span.choice,
+div.select-all > span.choice {
   display: inline-block !important;
   margin-right: 0.5rem !important;
   margin-bottom: 0.5rem !important;
   text-align: left !important;
 }
 
-/* Ensure the check work button aligns cleanly with spacing */
-.problem-environment .btn, 
-.problem-environment button,
-.main-activity back-to-top + button {
-  margin-left: 0 !important; /* Lines it up with the left margin */
-  margin-top: 0.5rem !important;
-  display: inline-block !important;
+/* Ensure inline verification answer layouts retain their native flexible positioning */
+.problem-environment .form-inline,
+.problem-environment .answer-container {
+  display: inline-flex !important;
+  vertical-align: middle !important;
 }
 
 
