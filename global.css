@@ -591,6 +591,21 @@ div.select-all > span.choice {
 }
 
 
+/* Move the top header tools (Downloads, Settings, Math Editor, Contact) to the right */
+.xmdownload,
+.xmsettings,
+.xmmatheditor,
+.xmcontact {
+    float: right !important;
+    margin-left: 1rem !important;
+}
+
+/* Ensure the header container allows right-floating items */
+.main-title {
+    width: 100% !important;
+    display: block !important;
+    overflow: hidden !important;
+}
 
 
 /* ******** Done with changes ********************************  */
