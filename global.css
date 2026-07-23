@@ -668,18 +668,7 @@ div.select-all > span.choice {
     width: 100% !important;
 }
 
-/* Treat the orange bar as the center item */
-.activity-title-center {
-    flex-grow: 1 !important;
-    text-align: center !important;
-    order: 2 !important;
 
-    /* This is the magic: allow children to escape vertically */
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
 
 /* Make the activity title container relative */
 .activity-title {
@@ -690,6 +679,7 @@ div.select-all > span.choice {
 .activity-title-center {
     text-align: center !important;
 }
+
 
 /* Make the orange bar the positioning container */
 .activity-title-center {
@@ -723,11 +713,16 @@ div.select-all > span.choice {
     line-height: 1.4 !important;
 }
 
-
 mjx-container {
+    line-height: normal !important;
+    overflow: visible !important;
+    padding: 6px 0 !important;
     display: inline-block !important;
 }
 
+mjx-container > svg {
+    overflow: visible !important;
+}
 
 /* ******** Done with changes ********************************  */
 
