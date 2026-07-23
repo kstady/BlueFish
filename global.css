@@ -20,7 +20,7 @@
 
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
-    font-size: 21px !important;
+    font-size: 22px !important;
     line-height: 1.55 !important;
     color: hsl(0, 0%, 10%) !important;
 }
@@ -243,81 +243,45 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 
 
 
-/*  **************************** Modifications made with the help of AI. *****************************  */
-/*  **************************** Save, then use CTRL F5 in HTML to apply changes. *****************************  */
+/* **************************** Modifications made with the help of AI. ***************************** */
+/* **************************** Save, then use CTRL F5 in HTML to apply changes. ***************************** */
 
 /* Only applies spacing if it is inside the main-activity container, not the TOC. */
-.main-activity p, 
-.main-activity .problem, 
-.main-activity .theorem, 
-.main-activity .definition, 
-.main-activity .exercise, 
-.main-activity .remark, 
-.main-activity h2, 
-.main-activity h3 {
-    margin-top: 1.5rem !important;
-    margin-bottom: 1.5rem !important;
-    display: block;
+.main-activity p, .main-activity .problem, .main-activity .theorem, .main-activity .definition, .main-activity .exercise, .main-activity .remark, .main-activity h2, .main-activity h3 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  display: block;
 }
 
 /* List spacing specifically for the lesson */
 .main-activity li {
-    margin-bottom: 1rem !important;
-    margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  margin-top: 1rem !important;
 }
 
 /* The item[] fix - also scoped to the activity */
-.main-activity li[data-label=""]::marker, 
-.main-activity li[data-label=" "]::marker, 
-.main-activity li[data-label="~"]::marker {
-    content: none !important;
+.main-activity li[data-label=""]::marker, .main-activity li[data-label=" "]::marker, .main-activity li[data-label="~"]::marker {
+  content: none !important;
 }
 
-/* Make the Ximera multiple-choice container sit closer to the preceding sentence */
-.problem-environment div.multiple-choice,
-.problem-environment div.select-all,
-.main-activity div.multiple-choice,
+/* Correctly handles top and bottom padding/margins on Ximera multiple-choice containers */
+.problem-environment div.multiple-choice, 
+.problem-environment div.select-all, 
+.main-activity div.multiple-choice, 
 .main-activity div.select-all {
-    margin-top: -1rem !important;
-    margin-bottom: 0.3rem !important;
-    display: block !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+  display: block !important;
 }
 
-/* Give the choice buttons a bit of separation without adding extra top space */
-.problem-environment div.multiple-choice > span.choice,
-.problem-environment div.select-all > span.choice,
-.main-activity div.multiple-choice > span.choice,
+/* Give individual choice buttons separation */
+.problem-environment div.multiple-choice > span.choice, 
+.problem-environment div.select-all > span.choice, 
+.main-activity div.multiple-choice > span.choice, 
 .main-activity div.select-all > span.choice {
-    display: inline-block !important;
-    margin-right: 0.4rem !important;
-    margin-top: -1rem !important;
-    margin-bottom: 0.1rem !important;
-}
-
-/* Reduce the gap between the preceding math block and the choices block */
-.problem-environment .mathjax-block + div.multiple-choice,
-.problem-environment .mathjax-block + div.select-all {
-    margin-top: 0.1rem !important;
-}
-
-/* Reduce the gap between the paragraph before the choices and the choices block */
-.problem-environment p + div.multiple-choice,
-.problem-environment .noindent + div.multiple-choice,
-.problem-environment p + div.select-all,
-.problem-environment .noindent + div.select-all,
-.main-activity p + div.multiple-choice,
-.main-activity .noindent + div.multiple-choice,
-.main-activity p + div.select-all,
-.main-activity .noindent + div.select-all {
-    margin-top: -1rem !important;
-}
-
-/* Give the following answer paragraph a bit more room after the choices */
-.problem-environment div.multiple-choice + p,
-.problem-environment div.multiple-choice + .noindent,
-.problem-environment div.select-all + p,
-.problem-environment div.select-all + .noindent {
-    margin-top: 0.35rem !important;
+  display: inline-block !important;
+  margin-right: 0.4rem !important;
+  margin-bottom: 0.4rem !important;
 }
 
 
