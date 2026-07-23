@@ -723,6 +723,22 @@ div.select-all > span.choice {
     line-height: 1.4 !important;
 }
 
+
+/* Fix exponent clipping inside lesson content */
+.main-inhoud,
+.main-inhoud p,
+.main-inhoud span,
+.main-inhoud div,
+.main-inhoud mjx-container {
+    line-height: 1.45 !important;
+}
+
+/* Give MathJax extra breathing room */
+mjx-container {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
 /* ******** Done with changes ********************************  */
 
 /* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
