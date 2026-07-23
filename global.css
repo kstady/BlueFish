@@ -448,22 +448,21 @@ div.select-all > span.choice {
   display: inline !important;
 }
 
-/* 1. Force the inner header tags to stay inline with their sub-captions */
-.definition h5, .theorem h5, .procedure h5, .remark h5, .warning h5, .example h5, .note h5,
-.panel-heading, .environment-title, [class*="-title"] {
-  display: inline !important;
-}
-
-/* 2. Target the first paragraph that directly follows the header tags and push it down */
-.definition h5 + p, .definition-environment h5 + p,
-.theorem h5 + p, .theorem-environment h5 + p,
-.procedure h5 + p, .procedure-environment h5 + p,
-.remark h5 + p, .warning h5 + p, .example h5 + p, .note h5 + p,
-.definition h5 + .noindent, .theorem h5 + .noindent, .procedure h5 + .noindent {
+/* Safely push content down after titles without touching global navigation or headings */
+.main-activity .theorem > p:first-of-type,
+.main-activity .definition > p:first-of-type,
+.main-activity .procedure > p:first-of-type,
+.main-activity .remark > p:first-of-type,
+.main-activity .warning > p:first-of-type,
+.main-activity .example > p:first-of-type,
+.main-activity .note > p:first-of-type,
+.main-activity .theorem-environment > p:first-of-type,
+.main-activity .definition-environment > p:first-of-type,
+.main-activity .procedure-environment > p:first-of-type {
   margin-top: 1.5rem !important;
-  display: block !important;
   clear: both !important;
 }
+
 
 
 
