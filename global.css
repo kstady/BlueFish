@@ -625,6 +625,45 @@ header {
 }
 
 
+/* ============================================================
+   FIX XIMERA HEADER ALIGNMENT (FINAL)
+   ============================================================ */
+
+/* Restore flex layout for the top navigation bar */
+header.navbar,
+header .navbar-header,
+header .navbar-collapse {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+/* Force the right-side menu (Downloads, Settings, Contact) to align right */
+header .navbar-nav {
+    margin-left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Center the orange section title bar and allow it to expand */
+#ximera-title,
+.ximera-title,
+header .title {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    display: block !important;
+    width: fit-content !important;
+}
+
+/* Prevent main-activity spacing from collapsing the header */
+header {
+    flex-shrink: 0 !important;
+}
+
+
+
 /* ******** Done with changes ********************************  */
 
 /* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
