@@ -645,6 +645,38 @@ div.select-all > span.choice {
 }
 
 
+/* Turn the entire activity title area into a horizontal flexbox */
+.activity-title {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+/* Center the orange bar */
+.activity-title-center {
+    flex-grow: 1 !important;
+    text-align: center !important;
+    order: 2 !important;
+}
+
+/* Left arrow */
+.xmprev {
+    order: 1 !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-right: 1rem !important;
+}
+
+/* Right arrow */
+.xmnext {
+    order: 3 !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    padding-left: 1rem !important;
+}
 
 /* ******** Done with changes ********************************  */
 
