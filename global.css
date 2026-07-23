@@ -579,42 +579,25 @@ div.select-all > span.choice {
 
 
 
-
-/* Fix the orange bar container */
-.activity-title-center {
-    width: 100% !important;
-    text-align: center !important;
-    display: block !important;
-    margin: 0 auto !important;
+/* Force the top menu (Downloads / Settings / Math Editor / Contact) to the right */
+.navbar .nav,
+.navbar-nav,
+.navbar-right {
+  float: right !important;
+  margin-right: 20px !important;
 }
 
-/* Make the orange bar itself expand and center */
-.activity-title-center .title {
-    display: inline-block !important;
-    padding: 0.5rem 2rem !important;
+/* Keep the logo/title on the left if present */
+.navbar-header,
+.navbar .navbar-left {
+  float: left !important;
 }
 
-
-/* Fix layout of the left/right navigation arrows around the orange bar */
-.activity-title-wrapper {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    width: 100% !important;
+/* Prevent the menu from stretching full width */
+.navbar .nav > li {
+  display: inline-block !important;
 }
 
-/* Ensure the orange bar stays centered inside the flex container */
-.activity-title-center {
-    text-align: center !important;
-    flex-grow: 1 !important;
-}
-
-/* Make sure the arrows don't wrap above/below */
-.activity-title-wrapper .activity-nav {
-    flex-shrink: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-}
 
 
 
