@@ -265,7 +265,7 @@ div.multiple-choice::before,
 div.select-all::before {
   content: "Multiple Choice" !important;
   font-weight: bold !important;
-  font-size: 1.5rem !important; /* Makes the font smaller (Matches standard body size) */
+  font-size: 1.2rem !important; /* Makes the font smaller (Matches standard body size) */
   display: block !important;
   text-align: left !important;
   margin-bottom: 0.75rem !important;
@@ -274,7 +274,7 @@ div.select-all::before {
 /* For select-all question blocks, make the label match and show correct text */
 div.select-all::before {
   content: "Select All That Apply" !important;
-  font-size: 1rem !important; /* Keeps sizing identical for select-all */
+  font-size: 1.2rem !important; /* Keeps sizing identical for select-all */
 }
 
 /* Target ONLY the spans that are direct children of the multiple choice block container */
