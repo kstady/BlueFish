@@ -442,15 +442,16 @@ div.select-all > span.choice {
   display: block !important;
 }
 
-/* Creates a distinct space immediately after the default environment titles */
-.theorem::after, .theorem-environment::after,
-.definition::after, .definition-environment::after,
-.procedure::after, .procedure-environment::after,
-.remark::after, .warning::after, .example::after, .note::after {
-  content: "" !important;
-  display: block !important;
+/* Creates a distinct space immediately after environment title headers */
+.theorem h5, .theorem-environment h5,
+.definition h5, .definition-environment h5,
+.procedure h5, .procedure-environment h5,
+.remark h5, .warning h5, .example h5, .note h5,
+.panel-heading, .environment-title, [class*="-title"] {
   margin-bottom: 1.5rem !important;
+  display: block !important;
 }
+
 
 /* Adds consistent spacing AFTER paragraphs globally to keep text readable */
 .main-activity p,
