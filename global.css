@@ -448,13 +448,24 @@ div.select-all > span.choice {
   display: inline !important;
 }
 
-/* Push the text down by adding space to the first paragraph inside these specific environments */
-.theorem > p:first-of-type, .theorem-environment > p:first-of-type,
-.definition > p:first-of-type, .definition-environment > p:first-of-type,
-.procedure > p:first-of-type, .procedure-environment > p:first-of-type,
-.remark > p:first-of-type, .warning > p:first-of-type,
-.example > p:first-of-type, .note > p:first-of-type {
-  margin-top: 1.5rem !important;
+/* 1. Force the title row container to act as a block with a bottom space */
+.theorem h5, .theorem-environment h5,
+.definition h5, .definition-environment h5,
+.procedure h5, .procedure-environment h5,
+.remark h5, .warning h5, .example h5, .note h5,
+.panel-heading, .environment-title, [class*="-title"] {
+  margin-bottom: 1.5rem !important;
+  display: block !important; 
+  clear: both !important;
+}
+
+/* 2. Force absolutely everything INSIDE that title row to stay on the exact same line */
+.theorem h5 *, .theorem-environment h5 *,
+.definition h5 *, .definition-environment h5 *,
+.procedure h5 *, .procedure-environment h5 *,
+.remark h5 *, .warning h5 *, .example h5 *, .note h5 *,
+.panel-heading *, .environment-title *, [class*="-title"] * {
+  display: inline !important;
 }
 
 
