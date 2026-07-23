@@ -250,7 +250,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
    XIMERA MULTIPLE-CHOICE & SELECT-ALL LAYOUT FIX
    ========================================================================== */
 
-/* Force the multiple choice container to completely clear the preceding text blocks */
+/* Force the entire block and its text elements to left-align */
 .problem-environment .multiple-choice, 
 .problem-environment .select-all, 
 .main-activity .multiple-choice, 
@@ -261,33 +261,37 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
   margin-bottom: 2.5rem !important;
   display: block !important;
   clear: both !important;
+  text-align: left !important; /* Fixes centered buttons */
 }
 
-/* Add explicit breathing room directly to the generated "Multiple Choice" text label */
+/* Make the "Multiple Choice" text label bold and left-aligned */
 .multiple-choice::before,
-.select-all::before,
-.multiple-choice,
-.select-all {
-  padding-top: 0.5rem !important;
+.select-all::before {
+  font-weight: bold !important;
+  display: block !important;
+  text-align: left !important;
+  margin-bottom: 0.75rem !important; /* Space between label and boxes */
 }
 
-/* Give individual choice buttons separation and breathing room */
+/* Ensure the choice button items align cleanly on the left margin */
 .problem-environment .choice, 
 .main-activity .choice,
 span.choice {
   display: inline-block !important;
   margin-right: 0.5rem !important;
   margin-bottom: 0.5rem !important;
-  margin-top: 0.5rem !important;
+  text-align: left !important;
 }
 
 /* Ensure the check work button aligns cleanly with spacing */
 .problem-environment .btn, 
 .problem-environment button,
 .main-activity back-to-top + button {
-  margin-left: 1rem !important;
-  vertical-align: middle !important;
+  margin-left: 0 !important; /* Lines it up with the left margin */
+  margin-top: 0.5rem !important;
+  display: inline-block !important;
 }
+
 
 /* **************************** End MC and Select All Spacing ***************************** */
 
