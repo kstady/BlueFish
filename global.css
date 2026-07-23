@@ -442,15 +442,21 @@ div.select-all > span.choice {
   display: block !important;
 }
 
-/* Creates a distinct space immediately after environment title headers */
-.theorem h5, .theorem-environment h5,
-.definition h5, .definition-environment h5,
-.procedure h5, .procedure-environment h5,
-.remark h5, .warning h5, .example h5, .note h5,
-.panel-heading, .environment-title, [class*="-title"] {
-  margin-bottom: 1.5rem !important;
-  display: block !important;
+/* Keep the title items inline on the same line */
+.definition h5, .theorem h5, .procedure h5,
+.environment-title, [class*="-title"] {
+  display: inline !important;
 }
+
+/* Push the text down by adding space to the first paragraph inside these specific environments */
+.theorem > p:first-of-type, .theorem-environment > p:first-of-type,
+.definition > p:first-of-type, .definition-environment > p:first-of-type,
+.procedure > p:first-of-type, .procedure-environment > p:first-of-type,
+.remark > p:first-of-type, .warning > p:first-of-type,
+.example > p:first-of-type, .note > p:first-of-type {
+  margin-top: 1.5rem !important;
+}
+
 
 
 /* Adds consistent spacing AFTER paragraphs globally to keep text readable */
