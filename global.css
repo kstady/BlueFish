@@ -623,6 +623,29 @@ div.select-all > span.choice {
 }
 
 
+/* Put the arrows on the left and right of the orange bar */
+.activity-title-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+/* Keep the orange bar centered */
+.activity-title-center {
+    flex-grow: 1 !important;
+    text-align: center !important;
+}
+
+/* Prevent arrows from stacking */
+.activity-nav {
+    flex-shrink: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+
+
 /* ******** Done with changes ********************************  */
 
 /* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
