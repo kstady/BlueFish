@@ -626,42 +626,40 @@ header {
 
 
 /* ============================================================
-   FIX XIMERA HEADER ALIGNMENT (FINAL)
+   RESTORE XIMERA HEADER LAYOUT (FINAL + VERIFIED)
    ============================================================ */
 
-/* Restore flex layout for the top navigation bar */
-header.navbar,
-header .navbar-header,
-header .navbar-collapse {
+/* Make the top header a proper flex container again */
+.navbar {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
     width: 100% !important;
 }
 
-/* Force the right-side menu (Downloads, Settings, Contact) to align right */
-header .navbar-nav {
+/* Right-align the Downloads / Settings / Contact menu */
+.navbar-nav {
     margin-left: auto !important;
     display: flex !important;
     align-items: center !important;
 }
 
-/* Center the orange section title bar and allow it to expand */
-#ximera-title,
+/* Center and widen the orange section title bar */
+.navbar .activity-title,
+#activity-title,
 .ximera-title,
 header .title {
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center !important;
     display: block !important;
-    width: fit-content !important;
+    width: max-content !important;
 }
 
-/* Prevent main-activity spacing from collapsing the header */
+/* Prevent header from collapsing when main content grows */
 header {
     flex-shrink: 0 !important;
 }
-
 
 
 /* ******** Done with changes ********************************  */
