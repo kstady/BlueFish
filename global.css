@@ -449,7 +449,7 @@ div.select-all > span.choice {
 .remark::after, .warning::after, .example::after, .note::after {
   content: "" !important;
   display: block !important;
-  margin-bottom: 1.25rem !important;
+  margin-bottom: 1.5rem !important;
 }
 
 /* Adds consistent spacing AFTER paragraphs globally to keep text readable */
