@@ -694,7 +694,7 @@ div.select-all > span.choice {
 /* LEFT ARROW */
 .xmprev {
     position: absolute !important;
-    left: 0 !important;
+    left: 10px !important;        /* move closer to the orange bar */
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
@@ -702,10 +702,11 @@ div.select-all > span.choice {
 /* RIGHT ARROW */
 .xmnext {
     position: absolute !important;
-    right: 0 !important;
+    right: 10px !important;       /* move closer to the orange bar */
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
+
 
 
 /* ******** Done with changes ********************************  */
