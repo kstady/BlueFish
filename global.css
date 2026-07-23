@@ -578,24 +578,16 @@ div.select-all > span.choice {
 }
 
 
-
-/* Force the top menu (Downloads / Settings / Math Editor / Contact) to the right */
-.navbar .nav,
-.navbar-nav,
-.navbar-right {
-  float: right !important;
-  margin-right: 20px !important;
+.activity-title-center {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
 }
 
-/* Keep the logo/title on the left if present */
-.navbar-header,
-.navbar .navbar-left {
-  float: left !important;
-}
-
-/* Prevent the menu from stretching full width */
-.navbar .nav > li {
-  display: inline-block !important;
+.activity-title-center .title {
+    display: inline-block !important;
+    padding: 0.5rem 2rem !important;
 }
 
 
