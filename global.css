@@ -705,22 +705,19 @@ div.select-all > span.choice {
 }
 
 
-/* Fix exponent clipping inside lesson content */
-.main-inhoud, 
-.main-inhoud p, 
-.main-inhoud span, 
-.main-inhoud div {
-    line-height: 1.4 !important;
-}
-
 mjx-container {
-    line-height: normal !important;
     overflow: visible !important;
-    padding: 6px 0 !important;
-    display: inline-block !important;
 }
 
-mjx-container > svg {
+mjx-container mjx-math {
+    overflow: visible !important;
+}
+
+mjx-container svg {
+    overflow: visible !important;
+}
+
+mjx-container mjx-msup {
     overflow: visible !important;
 }
 
