@@ -442,6 +442,25 @@ div.select-all > span.choice {
   display: block !important;
 }
 
+/* Creates a distinct space immediately after the default environment titles */
+.theorem::after, .theorem-environment::after,
+.definition::after, .definition-environment::after,
+.procedure::after, .procedure-environment::after,
+.remark::after, .warning::after, .example::after, .note::after {
+  content: "" !important;
+  display: block !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* Adds consistent spacing AFTER paragraphs globally to keep text readable */
+.main-activity p,
+.problem-environment p, 
+.problem-environment .noindent {
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important; /* Space after each paragraph */
+}
+
+
 
 /* TOC CHANGES */
 
