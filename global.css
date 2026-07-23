@@ -580,6 +580,21 @@ div.select-all > span.choice {
 
 
 
+/* Fix the orange bar container */
+.activity-title-center {
+    width: 100% !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Make the orange bar itself expand and center */
+.activity-title-center .title {
+    display: inline-block !important;
+    padding: 0.5rem 2rem !important;
+}
+
+
 /* ******** Done with changes ********************************  */
 
 /* ******** Save file, then use Ctrl F5 on webpage whenever you modify this file. **** */
