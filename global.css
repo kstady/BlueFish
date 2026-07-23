@@ -457,7 +457,7 @@ div.select-all > span.choice {
 .problem-environment p, 
 .problem-environment .noindent {
   margin-top: 0 !important;
-  margin-bottom: 1.5rem !important; /* Space after each paragraph */
+  margin-bottom: 1.8rem !important; /* Space after each paragraph */
 }
 
 
