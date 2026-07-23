@@ -246,42 +246,47 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* **************************** Modifications made with the help of AI. ***************************** */
 /* **************************** Save, then use CTRL F5 in HTML to apply changes. ***************************** */
 
-/* Only applies spacing if it is inside the main-activity container, not the TOC. */
-.main-activity p, .main-activity .problem, .main-activity .theorem, .main-activity .definition, .main-activity .exercise, .main-activity .remark, .main-activity h2, .main-activity h3 {
-  margin-top: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
-  display: block;
-}
+/* ==========================================================================
+   XIMERA MULTIPLE-CHOICE & SELECT-ALL LAYOUT FIX
+   ========================================================================== */
 
-/* List spacing specifically for the lesson */
-.main-activity li {
-  margin-bottom: 1rem !important;
-  margin-top: 1rem !important;
-}
-
-/* The item[] fix - also scoped to the activity */
-.main-activity li[data-label=""]::marker, .main-activity li[data-label=" "]::marker, .main-activity li[data-label="~"]::marker {
-  content: none !important;
-}
-
-/* Correctly handles top and bottom padding/margins on Ximera multiple-choice containers */
-.problem-environment div.multiple-choice, 
-.problem-environment div.select-all, 
-.main-activity div.multiple-choice, 
-.main-activity div.select-all {
+/* Force the multiple choice container to completely clear the preceding text blocks */
+.problem-environment .multiple-choice, 
+.problem-environment .select-all, 
+.main-activity .multiple-choice, 
+.main-activity .select-all,
+[class*="multiple-choice"], 
+[class*="select-all"] {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
   display: block !important;
+  clear: both !important;
 }
 
-/* Give individual choice buttons separation */
-.problem-environment div.multiple-choice > span.choice, 
-.problem-environment div.select-all > span.choice, 
-.main-activity div.multiple-choice > span.choice, 
-.main-activity div.select-all > span.choice {
+/* Add explicit breathing room directly to the generated "Multiple Choice" text label */
+.multiple-choice::before,
+.select-all::before,
+.multiple-choice,
+.select-all {
+  padding-top: 0.5rem !important;
+}
+
+/* Give individual choice buttons separation and breathing room */
+.problem-environment .choice, 
+.main-activity .choice,
+span.choice {
   display: inline-block !important;
-  margin-right: 0.4rem !important;
-  margin-bottom: 0.4rem !important;
+  margin-right: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  margin-top: 0.5rem !important;
+}
+
+/* Ensure the check work button aligns cleanly with spacing */
+.problem-environment .btn, 
+.problem-environment button,
+.main-activity back-to-top + button {
+  margin-left: 1rem !important;
+  vertical-align: middle !important;
 }
 
 
