@@ -592,34 +592,32 @@ div.select-all > span.choice {
 
 
 /*   *********************Move all header tools to the right in the correct order */
-.main-title .xmdownload {
-    float: right !important;
-    order: 1;
-}
-
-.main-title .xmsettings {
-    float: right !important;
-    order: 2;
-}
-
-.main-title .xmmatheditor {
-    float: right !important;
-    order: 3;
-}
-
-/* Contact is just a span, so target it directly */
-.main-title .xmhidden-small {
-    float: right !important;
-    order: 4;
-    margin-left: 1rem !important;
-}
-
-/* Make the header a flex container so order works */
+/* Make the header a flex container so we can control order */
 .main-title {
     display: flex !important;
     justify-content: flex-end !important;
     align-items: center !important;
     gap: 1rem !important;
+}
+
+/* Downloads first */
+.main-title .xmdownload {
+    order: 1 !important;
+}
+
+/* Settings second */
+.main-title .xmsettings {
+    order: 2 !important;
+}
+
+/* Math Editor third */
+.main-title .xmmatheditor {
+    order: 3 !important;
+}
+
+/* Contact last — this targets the span you showed */
+.main-title .xmhidden-small {
+    order: 4 !important;
 }
 
 /* ******** Done with changes ********************************  */
