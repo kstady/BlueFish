@@ -660,22 +660,41 @@ div.select-all > span.choice {
     order: 2 !important;
 }
 
+/* Make the whole activity title area a flexbox */
+.activity-title {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+}
+
+/* Treat the orange bar as the center item */
+.activity-title-center {
+    flex-grow: 1 !important;
+    text-align: center !important;
+    order: 2 !important;
+
+    /* This is the magic: allow children to escape vertically */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
 /* Left arrow */
 .xmprev {
     order: 1 !important;
-    flex-shrink: 0 !important;
+    margin-right: auto !important;
     display: flex !important;
     align-items: center !important;
-    padding-right: 1rem !important;
 }
 
 /* Right arrow */
 .xmnext {
     order: 3 !important;
-    flex-shrink: 0 !important;
+    margin-left: auto !important;
     display: flex !important;
     align-items: center !important;
-    padding-left: 1rem !important;
 }
 
 /* ******** Done with changes ********************************  */
