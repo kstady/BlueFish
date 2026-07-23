@@ -247,7 +247,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* **************************** Save, then use CTRL F5 in HTML to apply changes. ***************************** */
 
 /* ==========================================================================
-   1. CORE MATH ENVIRONMENT PACING & SIZING (FIXED)
+   1. CORE MATH ENVIRONMENT PACING & SIZING
    ========================================================================= */
 
 /* Removes default lavender background for Problem and uses Glaucous Blue */
@@ -268,7 +268,6 @@ div[titletext*="Problem"] {
 .main-activity .example-environment, .main-activity .note-environment {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
-  /* display: block !important; REMOVED: This was breaking the header layout flexbox settings */
 }
 
 /* Safely push content down after titles without touching global navigation or headings */
@@ -448,6 +447,10 @@ div.select-all > span.choice {
   margin-bottom: 2rem !important;
   display: block !important;
 }
+
+
+
+
 
 /* Keep the title items inline on the same line */
 .definition h5, .theorem h5, .procedure h5,
