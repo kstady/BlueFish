@@ -591,22 +591,36 @@ div.select-all > span.choice {
 }
 
 
-/* Move the top header tools (Downloads, Settings, Math Editor, Contact) to the right */
-.xmdownload,
-.xmsettings,
-.xmmatheditor,
-.xmcontact {
+/*   *********************Move all header tools to the right in the correct order */
+.main-title .xmdownload {
     float: right !important;
+    order: 1;
+}
+
+.main-title .xmsettings {
+    float: right !important;
+    order: 2;
+}
+
+.main-title .xmmatheditor {
+    float: right !important;
+    order: 3;
+}
+
+/* Contact is just a span, so target it directly */
+.main-title .xmhidden-small {
+    float: right !important;
+    order: 4;
     margin-left: 1rem !important;
 }
 
-/* Ensure the header container allows right-floating items */
+/* Make the header a flex container so order works */
 .main-title {
-    width: 100% !important;
-    display: block !important;
-    overflow: hidden !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: center !important;
+    gap: 1rem !important;
 }
-
 
 /* ******** Done with changes ********************************  */
 
