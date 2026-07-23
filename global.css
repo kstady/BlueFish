@@ -715,7 +715,13 @@ div.select-all > span.choice {
 }
 
 
-
+/* Fix exponent clipping inside lesson content */
+.main-inhoud, 
+.main-inhoud p, 
+.main-inhoud span, 
+.main-inhoud div {
+    line-height: 1.4 !important;
+}
 
 /* ******** Done with changes ********************************  */
 
