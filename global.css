@@ -247,7 +247,7 @@ e.g. use "P1", "Problem 1", "Prob 1", "Exciting Problem 1", etc.
 /* **************************** Save, then use CTRL F5 in HTML to apply changes. ***************************** */
 
 /* ==========================================================================
-   1. CORE MATH ENVIRONMENT PACING & SIZING
+   1. CORE MATH ENVIRONMENT PACING & SIZING (FIXED)
    ========================================================================= */
 
 /* Removes default lavender background for Problem and uses Glaucous Blue */
@@ -258,26 +258,32 @@ div[titletext*="Problem"] {
   color: #333 !important;
 }
 
-/* Explicit layout container block spacing before and after ALL Ximera environments */
-.problem-environment, 
-.theorem, .definition, .exercise, .remark, .warning, .example, .lemma, .corollary, .note,
-.theorem-environment, .definition-environment, .warning-environment, .example-environment, .note-environment {
+/* Explicit layout container block spacing before and after textbook elements */
+.main-activity .problem-environment, 
+.main-activity .theorem, .main-activity .definition, .main-activity .procedure, 
+.main-activity .exercise, .main-activity .remark, .main-activity .warning, 
+.main-activity .example, .main-activity .lemma, .main-activity .corollary, .main-activity .note,
+.main-activity .theorem-environment, .main-activity .definition-environment, 
+.main-activity .procedure-environment, .main-activity .warning-environment, 
+.main-activity .example-environment, .main-activity .note-environment {
   margin-top: 2.5rem !important;
   margin-bottom: 2.5rem !important;
-  display: block !important;
+  /* display: block !important; REMOVED: This was breaking the header layout flexbox settings */
 }
 
-/* Adds explicit space after the title for all panels EXCEPT Problems */
-.theorem p:first-of-type, .theorem .noindent:first-of-type,
-.definition p:first-of-type, .definition .noindent:first-of-type,
-.remark p:first-of-type, .remark .noindent:first-of-type,
-.warning p:first-of-type, .warning .noindent:first-of-type,
-.example p:first-of-type, .example .noindent:first-of-type,
-.lemma p:first-of-type, .lemma .noindent:first-of-type,
-.note p:first-of-type, .note .noindent:first-of-type,
-.theorem-environment p:first-of-type, .definition-environment p:first-of-type,
-.warning-environment p:first-of-type, .example-environment p:first-of-type, .note-environment p:first-of-type {
+/* Safely push content down after titles without touching global navigation or headings */
+.main-activity .theorem > p:first-of-type,
+.main-activity .definition > p:first-of-type,
+.main-activity .procedure > p:first-of-type,
+.main-activity .remark > p:first-of-type,
+.main-activity .warning > p:first-of-type,
+.main-activity .example > p:first-of-type,
+.main-activity .note > p:first-of-type,
+.main-activity .theorem-environment > p:first-of-type,
+.main-activity .definition-environment > p:first-of-type,
+.main-activity .procedure-environment > p:first-of-type {
   margin-top: 1.5rem !important;
+  clear: both !important;
 }
 
 /* Keep all content at the normal lesson size even when it wraps or uses line breaks */
@@ -305,11 +311,12 @@ div[titletext*="Problem"] {
   overflow: visible !important;
 }
 
-/* Standard paragraph rules inside math container blocks */
+/* Adds consistent spacing AFTER paragraphs globally to keep text readable */
+.main-activity p,
 .problem-environment p, 
 .problem-environment .noindent {
-  margin-top: 1rem !important;
-  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.5rem !important; /* Space after each paragraph */
 }
 
 /* CRITICAL: Ensures the VERY FIRST paragraph inside a Problem stays tight to the title */
