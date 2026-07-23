@@ -681,21 +681,32 @@ div.select-all > span.choice {
     justify-content: center !important;
 }
 
-/* Left arrow */
-.xmprev {
-    order: 1 !important;
-    margin-right: auto !important;
-    display: flex !important;
-    align-items: center !important;
+/* Make the activity title container relative */
+.activity-title {
+    position: relative !important;
 }
 
-/* Right arrow */
-.xmnext {
-    order: 3 !important;
-    margin-left: auto !important;
-    display: flex !important;
-    align-items: center !important;
+/* Center the orange bar */
+.activity-title-center {
+    text-align: center !important;
 }
+
+/* LEFT ARROW */
+.xmprev {
+    position: absolute !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* RIGHT ARROW */
+.xmnext {
+    position: absolute !important;
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
 
 /* ******** Done with changes ********************************  */
 
