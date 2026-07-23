@@ -735,7 +735,7 @@ div.select-all > span.choice {
 
 /* Give MathJax extra breathing room */
 mjx-container {
-    padding-top: 4px !important;
+    padding-top: 5px !important;
     padding-bottom: 4px !important;
 }
 
