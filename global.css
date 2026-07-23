@@ -577,46 +577,17 @@ div.select-all > span.choice {
     margin-right: 10px !important;
 }
 
-
-/* Keep main content layout flush against the newly narrowed TOC column */
+/* Restore Ximera header alignment while keeping your spacing */
 .main-activity, 
 main, 
 #main-content {
     width: auto !important;
-    margin-left: 0 !important;        /* Prevents random white space gaps from creeping in */
-    padding-left: 10px !important;    /* Clean spacing padding between lesson layout and TOC */
+    padding-left: 10px !important;
+
+    /* Remove the margin override so the header stays aligned */
+    margin-left: unset !important;
 }
 
-/* --- FIX XIMERA HEADER ALIGNMENT --- */
-
-/* Right-align the top-right menu (Downloads, Settings, Contact, Math Editor) */
-header .navbar-nav,
-.navbar-nav {
-    display: flex !important;
-    justify-content: flex-end !important;
-    align-items: center !important;
-    width: 100%;
-}
-
-/* Ensure the orange section title bar stays centered */
-#ximera-title,
-.ximera-title,
-header .title,
-.navbar-header .title {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    display: block !important;
-}
-
-/* Prevent your spacing rules from pushing header items left */
-header,
-.navbar,
-.navbar-header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-}
 
 
 /* ******** Done with changes ********************************  */
