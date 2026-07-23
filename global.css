@@ -705,21 +705,7 @@ div.select-all > span.choice {
 }
 
 
-mjx-container {
-    overflow: visible !important;
-}
 
-mjx-container mjx-math {
-    overflow: visible !important;
-}
-
-mjx-container svg {
-    overflow: visible !important;
-}
-
-mjx-container mjx-msup {
-    overflow: visible !important;
-}
 
 /* ******** Done with changes ********************************  */
 
