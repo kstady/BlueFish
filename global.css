@@ -591,7 +591,6 @@ div.select-all > span.choice {
 }
 
 
-/*   *********************Move all header tools to the right in the correct order */
 /* Make the header a flex container so we can control order */
 .main-title {
     display: flex !important;
@@ -615,8 +614,8 @@ div.select-all > span.choice {
     order: 3 !important;
 }
 
-/* Contact last — this targets the span you showed */
-.main-title .xmhidden-small {
+/* Contact last — target the actual wrapper you showed */
+.main-title #contact-instructor {
     order: 4 !important;
 }
 
