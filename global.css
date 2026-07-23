@@ -691,10 +691,17 @@ div.select-all > span.choice {
     text-align: center !important;
 }
 
+/* Make the orange bar the positioning container */
+.activity-title-center {
+    position: relative !important;
+    text-align: center !important;
+    padding: 0 40px !important; /* space for arrows */
+}
+
 /* LEFT ARROW */
 .xmprev {
     position: absolute !important;
-    left: 10px !important;        /* move closer to the orange bar */
+    left: 0 !important;          /* now relative to the orange bar */
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
@@ -702,10 +709,11 @@ div.select-all > span.choice {
 /* RIGHT ARROW */
 .xmnext {
     position: absolute !important;
-    right: 10px !important;       /* move closer to the orange bar */
+    right: 0 !important;         /* now relative to the orange bar */
     top: 50% !important;
     transform: translateY(-50%) !important;
 }
+
 
 
 
