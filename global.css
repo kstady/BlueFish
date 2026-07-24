@@ -32,7 +32,7 @@ p.noindent,
 .theorem-like p,
 .theorem-like .noindent {
     font-size: inherit !important;
-    line-height: 1.6 !important;
+    line-height: 1.8 !important;
 }
 
 /* *********************************** Done changing the font ****************************************** */
