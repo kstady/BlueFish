@@ -714,34 +714,6 @@ div.select-all > span.choice {
 }
 
 
-/* 1. Target the text block wrapper inside the problem to prevent top-clipping */
-.problem p, 
-.problem .xc-problem-content {
-    line-height: normal !important;      /* Drops the rigid line-height logic */
-    overflow: visible !important;        /* Prevents the box from shaving off top pixels */
-    padding-top: 0.4em !important;       /* Safely stretches the block text boundaries upward */
-}
-
-/* 2. Lock the MathJax baseline to the text and fix the exponent clipping */
-.problem mjx-container,
-.problem .MathJax,
-.problem .mjx-chtml {
-    vertical-align: baseline !important; /* Locks equations perfectly with surrounding text */
-    margin: 0 !important;                /* Eliminates downward structural shifting */
-    padding-top: 0.25em !important;      /* Creates internal headroom specifically for exponents */
-    overflow: visible !important;        /* Ensures high superscripts render fully */
-    display: inline !important;          /* Keeps math completely inline without breaking rows */
-}
-
-/* 3. Give extra breathing room to characters that sit inside superscripts */
-.problem mjx-sup,
-.problem .mjx-sups,
-.problem sup {
-    vertical-align: super !important;
-    overflow: visible !important;
-}
-
-
 
 /* ******** Done with changes ********************************  */
 
