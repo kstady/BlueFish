@@ -32,7 +32,7 @@ p.noindent,
 .theorem-like p,
 .theorem-like .noindent {
     font-size: inherit !important;
-    line-height: 1.8 !important;
+    line-height: 1.55 !important;
 }
 
 /* *********************************** Done changing the font ****************************************** */
@@ -705,6 +705,22 @@ div.select-all > span.choice {
 }
 
 
+.problem > *:first-child {
+    display: block !important;
+    line-height: normal !important;
+    overflow: visible !important;
+    white-space: normal !important;
+    align-items: unset !important;
+}
+
+.problem > div:first-child,
+.problem > p:first-child,
+.problem > span:first-child {
+    display: block !important;
+    line-height: normal !important;
+    overflow: visible !important;
+    white-space: normal !important;
+}
 
 
 /* ******** Done with changes ********************************  */
