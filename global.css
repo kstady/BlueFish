@@ -705,15 +705,6 @@ div.select-all > span.choice {
 }
 
 
-/* 1. Safely increase the line spacing of the text inside the problem */
-.problem p, 
-.problem span,
-.problem li {
-    line-height: 3.8 !important; /* Expands line spacing to prevent exponent collisions */
-    vertical-align: middle;
-}
-
-
 
 /* ******** Done with changes ********************************  */
 
