@@ -709,7 +709,7 @@ div.select-all > span.choice {
 .problem p, 
 .problem span,
 .problem li {
-    line-height: 1.8 !important; /* Expands line spacing to prevent exponent collisions */
+    line-height: 3.8 !important; /* Expands line spacing to prevent exponent collisions */
     vertical-align: middle;
 }
 
