@@ -706,18 +706,13 @@ div.select-all > span.choice {
 
 
 
-.problem p,
-.exercise p,
-.free-response p,
-.activity p,
-.main-inhoud p {
-    line-height: 1.6 !important;
+.problem > p:first-child {
+    display: block !important;
+    line-height: normal !important;
     overflow: visible !important;
+    align-items: unset !important;
 }
 
-.MathJax {
-    overflow: visible !important;
-}
 
 
 
