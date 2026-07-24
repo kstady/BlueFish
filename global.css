@@ -713,6 +713,12 @@ div.select-all > span.choice {
     align-items: unset !important;
 }
 
+.problem > div:first-child,
+.problem > .problem-header {
+    display: block !important;
+    line-height: normal !important;
+    overflow: visible !important;
+}
 
 
 
