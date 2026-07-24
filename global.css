@@ -705,21 +705,28 @@ div.select-all > span.choice {
 }
 
 
-.problem > *:first-child {
-    display: block !important;
-    line-height: normal !important;
-    overflow: visible !important;
-    white-space: normal !important;
-    align-items: unset !important;
+/* 1. Safely increase the line spacing of the text inside the problem */
+.problem p, 
+.problem span,
+.problem li {
+    line-height: 1.8 !important; /* Expands line spacing to prevent exponent collisions */
+    vertical-align: middle;
 }
 
-.problem > div:first-child,
-.problem > p:first-child,
-.problem > span:first-child {
-    display: block !important;
-    line-height: normal !important;
+/* 2. Prevent the problem box from slicing off the tops of tall letters */
+.problem {
     overflow: visible !important;
-    white-space: normal !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+}
+
+/* 3. Ensure MathJax can breathe vertically without altering its inline/block display behavior */
+.problem .MathJax,
+.problem .mjx-chtml,
+.problem mjx-container {
+    overflow: visible !important;
+    margin-top: 0.1em !important;
+    margin-bottom: 0.1em !important;
 }
 
 
