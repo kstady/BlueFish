@@ -704,15 +704,18 @@ div.select-all > span.choice {
     transform: translateY(-50%) !important;
 }
 
-.MathJax, .MathJax span {
-    line-height: normal !important;
-}
 
-.MathJax_Display {
+
+.problem p,
+.exercise p,
+.free-response p,
+.activity p,
+.main-inhoud p {
+    line-height: 1.6 !important;
     overflow: visible !important;
 }
 
-.MathJax span {
+.MathJax {
     overflow: visible !important;
 }
 
