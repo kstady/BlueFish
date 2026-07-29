@@ -25,11 +25,9 @@
     color: hsl(0, 0%, 10%) !important;
 }
 
-/* Append this if the other options fail */
-.main-activity mjx-math {
-  display: inline-block !important;
-  line-height: 1 !important;
-  box-sizing: content-box !important;
+.main-activity .MathJax, 
+.main-activity mjx-container {
+  vertical-align: -0.25em !important; /* Pulls the equation slightly down */
 }
 
 
