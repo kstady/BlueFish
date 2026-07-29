@@ -19,11 +19,27 @@
 
 
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
-.main-activity {
-    font-size: 20px !important;
-    line-height: 2 !important;
-    color: hsl(0, 0%, 10%) !important;
+.main-activity { 
+  font-size: 18px !important; 
+  line-height: 1.65 !important; 
+  color: hsl(0, 0%, 10%) !important; 
 }
+
+/* Force all structural math wrappers to render outward without shifting positions */
+.main-activity mjx-container,
+.main-activity .MathJax,
+.main-activity .MathJax_Display,
+.main-activity mjx-math,
+.main-activity mjx-mfrac,
+.main-activity mjx-msup,
+.main-activity .problem,
+.main-activity [class*="problem"] {
+  overflow: visible !important;  /* Removes the invisible ceiling slicing the numbers */
+  clip: auto !important;          /* Overrides legacy clipping rules */
+  max-height: none !important;    /* Prevents containers from capping element growth */
+  height: auto !important;        /* Let elements determine their own vertical bounds */
+}
+
 
 
 /* Keep paragraphs produced inside problems and theorem-like blocks at the normal lesson size. */
