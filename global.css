@@ -20,37 +20,10 @@
 
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
 .main-activity {
-    font-size: 22px !important;
-    line-height: 2 !important;
+    font-size: 18px !important;
+    line-height: 1.65 !important;
     color: hsl(0, 0%, 10%) !important;
 }
-
-/* 1. Target all structural containers (both display and inline math versions) */
-.main-activity mjx-container,
-.main-activity .MathJax,
-.main-activity .MathJax_Display,
-.main-activity .mjx-chtml {
-  overflow: visible !important;
-  display: inline-block !important; /* Forces block structures to respect manual box limits */
-  padding-top: 0.4em !important;    /* Forces physical spacing to shield high exponents */
-  padding-bottom: 0.4em !important; /* Protects deep fraction denominators */
-}
-
-/* 2. Break display math out of full-width tight layouts if they are restricted */
-.main-activity mjx-container[display="true"],
-.main-activity .MathJax_Display {
-  display: block !important;
-  margin: 1.5em 0 !important;       /* Increases space between the paragraph text and display formulas */
-  overflow: visible !important;
-}
-
-/* 3. Handle Ximera's specific inner math structural wrappers */
-.main-activity mjx-math {
-  overflow: visible !important;
-  box-sizing: content-box !important;
-}
-
-
 
 
 /* Keep paragraphs produced inside problems and theorem-like blocks at the normal lesson size. */
