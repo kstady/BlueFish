@@ -25,9 +25,29 @@
     color: hsl(0, 0%, 10%) !important;
 }
 
-.main-activity .MathJax, 
-.main-activity mjx-container {
-  vertical-align: -0.25em !important; /* Pulls the equation slightly down */
+/* 1. Target all structural containers (both display and inline math versions) */
+.main-activity mjx-container,
+.main-activity .MathJax,
+.main-activity .MathJax_Display,
+.main-activity .mjx-chtml {
+  overflow: visible !important;
+  display: inline-block !important; /* Forces block structures to respect manual box limits */
+  padding-top: 0.4em !important;    /* Forces physical spacing to shield high exponents */
+  padding-bottom: 0.4em !important; /* Protects deep fraction denominators */
+}
+
+/* 2. Break display math out of full-width tight layouts if they are restricted */
+.main-activity mjx-container[display="true"],
+.main-activity .MathJax_Display {
+  display: block !important;
+  margin: 1.5em 0 !important;       /* Increases space between the paragraph text and display formulas */
+  overflow: visible !important;
+}
+
+/* 3. Handle Ximera's specific inner math structural wrappers */
+.main-activity mjx-math {
+  overflow: visible !important;
+  box-sizing: content-box !important;
 }
 
 
