@@ -25,12 +25,13 @@
     color: hsl(0, 0%, 10%) !important;
 }
 
-.main-activity {
-  font-size: 22px !important;
-  line-height: 2.0 !important;
-  color: hsl(0, 0%, 10%) !important;
-  overflow: visible !important; /* Prevents the parent wrapper from clipping top elements */
+/* Append this if the other options fail */
+.main-activity mjx-math {
+  display: inline-block !important;
+  line-height: 1 !important;
+  box-sizing: content-box !important;
 }
+
 
 
 
