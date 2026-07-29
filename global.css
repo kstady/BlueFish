@@ -25,6 +25,16 @@
     color: hsl(0, 0%, 10%) !important;
 }
 
+/* Allow exponents and fractions to render past their strict bounding boxes */
+.main-activity mjx-container,
+.main-activity .MathJax,
+.main-activity .MathJax_Display {
+  overflow: visible !important;
+  padding-top: 0.25em !important; /* Forces physical space at the top */
+  padding-bottom: 0.25em !important;
+}
+
+
 /* Keep paragraphs produced inside problems and theorem-like blocks at the normal lesson size. */
 p.noindent,
 .problem-environment p,
