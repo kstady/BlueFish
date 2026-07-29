@@ -19,11 +19,23 @@
 
 
 /* Adjust overall page sizing and color to match PDF proportions.  Change font size here. */
-.main-activity { 
-  font-size: 18px !important; 
-  line-height: 1.65 !important; 
-  color: hsl(0, 0%, 10%) !important; 
+.main-activity {
+    font-size: 22px !important;
+    line-height: 1.75 !important;
+    color: hsl(0, 0%, 10%) !important;
 }
+
+/* Keep paragraphs produced inside problems and theorem-like blocks at the normal lesson size. */
+p.noindent,
+.problem-environment p,
+.problem-environment .noindent,
+.theorem-like p,
+.theorem-like .noindent {
+    font-size: inherit !important;
+    line-height: 1.55 !important;
+}
+
+
 
 
 /* *********************************** Done changing the font ****************************************** */
