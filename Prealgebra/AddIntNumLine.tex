@@ -46,6 +46,8 @@ Use a numberline to find the sum $3+7.$
 
 Start at $3,$ then move $7$ units to the \textbf{right}.  Movement is to the right, since a \textbf{positive} number is added to $3.$
 
+\definecolor{accessibleRed}{HTML}{A61B1B}
+
 \begin{center}
 \begin{tikzpicture}[x=0.75cm,>=latex, scale=1.5] % Use latex arrowhead style
 \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
@@ -54,7 +56,7 @@ Start at $3,$ then move $7$ units to the \textbf{right}.  Movement is to the rig
 \fill (3,0) circle (1.8pt);
 \draw[->,out=60,in=120,color=glaucous, thick] (3,0) to (4,0) to (5,0) to (6,0) to (7,0) to (8,0) to (9,0) to (10,0); % Curves
 \node[color=accessibleGreen] at (3,-0.65) {\large \textbf{Start}};
-\node[accessibleOrange] at (10,-0.65) {\large \textbf{Stop}};
+\node[accessibleRed] at (10,-0.65) {\large \textbf{Stop}};
 \node at (6.5,0.9) {$\mathbf{3 + 7 = 10}$};
 \end{tikzpicture}
 \xmalt{Horizontal number line from negative 5 to 10, with tick marks and labels for each integer.  There is a solid black dot at 3.  
@@ -74,6 +76,9 @@ Use a numberline to find the sum $3+(-7).$
 
 Start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  Movement is to the left, since a \textbf{negative} number is added to $3.$
 
+\definecolor{accessibleRed}{HTML}{A61B1B}
+
+
 \begin{center}
 \begin{tikzpicture}[x=0.75cm,>=latex, scale=1.5] % Use latex arrowhead style
     \draw[thick, <->] (-6,0)--(11,0); % Number line from -6 to 11
@@ -82,8 +87,8 @@ Start at $3$ then move $|-7| = 7$ units to the \textbf{left}.  Movement is to th
     \fill (3,0) circle (1.8pt); % Mark start at 3
     % Movement humps from 3 to -4
     \draw[<-,out=60,in=120,color=glaucous, thick] (-4,0) to (-3,0) to (-2,0) to (-1,0) to (0,0) to (1,0) to (2,0) to (3,0); % Curves
-    \node[color=OliveGreen!90!black] at (3,-0.65) {\large \textbf{Start}};
-    \node[color=orange!80!black] at (-4,-0.65) {\large \textbf{Stop}};
+    \node[accessibleGreen] at (3,-0.65) {\large \textbf{Start}};
+    \node[accessibleRed] at (-4,-0.65) {\large \textbf{Stop}};
     \node at (-0.5,0.9) {$\mathbf{3 + (-7) = -4}$}; % Label for the operation
 \end{tikzpicture}
 
