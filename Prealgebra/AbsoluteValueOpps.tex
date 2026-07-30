@@ -37,12 +37,12 @@ The number line below shows the absolute values of $-4$ and $4.$  Since their ab
     \draw (\x, 0.1) -- (\x, -0.1) node[below] {\small \x};
 
 % Highlighting the points -4, 0, and 4
-\filldraw[orange!85!black] (-4,0) circle (2pt);
+\filldraw[accessibleOrange] (-4,0) circle (2pt);
 \filldraw[glaucous] (4,0) circle (2pt);
 \filldraw[black] (0,0) circle (2pt);
 
 % Horizontal line for -4 (Red) - Original position
-\draw[orange!85!black, ultra thick, |-|] (-4, 0.6) -- (0, 0.6)
+\draw[accessibleOrange, ultra thick, |-|] (-4, 0.6) -- (0, 0.6)
     node[midway, above, font=\bfseries] {Distance = 4};
 
 % Horizontal line for +4 (Blue) - Original position
@@ -50,7 +50,7 @@ The number line below shows the absolute values of $-4$ and $4.$  Since their ab
     node[midway, above, font=\bfseries] {Distance = 4};
 
 % NEW: Absolute values centered UNDER the number line
-\node[orange!85!black, font=\bfseries] at (-2, -0.8) {$\mathbf{|-4| = 4}$};
+\node[accessibleOrange, font=\bfseries] at (-2, -0.8) {$\mathbf{|-4| = 4}$};
 \node[glaucous, font=\bfseries] at (2, -0.8) {$\mathbf{|4| = 4}$};
 
 % Vertical guide lines - Original position
@@ -150,8 +150,8 @@ since its velocity is negative.  Since $|-15| = 15$ the ball is traveling at a s
     \node[right] at (4, 3.5) {\textbf{Velocity = 0}};
 
     % Downward Path (Negative Velocity)
-    \draw[->, orange!80!black, line width=3pt] (2.2, 3.5) -- (2.2, 0);
-    \node[right, orange!80!black, font=\bfseries] at (2.2, 2) {Velocity  (--)};
+    \draw[->, accessibleOrange, line width=3pt] (2.2, 3.5) -- (2.2, 0);
+    \node[right, accessibleOrange, font=\bfseries] at (2.2, 2) {Velocity  (--)};
 
 \end{tikzpicture}
 \xmalt{A physics diagram illustrating vertical projectile motion relative to a ground line.  A ball is above the 
@@ -206,12 +206,12 @@ in \textbf{opposite} directions, and they have the same absolute values.
     \draw (\x, 0.1) -- (\x, -0.1) node[below] {\small \x};
 
 % Highlighting the points -3, 0, and 3
-\filldraw[orange!85!black] (-3,0) circle (2pt);
+\filldraw[accessibleOrange] (-3,0) circle (2pt);
 \filldraw[glaucous] (3,0) circle (2pt);
 \filldraw[black] (0,0) circle (2pt);
 
 % Horizontal line for -3 (Orange)
-\draw[orange!85!black, ultra thick, |-|] (-3, 0.6) -- (0, 0.6)  % |-| is a line with two vertical bars at its end
+\draw[accessibleOrange, ultra thick, |-|] (-3, 0.6) -- (0, 0.6)  % |-| is a line with two vertical bars at its end
     node[midway, above, font=\bfseries] {Distance = 3};
 
 % Horizontal line for 3 (Blue)
@@ -219,7 +219,7 @@ in \textbf{opposite} directions, and they have the same absolute values.
     node[midway, above, font=\bfseries] {Distance = 3};
 
 % Absolute values- centered
-\node[orange!85!black, font=\bfseries] at (-1.5, -0.8) {$\mathbf{|-3| = 3}$};
+\node[accessibleOrange, font=\bfseries] at (-1.5, -0.8) {$\mathbf{|-3| = 3}$};
 \node[glaucous, font=\bfseries] at (1.5, -0.8) {$\mathbf{|3| = 3}$};
 
 \end{tikzpicture}
@@ -357,35 +357,21 @@ Remember: $-(-x) = x,$ therefore since $x$ started as $-10$, the final result is
 \begin{warning}
 
 A common mistake is to treat absolute value like parentheses. Keep in mind that \textbf{parentheses} are 
-used for \textbf{grouping}, whereas \textbf{absolute value} is an \textbf{operation}.  Make certain you 
+used only for \textbf{grouping}, whereas \textbf{absolute value} is an \textbf{operation} and a grouping symbol.  Make certain you 
 understand the difference between the following cases.  
-
 
 \begin{itemize}[leftmargin=0pt]
     \item \textbf{Double Negative with Parentheses} \\
-    Since we have parentheses, we simply find the opposite of negative $7,$ which is $7.$ 
+    Since there are parentheses, we simply find the opposite of negative $7,$ which is $7.$ 
     \[ -(-7) = 7 \] 
 
     \item \textbf{Double Negative with Absolute Value} \\
-    To find the opposite of the absolute value of negative $7,$ start with the absolute value: 
-    \[ - \underbrace{|-7|}_{7} = -7 \]
-    Then find the opposite of that result. The opposite of $7$ is $-7.$
+    To find the opposite of the absolute value of negative $7,$ start with the absolute value. Then find the opposite of that result. The opposite of $7$ is $-7.$
+    
+    \[ - \underbrace{|-7|}_{\rule{0pt}{2.5ex} 7} = -7 \]
+
 \end{itemize}
 
-
-
-\begin{description}[style=nextline, leftmargin=0pt]  %leftmargin removes the indentation below items
-    \item[Double Negative with Parentheses]  Since we have parentheses, we simply find the opposite of negative $7,$ which is $7.$
-        \[ -(-7) = 7 \]
-
-\item[Double Negative with Absolute Value]
-
-To find the opposite of the absolute value of negative $7,$ start with the absolute value: $|-7| = 7,$ 
-then find the opposite of that result.  The opposite of $7$ is $-7$ therefore,
-
-\[ -|-7| = -7. \]
-
-\end{description}
 
 \end{warning}
 
@@ -408,7 +394,7 @@ doesn't rely on distance.
 \end{procedure}
 
 \begin{problem}
-\textcolor{orange!80!black}{\textbf{True or False}} \ If a number is negative, its opposite must be positive.
+\textcolor{accessibleOrange}{\textbf{True or False}} \ If a number is negative, its opposite must be positive.
 
 \begin{multipleChoice}
 \choice[correct]{True}
@@ -422,7 +408,7 @@ Exactly! The opposite flips the sign, so a negative becomes positive.
 \end{problem}
 
 \begin{problem}
-\textcolor{orange!80!black}{\textbf{True or False}} \ Two different numbers can have the same absolute value.
+\textcolor{accessibleOrange}{\textbf{True or False}} \ Two different numbers can have the same absolute value.
 
 \begin{multipleChoice}
 \choice[correct]{True}
@@ -463,12 +449,9 @@ $a$ and $b$ on a number line is $10$ units, what are the two numbers?
 \end{multipleChoice}
 
 \begin{hint}
-Draw a number line and with $a$ and $b$ ten units apart.
+Draw a number line and with $a$ and $b$ ten units apar and on opposite sides of 0.
 \end{hint}
 
-\begin{feedback}[correct]
-Good job!  You made it through this problem and this section.
-\end{feedback}
 
 \end{problem}
 
