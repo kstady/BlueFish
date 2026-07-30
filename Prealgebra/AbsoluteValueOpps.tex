@@ -38,7 +38,7 @@ The number line below shows the absolute values of $-4$ and $4.$  Since their ab
 
 % Highlighting the points -4, 0, and 4
 \filldraw[accessibleOrange] (-4,0) circle (2pt);
-\filldraw[glaucous] (4,0) circle (2pt);
+\filldraw[accessibleGlaucous] (4,0) circle (2pt);
 \filldraw[black] (0,0) circle (2pt);
 
 % Horizontal line for -4 (Red) - Original position
@@ -46,12 +46,12 @@ The number line below shows the absolute values of $-4$ and $4.$  Since their ab
     node[midway, above, font=\bfseries] {Distance = 4};
 
 % Horizontal line for +4 (Blue) - Original position
-\draw[glaucous, ultra thick, |-|] (0, 1.3) -- (4, 1.3)
+\draw[accessibleGlaucous, ultra thick, |-|] (0, 1.3) -- (4, 1.3)
     node[midway, above, font=\bfseries] {Distance = 4};
 
 % NEW: Absolute values centered UNDER the number line
 \node[accessibleOrange, font=\bfseries] at (-2, -0.8) {$\mathbf{|-4| = 4}$};
-\node[glaucous, font=\bfseries] at (2, -0.8) {$\mathbf{|4| = 4}$};
+\node[accessibleGlaucous, font=\bfseries] at (2, -0.8) {$\mathbf{|4| = 4}$};
 
 % Vertical guide lines - Original position
 %\draw[dashed, gray] (0,0) -- (0, 1.5);
@@ -123,7 +123,7 @@ absolute value to turn velocity into speed.
 \begin{center}
 Speed = |Velocity|  \\
 
-\textbf{\textcolor{glaucous}{Speed is the size of velocity}}. 
+\textbf{\textcolor{accessibleGlaucous}{Speed is the size of velocity}}. 
 \end{center}
 
 When a ball is thrown straight up in the air, its velocity is positive as it moves upward, zero when it reaches its highest point and negative when
@@ -142,8 +142,8 @@ since its velocity is negative.  Since $|-15| = 15$ the ball is traveling at a s
     \shade[ball color=white, draw=black, thin] (0.8, 0.5) circle (0.15);
 
     % Upward Path (Positive Velocity)
-    \draw[->, glaucous!70!black, line width=3pt] (0.8, 0.7) -- (0.8, 3.5);
-    \node[left, glaucous!70!black, font=\bfseries] at (0.8, 2) {\textbf{Velocity (+)}};
+    \draw[->, accessibleGlaucous, line width=3pt] (0.8, 0.7) -- (0.8, 3.5);
+    \node[left, accessibleGlaucous, font=\bfseries] at (0.8, 2) {\textbf{Velocity (+)}};
 
     % The Peak (Zero Velocity)
     \draw[dashed, thick] (-1, 3.5) -- (4, 3.5);
@@ -207,7 +207,7 @@ in \textbf{opposite} directions, and they have the same absolute values.
 
 % Highlighting the points -3, 0, and 3
 \filldraw[accessibleOrange] (-3,0) circle (2pt);
-\filldraw[glaucous] (3,0) circle (2pt);
+\filldraw[accessibleGlaucous] (3,0) circle (2pt);
 \filldraw[black] (0,0) circle (2pt);
 
 % Horizontal line for -3 (Orange)
@@ -220,7 +220,7 @@ in \textbf{opposite} directions, and they have the same absolute values.
 
 % Absolute values- centered
 \node[accessibleOrange, font=\bfseries] at (-1.5, -0.8) {$\mathbf{|-3| = 3}$};
-\node[glaucous, font=\bfseries] at (1.5, -0.8) {$\mathbf{|3| = 3}$};
+\node[accessibleGlaucous, font=\bfseries] at (1.5, -0.8) {$\mathbf{|3| = 3}$};
 
 \end{tikzpicture}
 \xmalt{A horizontal number line from negative 4 to 4 with solid dots plotted at negative 3, 0, and 3.  
