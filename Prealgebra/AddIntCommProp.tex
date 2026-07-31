@@ -38,10 +38,11 @@ those results.
 
     \begin{center}
         \begin{tikzpicture}[
+        scale = 1.2, transform shape,      
         >=stealth, node distance=0.6cm,
         % Define Accessible Colors locally
         posColor/.style={color=accessibleOrange},
-        negColor/.style={accessibleGlaucous}
+        negColor/.style={color=accessibleGlaucous}
         ]
 
     % --- LINE 1: THE FULL EXPRESSION ---
@@ -90,8 +91,8 @@ those results.
     \node[posColor, font=\footnotesize\bfseries, anchor=north] (labelPos) at (2.525, -0.45) {Add Positives};
 
     % --- FLOW INDICATORS ---
-    \draw[->, gray!40, dashed, thick] (labelNeg.north) to [out=45, in=120] (res1digit.north);
-    \draw[->, gray!40, dashed, thick] (labelPos.south) to [out=315, in=240, looseness=1.15] (res2digit.south); % lossness increases the sag
+    \draw[->, black!75!gray, dashed, thick, shorten >=4pt] (labelNeg.north) to [out=45, in=120] (res1digit.north);  %shorten >=4pt crops the arrow back by 4pt along its trajectory, can increase or decrease
+    \draw[->, black!75!gray, dashed, thick, shorten >=4pt] (labelPos.south) to [out=315, in=240, looseness=1.15] (res2digit.south); % lossness increases the sag
 
     % --- LINE 2: FINAL BOLD RESULT ---
     \node[font=\large, anchor=west] (final) at (equals1.west) [yshift=-1.0cm] {$\mathbf{= \, -6}$};
