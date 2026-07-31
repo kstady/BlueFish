@@ -26,13 +26,13 @@ feet \textbf{above} sea level on Campbell Hill, and the lowest point is 455 feet
 \[ 1549 - 455 = 1094 \ \textrm{feet}. \]
 
 When one elevation is below sea level, finding the span isn't as straightforward.  For instance, in the United States, the highest peak is 
-20,310 feet \textbf{above} sea level in Denali, Alaska and the lowest basin is 282 feet \textbf{below} sea level in Death Valley, California.  
+20,320 feet \textbf{above} sea level in Denali, Alaska and the lowest basin is 282 feet \textbf{below} sea level in Death Valley, California.  
 So, the elevation span of the U.S. is given by the difference
-\[ 20,310 - (-282). \]
+\[ 20,320 - (-282). \]
 
 However, from the diagram below, you can see that the span of the U.S. can be found by \emph{adding}.
 
-\[ 20,310 + 282 = 20,592 \ \textrm{feet} \]
+\[ 20,320 + 282 = 20,602 \ \textrm{feet} \]
 
 
 \begin{center}
@@ -41,23 +41,23 @@ However, from the diagram below, you can see that the span of the U.S. can be fo
     \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\Large\textbf{Elevation (ft)}};
 
     % Sea Level Line
-    \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{Sea Level (0)}};
+    \draw[accessibleGlaucous, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{Sea Level (0)}};
 
     % Denali Point (+20,310)
-    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\Large Denali (+20,310)};
+    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\Large \textbf{Denali} (+20,320)};
 
     % Death Valley Point (-282)
-    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\Large Death Valley ($-282$)};
+    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\Large \textbf{Death Valley} ($-282$)};
 
     % Braces - Using 'very thick' for the curly lines
     \draw [decorate, decoration={brace, amplitude=9pt, raise=5pt}, very thick] (0,-2) -- (0,0)
         node [midway, left=25pt] {\Large\textbf{282 ft}};
 
     \draw [decorate, decoration={brace, amplitude=15pt, raise=5pt}, very thick] (0,0) -- (0,8)
-        node [midway, left=25pt] {\Large\textbf{20,310 ft}};
+        node [midway, left=25pt] {\Large\textbf{20,320 ft}};
 
     % Total Span Arrow - Two lines, Bold, No Italics
-    \draw[<->, orange!80!black, line width=2pt] (-8,-2) -- (-8,8)
+    \draw[<->, accessibleOrange, line width=2pt] (-8,-2) -- (-8,8)
         node [midway, left=15pt, align=center] {
             \Large\textbf{Elevation}\\
             \Large\textbf{Span}
@@ -66,10 +66,10 @@ However, from the diagram below, you can see that the span of the U.S. can be fo
     \draw[dashed, gray, thick] (-8,8) -- (0,8);
     \draw[dashed, gray, thick] (-8,-2) -- (0,-2);
 \end{tikzpicture}
-\xmalt{Vertical number line showing the elevation span for the United States.  Points are plotted at 20,310 for Denali 
-and negative 282 for Death Valley, with sea level marked at zero.  Braces indicate a distance of 20,310 units above 
+\xmalt{Vertical number line showing the elevation span for the United States.  Points are plotted at 20,320 for Denali 
+and negative 282 for Death Valley, with sea level marked at zero.  Braces indicate a distance of 20,320 units above 
 zero and 282 units below zero.  The total elevation span is shown to the left as the combined vertical distance from 
-negative 282 to 20,310.}
+negative 282 to 20,320.}
 \end{center}
 
 %\emph{Source:} Elevation data provided by the U.S. Geological Survey (USGS), Highest and Lowest Elevations table. Available at %\href{https://www.usgs.gov/educational-resources/highest-and-lowest-elevations}{\textcolor{darkraspberry}{\textbf{usgs.gov}}}.
@@ -78,7 +78,7 @@ negative 282 to 20,310.}
 \normalsize
 Although it seems paradoxical, this illustrates a key concept: \textbf{subtracting a number is the same as adding its opposite}.
 
-\[ 20,310 - (-282) =  20,310 + 282 \]
+\[ 20,320 - (-282) =  20,320 + 282 \]
 
 
 
@@ -103,13 +103,13 @@ span.
     \draw[ultra thick, <->] (0,-4) -- (0,10) node[above, yshift=5pt] {\textnormal{\Large\textbf{Elevation (ft)}}};
 
     % Sea Level Line
-    \draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\textnormal{\Large\textbf{Sea Level (0)}}};
+    \draw[accessibleGlaucous, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\textnormal{\Large\textbf{Sea Level (0)}}};
 
     % Mount Everest Point
-    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large Mt. Everest ($+29,032$)}};
+    \filldraw[black] (0,8) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large \textbf{Mt. Everest} ($+29,032$)}};
 
     % Ayding Lake Point
-    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large Ayding Lake ($-505$)}};
+    \filldraw[black] (0,-2) circle (5pt) node[right, xshift=8pt] {\textnormal{\Large \textbf{Ayding Lake} ($-505$)}};
 
     % Braces
     \draw [decorate, decoration={brace, amplitude=9pt, raise=5pt}, very thick] (0,-2) -- (0,0)
@@ -119,7 +119,7 @@ span.
         node [midway, left=25pt] {\textnormal{\Large\textbf{29,032 ft}}};
 
     % Total Span Arrow - Stacked on two lines with fixed line break
-    \draw[<->, orange!80!black, line width=2pt] (-8,-2) -- (-8,8)
+    \draw[<->, accessibleOrange, line width=2pt] (-8,-2) -- (-8,8)
         node [midway, left=15pt, align=center] {
             \Large \textbf{Elevation} \\
             \Large \textbf{Span}};
@@ -143,7 +143,7 @@ total elevation span is shown as the combined vertical distance from  negativve 
 
 \textbf{Do not include commas in your answer}.
 
-\textcolor{orange!80!black}{\textbf{China's Elevation Span}} =  $\answer{29537}$ \ feet
+\textcolor{accessibleOrange}{\textbf{China's Elevation Span}} =  $\answer{29537}$ \ feet
 
 \end{problem}
 
@@ -172,16 +172,16 @@ levels continue to rise at current rates.
 \draw[ultra thick, <->] (0,-2) -- (0,18) node[above, yshift=5pt] {\Large\textbf{Elevation (ft)}}; 
 
 % Current Sea Level Line 
-\draw[blue!60!black, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{Sea Level (0)}}; 
+\draw[accessibleGlaucous, ultra thick] (-1,0) -- (1.5,0) node[right, xshift=5pt] {\Large\textbf{Sea Level (0)}}; 
 
 % Villingili Island Point (+16.7)
-\filldraw[black] (0,16.7) circle (5pt) node[right, xshift=8pt] {\Large Villingili Island (+16.7)}; 
+\filldraw[black] (0,16.7) circle (5pt) node[right, xshift=8pt] {\Large \textbf{Villingili Island} (+16.7)}; 
 
 % Braces 
 \draw [decorate, decoration={brace, amplitude=10pt, raise=5pt}, very thick] (0,0) -- (0,16.7) node [midway, left=20pt] {\Large\textbf{16.7 ft}}; 
 
 % Total Span Arrow (SHIFTED LEFT: Changed from -6 to -9)
-\draw[<->, orange!80!black, line width=2pt] (-9,0) -- (-9,16.7) node [midway, left=15pt, align=center] {\Large\textbf{Elevation}\\\Large\textbf{Span}}; 
+\draw[<->, accessibleOrange, line width=2pt] (-9,0) -- (-9,16.7) node [midway, left=15pt, align=center] {\Large\textbf{Elevation}\\\Large\textbf{Span}}; 
 
 % Guides (SHIFTED LEFT: Changed starting point from -6 to -9)
 \draw[dashed, gray, thick] (-9,16.7) -- (0,16.7); 
