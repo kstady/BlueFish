@@ -8,7 +8,7 @@ The key files for Ximera deployment are:
 - xmScripts (contains a configfile, and the script 'xmlatex' to compile Ximera files)
 - global.css (for look on the web)
 - .gitignore (update to the most recent version)
-- .devcontainer (Only if you wish to work in Codespace)
+- .devcontainer (needed to work in a Codespace)
 
 ## License
 The contents of this repository (unless otherwise stated) are in the Public Domain.
