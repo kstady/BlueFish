@@ -308,7 +308,6 @@ div[titletext*="Problem"] {
 .problem-environment .mjx-chtml, 
 .problem-environment .mjx-container, 
 .problem-environment .mjx-math {
-  font-size: inherit !important;
   overflow: visible !important;
 }
 
