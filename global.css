@@ -199,7 +199,7 @@ Also note: We may want to decide, as a team, what the default text should *actua
  }
 
 img[src$="CLEcold.jpg"] {
-  width: 90% !important;
+  width: 85% !important;
   height: auto !important;
 }
 
