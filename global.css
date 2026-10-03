@@ -198,6 +198,11 @@ Also note: We may want to decide, as a team, what the default text should *actua
 	content:"problem" attr(numbered) ".";
  }
 
+img[src$="CLEcold.jpg"] {
+  width: 90% !important;
+  height: auto !important;
+}
+
 .exploration::before {
 	content:"exploration" attr(numbered) ".";
  }
