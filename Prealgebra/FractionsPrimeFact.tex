@@ -94,9 +94,12 @@ If none of these four numbers work, the number is prime.
     %If a number is greater than 1, check to see if it is divisible by any prime number less than or equal to its square root.  If it is not divisible by any of those prime numbers, then it is prime.  Otherwise, it is composite.
 \end{procedure} 
 
-Rather than performing long division, we can use the \textbf{divisibility rules} to check if a number is divisible by 2, 3, or 5. 
+Rather than performing long division, we can use the \textbf{divisibility rules} below to check if a number is evenly 
+divisible by $2, 3,$ or $5$.  If none of those numbers evenly divide into the number of in question, you will 
+need to perform long division to check if it is evenly divisible by $7$.  
+
 \begin{fact}
-The divisibility rules for 2, 3 and 5 are as follows:
+
 \begin{itemize}
     \item A number is divisible by 2 if it is even.
     \item A number is divisible by 3 if the sum of its digits is divisible by 3.
@@ -108,14 +111,12 @@ The divisibility rules for 2, 3 and 5 are as follows:
 Are the numbers 23 and 35 prime or composite?
 
 \begin{explanation}
-We need to check if 23 can be evenly divided by 2, 3, 5, or 7.
+We need to check if 23 can be evenly divided by $2, 3, 5$ or $7$.
 
-- $23 \div 2 = 11.5$ (not evenly)
-- $23 \div 3 = 7.67$ (not evenly)
-- $23 \div 5 = 4.6$ (not evenly)
-- $23 \div 7 = 3.29$ (not evenly)
+  $23$ is not divisible by $2, 3, 5$ or $7 \rigtharrow$ \ prime.
 
-Since none of these four numbers divide into 23 without a remainder, the number is prime.
+  $35$ is divisible by $5 \rigtharrow$ composite.
+
 \end{explanation}
 \end{example}
 
