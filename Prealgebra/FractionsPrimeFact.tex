@@ -86,14 +86,38 @@ A natural number greater than 1 that's not prime is called a \textbf{composite n
 
 \end{definition}
 
-\begin{procedure}[\textbf{How to Tell if a Number is Prime}]
+\begin{procedure}[\textbf{How to Tell if a Number Less Than 100 is Prime}]
 
-To check if any number less than 100 is prime, you only need to test if it can be divided evenly by \textbf{2, 3, 5, or 7}. 
-If none of these four numbers divide into it without a remainder, the number is guaranteed to be a prime number.
+To check if a number less than 100 is prime, you only need to test if it can be evenly divided by \textbf{2, 3, 5, or 7}. 
+If none of these four numbers work, the number is prime.
 
     %If a number is greater than 1, check to see if it is divisible by any prime number less than or equal to its square root.  If it is not divisible by any of those prime numbers, then it is prime.  Otherwise, it is composite.
 \end{procedure} 
 
+Rather than performing long division, we can use the \textbf{divisibility rules} to check if a number is divisible by 2, 3, or 5. 
+\begin{fact}
+The divisibility rules for 2, 3 and 5 are as follows:
+\begin{itemize}
+    \item A number is divisible by 2 if it is even.
+    \item A number is divisible by 3 if the sum of its digits is divisible by 3.
+    \item A number is divisible by 5 if it ends in 0 or 5.
+\end{itemize}
+\end{fact}
+
+\begin{example}
+Are the numbers 23 and 35 prime or composite?
+
+\begin{explanation}
+We need to check if 23 can be evenly divided by 2, 3, 5, or 7.
+
+- $23 \div 2 = 11.5$ (not evenly)
+- $23 \div 3 = 7.67$ (not evenly)
+- $23 \div 5 = 4.6$ (not evenly)
+- $23 \div 7 = 3.29$ (not evenly)
+
+Since none of these four numbers divide into 23 without a remainder, the number is prime.
+\end{explanation}
+\end{example}
 
 \begin{problem}
 Which of the following numbers are \textbf{prime}?
